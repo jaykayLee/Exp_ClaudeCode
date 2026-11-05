@@ -11,3 +11,9 @@ START_HERE.html을 브라우저에서 연다. 마스터 프롬프트와 이 ZIP�
 - 이 파일은 구현을 위한 인계 패키지이며 자동 수집·게시 완성본이 아니다.
 
 Windows에서 실제 앱 설치를 시험할 때는 workspace/Naver_Blog_Automation/install.bat를 사용한다. 설치는 네트워크와 사용자 정책에 영향을 받는다. 최초 무결성 확인 후 수행하고, .venv나 실제 사용자 설정은 다음 인계 ZIP에서 제외한다.
+
+## Git · CI (2026-11-05 추가)
+- 이 폴더가 git 저장소 루트다. 로컬 커밋으로 Phase별 체크포인트가 남아 있다.
+- `.github/workflows/ci.yml`: push 시 Linux 테스트와 **실제 Windows 러너에서 BAT 실행**(공백·한글 경로). 결과물로 설치 ZIP과 로그를 내려받을 수 있다.
+- 새 세션 시작: `bash scripts/cloud_session_setup.sh` → `00_SESSION/PHASE_HANDOFF.md`.
+- 다음 작업 후보: `docs/BACKLOG_P07_P10.md`.
