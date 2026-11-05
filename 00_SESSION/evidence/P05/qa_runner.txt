@@ -1,0 +1,122 @@
+test_both_inputs_processed_independently (test_daily_ops.Daily.test_both_inputs_processed_independently) ... ok
+test_concurrent_run_is_refused_and_lock_kept (test_daily_ops.Daily.test_concurrent_run_is_refused_and_lock_kept) ... ok
+test_demo_modes_do_not_touch_inbox (test_daily_ops.Daily.test_demo_modes_do_not_touch_inbox) ... ok
+test_no_input_is_not_a_failure_and_is_logged (test_daily_ops.Daily.test_no_input_is_not_a_failure_and_is_logged) ... ok
+test_one_failure_keeps_other_result (test_daily_ops.Daily.test_one_failure_keeps_other_result) ... ok
+test_rerun_same_day_reuses_output_and_keeps_observed_at (test_daily_ops.Daily.test_rerun_same_day_reuses_output_and_keeps_observed_at) ... ok
+test_bat_encoding_and_header (test_daily_ops.WindowsScriptsStatic.test_bat_encoding_and_header) ... ok
+test_bat_paths_quoted (test_daily_ops.WindowsScriptsStatic.test_bat_paths_quoted) ... ok
+test_installer_does_not_overwrite_user_data (test_daily_ops.WindowsScriptsStatic.test_installer_does_not_overwrite_user_data) ... ok
+test_python_entrypoints_exist (test_daily_ops.WindowsScriptsStatic.test_python_entrypoints_exist) ... ok
+test_scheduler_requires_confirmation_and_is_local_only (test_daily_ops.WindowsScriptsStatic.test_scheduler_requires_confirmation_and_is_local_only) ... ok
+test_unattended_python_never_prompts (test_daily_ops.WindowsScriptsStatic.test_unattended_python_never_prompts) ... ok
+test_checked_record_clears_danawa_issues_naver_still_missing (test_panel_integration.HumanReviewLoop.test_checked_record_clears_danawa_issues_naver_still_missing) ... ok
+test_broken_or_missing_image_keeps_price_row (test_panel_integration.ImageIntegrity.test_broken_or_missing_image_keeps_price_row) ... ok
+test_originals_unchanged_and_outputs_354x472 (test_panel_integration.ImageIntegrity.test_originals_unchanged_and_outputs_354x472) ... ok
+test_demo_snapshot_via_api (test_panel_integration.ServerSnapshotApi.test_demo_snapshot_via_api) ... [HTTP] POST /api/snapshot 200
+[HTTP] GET /output/20261105_demo_d7cc23d8eeac/product_table.html 200
+[HTTP] GET /output/20261105_demo_d7cc23d8eeac/bridge/evidence_sidecar.json 200
+ok
+test_snapshot_api_guards (test_panel_integration.ServerSnapshotApi.test_snapshot_api_guards) ... [HTTP] POST /api/snapshot 403
+[HTTP] POST /api/snapshot 400
+[HTTP] POST /api/snapshot 400
+[HTTP] POST /api/snapshot 400
+[HTTP] POST /api/snapshot 400
+[HTTP] POST /api/snapshot 400
+ok
+test_user_recorded_job_via_api (test_panel_integration.ServerSnapshotApi.test_user_recorded_job_via_api) ... [HTTP] POST /api/snapshot 200
+ok
+test_required_table_headers_unchanged (test_panel_integration.StaticUi.test_required_table_headers_unchanged) ... ok
+test_snapshot_card_present_and_offline (test_panel_integration.StaticUi.test_snapshot_card_present_and_offline) ... ok
+test_abc_selects_a_ranks_b_excludes_c (test_snapshot_bridge.AdapterSelection.test_abc_selects_a_ranks_b_excludes_c) ... ok
+test_defence_in_depth_rejects_tampered_candidate (test_snapshot_bridge.AdapterSelection.test_defence_in_depth_rejects_tampered_candidate) ... ok
+test_evidence_kind_rules (test_snapshot_bridge.AdapterSelection.test_evidence_kind_rules) ... ok
+test_exclusion_reasons (test_snapshot_bridge.AdapterSelection.test_exclusion_reasons) ... ok
+test_old_behavior_would_have_chosen_card_only (test_snapshot_bridge.AdapterSelection.test_old_behavior_would_have_chosen_card_only)
+Documents I02: legacy meta-wide terms (no scope) are no longer promoted. ... ok
+test_price_url_time_belong_to_same_offer (test_snapshot_bridge.AdapterSelection.test_price_url_time_belong_to_same_offer) ... ok
+test_tie_is_deterministic_and_reported (test_snapshot_bridge.AdapterSelection.test_tie_is_deterministic_and_reported) ... ok
+test_demo_end_to_end_seven_columns (test_snapshot_bridge.BridgeE2E.test_demo_end_to_end_seven_columns) ... ok
+test_demo_label_preserved_everywhere (test_snapshot_bridge.BridgeE2E.test_demo_label_preserved_everywhere) ... ok
+test_html_escape_of_untrusted_names (test_snapshot_bridge.BridgeE2E.test_html_escape_of_untrusted_names) ... ok
+test_job_validation (test_snapshot_bridge.BridgeE2E.test_job_validation) ... ok
+test_manual_import_requires_user_recorded_and_stays_hold (test_snapshot_bridge.BridgeE2E.test_manual_import_requires_user_recorded_and_stays_hold) ... ok
+test_no_structured_offers_reason_visible (test_snapshot_bridge.BridgeE2E.test_no_structured_offers_reason_visible) ... ok
+test_partial_failure_keeps_rows (test_snapshot_bridge.BridgeE2E.test_partial_failure_keeps_rows) ... ok
+test_rerun_keeps_observed_at_and_does_not_publish (test_snapshot_bridge.BridgeE2E.test_rerun_keeps_observed_at_and_does_not_publish) ... ok
+test_target_mismatch_between_job_and_meta_holds (test_snapshot_bridge.BridgeE2E.test_target_mismatch_between_job_and_meta_holds) ... ok
+test_no_selection_is_none_not_zero (test_snapshot_bridge.PanelInput.test_no_selection_is_none_not_zero) ... ok
+test_selected_maps_total_and_keeps_flags_false (test_snapshot_bridge.PanelInput.test_selected_maps_total_and_keeps_flags_false) ... ok
+test_synthetic_condition_labelled (test_snapshot_bridge.PanelInput.test_synthetic_condition_labelled) ... ok
+test_demo_api_and_output (test_workspace.HTTPTests.test_demo_api_and_output) ... [HTTP] POST /api/run 200
+[HTTP] GET /output/20261105_demo_27afc152c3b8/product_table.html 200
+ok
+test_host_and_origin_guard (test_workspace.HTTPTests.test_host_and_origin_guard) ... [HTTP] GET /api/status 403
+[HTTP] GET /api/status 403
+ok
+test_local_image_upload_and_brief_save (test_workspace.HTTPTests.test_local_image_upload_and_brief_save) ... [HTTP] POST /api/image 200
+[HTTP] POST /api/brief 200
+ok
+test_mutation_requires_token (test_workspace.HTTPTests.test_mutation_requires_token) ... [HTTP] POST /api/run 403
+ok
+test_status_and_missing_secret_routes (test_workspace.HTTPTests.test_status_and_missing_secret_routes) ... [HTTP] GET /api/status 200
+[HTTP] GET /01_CONFIG/settings.local.json 404
+[HTTP] GET /output/../../01_CONFIG/settings.local.json 404
+ok
+test_bad_image_and_rights (test_workspace.ImageTests.test_bad_image_and_rights) ... ok
+test_download_default_off_and_host_allowlist (test_workspace.ImageTests.test_download_default_off_and_host_allowlist) ... ok
+test_http_429_stops_without_retry (test_workspace.ImageTests.test_http_429_stops_without_retry) ... ok
+test_mock_download_stores_valid_image (test_workspace.ImageTests.test_mock_download_stores_valid_image) ... ok
+test_original_import_hash_and_evidence (test_workspace.ImageTests.test_original_import_hash_and_evidence) ... ok
+test_path_traversal_and_dimensions (test_workspace.ImageTests.test_path_traversal_and_dimensions) ... ok
+test_private_and_mixed_dns_are_rejected (test_workspace.ImageTests.test_private_and_mixed_dns_are_rejected) ... ok
+test_public_ip_is_pinned (test_workspace.ImageTests.test_public_ip_is_pinned) ... ok
+test_three_aspect_ratios_and_original_integrity (test_workspace.ImageTests.test_three_aspect_ratios_and_original_integrity) ... ok
+test_bad_image_keeps_prices (test_workspace.PipelineTests.test_bad_image_keeps_prices) ... ok
+test_demo_seven_columns_and_three_images (test_workspace.PipelineTests.test_demo_seven_columns_and_three_images) ... ok
+test_html_escapes_untrusted_text (test_workspace.PipelineTests.test_html_escapes_untrusted_text) ... ok
+test_live_and_publishing_are_explicitly_unavailable (test_workspace.PipelineTests.test_live_and_publishing_are_explicitly_unavailable) ... ok
+test_lock_prevents_parallel_write_and_cleans_up (test_workspace.PipelineTests.test_lock_prevents_parallel_write_and_cleans_up) ... ok
+test_missing_source_keeps_row_and_holds (test_workspace.PipelineTests.test_missing_source_keeps_row_and_holds) ... ok
+test_ready_means_only_manual_review (test_workspace.PipelineTests.test_ready_means_only_manual_review) ... ok
+test_repeat_same_input_does_not_fake_price_timestamp (test_workspace.PipelineTests.test_repeat_same_input_does_not_fake_price_timestamp) ... ok
+test_stale_generated_image_removed_on_later_failure (test_workspace.PipelineTests.test_stale_generated_image_removed_on_later_failure) ... ok
+test_bounds (test_workspace.ValidationTests.test_bounds) ... ok
+test_config_safe_and_reinstallation_preserves_config (test_workspace.ValidationTests.test_config_safe_and_reinstallation_preserves_config) ... ok
+test_credit_needed_for_permission (test_workspace.ValidationTests.test_credit_needed_for_permission) ... ok
+test_links (test_workspace.ValidationTests.test_links) ... ok
+test_price_error_preserved (test_workspace.ValidationTests.test_price_error_preserved) ... ok
+test_single_price_only (test_workspace.ValidationTests.test_single_price_only) ... ok
+test_stale_future_and_missing_timestamps (test_workspace.ValidationTests.test_stale_future_and_missing_timestamps) ... ok
+test_true_boolean_and_condition_required (test_workspace.ValidationTests.test_true_boolean_and_condition_required) ... ok
+test_conditional_hint_blocks_even_if_declared_normal (test_snapshot_probe.TestPerOfferTerms.test_conditional_hint_blocks_even_if_declared_normal) ... ok
+test_duplicate_offer_terms_ambiguous (test_snapshot_probe.TestPerOfferTerms.test_duplicate_offer_terms_ambiguous) ... ok
+test_fresh_hours_parameter (test_snapshot_probe.TestPerOfferTerms.test_fresh_hours_parameter) ... ok
+test_meta_terms_without_scope_not_promoted (test_snapshot_probe.TestPerOfferTerms.test_meta_terms_without_scope_not_promoted) ... ok
+test_multiple_or_bad_shipping_rates (test_snapshot_probe.TestPerOfferTerms.test_multiple_or_bad_shipping_rates) ... ok
+test_offer_level_shipping_and_seller_kept (test_snapshot_probe.TestPerOfferTerms.test_offer_level_shipping_and_seller_kept) ... ok
+test_shipping_conflict_between_sources (test_snapshot_probe.TestPerOfferTerms.test_shipping_conflict_between_sources) ... ok
+test_boolean_shipping_rejected (test_snapshot_probe.TestProbe.test_boolean_shipping_rejected) ... ok
+test_demo_always_not_exported (test_snapshot_probe.TestProbe.test_demo_always_not_exported) ... ok
+test_graph (test_snapshot_probe.TestProbe.test_graph) ... ok
+test_host_check (test_snapshot_probe.TestProbe.test_host_check) ... ok
+test_html_escaped (test_snapshot_probe.TestProbe.test_html_escaped) ... ok
+test_invalid_jsonld (test_snapshot_probe.TestProbe.test_invalid_jsonld) ... ok
+test_krw_parse_strict (test_snapshot_probe.TestProbe.test_krw_parse_strict) ... ok
+test_large_input_fails (test_snapshot_probe.TestProbe.test_large_input_fails) ... ok
+test_offer_and_aggregate (test_snapshot_probe.TestProbe.test_offer_and_aggregate) ... ok
+test_permission_required (test_snapshot_probe.TestProbe.test_permission_required) ... ok
+test_plain_html_does_not_guess_prices (test_snapshot_probe.TestProbe.test_plain_html_does_not_guess_prices) ... ok
+test_review_row_generated (test_snapshot_probe.TestProbe.test_review_row_generated) ... ok
+test_saves_reports (test_snapshot_probe.TestProbe.test_saves_reports) ... ok
+test_stale_blocks (test_snapshot_probe.TestProbe.test_stale_blocks) ... ok
+test_timezone_required (test_snapshot_probe.TestProbe.test_timezone_required) ... ok
+test_unknown_payment_blocks (test_snapshot_probe.TestProbe.test_unknown_payment_blocks) ... ok
+test_unknown_shipping_blocks (test_snapshot_probe.TestProbe.test_unknown_shipping_blocks) ... ok
+test_wrong_model_blocks (test_snapshot_probe.TestProbe.test_wrong_model_blocks) ... ok
+test_wrong_variant_blocks (test_snapshot_probe.TestProbe.test_wrong_variant_blocks) ... ok
+
+----------------------------------------------------------------------
+Ran 96 tests in 4.967s
+
+OK

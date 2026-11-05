@@ -24,6 +24,15 @@ def inspect():
         add('Writable workspace','PASS',str(ROOT))
     except (OSError,ValueError,KeyError) as e:
         add('Config / write access','FAIL',str(e))
+    try:
+        from run_once import lock_info
+        lock=lock_info(ROOT)
+        add('Pipeline lock','PASS' if lock is None else 'WARN',
+            'No lock' if lock is None else f"Lock exists: {lock}. Delete 07_DATA/state/pipeline.lock only after confirming no run is active.")
+    except (ImportError,OSError,ValueError) as e:
+        add('Pipeline lock','WARN',str(e))
+    addon=ROOT/'11_ADDONS/DANAWA_SNAPSHOT_PROBE/probe/snapshot_probe.py'
+    add('Snapshot add-on','PASS' if addon.is_file() else 'WARN','Saved-HTML bridge (offline, no network)' if addon.is_file() else 'Missing; snapshot bridge unavailable')
     add('Danawa live collector','NOT_CONFIGURED','Approved import only; live permission and selector validation required')
     add('Naver shopping legacy API','RETIRED','Official retirement: 2026-07-31. No API key setup needed for this baseline.')
     add('Naver publication','DISABLED','Manual handoff only')

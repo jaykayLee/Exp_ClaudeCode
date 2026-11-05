@@ -1,0 +1,6 @@
+no-input EXIT=0
+[INFO] 처리할 입력이 없습니다. 07_DATA/inbox/products.json에 records를 넣거나 07_DATA/inbox/snapshot_job.json 작업 파일을 만드세요.
+  "overall": "DONE",
+      "review_gate": "DEMO_ONLY",
+snapshot-demo EXIT=0
+3
