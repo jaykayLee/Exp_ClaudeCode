@@ -1,36 +1,69 @@
 {
-  "stage": "HANDOFF_PREPARATION",
+  "stage": "P00",
   "date": "2026-11-05",
-  "os": "Linux-6.18.57-x86_64-with-glibc2.41",
-  "python": "3.13.5",
+  "os": "Linux-6.18.44-fc-v236-x86_64-with-glibc2.39",
+  "python": "3.13.18",
   "pillow": "12.3.0",
+  "dependency_install": {
+    "command": "python3 -m venv .venv && .venv/bin/pip install -r tools/dependencies.lock",
+    "result": "OK",
+    "packages": [
+      "Pillow==12.3.0"
+    ]
+  },
   "tests": [
+    {
+      "suite": "handoff_integrity",
+      "cwd": ".",
+      "command": "python3 tools/verify_handoff.py",
+      "exit_code": 0,
+      "result": "PASS",
+      "note": "Run on pristine copy before any change"
+    },
     {
       "suite": "workspace_v1_0",
       "cwd": "workspace/Naver_Blog_Automation",
-      "command": "python tools/qa_runner.py",
+      "command": ".venv/bin/python tools/qa_runner.py",
       "exit_code": 0,
       "executed": 31,
       "failures": 0,
       "errors": 0,
-      "log": "reference/verification/v1_0_tests.txt"
+      "skipped": 0,
+      "log": "00_SESSION/evidence/logs/v1_0_qa_runner.txt"
     },
     {
       "suite": "snapshot_v1_3",
       "cwd": "workspace/Naver_Blog_Automation/11_ADDONS/DANAWA_SNAPSHOT_PROBE",
-      "command": "python -m unittest discover -s tests -v",
+      "command": "../../.venv/bin/python -m unittest discover -s tests -v",
       "exit_code": 0,
       "executed": 19,
       "failures": 0,
       "errors": 0,
-      "log": "reference/verification/v1_3_tests.txt"
+      "log": "00_SESSION/evidence/logs/v1_3_unittest.txt"
+    },
+    {
+      "suite": "doctor",
+      "cwd": "workspace/Naver_Blog_Automation",
+      "command": ".venv/bin/python tools/doctor.py",
+      "exit_code": 0,
+      "log": "00_SESSION/evidence/logs/doctor.txt"
+    },
+    {
+      "suite": "p00_interface_probe",
+      "cwd": ".",
+      "command": "workspace/Naver_Blog_Automation/.venv/bin/python 00_SESSION/evidence/p00_interface_probe.py",
+      "exit_code": 0,
+      "checks_confirmed": 11,
+      "log": "00_SESSION/evidence/p00_interface_probe.txt",
+      "note": "Defect reproduction, not a pass of target behavior"
     }
   ],
   "not_run": [
-    "Windows BAT installation",
-    "Cross-module E2E",
+    "Windows BAT installation (install/start_panel/doctor/smoke/run_once .bat)",
+    "Cross-module E2E v1.0<->v1.3",
     "Real Danawa response parsing",
     "Naver Shopping live collection",
-    "Naver editor/publication"
+    "Naver editor/publication",
+    "Re-confirmation of Naver Shopping API retirement notice"
   ]
 }

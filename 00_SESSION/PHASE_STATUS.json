@@ -4,15 +4,23 @@
   "handoff_version": "1.0",
   "prepared_date": "2026-11-05",
   "current_phase": "P00",
-  "status": "NOT_STARTED",
+  "status": "PASS",
   "phases": {
     "P00": {
-      "implementation": "NOT_STARTED",
-      "verification": "NOT_RUN"
+      "implementation": "PASS",
+      "verification": "PASS",
+      "verification_scope": "Linux cloud container only: integrity check, v1.0 31 tests, v1.3 19 tests, doctor, read-only interface probe (11 checks)",
+      "app_code_changed": false,
+      "outputs": [
+        "docs/P00_INTERFACE_MAP.md",
+        "00_SESSION/evidence/p00_interface_probe.json",
+        "00_SESSION/evidence/logs/"
+      ]
     },
     "P01": {
       "implementation": "NOT_STARTED",
-      "verification": "NOT_RUN"
+      "verification": "NOT_RUN",
+      "scope_fixed_in": "docs/P00_INTERFACE_MAP.md §3"
     },
     "P02": {
       "implementation": "NOT_STARTED",
@@ -49,11 +57,33 @@
   "capabilities": {
     "live_danawa": "NOT_IMPLEMENTED",
     "live_naver_shopping": "NOT_IMPLEMENTED",
-    "windows_runtime": "NOT_RUN",
+    "windows_runtime": "NEEDS_WINDOWS_CHECK",
     "combined_e2e": "NOT_RUN",
     "naver_publishing": "NOT_IMPLEMENTED"
   },
-  "next_action": "Run P00 against actual provided files. Do not assume past weekly steps were installed.",
+  "next_action": "P01 only: per-offer shipping/payment fix in v1.3 + snapshot_adapter + run_snapshot_to_panel + DEMO E2E harness, per docs/P00_INTERFACE_MAP.md §3. Do not start automatically.",
   "auto_publish": false,
-  "public_deployment_approved": false
+  "public_deployment_approved": false,
+  "last_session_date": "2026-11-05",
+  "p00_checks": {
+    "v1_0_unit_tests": {
+      "executed": 31,
+      "failures": 0,
+      "errors": 0
+    },
+    "v1_3_unit_tests": {
+      "executed": 19,
+      "failures": 0,
+      "errors": 0
+    },
+    "runtime": "Linux/Python 3.13.18/Pillow 12.3.0 (venv)",
+    "scope": "Independent suites only; not end-to-end, not Windows, not live"
+  },
+  "blockers": [
+    "I01 BLOCKED_INPUT v1.1/v1.2 originals missing",
+    "I04 BLOCKED_EXTERNAL Danawa allowed source/terms",
+    "I05 BLOCKED_EXTERNAL Naver Shopping replacement path",
+    "I06 NEEDS_WINDOWS_CHECK BAT install/schedule"
+  ],
+  "next_possible_phase": "P01"
 }

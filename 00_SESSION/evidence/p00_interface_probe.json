@@ -1,0 +1,228 @@
+{
+  "probe": "P00_interface_probe",
+  "now_fixed": "2026-11-05T12:00:00+09:00",
+  "checks": {
+    "seven_headers_exact": {
+      "result": "CONFIRMED",
+      "detail": [
+        "No.",
+        "상품명",
+        "이미지",
+        "다나와 최저가",
+        "사이트 주소",
+        "네이버 최저가",
+        "사이트 주소"
+      ]
+    },
+    "I02_meta_shipping_applied_to_all_offers": {
+      "result": "CONFIRMED",
+      "detail": {
+        "eligible_rows": [
+          [
+            "https://example.com/A",
+            119000,
+            0,
+            "normal"
+          ],
+          [
+            "https://example.com/B",
+            117000,
+            0,
+            "normal"
+          ],
+          [
+            "https://example.com/C",
+            80000,
+            0,
+            "normal"
+          ]
+        ],
+        "naive_lowest_total_url": "https://example.com/C",
+        "expected_after_fix": "A (119000+0) only; B ranked after A (122000); C excluded (card-only)"
+      }
+    },
+    "I02_offer_level_seller_shipping_dropped": {
+      "result": "CONFIRMED",
+      "detail": {
+        "offer_candidates_keys": [
+          "candidate_model",
+          "candidate_variant",
+          "condition",
+          "currency",
+          "image_url",
+          "name",
+          "offer_index",
+          "price",
+          "url"
+        ]
+      }
+    },
+    "I03_schema_mismatch": {
+      "result": "CONFIRMED",
+      "detail": {
+        "shared_keys": [
+          "image_credit",
+          "image_path",
+          "image_rights",
+          "model",
+          "query",
+          "variant"
+        ],
+        "v1_3_only": [
+          "base_price",
+          "candidate_model",
+          "candidate_variant",
+          "observed_at",
+          "payment_condition",
+          "product_condition",
+          "shipping_fee",
+          "source_page",
+          "url"
+        ],
+        "v1_0_required_for_danawa_but_absent_in_v1_3": [
+          "danawa_condition",
+          "danawa_match_checked",
+          "danawa_observed_at",
+          "danawa_price",
+          "danawa_terms_checked",
+          "danawa_url"
+        ]
+      }
+    },
+    "I03_direct_feed_loses_price": {
+      "result": "CONFIRMED",
+      "detail": {
+        "normalized_from_v1_3_row": {
+          "query": "합성 상품 P00",
+          "model": "SYN-P00",
+          "variant": "black",
+          "image_path": "",
+          "image_url": "",
+          "image_rights": "unknown",
+          "image_credit": "",
+          "image_source_page": "",
+          "input_issues": [],
+          "danawa_price": null,
+          "danawa_url": null,
+          "danawa_observed_at": "",
+          "danawa_match_checked": false,
+          "danawa_terms_checked": false,
+          "danawa_condition": "배송비·쿠폰 조건 미확인",
+          "naver_price": null,
+          "naver_url": null,
+          "naver_observed_at": "",
+          "naver_match_checked": false,
+          "naver_terms_checked": false,
+          "naver_condition": "배송비·쿠폰 조건 미확인"
+        }
+      }
+    },
+    "evidence_fields_dropped_by_normalize_records": {
+      "result": "CONFIRMED",
+      "detail": {
+        "dropped": [
+          "candidate_id",
+          "evidence_kind",
+          "shipping_fee",
+          "snapshot_sha256",
+          "source_kind"
+        ]
+      }
+    },
+    "v1_3_demo_csv_empty": {
+      "result": "CONFIRMED",
+      "detail": {
+        "status": "DEMO_ONLY",
+        "review_csv_count": 0
+      }
+    },
+    "v1_3_run_demo_overwrites_observed_at": {
+      "result": "CONFIRMED",
+      "detail": "run(demo=True) replaces observed_at with current time; P01 harness must call inspect_snapshot(now=...) instead"
+    },
+    "freshness_threshold_split": {
+      "result": "CONFIRMED",
+      "detail": {
+        "v1_3_FRESH_HOURS_hardcoded": 24,
+        "v1_0_config_max_price_age_hours": 24,
+        "v1_0_allowed_range": "1..168"
+      }
+    },
+    "v1_0_demo_pipeline_isolated": {
+      "result": "CONFIRMED",
+      "detail": {
+        "gate": "DEMO_ONLY",
+        "rows": 3,
+        "files": [
+          "NAVER_HANDOFF.md",
+          "images",
+          "normalized_products.json",
+          "product_table.html",
+          "run_report.json"
+        ],
+        "network_price_collection": false,
+        "published": false
+      }
+    },
+    "v1_0_empty_inbox_rejected": {
+      "result": "CONFIRMED",
+      "detail": {
+        "message": "상품 데이터 목록 1~30개가 필요합니다.",
+        "note": "07_DATA/inbox/products.json ships with records: [] so run_once.bat (non-demo) exits 1 until input exists"
+      }
+    }
+  },
+  "signatures": {
+    "probe.snapshot_probe.inspect_snapshot": "(html_bytes: 'bytes', meta: 'dict', *, now: 'datetime | None' = None, demo: 'bool' = False) -> 'dict'",
+    "probe.snapshot_probe.offer_candidates": "(products: 'list[dict]') -> 'tuple[list[dict], list[str]]'",
+    "probe.snapshot_probe.save_report": "(report: 'dict', output_dir: 'Path') -> 'dict'",
+    "probe.snapshot_probe.run": "(html_file: 'Path', meta_file: 'Path', output_dir: 'Path', *, demo=False) -> 'dict'",
+    "probe.snapshot_probe.krw_int": "(value: 'object') -> 'int | None'",
+    "probe.snapshot_probe.safe_https_url": "(url: 'object', *, danawa_only: 'bool' = False) -> 'bool'",
+    "nbcore.validation.normalize_records": "(records: 'object') -> 'list[dict]'",
+    "nbcore.validation.review_issues": "(record: 'dict', max_age_hours: 'int' = 24, now: 'datetime | None' = None) -> 'list[str]'",
+    "nbcore.validation.normalize_price": "(value: 'object') -> 'int | None'",
+    "nbcore.validation.public_link": "(value: 'object') -> 'str | None'",
+    "nbcore.validation.parse_time": "(value: 'object') -> 'datetime | None'",
+    "nbcore.pipeline.run_pipeline": "(root: 'Path', records: 'object', mode: 'str' = 'MANUAL_IMPORT') -> 'dict'",
+    "exporters.table_exporter.render_product_table": "(products: 'Iterable[object]', image_base_dir: 'str | Path | None' = None, title: 'str' = '상품 가격 비교표') -> 'str'",
+    "exporters.table_exporter.export_product_table": "(products: 'Iterable[object]', output_file: 'str | Path' = 'output/product_table.html', image_base_dir: 'str | Path | None' = None, title: 'str' = '상품 가격 비교표') -> 'Path'"
+  },
+  "v1_3_csv_columns": [
+    "query",
+    "model",
+    "variant",
+    "candidate_model",
+    "candidate_variant",
+    "base_price",
+    "shipping_fee",
+    "product_condition",
+    "payment_condition",
+    "url",
+    "observed_at",
+    "source_page",
+    "image_path",
+    "image_rights",
+    "image_credit"
+  ],
+  "v1_0_table_headers": [
+    "No.",
+    "상품명",
+    "이미지",
+    "다나와 최저가",
+    "사이트 주소",
+    "네이버 최저가",
+    "사이트 주소"
+  ],
+  "v1_0_PriceCandidate_fields": [
+    "provider",
+    "product_id",
+    "model",
+    "variant",
+    "price",
+    "url",
+    "observed_at",
+    "price_basis",
+    "image_url"
+  ]
+}

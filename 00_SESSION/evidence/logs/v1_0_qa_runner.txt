@@ -1,0 +1,47 @@
+test_demo_api_and_output (test_workspace.HTTPTests.test_demo_api_and_output) ... [HTTP] POST /api/run 200
+[HTTP] GET /output/20261105_demo_27afc152c3b8/product_table.html 200
+ok
+test_host_and_origin_guard (test_workspace.HTTPTests.test_host_and_origin_guard) ... [HTTP] GET /api/status 403
+[HTTP] GET /api/status 403
+ok
+test_local_image_upload_and_brief_save (test_workspace.HTTPTests.test_local_image_upload_and_brief_save) ... [HTTP] POST /api/image 200
+[HTTP] POST /api/brief 200
+ok
+test_mutation_requires_token (test_workspace.HTTPTests.test_mutation_requires_token) ... [HTTP] POST /api/run 403
+ok
+test_status_and_missing_secret_routes (test_workspace.HTTPTests.test_status_and_missing_secret_routes) ... [HTTP] GET /api/status 200
+[HTTP] GET /01_CONFIG/settings.local.json 404
+[HTTP] GET /output/../../01_CONFIG/settings.local.json 404
+ok
+test_bad_image_and_rights (test_workspace.ImageTests.test_bad_image_and_rights) ... ok
+test_download_default_off_and_host_allowlist (test_workspace.ImageTests.test_download_default_off_and_host_allowlist) ... ok
+test_http_429_stops_without_retry (test_workspace.ImageTests.test_http_429_stops_without_retry) ... ok
+test_mock_download_stores_valid_image (test_workspace.ImageTests.test_mock_download_stores_valid_image) ... ok
+test_original_import_hash_and_evidence (test_workspace.ImageTests.test_original_import_hash_and_evidence) ... ok
+test_path_traversal_and_dimensions (test_workspace.ImageTests.test_path_traversal_and_dimensions) ... ok
+test_private_and_mixed_dns_are_rejected (test_workspace.ImageTests.test_private_and_mixed_dns_are_rejected) ... ok
+test_public_ip_is_pinned (test_workspace.ImageTests.test_public_ip_is_pinned) ... ok
+test_three_aspect_ratios_and_original_integrity (test_workspace.ImageTests.test_three_aspect_ratios_and_original_integrity) ... ok
+test_bad_image_keeps_prices (test_workspace.PipelineTests.test_bad_image_keeps_prices) ... ok
+test_demo_seven_columns_and_three_images (test_workspace.PipelineTests.test_demo_seven_columns_and_three_images) ... ok
+test_html_escapes_untrusted_text (test_workspace.PipelineTests.test_html_escapes_untrusted_text) ... ok
+test_live_and_publishing_are_explicitly_unavailable (test_workspace.PipelineTests.test_live_and_publishing_are_explicitly_unavailable) ... ok
+test_lock_prevents_parallel_write_and_cleans_up (test_workspace.PipelineTests.test_lock_prevents_parallel_write_and_cleans_up) ... ok
+test_missing_source_keeps_row_and_holds (test_workspace.PipelineTests.test_missing_source_keeps_row_and_holds) ... ok
+test_ready_means_only_manual_review (test_workspace.PipelineTests.test_ready_means_only_manual_review) ... ok
+test_repeat_same_input_does_not_fake_price_timestamp (test_workspace.PipelineTests.test_repeat_same_input_does_not_fake_price_timestamp) ... ok
+test_stale_generated_image_removed_on_later_failure (test_workspace.PipelineTests.test_stale_generated_image_removed_on_later_failure) ... ok
+test_bounds (test_workspace.ValidationTests.test_bounds) ... ok
+test_config_safe_and_reinstallation_preserves_config (test_workspace.ValidationTests.test_config_safe_and_reinstallation_preserves_config) ... ok
+test_credit_needed_for_permission (test_workspace.ValidationTests.test_credit_needed_for_permission) ... ok
+test_links (test_workspace.ValidationTests.test_links) ... ok
+test_price_error_preserved (test_workspace.ValidationTests.test_price_error_preserved) ... ok
+test_single_price_only (test_workspace.ValidationTests.test_single_price_only) ... ok
+test_stale_future_and_missing_timestamps (test_workspace.ValidationTests.test_stale_future_and_missing_timestamps) ... ok
+test_true_boolean_and_condition_required (test_workspace.ValidationTests.test_true_boolean_and_condition_required) ... ok
+
+----------------------------------------------------------------------
+Ran 31 tests in 2.863s
+
+OK
+v1.0 EXIT=0

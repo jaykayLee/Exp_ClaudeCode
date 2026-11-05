@@ -1,0 +1,25 @@
+test_boolean_shipping_rejected (test_snapshot_probe.TestProbe.test_boolean_shipping_rejected) ... ok
+test_demo_always_not_exported (test_snapshot_probe.TestProbe.test_demo_always_not_exported) ... ok
+test_graph (test_snapshot_probe.TestProbe.test_graph) ... ok
+test_host_check (test_snapshot_probe.TestProbe.test_host_check) ... ok
+test_html_escaped (test_snapshot_probe.TestProbe.test_html_escaped) ... ok
+test_invalid_jsonld (test_snapshot_probe.TestProbe.test_invalid_jsonld) ... ok
+test_krw_parse_strict (test_snapshot_probe.TestProbe.test_krw_parse_strict) ... ok
+test_large_input_fails (test_snapshot_probe.TestProbe.test_large_input_fails) ... ok
+test_offer_and_aggregate (test_snapshot_probe.TestProbe.test_offer_and_aggregate) ... ok
+test_permission_required (test_snapshot_probe.TestProbe.test_permission_required) ... ok
+test_plain_html_does_not_guess_prices (test_snapshot_probe.TestProbe.test_plain_html_does_not_guess_prices) ... ok
+test_review_row_generated (test_snapshot_probe.TestProbe.test_review_row_generated) ... ok
+test_saves_reports (test_snapshot_probe.TestProbe.test_saves_reports) ... ok
+test_stale_blocks (test_snapshot_probe.TestProbe.test_stale_blocks) ... ok
+test_timezone_required (test_snapshot_probe.TestProbe.test_timezone_required) ... ok
+test_unknown_payment_blocks (test_snapshot_probe.TestProbe.test_unknown_payment_blocks) ... ok
+test_unknown_shipping_blocks (test_snapshot_probe.TestProbe.test_unknown_shipping_blocks) ... ok
+test_wrong_model_blocks (test_snapshot_probe.TestProbe.test_wrong_model_blocks) ... ok
+test_wrong_variant_blocks (test_snapshot_probe.TestProbe.test_wrong_variant_blocks) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 0.009s
+
+OK
+v1.3 EXIT=0
