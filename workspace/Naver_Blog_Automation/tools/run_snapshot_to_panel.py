@@ -195,6 +195,61 @@ def run_snapshot_to_panel(input_paths: list[Path], root: Path = ROOT, *, now: da
                           "danawa_url": e["panel_record"]["danawa_url"]} for i, e in enumerate(entries, 1)]}
 
 
+REASON_TEXT = {
+    "SHIPPING_UNVERIFIED": "배송비 미확인", "PAYMENT_NOT_CONFIRMED_NORMAL": "일반 결제 미확인",
+    "PAYMENT_CONDITIONAL_HINT": "카드·렌탈·쿠폰 등 조건부 가격 문구", "TOTAL_NOT_COMPUTABLE": "총액 계산 불가",
+    "SHIPPING_EVIDENCE_CONFLICT": "배송비 근거 충돌", "OFFER_TERMS_AMBIGUOUS": "판매자 조건 기록 중복",
+    "MODEL_NOT_VERIFIED_EQUAL": "모델 불일치", "VARIANT_NOT_VERIFIED_EQUAL": "옵션 불일치",
+    "CONDITION_UNKNOWN_OR_NOT_NEW": "신품 미확인", "CURRENCY_NOT_KRW_OR_MISSING": "원화 아님",
+    "OFFER_URL_INVALID": "판매처 URL 오류", "PRICE_INVALID": "가격 형식 오류",
+    "OBSERVED_AT_MISSING_OR_NO_TIMEZONE": "확인시각 없음/타임존 없음", "OBSERVED_AT_STALE": "확인시각 경과",
+    "OBSERVED_AT_FUTURE": "미래 확인시각", "OBSERVED_AT_OUTSIDE_24H": "확인시각 허용 범위 밖",
+    "SOURCE_PERMISSION_UNCONFIRMED": "출처 이용 확인 안 됨", "SOURCE_URL_INVALID_OR_NOT_DANAWA": "다나와 출처 URL 아님",
+    "NO_JSONLD_PRODUCT_FOUND": "구조화된 상품 정보 없음", "NO_STRUCTURED_OFFERS": "구조화된 가격 없음",
+    "META_TERMS_NOT_APPLIED_SCOPE_UNDECLARED": "공통 배송비·결제조건 적용 범위 미선언",
+}
+STATUS_TEXT = {"SELECTED": "선택됨", "NO_ELIGIBLE_CANDIDATE": "보류 · 적합 후보 없음",
+               "NO_CANDIDATE": "보류 · 후보 없음", "SNAPSHOT_FAILED": "실패 · 저장본 처리 오류"}
+
+
+def explain_reason(code: str) -> str:
+    key = code.split(":", 1)[0]
+    return REASON_TEXT.get(key, code)
+
+
+def status_rows(sidecar: dict) -> list[dict]:
+    """Per-product collection status for the panel (separate from the 7-column table)."""
+    rows = []
+    for p in sidecar.get("products", []):
+        chosen_id = (p.get("selection") or {}).get("selected_candidate_id")
+        chosen = next((c for c in p.get("candidates", []) if c.get("candidate_id") == chosen_id), None)
+        if chosen:
+            detail = (f"총액 {chosen['total_price']:,}원 = 상품가 {chosen['base_price']:,}원 + 배송비 "
+                      f"{chosen['shipping_fee']:,}원 · {chosen.get('seller_name') or '판매자 미기재'}")
+            excluded = sum(1 for c in p.get("candidates", []) if not c.get("eligible"))
+            if excluded:
+                detail += f" · 제외 {excluded}건"
+        elif p.get("error"):
+            detail = p["error"]
+        else:
+            codes = sorted({r for e in (p.get("selection") or {}).get("excluded", []) for r in e.get("reasons", [])})
+            detail = ", ".join(dict.fromkeys(explain_reason(c) for c in codes if c != "DEMO_ONLY")) or "후보 없음"
+        rows.append({"row": p.get("row"), "query": p.get("query"), "danawa_status": p.get("status"),
+                     "danawa_status_text": STATUS_TEXT.get(p.get("status"), p.get("status")),
+                     "detail": detail[:400], "naver_status": "NOT_CONNECTED",
+                     "naver_status_text": "미연결 · 허용 경로 확정 전 (P03)"})
+    return rows
+
+
+def run_for_panel(job: Path, root: Path = ROOT) -> dict:
+    """Server helper: run one job and return what the panel needs (status + reviewable records)."""
+    result = run_snapshot_to_panel([job], root)
+    sidecar = json.loads((root / result["sidecar"]).read_text(encoding="utf-8"))
+    report = json.loads((root / result["output_relative"] / "run_report.json").read_text(encoding="utf-8"))
+    return {**result, "pipeline": report, "status_rows": status_rows(sidecar),
+            "panel_records": [p["panel_record"] for p in sidecar["products"]]}
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Saved-snapshot to 7-column review table. Never posts.")
     parser.add_argument("--job", action="append", type=Path, default=[], help="snapshot job JSON (repeatable)")

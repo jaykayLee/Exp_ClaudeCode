@@ -1,0 +1,78 @@
+{
+  "passed": 14,
+  "total": 14,
+  "checks": [
+    {
+      "name": "connected_real_http",
+      "passed": true,
+      "detail": "http://127.0.0.1:42515/"
+    },
+    {
+      "name": "status_rows_three",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "row1_selected_total",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "row2_hold_reason_korean",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "row3_no_structured",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "naver_not_connected_shown",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "badge_demo",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "loaded_into_review_list",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mode_badge_demo",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "human_check_unticked",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "generated_table_seven_headers",
+      "passed": true,
+      "detail": "['No.', '상품명', '이미지', '다나와 최저가', '사이트 주소', '네이버 최저가', '사이트 주소']"
+    },
+    {
+      "name": "mobile_no_page_horizontal_overflow",
+      "passed": true,
+      "detail": "overflow=0px"
+    },
+    {
+      "name": "mobile_status_table_scrolls_inside_card",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "no_javascript_errors",
+      "passed": true,
+      "detail": ""
+    }
+  ],
+  "path_with_space_and_korean": true,
+  "windows_browser_tested": false
+}

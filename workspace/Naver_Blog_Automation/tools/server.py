@@ -105,6 +105,19 @@ class Handler(BaseHTTPRequestHandler):
                 if payload.get('persist_input') is True and mode=='MANUAL_IMPORT':
                     atomic_json(root/'07_DATA/inbox/products.json',{"records":records})
                 self.send_json(200,result)
+            elif path=='/api/snapshot':
+                # P04: saved-snapshot bridge. Local files only; no network, no publication.
+                import run_snapshot_to_panel as bridge
+                if payload.get('demo') is True:
+                    job=root/bridge.DEMO_JOB
+                else:
+                    rel=payload.get('job')
+                    if not isinstance(rel,str) or not rel.endswith('.json') or len(rel)>300:
+                        raise ValueError('JOB_PATH_REQUIRED: 07_DATA/inbox/....json')
+                    job=(root/rel).resolve()
+                    if not job.is_relative_to((root/'07_DATA').resolve()):
+                        raise ValueError('JOB_MUST_BE_INSIDE_07_DATA')
+                self.send_json(200,bridge.run_for_panel(job,root))
             elif path=='/api/image':
                 encoded=payload.get('data','')
                 if not isinstance(encoded,str):raise ValueError('BASE64_REQUIRED')

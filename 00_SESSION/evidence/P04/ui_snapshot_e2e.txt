@@ -1,0 +1,15 @@
+PASS connected_real_http http://127.0.0.1:42515/
+PASS status_rows_three 
+PASS row1_selected_total 
+PASS row2_hold_reason_korean 
+PASS row3_no_structured 
+PASS naver_not_connected_shown 
+PASS badge_demo 
+PASS loaded_into_review_list 
+PASS mode_badge_demo 
+PASS human_check_unticked 
+PASS generated_table_seven_headers ['No.', '상품명', '이미지', '다나와 최저가', '사이트 주소', '네이버 최저가', '사이트 주소']
+PASS mobile_no_page_horizontal_overflow overflow=0px
+PASS mobile_status_table_scrolls_inside_card 
+PASS no_javascript_errors 
+{"passed": 14, "total": 14}
