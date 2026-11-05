@@ -18,7 +18,7 @@ from decimal import Decimal, InvalidOperation
 from pathlib import Path
 from urllib.parse import urlparse
 
-VERSION = "1.3.0"
+VERSION = "1.3.1"  # 1.3.1 (P01): per-offer shipping/payment evidence; meta terms need explicit scope
 MAX_HTML_BYTES = 5 * 1024 * 1024
 MAX_JSONLD_BYTES = 1024 * 1024
 MAX_ITEMS = 100
@@ -153,6 +153,66 @@ def safe_label(value: object) -> str:
     return ""
 
 
+def fee_int(value: object) -> int | None:
+    """Shipping fee: explicit 0 means confirmed free shipping; bool/blank/ranges are None."""
+    if isinstance(value, bool) or value is None:
+        return None
+    if isinstance(value, (int, float, Decimal)) and value == 0:
+        return 0
+    if isinstance(value, str) and re.fullmatch(r"\s*0+(?:\.0+)?\s*", value):
+        return 0
+    return krw_int(value)
+
+
+def offer_shipping(offer: dict) -> tuple[int | None, bool, str]:
+    """Read one offer's own schema.org shippingDetails. Returns (fee, declared, problem)."""
+    if "shippingDetails" not in offer:
+        return None, False, ""
+    details = offer.get("shippingDetails")
+    items = details if isinstance(details, list) else [details]
+    if len(items) != 1 or not isinstance(items[0], dict):
+        return None, True, "SHIPPING_MULTIPLE_OR_INVALID_RATES"
+    rate = items[0].get("shippingRate")
+    if not isinstance(rate, dict):
+        return None, True, "SHIPPING_RATE_MISSING"
+    if rate.get("currency") not in (None, "KRW"):
+        return None, True, "SHIPPING_CURRENCY_NOT_KRW"
+    fee = fee_int(rate.get("value"))
+    return fee, True, "" if fee is not None else "SHIPPING_RATE_INVALID"
+
+
+# Conditional-price wording that must never be treated as a normal purchase price.
+PAYMENT_HINTS = ("카드", "렌탈", "약정", "쿠폰", "할부", "월 ", "멤버십", "회원가", "card", "rental", "coupon")
+
+
+def payment_hints(offer: dict) -> list[str]:
+    texts = [offer.get("name"), offer.get("description")]
+    spec = offer.get("priceSpecification")
+    if isinstance(spec, dict):
+        texts += [spec.get("name"), spec.get("description")]
+    joined = " ".join(t for t in texts if isinstance(t, str)).lower()
+    return [h.strip() for h in PAYMENT_HINTS if h.lower() in joined]
+
+
+def offer_terms_map(meta: dict) -> tuple[dict, set, list[str]]:
+    """User-recorded per-offer terms keyed by exact offer URL."""
+    terms = meta.get("offer_terms") or []
+    warnings: list[str] = []
+    if not isinstance(terms, list):
+        return {}, set(), ["OFFER_TERMS_NOT_LIST"]
+    found: dict = {}
+    duplicate: set = set()
+    for entry in terms:
+        if not isinstance(entry, dict) or not isinstance(entry.get("url"), str):
+            warnings.append("OFFER_TERMS_ENTRY_INVALID")
+            continue
+        url = entry["url"].strip()
+        if url in found:
+            duplicate.add(url)
+        found[url] = entry
+    return found, duplicate, warnings
+
+
 def offer_candidates(products: list[dict]) -> tuple[list[dict], list[str]]:
     output: list[dict] = []
     warnings: list[str] = []
@@ -180,7 +240,16 @@ def offer_candidates(products: list[dict]) -> tuple[list[dict], list[str]]:
                 currency = currency or spec.get("priceCurrency")
             cond = safe_label(offer.get("itemCondition"))
             item_condition = "new" if cond.endswith("NewCondition") else "unknown"
+            seller = offer.get("seller")
+            seller_id = safe_label(seller.get("@id") or seller.get("identifier")) if isinstance(seller, dict) else ""
+            ship_fee, ship_declared, ship_problem = offer_shipping(offer)
             output.append({
+                "seller_name": safe_label(seller),
+                "seller_id": seller_id,
+                "offer_shipping_fee": ship_fee,
+                "offer_shipping_declared": ship_declared,
+                "offer_shipping_problem": ship_problem,
+                "payment_hints": payment_hints(offer),
                 "name": prod_name,
                 "candidate_model": model,
                 "candidate_variant": variant,
@@ -197,10 +266,52 @@ def offer_candidates(products: list[dict]) -> tuple[list[dict], list[str]]:
     return output, warnings
 
 
+def resolve_offer_terms(c: dict, terms: dict | None, terms_duplicate: bool, scope_all: bool,
+                        meta_shipping: int | None, meta_payment: str) -> dict:
+    """Per-offer shipping/payment. Offer evidence wins; meta values only with explicit all-offer scope."""
+    issues: list[str] = []
+    if terms_duplicate:
+        issues.append("OFFER_TERMS_AMBIGUOUS")
+        terms = None
+    declared: list[tuple[str, int | None]] = []
+    if terms is not None and "shipping_fee" in terms:
+        declared.append(("meta_offer_terms", fee_int(terms.get("shipping_fee"))))
+    if c["offer_shipping_declared"]:
+        declared.append(("offer_jsonld", c["offer_shipping_fee"]))
+        if c["offer_shipping_problem"]:
+            issues.append(c["offer_shipping_problem"])
+    if declared:
+        values = {v for _, v in declared}
+        source = "+".join(s for s, _ in declared)
+        if None in values:
+            shipping = None
+        elif len(values) > 1:
+            shipping = None
+            issues.append("SHIPPING_EVIDENCE_CONFLICT")
+        else:
+            shipping = values.pop()
+    elif scope_all:
+        shipping, source = meta_shipping, "meta_all_offers"
+    else:
+        shipping, source = None, "none"
+    if terms is not None and "payment_condition" in terms:
+        payment, pay_source = str(terms.get("payment_condition") or "unknown")[:64], "meta_offer_terms"
+    elif scope_all:
+        payment, pay_source = meta_payment, "meta_all_offers"
+    else:
+        payment, pay_source = "unknown", "none"
+    if c["payment_hints"]:
+        issues.append("PAYMENT_CONDITIONAL_HINT")
+    return {"shipping_fee": shipping, "shipping_source": source, "payment_condition": payment,
+            "payment_source": pay_source, "issues": issues}
+
+
 def inspect_snapshot(html_bytes: bytes, meta: dict, *, now: datetime | None = None,
-                     demo: bool = False) -> dict:
+                     demo: bool = False, fresh_hours: int = FRESH_HOURS) -> dict:
     if len(html_bytes) > MAX_HTML_BYTES:
         raise ValueError("HTML_TOO_LARGE")
+    if type(fresh_hours) is not int or not 1 <= fresh_hours <= 168:
+        raise ValueError("FRESH_HOURS_INVALID")
     if now is None:
         now = datetime.now(timezone.utc)
     html_text = html_bytes.decode("utf-8-sig", errors="replace")
@@ -214,13 +325,21 @@ def inspect_snapshot(html_bytes: bytes, meta: dict, *, now: datetime | None = No
     target_model = safe_label(target.get("model"))
     target_variant = safe_label(target.get("variant"))
     approved = meta.get("usage_permission") == "confirmed"
-    payment_condition = str(meta.get("payment_condition", "unknown"))
-    shipping_value = meta.get("shipping_fee")
-    shipping = (0 if not isinstance(shipping_value, bool) and shipping_value == 0
-                else krw_int(shipping_value))
+    meta_payment = str(meta.get("payment_condition", "unknown"))
+    meta_shipping = fee_int(meta.get("shipping_fee"))
+    # v1.3.1: top-level meta terms are NOT facts about every seller unless explicitly scoped.
+    scope_all = meta.get("offer_terms_scope") == "all_offers"
+    if not scope_all and (meta.get("shipping_fee") is not None or meta_payment not in ("", "unknown")):
+        warnings.append("META_TERMS_NOT_APPLIED_SCOPE_UNDECLARED")
+    terms_by_url, terms_dup, terms_warnings = offer_terms_map(meta)
+    warnings.extend(terms_warnings)
     report_candidates = []
     export_rows = []
     for c in candidates:
+        resolved = resolve_offer_terms(c, terms_by_url.get(c["url"]), c["url"] in terms_dup,
+                                       scope_all, meta_shipping, meta_payment)
+        shipping = resolved["shipping_fee"]
+        payment_condition = resolved["payment_condition"]
         issues = []
         if demo:
             issues.append("DEMO_ONLY")
@@ -230,7 +349,7 @@ def inspect_snapshot(html_bytes: bytes, meta: dict, *, now: datetime | None = No
             issues.append("SOURCE_URL_INVALID_OR_NOT_DANAWA")
         if capture_dt is None:
             issues.append("OBSERVED_AT_MISSING_OR_NO_TIMEZONE")
-        elif now - capture_dt > timedelta(hours=FRESH_HOURS) or capture_dt - now > timedelta(minutes=5):
+        elif now - capture_dt > timedelta(hours=fresh_hours) or capture_dt - now > timedelta(minutes=5):
             issues.append("OBSERVED_AT_OUTSIDE_24H")
         if c["price"] is None:
             issues.append("PRICE_INVALID")
@@ -248,6 +367,7 @@ def inspect_snapshot(html_bytes: bytes, meta: dict, *, now: datetime | None = No
             issues.append("SHIPPING_UNVERIFIED")
         if payment_condition != "normal":
             issues.append("PAYMENT_NOT_CONFIRMED_NORMAL")
+        issues.extend(x for x in resolved["issues"] if x not in issues)
         row = {
             "query": safe_label(target.get("query")),
             "model": target_model,
@@ -268,7 +388,15 @@ def inspect_snapshot(html_bytes: bytes, meta: dict, *, now: datetime | None = No
         report_candidates.append({"product_name": c["name"], "price": c["price"],
                                   "url": c["url"], "model": c["candidate_model"],
                                   "variant": c["candidate_variant"], "issues": issues,
-                                  "eligible_for_review_csv": not issues})
+                                  "eligible_for_review_csv": not issues,
+                                  # v1.3.1 additive per-offer evidence (each value belongs to THIS offer)
+                                  "offer_index": c["offer_index"], "seller_name": c["seller_name"],
+                                  "seller_id": c["seller_id"], "currency": c["currency"],
+                                  "product_condition": c["condition"], "shipping_fee": shipping,
+                                  "shipping_source": resolved["shipping_source"],
+                                  "payment_condition": payment_condition,
+                                  "payment_source": resolved["payment_source"],
+                                  "payment_hints": c["payment_hints"]})
         if not issues:
             export_rows.append(row)
     status = ("DEMO_ONLY" if demo else "REVIEW_CANDIDATES_AVAILABLE" if export_rows
