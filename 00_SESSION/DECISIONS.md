@@ -30,3 +30,5 @@
 2026-11-05 (infra) — 저장소 바이트 보존을 위해 `.gitattributes`를 `* -text`로 한다. CI는 GitHub Actions(linux + windows 실제 BAT 실행)로 하고 비밀값은 쓰지 않는다.
 2026-11-05 (infra) — 세션 시작 훅(.claude/settings.json) 등록은 자동 모드 보안 규칙으로 거부되어 하지 않았다. `scripts/cloud_session_setup.sh`를 수동 실행한다(사용자가 원하면 직접 훅으로 등록).
 2026-11-05 (infra) — 원격 저장소는 이 세션의 GitHub 토큰이 무효라 생성하지 못했다. 전체 이력은 `git bundle`로 전달한다.
+2026-11-05 (P07) — Windows 검증은 GitHub Actions windows-latest의 실제 BAT 실행을 1차 증거로 쓰고, 사용자 PC 결과와 별도 필드로 기록한다. CI는 작업 스케줄러 등록을 하지 않는다.
+2026-11-05 (P07) — 매니페스트는 각 Phase 마지막 커밋 직전에 `tools/write_manifest.py`로 재생성한다.

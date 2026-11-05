@@ -7,7 +7,7 @@
 | I03 | P0 | RESOLVED (P01) | v1.3 → v1.0 입력 변환. |
 | I04 | P0 | BLOCKED_EXTERNAL | 다나와 허용 경로·실제 저장본 없음. 사용자가 저장한 상품 페이지 HTML 1개가 있으면 오프라인 구조 점검이 가능하다. |
 | I05 | P1 | BLOCKED_EXTERNAL | 네이버쇼핑 가격 경로 없음. 네이버 열은 "미수집" 유지. |
-| I06 | P1 | NEEDS_WINDOWS_CHECK | 모든 BAT·PowerShell·작업 스케줄러는 실행하지 않았다. `00_PROJECT/QA/WINDOWS_ACCEPTANCE.md` A~F 순서로 확인하고 `09_LOGS`를 회신한다. |
+| I06 | P1 | PARTIAL (P07) | CI Windows Server에서 install/doctor/smoke/run_once/run_snapshot_demo/재설치/서버/브라우저 E2E 통과. 사용자 PC와 작업 스케줄러는 미실행. `00_PROJECT/QA/WINDOWS_ACCEPTANCE.md` A~F 순서로 확인하고 `09_LOGS`를 회신한다. |
 | I07~I09 | — | RESOLVED (P01) | DEMO 하네스, 근거 sidecar, 신선도 기준 통일. |
 | I10 | P2 | RESOLVED (P05) | 빈 인박스 → NO_INPUT(exit 0) + 안내 + 실행 로그. |
 | I11 | P2 | PARTIAL | 스냅샷 후보 URL은 https만 허용한다. v1.0 수동 입력은 http도 허용한다. 통일하려면 사용자 결정이 필요하다(기존 입력 호환성 영향). |
@@ -17,3 +17,4 @@
 | I15 | P1 | NOT_RUN | `naver_paste_table.html`을 네이버 에디터에 붙여넣었을 때 표·링크가 유지되는지 미검증이다. 1행 시험 결과를 회신해야 한다. |
 | I16 | P3 | NOTE | UI 브라우저 QA는 개발용 Playwright(Python)가 필요하다. 배포 의존성(lock)에는 넣지 않았다. |
 | I17 | P2 | DECISION_NEEDED | P07~P10은 마스터 프롬프트에 정의되지 않았다. 제안 목록: `docs/PROGRESS_REPORT_P00_P06.md` §6. |
+| I18 | P3 | RESOLVED (P07) | 문서 수정 후 매니페스트를 갱신하지 않으면 CI 무결성 검사가 실패한다 → `tools/write_manifest.py`를 마지막에 실행(release-package 스킬에 반영). |

@@ -3,8 +3,8 @@
   "project_id": "NAVER_BLOG_AUTOMATION",
   "handoff_version": "1.0",
   "prepared_date": "2026-11-05",
-  "current_phase": "P06",
-  "status": "PASS_LINUX_SCOPE",
+  "current_phase": "P07",
+  "status": "PASS_CI_WINDOWS",
   "phases": {
     "P00": {
       "implementation": "PASS",
@@ -60,9 +60,17 @@
       "naver_editor_paste": "NOT_RUN"
     },
     "P07": {
-      "implementation": "NOT_DEFINED",
-      "verification": "NOT_RUN",
-      "note": "Not defined in MASTER_IMPLEMENTATION_PROMPT_KO.md (phases end at P06). Candidates proposed in docs/PROGRESS_REPORT_P00_P06.md; scope needs user decision."
+      "implementation": "PASS",
+      "verification": "PASS_CI_WINDOWS",
+      "definition": "Windows 실기 반영 (docs/BACKLOG_P07_P10.md) — started on user request 2026-11-05",
+      "verification_scope": "GitHub Actions windows-latest (clean Windows Server, Python 3.13.17) in path 'D:\\a\\_temp\\작업 폴더\\Naver Blog': install.bat, doctor.bat, smoke.bat (102 tests), run_once.bat, run_snapshot_demo.bat, reinstall keeps settings, server_smoke 11/11, Chromium panel E2E 14/14, schedule.ps1 parse. Runs 41989684593, 41990092041.",
+      "user_pc_verification": "NEEDS_WINDOWS_CHECK (security software, user rights, Edge/Chrome, Task Scheduler, offline install message)",
+      "not_run": [
+        "Task Scheduler register/run/unregister (never in CI by policy)",
+        "offline install failure message",
+        "image download (F)",
+        "user PC"
+      ]
     },
     "P08": {
       "implementation": "NOT_DEFINED",
@@ -94,7 +102,7 @@
   "capabilities": {
     "live_danawa": "BLOCKED_EXTERNAL",
     "live_naver_shopping": "BLOCKED_EXTERNAL",
-    "windows_runtime": "NEEDS_WINDOWS_CHECK",
+    "windows_runtime": "PASS_CI_WINDOWS_SERVER / USER_PC_NOT_RUN",
     "combined_e2e": "PASS_SYNTHETIC_OFFLINE_ONLY",
     "naver_publishing": "NOT_IMPLEMENTED (manual handoff + paste-test table only)",
     "snapshot_bridge": "IMPLEMENTED",
@@ -102,7 +110,7 @@
     "panel_snapshot_card": "IMPLEMENTED",
     "daily_run": "IMPLEMENTED_LINUX_VERIFIED"
   },
-  "next_action": "Do not start automatically. See docs/PROGRESS_REPORT_P00_P06.md §6 for proposed P07-P10.",
+  "next_action": "Do not start automatically. See docs/BACKLOG_P07_P10.md.",
   "auto_publish": false,
   "public_deployment_approved": false,
   "last_session_date": "2026-11-05",
@@ -124,10 +132,10 @@
     "I01 BLOCKED_INPUT v1.1/v1.2 originals (direct adapter used)",
     "I04 BLOCKED_EXTERNAL Danawa allowed source / real saved page",
     "I05 BLOCKED_EXTERNAL Naver Shopping price path",
-    "I06 NEEDS_WINDOWS_CHECK all BAT/PS1/Task Scheduler",
-    "I15 NOT_RUN Naver editor paste behaviour"
+    "I15 NOT_RUN Naver editor paste behaviour",
+    "I06 PARTIAL: CI Windows PASS; user PC + Task Scheduler NEEDS_WINDOWS_CHECK"
   ],
-  "next_possible_phase": "User decision: Windows acceptance run (checklist) and/or provide one saved Danawa page (P02 A). P07-P10 are not defined by the master prompt.",
+  "next_possible_phase": "P08 (needs one user-saved Danawa page) or P09 (job-file form, no input needed); user PC checklist anytime",
   "p01_checks": {
     "v1_0_qa_runner": {
       "executed": 50,

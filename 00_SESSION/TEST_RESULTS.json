@@ -1,5 +1,5 @@
 {
-  "stage": "P06",
+  "stage": "P07",
   "p00": {
     "date": "2026-11-05",
     "os": "Linux-6.18.44-fc-v236-x86_64-with-glibc2.39",
@@ -203,6 +203,34 @@
       "Naver Shopping collection",
       "Naver editor paste of naver_paste_table.html",
       "Naver publication"
+    ]
+  },
+  "p07": {
+    "date": "2026-11-05",
+    "environment": "GitHub Actions windows-latest + ubuntu-latest",
+    "runs": [
+      {
+        "id": 41989684593,
+        "result": "success",
+        "windows": "install/doctor/smoke 102/run_once/run_snapshot_demo/reinstall/schedule parse PASS",
+        "log": "00_SESSION/evidence/P07/ci_41989684593_windows.log"
+      },
+      {
+        "id": 41990092041,
+        "result": "windows success (server_smoke 11/11, Chromium E2E 14/14); linux FAILED only at 'Handoff manifest check' (3 files edited after manifest) — fixed by tools/write_manifest.py",
+        "log": "00_SESSION/evidence/P07/ci_41990092041_windows.log"
+      }
+    ],
+    "local": {
+      "qa_runner": "102/102",
+      "server_smoke": "11/11 linux"
+    },
+    "not_run": [
+      "user PC",
+      "Task Scheduler",
+      "offline install message",
+      "Naver editor paste",
+      "real Danawa page"
     ]
   }
 }

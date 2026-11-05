@@ -1,0 +1,1062 @@
+{
+  "phase": "P07",
+  "date": "2026-11-05",
+  "note": "P07 Windows CI evidence, server smoke, browser E2E on Windows, manifest tool",
+  "previous_release": "RELEASE_MANIFEST_P06_infra.json",
+  "preserved_originals": {
+    "reference/originals/Naver_Blog_Automation_Workspace_v1.0.zip": "b7e9015a9db956b9eba5b6739c198d795d491f28551d0437a5cabbeef480bf34",
+    "reference/originals/Naver_Blog_Danawa_Snapshot_Probe_Addon_v1.3.zip": "b1212dfca89316c3bdb7bfae86b27f752dd7d2a48a93bdd728910e82241f21e1"
+  },
+  "files": [
+    {
+      "path": ".claude/skills/danawa-snapshot-onboarding/SKILL.md",
+      "sha256": "a05a497a06e6dd460ae2f446cd7d282a380e7f3132b334ac171ca157fce268d3",
+      "bytes": 2836
+    },
+    {
+      "path": ".claude/skills/phase-runner/SKILL.md",
+      "sha256": "cc5b7a67e36d767c016814570cdd3aae3d9b5f092d35bb4be8876be3338dd8f2",
+      "bytes": 2634
+    },
+    {
+      "path": ".claude/skills/price-data-contract/SKILL.md",
+      "sha256": "ff1e652a3824a0a67509310451ddae2b366977d134bdf2506eaf3c99ee7af134",
+      "bytes": 2945
+    },
+    {
+      "path": ".claude/skills/qa-verify/SKILL.md",
+      "sha256": "6b1788c3cfd93a88cd861d523be1d02e02c2afa991980f417a51251e37cc51ce",
+      "bytes": 2268
+    },
+    {
+      "path": ".claude/skills/release-package/SKILL.md",
+      "sha256": "7cf5f2e45be31e85c482afdd1cee20598b93d44d08a9302ee4f5212e6f18b770",
+      "bytes": 2295
+    },
+    {
+      "path": ".claude/skills/windows-ci-triage/SKILL.md",
+      "sha256": "0d9c1a0f5f4149fcfc5784260a6fefeaac65ddc35f4737598b86e57449cbfa7c",
+      "bytes": 2375
+    },
+    {
+      "path": ".gitattributes",
+      "sha256": "3b25d326f67371407d6ef35c02c5305686a1ecfa40340bb8f3e2bca3b62d2d06",
+      "bytes": 143
+    },
+    {
+      "path": ".github/pull_request_template.md",
+      "sha256": "a4bd272f1b0bfa2b59b3defadfc8da2ddc7a57cc7f7baae93092778936fdbd37",
+      "bytes": 550
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha256": "1d6144b50fe1dbefbda54a343e8e77edbd9f1b408d7debf7012761a746f9a055",
+      "bytes": 5265
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "828e9bf8acc638890ab16db2ce6a40614250eed330149887223f5c2dca8a9fed",
+      "bytes": 37
+    },
+    {
+      "path": "00_SESSION/DECISIONS.md",
+      "sha256": "6ffbcb34871f921213a36a276f7a807b965578efd45126d676ec7a1c3d3c9364",
+      "bytes": 5769
+    },
+    {
+      "path": "00_SESSION/OPEN_ISSUES.md",
+      "sha256": "2c1d265faa16639665923bc69cc237d69a2cf50bd832db1007a3dc9e6ba229cd",
+      "bytes": 2578
+    },
+    {
+      "path": "00_SESSION/PHASE_HANDOFF.md",
+      "sha256": "9bb2577776dd2eb4be21b6334ae92d64dff7f27dc3663fd34c9253faf224abb9",
+      "bytes": 1210
+    },
+    {
+      "path": "00_SESSION/PHASE_STATUS.json",
+      "sha256": "a6664a6381a5d34c4c92952bded316c20b31640229d6008ccfefdaeb64d91e8e",
+      "bytes": 7026
+    },
+    {
+      "path": "00_SESSION/TEST_RESULTS.json",
+      "sha256": "ae4df7487511d7a5b87a68553eb7b04b3de5ab5bc3135d1be7a35daa9623ac6a",
+      "bytes": 8929
+    },
+    {
+      "path": "00_SESSION/evidence/P01/cli_demo_output.json",
+      "sha256": "196cacdb5cf4707b70c234ab4f61c2b1aac088d8a7f92bed0f1e9764838e6c59",
+      "bytes": 843
+    },
+    {
+      "path": "00_SESSION/evidence/P01/demo_table_screenshot.png",
+      "sha256": "87410234f821b4dbe18189179bb8d83eaedbf22894d5605c1c4166c396557a99",
+      "bytes": 367827
+    },
+    {
+      "path": "00_SESSION/evidence/P01/doctor.txt",
+      "sha256": "b2db67ea309806a2862d0c57b9de70a231ad12d0575cabe906184e68ba167407",
+      "bytes": 1314
+    },
+    {
+      "path": "00_SESSION/evidence/P01/p00_probe_rerun_after_p01.txt",
+      "sha256": "cbf9e68a1c08dced9ebf5a8c52fe74b2fa33d9d70f7d4901eb24c3e39f66fdb5",
+      "bytes": 2270
+    },
+    {
+      "path": "00_SESSION/evidence/P01/qa_test_report.json",
+      "sha256": "f49e732ac25c305d376c8ff98952ebf9ffce645f37157f5ccb643ecc722f88af",
+      "bytes": 415
+    },
+    {
+      "path": "00_SESSION/evidence/P01/v1_0_qa_runner_with_bridge.txt",
+      "sha256": "aa160898ef9487fd25f398e154fcb7be7c7b360740a0578aa3a388b4acf53909",
+      "bytes": 6192
+    },
+    {
+      "path": "00_SESSION/evidence/P01/v1_3_1_unittest.txt",
+      "sha256": "297f950db3665962d28c00bc5a7ae6632edc6c49c51e853341d2c8a8aa71bf89",
+      "bytes": 2639
+    },
+    {
+      "path": "00_SESSION/evidence/P04/generated_table.png",
+      "sha256": "87410234f821b4dbe18189179bb8d83eaedbf22894d5605c1c4166c396557a99",
+      "bytes": 367827
+    },
+    {
+      "path": "00_SESSION/evidence/P04/panel_edit_dialog.png",
+      "sha256": "a08e8c7e0467e3cbfcf17aab410341918f84fb94fd35cee2f7cc42897ee30dc9",
+      "bytes": 142165
+    },
+    {
+      "path": "00_SESSION/evidence/P04/panel_review_list.png",
+      "sha256": "fd4e85c80f2c6be45aff2e425cec357c3b8f4e6d4b2651b21bd14b375e7e06e6",
+      "bytes": 268694
+    },
+    {
+      "path": "00_SESSION/evidence/P04/panel_snapshot_card.png",
+      "sha256": "ec2cf0c34168068ebf3fb28927c0d76bd0ae6b77ec9dfa8e036834bdb0fc8cc0",
+      "bytes": 212313
+    },
+    {
+      "path": "00_SESSION/evidence/P04/panel_snapshot_card_mobile.png",
+      "sha256": "8f344f0dba2da53227a5be58582654706395a3a41befee533f65bd300425b89b",
+      "bytes": 161780
+    },
+    {
+      "path": "00_SESSION/evidence/P04/qa_runner.txt",
+      "sha256": "6128cc2a1dcda8f49c3ca57019cf9182c1d509f1dd8a93a2da7c2a3e42ce96dd",
+      "bytes": 7566
+    },
+    {
+      "path": "00_SESSION/evidence/P04/ui_snapshot_e2e.json",
+      "sha256": "95c7d6b25b218c6170d88c82a448b2598d87f2da53529d2688dd035a334280f7",
+      "bytes": 1597
+    },
+    {
+      "path": "00_SESSION/evidence/P04/ui_snapshot_e2e.py",
+      "sha256": "94310ec1cd76f8eaeee39eb6d189179d1e3cd3ad5f88145d80f8c01ce6bab53e",
+      "bytes": 6268
+    },
+    {
+      "path": "00_SESSION/evidence/P04/ui_snapshot_e2e.txt",
+      "sha256": "2bc8f5443c85672e6054b4e1da2d34f1f77076bdc372ccf784e4fd99d672d759",
+      "bytes": 591
+    },
+    {
+      "path": "00_SESSION/evidence/P05/qa_runner.txt",
+      "sha256": "8ba8d02a121aa7a70403efbd693e92dceffb3569dc2b2445d65e55735ec3f988",
+      "bytes": 11494
+    },
+    {
+      "path": "00_SESSION/evidence/P05/run_once_cli.txt",
+      "sha256": "1b0c45c3a04ee7b9c08a35948b09a45739f21a6b28e0c9547fe38321d8ea9030",
+      "bytes": 250
+    },
+    {
+      "path": "00_SESSION/evidence/P06/clean_install_verification.txt",
+      "sha256": "74e35c1ae8b442ad30098357f8555eaa99b335b3c8117de660661c6513acc01e",
+      "bytes": 1177
+    },
+    {
+      "path": "00_SESSION/evidence/P06/developer_ui_qa_rerun.txt",
+      "sha256": "aab9fdc536d7c4588dfc647c0b9027dbe8d5efbce313e24ac34084e533777d95",
+      "bytes": 1864
+    },
+    {
+      "path": "00_SESSION/evidence/P06/final_install_zip_check.txt",
+      "sha256": "248a22412ae4818139e160c04c8f8183138c520f74cf350101ec39808ad9f78d",
+      "bytes": 285
+    },
+    {
+      "path": "00_SESSION/evidence/P06/flow_diagram.png",
+      "sha256": "3b18e3261121572711d04d250cce7d9f9f0d41fe5fe9536d4dfdba8d70231b11",
+      "bytes": 130560
+    },
+    {
+      "path": "00_SESSION/evidence/P06/naver_paste_table.png",
+      "sha256": "e3e4d6767d03ffb1f513623f60b56d838b4707d4c818c7f8292e1cc639b3221b",
+      "bytes": 117968
+    },
+    {
+      "path": "00_SESSION/evidence/P06/qa_runner.txt",
+      "sha256": "3f0e9256b083108f165656f5c6ea868f7d8d983b0cee80b55c730aa451278421",
+      "bytes": 12273
+    },
+    {
+      "path": "00_SESSION/evidence/P06/qa_test_report.json",
+      "sha256": "dd1d97bd9e497fea5d52eb1c69c95fe434478368e54884f4c5232d41fc480ca2",
+      "bytes": 481
+    },
+    {
+      "path": "00_SESSION/evidence/P07/ci_41989684593_linux.log",
+      "sha256": "d0021ea09ab0afc52906a2e80a314c011f8b014ffada75d4f294419bcf4a433c",
+      "bytes": 56437
+    },
+    {
+      "path": "00_SESSION/evidence/P07/ci_41989684593_windows.log",
+      "sha256": "e5906a1c628fbed004b12c01c485c1e17fd89e0c601d8ea3e3c0cce3e9902f17",
+      "bytes": 113717
+    },
+    {
+      "path": "00_SESSION/evidence/P07/ci_41990092041_windows.log",
+      "sha256": "e87dfb0f74fdc357c60d7da860dc072cb74d2c336d0d7245396c0a794528a5ef",
+      "bytes": 70998
+    },
+    {
+      "path": "00_SESSION/evidence/logs/doctor.txt",
+      "sha256": "cd3b63738292e052abef4018e40f7f0871fe11ddcb897cfe0a5901b8c510a0cd",
+      "bytes": 1314
+    },
+    {
+      "path": "00_SESSION/evidence/logs/doctor_report.json",
+      "sha256": "5ae9b036838e9a2654dce38367ffd5840c517ffc72696bf12210af9f30bca42c",
+      "bytes": 1313
+    },
+    {
+      "path": "00_SESSION/evidence/logs/test_report.json",
+      "sha256": "d25ebd8965d8de0774fd637a91e13150b96b9c867d0941f936ee3a873bebc5ea",
+      "bytes": 415
+    },
+    {
+      "path": "00_SESSION/evidence/logs/v1_0_qa_runner.txt",
+      "sha256": "a97f10bf715f4081bc466a48c35fc6aa784abd0035896c40424e9ed3a6a707dd",
+      "bytes": 3843
+    },
+    {
+      "path": "00_SESSION/evidence/logs/v1_3_unittest.txt",
+      "sha256": "2b08cf8207cbcd7cfd0bf5c463a054426aad41c15c8664c6e5889e6390aa145a",
+      "bytes": 1756
+    },
+    {
+      "path": "00_SESSION/evidence/p00_interface_probe.json",
+      "sha256": "6211210276fab5005260b322587920e52abb032a285e2855d8b5fe88b29460ee",
+      "bytes": 6957
+    },
+    {
+      "path": "00_SESSION/evidence/p00_interface_probe.py",
+      "sha256": "fa2be753b21bfb19b8de892f992b008c622d1f323e7e6d887fa0eeab9373b427",
+      "bytes": 8724
+    },
+    {
+      "path": "00_SESSION/evidence/p00_interface_probe.txt",
+      "sha256": "375e11f83e090a5f6accd287f0534e2d486f4666eb224f11de06b6fb74cfc868",
+      "bytes": 2865
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "fb7201008b6bd8c414e5f565ed8f9ee39d14cb36470f27e3a124bcb90104405e",
+      "bytes": 1470
+    },
+    {
+      "path": "ARTIFACT_MANIFEST.json",
+      "sha256": "b9aba4672c7735ab589e14eaee9c50d31080a6248843eaed6d2dacda76714585",
+      "bytes": 25622
+    },
+    {
+      "path": "CLAUDE.md",
+      "sha256": "abae01787094b74b2e41da13faad050187823d0771de3cd8be40c5a63d675e5c",
+      "bytes": 146
+    },
+    {
+      "path": "MASTER_IMPLEMENTATION_PROMPT_KO.md",
+      "sha256": "0df8290b5e4af9b78993f496bbc61505c7ff38868949b19db6076f4ca459c272",
+      "bytes": 20756
+    },
+    {
+      "path": "README.md",
+      "sha256": "37e8dd55c15b4cc4d77adccf5a23f12e2f534fedd7e40d3a41b6b8dd4b90f1d1",
+      "bytes": 1403
+    },
+    {
+      "path": "RELEASE_MANIFEST_P00.json",
+      "sha256": "8c0c91a5fa00759c6a970dbf74ec4dfdd0ac7634f8ffab986f163ab4e6472645",
+      "bytes": 28092
+    },
+    {
+      "path": "RELEASE_MANIFEST_P01.json",
+      "sha256": "d7f85a57806658efd62e8577925468d635d6d2d9314d0f7f330f52bc39eace69",
+      "bytes": 32342
+    },
+    {
+      "path": "RELEASE_MANIFEST_P06.json",
+      "sha256": "107f3ae522c79f5c7370a37def4d46f8fa52d317b9c88131406281f8fb47505b",
+      "bytes": 37522
+    },
+    {
+      "path": "RELEASE_MANIFEST_P06_infra.json",
+      "sha256": "42a5a98c2b90922cb7a724b55831d2e71470557292b96ce676c56c81f829aba9",
+      "bytes": 39227
+    },
+    {
+      "path": "SOURCE_INVENTORY.json",
+      "sha256": "dacfc63844704995047840ebb51260c0c1f355b5bdd616847d7e832b8a3e8340",
+      "bytes": 1815
+    },
+    {
+      "path": "START_HERE.html",
+      "sha256": "d9a1797849062ec0bd802a757c9a45188b60762819b290ef5240076502395692",
+      "bytes": 6401
+    },
+    {
+      "path": "docs/ACCEPTANCE_MATRIX.md",
+      "sha256": "514e08a8b898cc2892d14fea01ee45e9fdc28889be9f5cbfb3c0c97d01632385",
+      "bytes": 1357
+    },
+    {
+      "path": "docs/BACKLOG_P07_P10.md",
+      "sha256": "91826e0039d7824fd895a20e7d4c5e52269a311845d24b14b27729ae81aec854",
+      "bytes": 1645
+    },
+    {
+      "path": "docs/BASELINE_AUDIT.md",
+      "sha256": "de59ca935a15bee9d2f3884a6ab88df2d9c62c5c7a0200363ebb66e03a5cf664",
+      "bytes": 2680
+    },
+    {
+      "path": "docs/INPUT_CHECKLIST.md",
+      "sha256": "c3853d3d26c97cdffded5d6c7bcd021b1a475302f88dafdbf2ad1a23f0a5d4cb",
+      "bytes": 2246
+    },
+    {
+      "path": "docs/P00_INTERFACE_MAP.md",
+      "sha256": "2698f76bf46d9bc40837456cd82bd5c08220035fc12c581e2b53bdb31b325b3b",
+      "bytes": 9973
+    },
+    {
+      "path": "docs/P01_IMPLEMENTATION.md",
+      "sha256": "f5dba5c947e19cf29483bc2412e20e1c4c1d073ffe91dd54c34b81929b0983fd",
+      "bytes": 5782
+    },
+    {
+      "path": "docs/PROGRESS_REPORT.html",
+      "sha256": "16c97c7f257ed02317881cf53237d3c726d0034f90442c97077cf0ae56cc4edc",
+      "bytes": 724712
+    },
+    {
+      "path": "docs/PROGRESS_REPORT_P00_P06.md",
+      "sha256": "8983e7b5bb877c6ce37bc47d8d7fc04b618e427841366afb6218b17e313bd396",
+      "bytes": 12349
+    },
+    {
+      "path": "docs/REFERENCE_SOURCES.md",
+      "sha256": "1f6718398543a94678cd08698a00981938c823b9580e118fd3027d0f9c663c6c",
+      "bytes": 1750
+    },
+    {
+      "path": "docs/SESSION_MESSAGES.md",
+      "sha256": "04ffeacd0e6a4f910ed5155bea3f3d0c6ad7af2eee9bbaa9a953488ae3b259f2",
+      "bytes": 2919
+    },
+    {
+      "path": "docs/SKILLS.md",
+      "sha256": "d8f2f866528e4fedd5403c5080755df330eea2493592e37e9a1e484ee553a455",
+      "bytes": 2012
+    },
+    {
+      "path": "reference/handoffs/Naver_Blog_Danawa_Snapshot_Probe_Handoff_v1.3.md",
+      "sha256": "88c1520450ce80a3a33b2b3baa847514c9f4429624871ceab1647ff1e6ea0324",
+      "bytes": 2461
+    },
+    {
+      "path": "reference/handoffs/Naver_Blog_Project_Handoff_v1.0.md",
+      "sha256": "88aa6a5a8a953dcd430e74f94ab06022657839059d2a9fa7b1c7f7687d9abd94",
+      "bytes": 10471
+    },
+    {
+      "path": "reference/originals/Naver_Blog_Automation_Workspace_v1.0.zip",
+      "sha256": "b7e9015a9db956b9eba5b6739c198d795d491f28551d0437a5cabbeef480bf34",
+      "bytes": 154439
+    },
+    {
+      "path": "reference/originals/Naver_Blog_Danawa_Snapshot_Probe_Addon_v1.3.zip",
+      "sha256": "b1212dfca89316c3bdb7bfae86b27f752dd7d2a48a93bdd728910e82241f21e1",
+      "bytes": 29614
+    },
+    {
+      "path": "reference/verification/HANDOFF_DELIVERY_QA.json",
+      "sha256": "8265922426690249390d7e150e68f75145aa74d88b9affc2cc559ca1552096f4",
+      "bytes": 787
+    },
+    {
+      "path": "reference/verification/package_reextract_v1_0.txt",
+      "sha256": "4ba08ec72b79fe0c4f19db7a33c1306bbe2c79adae0eba72621ad4898f724f0c",
+      "bytes": 3832
+    },
+    {
+      "path": "reference/verification/package_reextract_v1_3.txt",
+      "sha256": "7de5cc7ca89dbc6fa3726f19a5efffd5993c32f540d653aebf5ef9f42921616f",
+      "bytes": 1745
+    },
+    {
+      "path": "reference/verification/v1_0_test_report.json",
+      "sha256": "cb6d1db91dfb79c6568b2b6a0a02dc061ab9a725cff2e2f8ecaa58e5837383f4",
+      "bytes": 406
+    },
+    {
+      "path": "reference/verification/v1_0_tests.txt",
+      "sha256": "d4ce9e6a0f560cc7650bf3ec59d4b3f245684d9b3832314c41fceaef731c9215",
+      "bytes": 3831
+    },
+    {
+      "path": "reference/verification/v1_3_tests.txt",
+      "sha256": "9d341c8bdc1507b473302a8ec31e3f62aefafc4d9b4aec3dbf4d5ea532bab4f9",
+      "bytes": 1744
+    },
+    {
+      "path": "scripts/cloud_session_setup.sh",
+      "sha256": "0bd1b0b579c60717360861f4a1488a7281734ca71605e7d71712d4cc0858dc0e",
+      "bytes": 856
+    },
+    {
+      "path": "tools/verify_handoff.py",
+      "sha256": "04bfa881d40543789cfe4854b994709c04eee433d88fd2272dcd371c581eec25",
+      "bytes": 1923
+    },
+    {
+      "path": "tools/verify_release.py",
+      "sha256": "712ef698f92bc8c15ebe402c240ae0507fabe46a96805331057eca04a9eb1a43",
+      "bytes": 1966
+    },
+    {
+      "path": "tools/write_manifest.py",
+      "sha256": "91fa523003a726bd63a2bd2fcf7dbb6d05eb8c5b61c7d2c9030ad537bcaccc35",
+      "bytes": 2185
+    },
+    {
+      "path": "verify_handoff.bat",
+      "sha256": "86c9a197784b40ce2c77479569b68b1101fd9e617372e0b75de2b2953a5b8efb",
+      "bytes": 344
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/.gitignore",
+      "sha256": "4af7b1371c7a6602cdb7d46c24795124da9e7a4be37eea3ea48ba4dfdc070ec7",
+      "bytes": 206
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/00_PROJECT/CHANGELOG.md",
+      "sha256": "771b17ff2f3b0f998e068945f4f922859db2b64d92d75df76501a1da78859797",
+      "bytes": 3042
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/00_PROJECT/FILE_MANIFEST.sha256.json",
+      "sha256": "65269653e918b088f71e4aca88d7118b2d93c90ee803da213085a848417e97de",
+      "bytes": 13762
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/00_PROJECT/PROJECT_CONTEXT.md",
+      "sha256": "88aa6a5a8a953dcd430e74f94ab06022657839059d2a9fa7b1c7f7687d9abd94",
+      "bytes": 10471
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/00_PROJECT/PROJECT_LOCK.json",
+      "sha256": "fe27fe28d58e7efaae624bf2b54c73f21a1e749e9b80642411c142130fdb9e08",
+      "bytes": 688
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/00_PROJECT/PROJECT_MANIFEST.json",
+      "sha256": "699c8f6b0f40dbd10c7ebf696a2e268e117eaf8cb4a4a8ca9360509ce5e8d5f1",
+      "bytes": 1770
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/00_PROJECT/QA/DEVELOPER_UI_QA.md",
+      "sha256": "b2fe7ba2fa313c57584c3e9b60e36aa505b9f898f69f16a5ffda826c91619ea9",
+      "bytes": 507
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/00_PROJECT/QA/TEST_SCOPE.md",
+      "sha256": "9ca086cbaec35affbbbc9a432d42c1cb3d8bf03b5e65b2521fc61bf9da461fc6",
+      "bytes": 1257
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/00_PROJECT/QA/WINDOWS_ACCEPTANCE.md",
+      "sha256": "228baeef433b7f44d0765206fcd3e3ada257e42b6e8bea904c3f4046d34576e3",
+      "bytes": 5148
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/00_PROJECT/QA/build_environment_report.json",
+      "sha256": "9149a26227aeb59355c3415ff7b92eba04719f1150c9130c39504382e9eb9723",
+      "bytes": 1255
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/00_PROJECT/QA/developer_ui_qa.py",
+      "sha256": "31721b3df73e7b3311271bcb6e36b1c427f0a430ebbf0a68ef92cf3621907712",
+      "bytes": 9130
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/00_PROJECT/QA/doctor_console.txt",
+      "sha256": "12684175b4fcbcee063f59100ffd342945b69c6ff4012ed4c6f18bbfbc55cc8f",
+      "bytes": 1257
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/00_PROJECT/QA/python_test_report.json",
+      "sha256": "243dde37c6be34dfbb2ba6e0b45ccb000250655b35db6bbb4ce83cec4874936e",
+      "bytes": 406
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/00_PROJECT/QA/qa_runner_console.txt",
+      "sha256": "f4ba4a36c7f6929b5b41d60166b29485d8d8757150ab1566c48f916b4120f574",
+      "bytes": 3832
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/00_PROJECT/QA/release_validation.json",
+      "sha256": "ab429363cab6e7aaef2167ccb8914e5260895430258c37321c05fbad5093ceaf",
+      "bytes": 1878
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/00_PROJECT/QA/server_smoke.py",
+      "sha256": "116411d7357645dc307d2b9a8dd5382a64cdf95d60b0516af66d33d155645ec6",
+      "bytes": 4986
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/00_PROJECT/QA/ui_test_report.json",
+      "sha256": "d371c18a00e7dd499b5929caa5428809b397071e6df29ed542edc96bbfa67365",
+      "bytes": 1673
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/00_PROJECT/REGISTRY.json",
+      "sha256": "9abc4725863164803475080a8d12731d48cf07564b66f7092a44b2a305c035e0",
+      "bytes": 1163
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/00_PROJECT/ROADMAP.md",
+      "sha256": "6374a6b3b3a807eea4db4a67c67f6e92f8e3c182b1a24add2f3487d744aebeb5",
+      "bytes": 1358
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/01_CONFIG/product_input.schema.json",
+      "sha256": "8b1e916b7a5c5d2e2f544dd26fa6274bc2ba7c7475175cb5197d3f438f494dd7",
+      "bytes": 3055
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/01_CONFIG/settings.example.json",
+      "sha256": "60b548055ef5579eb107db31174018a672c881c1c37257dc94f7cde611f4d7d1",
+      "bytes": 735
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/02_CORE/exporters/__init__.py",
+      "sha256": "13171691963ba765641235ef189b87fe08b418ca27fbfe0bc7a0b625fbb90467",
+      "bytes": 188
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/02_CORE/exporters/naver_paste.py",
+      "sha256": "bca5025130663b872ee7c03b7cb7c0d61ad0144fe01af271cddd16a566d46d88",
+      "bytes": 3723
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/02_CORE/exporters/table_exporter.py",
+      "sha256": "ae88a5e35c9bf5b68f1b501af17dddded6f2898b7efdb8d8985479f7ed249f21",
+      "bytes": 5686
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/02_CORE/nbcore/__init__.py",
+      "sha256": "e39b5d16b01c4cd1ea0a55ff3d4751c7e0ec987576125dd3184c7a96f72ae33d",
+      "bytes": 44
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/02_CORE/nbcore/config.py",
+      "sha256": "75672abb677d1243895478ca63c849e4cd2c6fc7d51461643fab8c24ec443264",
+      "bytes": 3225
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/02_CORE/nbcore/images.py",
+      "sha256": "3bff8a5aa31ad2ebfd1aff72fd9f71896e1a0db83fb21a3292751a50d54b3cb7",
+      "bytes": 6506
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/02_CORE/nbcore/pipeline.py",
+      "sha256": "05bb40bb552cc6fcaf93b22d3789c176f7784943a4cb1a63c61e140d8f004bb3",
+      "bytes": 7711
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/02_CORE/nbcore/validation.py",
+      "sha256": "258dcf14a627900a40462a77359ee89934a976458b25b6077e09e4ad5d95f85e",
+      "bytes": 4959
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/03_PROVIDERS/providers/__init__.py",
+      "sha256": "e39b5d16b01c4cd1ea0a55ff3d4751c7e0ec987576125dd3184c7a96f72ae33d",
+      "bytes": 44
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/03_PROVIDERS/providers/approved_import.py",
+      "sha256": "3713cfca18b14574956db35846b4c0597c8c8b4cb5c4d349cc167627aab5475a",
+      "bytes": 413
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/03_PROVIDERS/providers/base.py",
+      "sha256": "f5fba9faae44899a49e99ee91cd97ea02575409c3d5bb4e4959f97709f3c9caf",
+      "bytes": 477
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/03_PROVIDERS/providers/danawa.py",
+      "sha256": "109919266e8ceeebf12b9b4e66fb7ebb5c23a62fe6fe11d494b2dfe4262384a6",
+      "bytes": 329
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/03_PROVIDERS/providers/naver_shopping.py",
+      "sha256": "1f60a31c2519472db4eb8543e40ed67d9a7e883574d2a21436d73105beac7a65",
+      "bytes": 319
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/03_PROVIDERS/providers/snapshot_adapter.py",
+      "sha256": "fe1a745b3cc9c4837efe94736dc039f7369729ebb56035d3dc5892d3e9d59bb3",
+      "bytes": 11841
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/04_CONTENT/references/reference_entry.example.json",
+      "sha256": "878dfee8343e0e492a93cae4bbbbd194d2c22c080e27466414f0a53e17ab2f6a",
+      "bytes": 396
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/04_CONTENT/references/source_registry.json",
+      "sha256": "501bcab371b4e0b8dc2d1e9ce6eb5dea15173fa33227ca3a3eb31e3e56505374",
+      "bytes": 4718
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/04_CONTENT/templates/content_creation_prompt.md",
+      "sha256": "2887966a887cda69a997eef28664d12b228b4f01b47f4136185ae252e944d6b0",
+      "bytes": 1577
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/04_CONTENT/templates/original_article_outline.md",
+      "sha256": "737d29bd535352b9de838e473bea0a5310582567e9d95acdf5ca1919df98e559",
+      "bytes": 1703
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/04_CONTENT/templates/post_draft.example.json",
+      "sha256": "b786a244918c17034c92a345432fca4a637be4d75d8ddd605a302316fdb9e6e7",
+      "bytes": 330
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/05_PUBLISHERS/publishers/__init__.py",
+      "sha256": "e39b5d16b01c4cd1ea0a55ff3d4751c7e0ec987576125dd3184c7a96f72ae33d",
+      "bytes": 44
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/05_PUBLISHERS/publishers/base.py",
+      "sha256": "95a7c62389d2d4bf07f89680e8ec4067b7898aab36fd6994719b44ae779323ad",
+      "bytes": 170
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/05_PUBLISHERS/publishers/blogger.py",
+      "sha256": "57e158bdefc90659e621e75778d3ff1ed33255653b824ef6756e94585f765316",
+      "bytes": 412
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/05_PUBLISHERS/publishers/naver.py",
+      "sha256": "565e64d2c251bb0b12ef1bbef0fa30ccb7248c36f3cbeb5f4a194f7c4bc257db",
+      "bytes": 360
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/05_PUBLISHERS/publishers/wordpress.py",
+      "sha256": "f020fb60b2545ce2fa53b13189b3d7b01e29f945de19f658f5beb44aa3240031",
+      "bytes": 421
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/06_UI/index.html",
+      "sha256": "f045d4fda5cd465f4d99831e168b5b191b969352cc1f54582ed971c3d5d8d896",
+      "bytes": 95043
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/07_DATA/images/original/README.md",
+      "sha256": "00e027bf5ee3cafedb9a5b01636ee924413503838631293f8a89d1c96cbea628",
+      "bytes": 143
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/07_DATA/images/resized/05e8248d86e50e19845c3b7e.jpg",
+      "sha256": "2fa2ec371704ebb679ed903f86ea755435c7438b1745f1eedc198de4c8c20ad7",
+      "bytes": 7363
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/07_DATA/images/resized/1b18b2a7362daa30736eb9f0.jpg",
+      "sha256": "b7be0bead6a1edaad98febe5e56808a782850bda7f4fa268a058164590611dc8",
+      "bytes": 8407
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/07_DATA/images/resized/83e50c3307d50cc1203fcd73.jpg",
+      "sha256": "689635d63256653c4656048ac32c26eaaa763f06cc385308cb8764bab0b4b1ac",
+      "bytes": 7166
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/07_DATA/inbox/products.json",
+      "sha256": "6c1db664439054b14cf5baade95beb5c1b194266ecf60003a2aab24c85fd8359",
+      "bytes": 20
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/07_DATA/samples/landscape.png",
+      "sha256": "278a85ce0809cde004a6ff88401c0c66ba13bc6380e525e9caae4f791a36f354",
+      "bytes": 2467
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/07_DATA/samples/legacy_sample.png",
+      "sha256": "e5d672595c800050d825418c5dc7bd91fb71ef4d61309378dfb6fd904d208eb1",
+      "bytes": 3126
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/07_DATA/samples/portrait.png",
+      "sha256": "1892eb922818e0f452e033ab78ddb95a1b1dbec78772a9dda140afae988f1ff6",
+      "bytes": 2957
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/07_DATA/samples/products_demo.json",
+      "sha256": "b5ef1131573c3216db7e1326cd2a8bc871cd3407bea15926d2079ef28b399ff1",
+      "bytes": 2740
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/07_DATA/samples/snapshot_demo/job.json",
+      "sha256": "c5b74d48c2e3b61b3b222329df63ec6e9487528ce854c07e95c2cb1ea33cf0d7",
+      "bytes": 1194
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/07_DATA/samples/snapshot_demo/product_a.html",
+      "sha256": "6b6baed2a689aa497478dfff2a6fb21064656bc1714347be2ae510b13ab5c842",
+      "bytes": 1478
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/07_DATA/samples/snapshot_demo/product_a_meta.json",
+      "sha256": "bcd42eaca8d7018ad06ee4ac51b8c2601c5c203d4d96525afc02b4585c61cd1f",
+      "bytes": 975
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/07_DATA/samples/snapshot_demo/product_b.html",
+      "sha256": "0d460864bccb0c906c7a3996d44df412625c7f2b1b3eadb4dbb402f74ee3a334",
+      "bytes": 882
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/07_DATA/samples/snapshot_demo/product_b_meta.json",
+      "sha256": "6933e937dcc20e7166f3f0d02f9f4bfab21b72048d47c91a90a2aa6c064f3a71",
+      "bytes": 539
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/07_DATA/samples/snapshot_demo/product_c.html",
+      "sha256": "79e0bf4f11a125d055b447f372b61366c7c5f2db4cceaa8999cacd741e79508e",
+      "bytes": 168
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/07_DATA/samples/snapshot_demo/product_c_meta.json",
+      "sha256": "bf748993e56aa6be0d7d53eb8dffacd5a74c003a7e5d88bff47a0b7b8920107d",
+      "bytes": 433
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/07_DATA/samples/transparent.png",
+      "sha256": "d1c0bc51df4d50d2afa1307dc69f767df0c84d19c210f948c9ce6e76a36a4927",
+      "bytes": 2928
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/07_DATA/state/README.md",
+      "sha256": "9fa9e89f8e852ecca36fb6b33c5dad9b1ba5416fc941613199397d9d562cb70b",
+      "bytes": 169
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/08_OUTPUT/runs/20261011_demo_27afc152c3b8/NAVER_HANDOFF.md",
+      "sha256": "7b309f80734d5ea528e7086b154445fc1a4360abd4223079a16ff09dcb3e2dc5",
+      "bytes": 1071
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/08_OUTPUT/runs/20261011_demo_27afc152c3b8/images/product_01.jpg",
+      "sha256": "2fa2ec371704ebb679ed903f86ea755435c7438b1745f1eedc198de4c8c20ad7",
+      "bytes": 7363
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/08_OUTPUT/runs/20261011_demo_27afc152c3b8/images/product_02.jpg",
+      "sha256": "b7be0bead6a1edaad98febe5e56808a782850bda7f4fa268a058164590611dc8",
+      "bytes": 8407
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/08_OUTPUT/runs/20261011_demo_27afc152c3b8/images/product_03.jpg",
+      "sha256": "689635d63256653c4656048ac32c26eaaa763f06cc385308cb8764bab0b4b1ac",
+      "bytes": 7166
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/08_OUTPUT/runs/20261011_demo_27afc152c3b8/normalized_products.json",
+      "sha256": "85321b16650c1f96c643805f1838e1f628f612ce65977154446f395fa857c084",
+      "bytes": 3050
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/08_OUTPUT/runs/20261011_demo_27afc152c3b8/product_table.html",
+      "sha256": "1886d8c7da760b3f71b3872f29b98eabe25161e0ba9dc0d312e2612f410220f6",
+      "bytes": 35394
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/08_OUTPUT/runs/20261011_demo_27afc152c3b8/run_report.json",
+      "sha256": "02695ded1df36e911633b6de1cab595fcf5b4ae103193d15dcb2f36ecf69a3ec",
+      "bytes": 1683
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/09_LOGS/README.md",
+      "sha256": "ac0bf2461569f23c386b2c4a96b876c4d26ff2214cb7d956a4ce5c172d6cb97e",
+      "bytes": 137
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/10_TESTS/test_daily_ops.py",
+      "sha256": "e17a0be5f0fe1a47c473c6c9f05f1d7d2b47725cb2639de8206f024e609ee658",
+      "bytes": 9229
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/10_TESTS/test_panel_integration.py",
+      "sha256": "0f2658c9ee9252df86ea84b2aefb0aac1c61b39842c2b985566b68cd778107f5",
+      "bytes": 9774
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/10_TESTS/test_release_and_paste.py",
+      "sha256": "532ea16096b0499db44fe10b8c6744fc99ffe90bf8b04ba5be13494de988e1a2",
+      "bytes": 6273
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/10_TESTS/test_snapshot_bridge.py",
+      "sha256": "577c344ef9d0d5cd4e87352cfd19a9af779a19dca79dd8483aac46b8d776e378",
+      "bytes": 20464
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/10_TESTS/test_workspace.py",
+      "sha256": "691a3a385bca3cb5142ea0ad456a666875d3f85e457115dcbe73474786cff60f",
+      "bytes": 15686
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/11_ADDONS/DANAWA_SNAPSHOT_PROBE/SHA256SUMS.txt",
+      "sha256": "d7fefc8bf78e3e7aff32957705008405c4c6a230fa1bd785f0dfd4b94dfee8c2",
+      "bytes": 1730
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/11_ADDONS/DANAWA_SNAPSHOT_PROBE/addon_manifest.json",
+      "sha256": "5b81226355f5b8c2ac4bf6697276752b47a570a5a99ac8be255e7715975cfe00",
+      "bytes": 1214
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/11_ADDONS/DANAWA_SNAPSHOT_PROBE/docs/CHANGELOG_1.3.1.md",
+      "sha256": "85dfca80d11da8602a0bcd1acd83232397eff20f76cc7d5879296e74577e64d1",
+      "bytes": 2115
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/11_ADDONS/DANAWA_SNAPSHOT_PROBE/docs/PROJECT_HANDOFF_v1.3.md",
+      "sha256": "88c1520450ce80a3a33b2b3baa847514c9f4429624871ceab1647ff1e6ea0324",
+      "bytes": 2461
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/11_ADDONS/DANAWA_SNAPSHOT_PROBE/docs/README.md",
+      "sha256": "37b3378a5cbb1d906b94b2ae3c9ff1abdb948c608cd34cd5376ab443bd44b9b9",
+      "bytes": 4313
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/11_ADDONS/DANAWA_SNAPSHOT_PROBE/docs/RELEASE_QA.md",
+      "sha256": "007c9c824c74a90ce3e60bf853c3542dc2da1292883866214013faa9fa0bd665",
+      "bytes": 2091
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/11_ADDONS/DANAWA_SNAPSHOT_PROBE/docs/Setup_Guide_v1.3.html",
+      "sha256": "3b5d0f7693fc6fe8e94f288faa1d255492bd42e31c207badb578cff15ed3b57d",
+      "bytes": 18404
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/11_ADDONS/DANAWA_SNAPSHOT_PROBE/doctor.bat",
+      "sha256": "ffc408c17371ffa5749bf2f0a8cad5abe7758dbf996865cf4d89da252a80c36f",
+      "bytes": 842
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/11_ADDONS/DANAWA_SNAPSHOT_PROBE/fixtures/demo_meta.json",
+      "sha256": "2ef5c557d48c72631b1fcdb4ad5be7a61b18660a781851840e67e9e99d18560c",
+      "bytes": 430
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/11_ADDONS/DANAWA_SNAPSHOT_PROBE/fixtures/demo_product.html",
+      "sha256": "ecbb78597c4872af854eeb921112b47f8c753feba4370c99843766930cf9bdea",
+      "bytes": 793
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/11_ADDONS/DANAWA_SNAPSHOT_PROBE/fixtures/manual_meta_template.json",
+      "sha256": "a00e30327648bfa27a11007c2f3f141ee0cec59bf37b4f879e380bd03b5f6850",
+      "bytes": 1130
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/11_ADDONS/DANAWA_SNAPSHOT_PROBE/install.bat",
+      "sha256": "66540e200b3b41816a180a9a79ad7a900073a1d9d2a0333c0fe364774922bd73",
+      "bytes": 1355
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/11_ADDONS/DANAWA_SNAPSHOT_PROBE/open_guide.bat",
+      "sha256": "beabd9f17521a7df08d3cb14e902a583d94a7aea3a73bbe6b708248d84a0f6e7",
+      "bytes": 55
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/11_ADDONS/DANAWA_SNAPSHOT_PROBE/output/.gitkeep",
+      "sha256": "df7756faec24ccf40468d07e9276c82f0cc18ebd6bea17ed6875a87d2abd9fc5",
+      "bytes": 36
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/11_ADDONS/DANAWA_SNAPSHOT_PROBE/probe/__init__.py",
+      "sha256": "7cb1b5bc5a9d1c74967107623bbe0b6cb8a792eaef5b586dabbf275df4b51325",
+      "bytes": 38
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/11_ADDONS/DANAWA_SNAPSHOT_PROBE/probe/snapshot_probe.py",
+      "sha256": "61d9890aa7fa9fed30420e10951ba14f94bc5d2559f49ea827ac4697fdd6b470",
+      "bytes": 23348
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/11_ADDONS/DANAWA_SNAPSHOT_PROBE/run_demo.bat",
+      "sha256": "bff4f8e4adddfaf67cafed79790d090582b2c28e3c7e1eaf0a437ed2ea05f4a1",
+      "bytes": 523
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/11_ADDONS/DANAWA_SNAPSHOT_PROBE/run_snapshot.bat",
+      "sha256": "877640efdd63fb3769028da49495794ed8e0af5fded6e1510b1e970ccf41c2f7",
+      "bytes": 1012
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/11_ADDONS/DANAWA_SNAPSHOT_PROBE/smoke.bat",
+      "sha256": "edc4664bfd3166ee95d7b391ed0ab782b4ce43e77148b7d89cda60ce2b164ed1",
+      "bytes": 394
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/11_ADDONS/DANAWA_SNAPSHOT_PROBE/tests/test_snapshot_probe.py",
+      "sha256": "ffbbdb496d5235a34a858bdb05ec0a95b6bcfc5f1e1f276d4f283add889c438b",
+      "bytes": 11191
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/11_ADDONS/DANAWA_SNAPSHOT_PROBE/tools/resolve_python.bat",
+      "sha256": "605abf5845f9e5a2e1a6cfd46bf5655459727ce89260d272d6ebda24e24eaea9",
+      "bytes": 1012
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/11_ADDONS/README.md",
+      "sha256": "442de0e3a0a8b464300f5771dbc7023369ae702365013df651c935477f2d65bd",
+      "bytes": 1200
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/11_ADDONS/addon_manifest.example.json",
+      "sha256": "f57ce4437c29c0678c07376be983803dd69a9f86c0258e256b0156728cae0266",
+      "bytes": 251
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/12_BACKUP/legacy/Naver_Blog_Auto_Step4_TableExporter_v0.4.zip",
+      "sha256": "2a50b3da09b497cd26ef28788c4fcf03abc50025d71c5cb97e4d1bdb8ab1695f",
+      "bytes": 13378
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/README.md",
+      "sha256": "aaae5e00d4376ad20d2c87252f51dd00297b2f24ad6aff8a38d4251e6423da12",
+      "bytes": 2319
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/disable_daily_review.bat",
+      "sha256": "1397047c89c921c92c389b1b44bb627456d829a0c7907a56bdb41b3bb523377c",
+      "bytes": 188
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/doctor.bat",
+      "sha256": "e1761a8713207bd1a02d05a2e4bff13fa69f38c78dc918990725abb350657455",
+      "bytes": 396
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/enable_daily_review.bat",
+      "sha256": "7ce0ed22c5ea4daa9cd3f48986270cdd78b7cd4dc2c3abc3937af05d6f056cc0",
+      "bytes": 180
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/install.bat",
+      "sha256": "272fc5fb296ff555204d924d4b4299ae7a2b863950076a1858182a88a4c2966c",
+      "bytes": 267
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/open_guide.bat",
+      "sha256": "8cf587c44c94d1d122a48560e561941c391a7b1936097760674daddd8dbed394",
+      "bytes": 60
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/run_once.bat",
+      "sha256": "88fd63e1904a3fb274f0a4f7e0a9b36891ff955aa0c4787e787284a0c542c667",
+      "bytes": 398
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/run_snapshot.bat",
+      "sha256": "996a762418bad894a22f9ed0112b72a8684c12cc93d47de0e75793c1cb79b8d0",
+      "bytes": 451
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/run_snapshot_demo.bat",
+      "sha256": "162da1500c7b0dd98d9f5ba0819138f680070beeaa4e7447260e6d97c5a8f268",
+      "bytes": 418
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/smoke.bat",
+      "sha256": "4b38bc6ab3e373acbd557164291acf24547be78841b29739193c235141946eb2",
+      "bytes": 399
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/start_panel.bat",
+      "sha256": "cabbe611498fca522dd4e56bbb35370cc7369d35a05fac7fd34dda0842ec1325",
+      "bytes": 396
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/tools/bootstrap.ps1",
+      "sha256": "971f597cc22aa32055c2d1c170451e8d642aafa3e9b6c70de2e18b628a83580d",
+      "bytes": 5883
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/tools/build_release.py",
+      "sha256": "251a7a26c67041d0344555fbb6daf733659b55e44039032cc32130f53d3e660b",
+      "bytes": 5669
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/tools/dependencies.lock",
+      "sha256": "41b54a6fb2918667ca47a61d73b522629d84490f3d78f0f20b21135faba10d35",
+      "bytes": 15
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/tools/doctor.py",
+      "sha256": "f34e0574548bcc7ea326d56a38b29a9f8ca48aba0fe1dac45d6b1a120d404657",
+      "bytes": 2598
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/tools/environment.py",
+      "sha256": "38929d49e4dbeaccf1ce38f7cd952607387b08c70577f6bb5b9bc92349dc0e2e",
+      "bytes": 178
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/tools/qa_runner.py",
+      "sha256": "00cefafe67078c1702eea147183555a488ff0f7f03c6d5e67b142d7d03133e32",
+      "bytes": 1628
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/tools/run_once.py",
+      "sha256": "4d56a02e7c51a8d9c0182295a7d0751e0c80a7a5c7a76455dbbacc6a5eaa33f5",
+      "bytes": 6424
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/tools/run_snapshot_to_panel.py",
+      "sha256": "96b1b0f9b6a5450b8983223c9cabae86ebe4b5fe1c4cd04fae11da3f35c33c7d",
+      "bytes": 15102
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/tools/schedule.ps1",
+      "sha256": "2a87f4f5c9095a159b9227186213774a685d2c094a49234cc508554660b13edb",
+      "bytes": 2531
+    },
+    {
+      "path": "workspace/Naver_Blog_Automation/tools/server.py",
+      "sha256": "83acaf9c9928ef5e627a73c7e1152c94dc273159bb7a193f258ebb533547b647",
+      "bytes": 8855
+    }
+  ]
+}

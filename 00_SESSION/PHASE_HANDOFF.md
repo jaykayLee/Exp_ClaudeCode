@@ -1,28 +1,16 @@
-# 이어하기 상태 — P06 완료 (2026-11-05)
+# 이어하기 상태 — P07 완료 (2026-11-05)
 
-P02·P03은 BLOCKED_EXTERNAL이고, P04→P05→P06을 연속으로 수행했다. 마스터 프롬프트의 Phase는 P06에서 끝나므로 P07~P10은 정의하지 않고 제안만 했다.
+저장소: https://github.com/jaykayLee/Exp_ClaudeCode (main). 새 세션은 이 저장소를 선택해 열고 `/phase-runner`로 시작한다.
 
-## 먼저 읽을 것
-1. `docs/PROGRESS_REPORT_P00_P06.md` — Phase별 상세 목록 (그림 포함 버전: `docs/PROGRESS_REPORT.html`)
-2. `00_SESSION/OPEN_ISSUES.md` — 남은 문제 (I04·I05 외부, I06 Windows, I15 네이버 붙여넣기, I17 P07~P10 결정)
-3. `workspace/Naver_Blog_Automation/00_PROJECT/QA/WINDOWS_ACCEPTANCE.md` — Windows 확인 순서
+## P07 결과
+- GitHub Actions Windows(깨끗한 Windows Server, 공백·한글 경로)에서 install.bat · doctor.bat · smoke.bat(102) · run_once.bat · run_snapshot_demo.bat · 재설치 설정 보존 · 패널 서버 점검 11/11 · Chromium 패널 E2E 14/14 통과.
+- CI 확장: `00_PROJECT/QA/server_smoke.py`(Linux·Windows), Windows 브라우저 E2E, actions Node 24 버전.
+- `tools/write_manifest.py`: 무결성 기준 재생성 도구(문서 수정 후 CI 실패 방지).
 
-## 결과 (Linux)
-- qa_runner 102/102 (작업 폴더 76 + 애드온 26), 브라우저 E2E 14/14, 기존 UI QA 15/15
-- 설치형 ZIP을 공백·한글 경로에 풀어 설치·진단·테스트·재설치·데모까지 통과
-- 작업 중 발견·수정한 버그: 모바일 상태 표 잘림(P04), 설치본에서 재빌드 시 매니페스트 해시 불일치(P06), UI QA 선택자(P06)
-
-## 재현
-```bash
-cd workspace/Naver_Blog_Automation && python3 -m venv .venv && .venv/bin/pip install -r tools/dependencies.lock
-.venv/bin/python tools/qa_runner.py
-.venv/bin/python tools/run_snapshot_to_panel.py --demo
-.venv/bin/python tools/run_once.py
-.venv/bin/python tools/build_release.py --out ../../../dist --label test
-cd ../.. && python3 tools/verify_release.py
-```
+## 아직 남은 Windows 항목 (사용자 PC)
+작업 스케줄러 등록·실행·해제, 오프라인 설치 실패 메시지, 실제 Edge/Chrome에서 작업실, 보안 프로그램 영향 → `workspace/Naver_Blog_Automation/00_PROJECT/QA/WINDOWS_ACCEPTANCE.md`.
 
 ## 다음 (자동 시작 금지)
-- 우선: Windows 체크리스트를 실행하고 `09_LOGS`를 회신한다 → 제안 P07.
-- 실제 다나와 저장본 1개를 제공하면 → 제안 P08 (P02 A안).
-- 그 외 제안 P09(작업 파일 작성 화면), P10(게시 계층 준비)은 범위 결정이 필요하다.
+- P08: 직접 저장한 다나와 상품 페이지 1개 필요 (`danawa-snapshot-onboarding` 스킬)
+- P09: 저장본 작업 파일 작성 화면 (입력 불필요)
+- P10: 게시 계층 준비 (플랫폼·인증 결정 필요)

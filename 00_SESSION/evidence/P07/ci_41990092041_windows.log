@@ -1,0 +1,1040 @@
+windows	Set up job	﻿2026-11-05T07:50:53.3829970Z Current runner version: '2.338.2'
+##[group]Runner Image Provisioner
+Hosted Compute Agent
+Version: 20261021.618
+Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+Build Date: 2026-10-21T00:45:21Z
+Worker ID: {24d1434d-79eb-4fb7-bd0d-c7e535b9d341}
+Region: eastus
+Cloud: Azure
+##[endgroup]
+##[group]Operating System
+Microsoft Windows Server 2025
+10.0.26100
+Datacenter
+##[endgroup]
+##[group]Runner Image
+Image: windows-2025-vs2026
+Version: 20261030.294.1
+Included Software: https://github.com/actions/runner-images/blob/win25-vs2026/20261030.294/images/windows/Windows2025-VS2026-Readme.md
+Image Release: https://github.com/actions/runner-images/releases/tag/win25-vs2026%2F20261030.294
+##[endgroup]
+##[group]GITHUB_TOKEN Permissions
+Contents: read
+Metadata: read
+##[endgroup]
+Secret source: Actions
+Cache mode: write
+Prepare workflow directory
+Prepare all required actions
+Getting action download info
+Download action repository 'actions/checkout@v5' (SHA:fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09)
+Download action repository 'actions/setup-python@v6' (SHA:ece7cb06caefa5fff74198d8649806c4678c61a1)
+Download action repository 'actions/upload-artifact@v5' (SHA:330a01c490aca151604b8cf639adc76d48f6c5d4)
+Complete job name: windows
+windows	Run actions/checkout@v5	﻿2026-11-05T07:50:54.6703550Z ##[group]Run actions/checkout@v5
+with:
+  repository: jaykayLee/Exp_ClaudeCode
+  token: ***
+  ssh-strict: true
+  ssh-user: git
+  persist-credentials: true
+  clean: true
+  sparse-checkout-cone-mode: true
+  fetch-depth: 1
+  fetch-tags: false
+  show-progress: true
+  lfs: false
+  submodules: false
+  set-safe-directory: true
+  allow-unsafe-pr-checkout: false
+env:
+  PYTHONUTF8: 1
+##[endgroup]
+Syncing repository: jaykayLee/Exp_ClaudeCode
+##[group]Getting Git version info
+Working directory is 'D:\a\Exp_ClaudeCode\Exp_ClaudeCode'
+[command]"C:\Program Files\Git\bin\git.exe" version
+git version 2.56.0.windows.4
+##[endgroup]
+Temporarily overriding HOME='D:\a\_temp\d2f6e61e-6100-4e68-9c30-ef384779917f' before making global git config changes
+Adding repository directory to the temporary git global config as a safe directory
+[command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\Exp_ClaudeCode\Exp_ClaudeCode
+Deleting the contents of 'D:\a\Exp_ClaudeCode\Exp_ClaudeCode'
+##[group]Initializing the repository
+[command]"C:\Program Files\Git\bin\git.exe" init D:\a\Exp_ClaudeCode\Exp_ClaudeCode
+Initialized empty Git repository in D:/a/Exp_ClaudeCode/Exp_ClaudeCode/.git/
+[command]"C:\Program Files\Git\bin\git.exe" remote add origin https://github.com/jaykayLee/Exp_ClaudeCode
+##[endgroup]
+##[group]Disabling automatic garbage collection
+[command]"C:\Program Files\Git\bin\git.exe" config --local gc.auto 0
+##[endgroup]
+##[group]Setting up auth
+[command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+[command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+[command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+[command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+[command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+[command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+[command]"C:\Program Files\Git\bin\git.exe" config --local http.https://github.com/.extraheader "AUTHORIZATION: basic ***"
+##[endgroup]
+##[group]Fetching the repository
+[command]"C:\Program Files\Git\bin\git.exe" -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +1dec3fddfda7cbf0f8d002d35dfc9e750fb2b0a7:refs/remotes/origin/main
+From https://github.com/jaykayLee/Exp_ClaudeCode
+ * [new ref]         1dec3fddfda7cbf0f8d002d35dfc9e750fb2b0a7 -> origin/main
+##[endgroup]
+##[group]Determining the checkout info
+##[endgroup]
+[command]"C:\Program Files\Git\bin\git.exe" sparse-checkout disable
+[command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all extensions.worktreeConfig
+##[group]Checking out the ref
+[command]"C:\Program Files\Git\bin\git.exe" checkout --progress --force -B main refs/remotes/origin/main
+Switched to a new branch 'main'
+branch 'main' set up to track 'origin/main'.
+##[endgroup]
+[command]"C:\Program Files\Git\bin\git.exe" log -1 --format=%H
+1dec3fddfda7cbf0f8d002d35dfc9e750fb2b0a7
+windows	Run actions/setup-python@v6	﻿2026-11-05T07:51:00.0083684Z ##[group]Run actions/setup-python@v6
+with:
+  python-version: 3.13
+  check-latest: false
+  token: ***
+  update-environment: true
+  allow-prereleases: false
+  freethreaded: false
+env:
+  PYTHONUTF8: 1
+##[endgroup]
+##[group]Installed versions
+Successfully set up CPython (3.13.17)
+##[endgroup]
+windows	Copy workspace to a path with spaces and Korean	﻿2026-11-05T07:51:00.2213472Z ##[group]Run $target = Join-Path $env:RUNNER_TEMP '작업 폴더\Naver Blog'
+[36;1m$target = Join-Path $env:RUNNER_TEMP '작업 폴더\Naver Blog'[0m
+[36;1mNew-Item -ItemType Directory -Force -Path $target | Out-Null[0m
+[36;1mCopy-Item -Recurse -Force 'workspace\Naver_Blog_Automation\*' $target[0m
+[36;1m"WS=$target" | Out-File -FilePath $env:GITHUB_ENV -Append -Encoding utf8[0m
+shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+env:
+  PYTHONUTF8: 1
+  pythonLocation: C:\hostedtoolcache\windows\Python\3.13.17\x64
+  PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.13.17\x64/lib/pkgconfig
+  Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+  Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+  Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+##[endgroup]
+windows	install.bat (real BAT + bootstrap.ps1)	﻿2026-11-05T07:51:01.0100497Z ##[group]Run cd /d "%WS%"
+[36;1mcd /d "%WS%"[0m
+[36;1mcall install.bat < NUL[0m
+shell: C:\Windows\system32\cmd.EXE /D /E:ON /V:OFF /S /C "CALL "{0}""
+env:
+  PYTHONUTF8: 1
+  pythonLocation: C:\hostedtoolcache\windows\Python\3.13.17\x64
+  PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.13.17\x64/lib/pkgconfig
+  Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+  Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+  Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+  WS: D:\a\_temp\작업 폴더\Naver Blog
+##[endgroup]
+Selected Python: C:\hostedtoolcache\windows\Python\3.13.17\x64\python.exe
+Collecting Pillow==12.3.0 (from -r D:\a\_temp\작업 폴더\Naver Blog\tools\dependencies.lock (line 1))
+  Downloading pillow-12.3.0-cp313-cp313-win_amd64.whl.metadata (9.3 kB)
+Downloading pillow-12.3.0-cp313-cp313-win_amd64.whl (7.2 MB)
+   ---------------------------------------- 7.2/7.2 MB 102.0 MB/s  0:00:00
+Installing collected packages: Pillow
+Successfully installed Pillow-12.3.0
+No broken requirements found.
+{
+  "checked_at": "2026-11-05T16:51:16.193832+09:00",
+  "platform": "Windows-2025Server-10.0.26100-SP0",
+  "checks": [
+    {
+      "name": "Python",
+      "status": "PASS",
+      "detail": "3.13.17"
+    },
+    {
+      "name": "64bit",
+      "status": "PASS",
+      "detail": "64"
+    },
+    {
+      "name": "Pillow",
+      "status": "PASS",
+      "detail": "12.3.0 (lock:12.3.0)"
+    },
+    {
+      "name": "Config",
+      "status": "PASS",
+      "detail": "Local-only / auto_publish=false"
+    },
+    {
+      "name": "Writable workspace",
+      "status": "PASS",
+      "detail": "D:\\a\\_temp\\작업 폴더\\Naver Blog"
+    },
+    {
+      "name": "Pipeline lock",
+      "status": "PASS",
+      "detail": "No lock"
+    },
+    {
+      "name": "Snapshot add-on",
+      "status": "PASS",
+      "detail": "Saved-HTML bridge (offline, no network)"
+    },
+    {
+      "name": "Danawa live collector",
+      "status": "NOT_CONFIGURED",
+      "detail": "Approved import only; live permission and selector validation required"
+    },
+    {
+      "name": "Naver shopping legacy API",
+      "status": "RETIRED",
+      "detail": "Official retirement: 2026-07-31. No API key setup needed for this baseline."
+    },
+    {
+      "name": "Naver publication",
+      "status": "DISABLED",
+      "detail": "Manual handoff only"
+    },
+    {
+      "name": "Windows BAT runtime",
+      "status": "CURRENT_PC",
+      "detail": "No claim of verification on another PC"
+    }
+  ],
+  "local_ok": true
+}
+test_both_inputs_processed_independently (test_daily_ops.Daily.test_both_inputs_processed_independently) ... ok
+test_concurrent_run_is_refused_and_lock_kept (test_daily_ops.Daily.test_concurrent_run_is_refused_and_lock_kept) ... ok
+test_demo_modes_do_not_touch_inbox (test_daily_ops.Daily.test_demo_modes_do_not_touch_inbox) ... ok
+test_no_input_is_not_a_failure_and_is_logged (test_daily_ops.Daily.test_no_input_is_not_a_failure_and_is_logged) ... ok
+test_one_failure_keeps_other_result (test_daily_ops.Daily.test_one_failure_keeps_other_result) ... ok
+test_rerun_same_day_reuses_output_and_keeps_observed_at (test_daily_ops.Daily.test_rerun_same_day_reuses_output_and_keeps_observed_at) ... ok
+test_bat_encoding_and_header (test_daily_ops.WindowsScriptsStatic.test_bat_encoding_and_header) ... ok
+test_bat_paths_quoted (test_daily_ops.WindowsScriptsStatic.test_bat_paths_quoted) ... ok
+test_installer_does_not_overwrite_user_data (test_daily_ops.WindowsScriptsStatic.test_installer_does_not_overwrite_user_data) ... ok
+test_python_entrypoints_exist (test_daily_ops.WindowsScriptsStatic.test_python_entrypoints_exist) ... ok
+test_scheduler_requires_confirmation_and_is_local_only (test_daily_ops.WindowsScriptsStatic.test_scheduler_requires_confirmation_and_is_local_only) ... ok
+test_unattended_python_never_prompts (test_daily_ops.WindowsScriptsStatic.test_unattended_python_never_prompts) ... ok
+test_checked_record_clears_danawa_issues_naver_still_missing (test_panel_integration.HumanReviewLoop.test_checked_record_clears_danawa_issues_naver_still_missing) ... ok
+test_broken_or_missing_image_keeps_price_row (test_panel_integration.ImageIntegrity.test_broken_or_missing_image_keeps_price_row) ... ok
+test_originals_unchanged_and_outputs_354x472 (test_panel_integration.ImageIntegrity.test_originals_unchanged_and_outputs_354x472) ... ok
+test_demo_snapshot_via_api (test_panel_integration.ServerSnapshotApi.test_demo_snapshot_via_api) ... ok
+test_snapshot_api_guards (test_panel_integration.ServerSnapshotApi.test_snapshot_api_guards) ... ok
+test_user_recorded_job_via_api (test_panel_integration.ServerSnapshotApi.test_user_recorded_job_via_api) ... ok
+test_required_table_headers_unchanged (test_panel_integration.StaticUi.test_required_table_headers_unchanged) ... ok
+test_snapshot_card_present_and_offline (test_panel_integration.StaticUi.test_snapshot_card_present_and_offline) ... ok
+test_inline_only_seven_columns (test_release_and_paste.NaverPaste.test_inline_only_seven_columns) ... ok
+test_written_by_bridge_demo (test_release_and_paste.NaverPaste.test_written_by_bridge_demo) ... ok
+test_output_inside_workspace_refused (test_release_and_paste.ReleaseBuild.test_output_inside_workspace_refused) ... ok
+test_rebuild_from_installed_copy (test_release_and_paste.ReleaseBuild.test_rebuild_from_installed_copy)
+Regression (found in P06 clean-install check): an old manifest must not be re-packed. ... ok
+test_secret_like_value_blocks_build (test_release_and_paste.ReleaseBuild.test_secret_like_value_blocks_build) ... ok
+test_zip_excludes_user_data_and_has_entrypoints (test_release_and_paste.ReleaseBuild.test_zip_excludes_user_data_and_has_entrypoints) ... ok
+test_abc_selects_a_ranks_b_excludes_c (test_snapshot_bridge.AdapterSelection.test_abc_selects_a_ranks_b_excludes_c) ... ok
+test_defence_in_depth_rejects_tampered_candidate (test_snapshot_bridge.AdapterSelection.test_defence_in_depth_rejects_tampered_candidate) ... ok
+test_evidence_kind_rules (test_snapshot_bridge.AdapterSelection.test_evidence_kind_rules) ... ok
+test_exclusion_reasons (test_snapshot_bridge.AdapterSelection.test_exclusion_reasons) ... ok
+test_old_behavior_would_have_chosen_card_only (test_snapshot_bridge.AdapterSelection.test_old_behavior_would_have_chosen_card_only)
+Documents I02: legacy meta-wide terms (no scope) are no longer promoted. ... ok
+test_price_url_time_belong_to_same_offer (test_snapshot_bridge.AdapterSelection.test_price_url_time_belong_to_same_offer) ... ok
+test_tie_is_deterministic_and_reported (test_snapshot_bridge.AdapterSelection.test_tie_is_deterministic_and_reported) ... ok
+test_demo_end_to_end_seven_columns (test_snapshot_bridge.BridgeE2E.test_demo_end_to_end_seven_columns) ... ok
+test_demo_label_preserved_everywhere (test_snapshot_bridge.BridgeE2E.test_demo_label_preserved_everywhere) ... ok
+test_html_escape_of_untrusted_names (test_snapshot_bridge.BridgeE2E.test_html_escape_of_untrusted_names) ... ok
+test_job_validation (test_snapshot_bridge.BridgeE2E.test_job_validation) ... ok
+test_manual_import_requires_user_recorded_and_stays_hold (test_snapshot_bridge.BridgeE2E.test_manual_import_requires_user_recorded_and_stays_hold) ... ok
+test_no_structured_offers_reason_visible (test_snapshot_bridge.BridgeE2E.test_no_structured_offers_reason_visible) ... ok
+test_partial_failure_keeps_rows (test_snapshot_bridge.BridgeE2E.test_partial_failure_keeps_rows) ... ok
+test_rerun_keeps_observed_at_and_does_not_publish (test_snapshot_bridge.BridgeE2E.test_rerun_keeps_observed_at_and_does_not_publish) ... ok
+test_target_mismatch_between_job_and_meta_holds (test_snapshot_bridge.BridgeE2E.test_target_mismatch_between_job_and_meta_holds) ... ok
+test_no_selection_is_none_not_zero (test_snapshot_bridge.PanelInput.test_no_selection_is_none_not_zero) ... ok
+test_selected_maps_total_and_keeps_flags_false (test_snapshot_bridge.PanelInput.test_selected_maps_total_and_keeps_flags_false) ... ok
+test_synthetic_condition_labelled (test_snapshot_bridge.PanelInput.test_synthetic_condition_labelled) ... ok
+test_demo_api_and_output (test_workspace.HTTPTests.test_demo_api_and_output) ... ok
+test_host_and_origin_guard (test_workspace.HTTPTests.test_host_and_origin_guard) ... ok
+test_local_image_upload_and_brief_save (test_workspace.HTTPTests.test_local_image_upload_and_brief_save) ... ok
+test_mutation_requires_token (test_workspace.HTTPTests.test_mutation_requires_token) ... ok
+test_status_and_missing_secret_routes (test_workspace.HTTPTests.test_status_and_missing_secret_routes) ... ok
+test_bad_image_and_rights (test_workspace.ImageTests.test_bad_image_and_rights) ... ok
+test_download_default_off_and_host_allowlist (test_workspace.ImageTests.test_download_default_off_and_host_allowlist) ... ok
+test_http_429_stops_without_retry (test_workspace.ImageTests.test_http_429_stops_without_retry) ... ok
+test_mock_download_stores_valid_image (test_workspace.ImageTests.test_mock_download_stores_valid_image) ... ok
+test_original_import_hash_and_evidence (test_workspace.ImageTests.test_original_import_hash_and_evidence) ... ok
+test_path_traversal_and_dimensions (test_workspace.ImageTests.test_path_traversal_and_dimensions) ... ok
+test_private_and_mixed_dns_are_rejected (test_workspace.ImageTests.test_private_and_mixed_dns_are_rejected) ... ok
+test_public_ip_is_pinned (test_workspace.ImageTests.test_public_ip_is_pinned) ... ok
+test_three_aspect_ratios_and_original_integrity (test_workspace.ImageTests.test_three_aspect_ratios_and_original_integrity) ... ok
+test_bad_image_keeps_prices (test_workspace.PipelineTests.test_bad_image_keeps_prices) ... ok
+test_demo_seven_columns_and_three_images (test_workspace.PipelineTests.test_demo_seven_columns_and_three_images) ... ok
+test_html_escapes_untrusted_text (test_workspace.PipelineTests.test_html_escapes_untrusted_text) ... ok
+test_live_and_publishing_are_explicitly_unavailable (test_workspace.PipelineTests.test_live_and_publishing_are_explicitly_unavailable) ... ok
+test_lock_prevents_parallel_write_and_cleans_up (test_workspace.PipelineTests.test_lock_prevents_parallel_write_and_cleans_up) ... ok
+test_missing_source_keeps_row_and_holds (test_workspace.PipelineTests.test_missing_source_keeps_row_and_holds) ... ok
+test_ready_means_only_manual_review (test_workspace.PipelineTests.test_ready_means_only_manual_review) ... ok
+test_repeat_same_input_does_not_fake_price_timestamp (test_workspace.PipelineTests.test_repeat_same_input_does_not_fake_price_timestamp) ... ok
+test_stale_generated_image_removed_on_later_failure (test_workspace.PipelineTests.test_stale_generated_image_removed_on_later_failure) ... ok
+test_bounds (test_workspace.ValidationTests.test_bounds) ... ok
+test_config_safe_and_reinstallation_preserves_config (test_workspace.ValidationTests.test_config_safe_and_reinstallation_preserves_config) ... ok
+test_credit_needed_for_permission (test_workspace.ValidationTests.test_credit_needed_for_permission) ... ok
+test_links (test_workspace.ValidationTests.test_links) ... ok
+test_price_error_preserved (test_workspace.ValidationTests.test_price_error_preserved) ... ok
+test_single_price_only (test_workspace.ValidationTests.test_single_price_only) ... ok
+test_stale_future_and_missing_timestamps (test_workspace.ValidationTests.test_stale_future_and_missing_timestamps) ... ok
+test_true_boolean_and_condition_required (test_workspace.ValidationTests.test_true_boolean_and_condition_required) ... ok
+test_conditional_hint_blocks_even_if_declared_normal (test_snapshot_probe.TestPerOfferTerms.test_conditional_hint_blocks_even_if_declared_normal) ... ok
+test_duplicate_offer_terms_ambiguous (test_snapshot_probe.TestPerOfferTerms.test_duplicate_offer_terms_ambiguous) ... ok
+test_fresh_hours_parameter (test_snapshot_probe.TestPerOfferTerms.test_fresh_hours_parameter) ... ok
+test_meta_terms_without_scope_not_promoted (test_snapshot_probe.TestPerOfferTerms.test_meta_terms_without_scope_not_promoted) ... ok
+test_multiple_or_bad_shipping_rates (test_snapshot_probe.TestPerOfferTerms.test_multiple_or_bad_shipping_rates) ... ok
+test_offer_level_shipping_and_seller_kept (test_snapshot_probe.TestPerOfferTerms.test_offer_level_shipping_and_seller_kept) ... ok
+test_shipping_conflict_between_sources (test_snapshot_probe.TestPerOfferTerms.test_shipping_conflict_between_sources) ... ok
+test_boolean_shipping_rejected (test_snapshot_probe.TestProbe.test_boolean_shipping_rejected) ... ok
+test_demo_always_not_exported (test_snapshot_probe.TestProbe.test_demo_always_not_exported) ... ok
+test_graph (test_snapshot_probe.TestProbe.test_graph) ... ok
+test_host_check (test_snapshot_probe.TestProbe.test_host_check) ... ok
+test_html_escaped (test_snapshot_probe.TestProbe.test_html_escaped) ... ok
+test_invalid_jsonld (test_snapshot_probe.TestProbe.test_invalid_jsonld) ... ok
+test_krw_parse_strict (test_snapshot_probe.TestProbe.test_krw_parse_strict) ... ok
+test_large_input_fails (test_snapshot_probe.TestProbe.test_large_input_fails) ... ok
+test_offer_and_aggregate (test_snapshot_probe.TestProbe.test_offer_and_aggregate) ... ok
+test_permission_required (test_snapshot_probe.TestProbe.test_permission_required) ... ok
+test_plain_html_does_not_guess_prices (test_snapshot_probe.TestProbe.test_plain_html_does_not_guess_prices) ... ok
+test_review_row_generated (test_snapshot_probe.TestProbe.test_review_row_generated) ... ok
+test_saves_reports (test_snapshot_probe.TestProbe.test_saves_reports) ... ok
+test_stale_blocks (test_snapshot_probe.TestProbe.test_stale_blocks) ... ok
+test_timezone_required (test_snapshot_probe.TestProbe.test_timezone_required) ... ok
+test_unknown_payment_blocks (test_snapshot_probe.TestProbe.test_unknown_payment_blocks) ... ok
+test_unknown_shipping_blocks (test_snapshot_probe.TestProbe.test_unknown_shipping_blocks) ... ok
+test_wrong_model_blocks (test_snapshot_probe.TestProbe.test_wrong_model_blocks) ... ok
+test_wrong_variant_blocks (test_snapshot_probe.TestProbe.test_wrong_variant_blocks) ... ok
+
+----------------------------------------------------------------------
+Ran 102 tests in 8.021s
+
+OK
+[HTTP] POST /api/snapshot 200
+[HTTP] GET /output/20261105_demo_d7cc23d8eeac/product_table.html 200
+[HTTP] GET /output/20261105_demo_d7cc23d8eeac/bridge/evidence_sidecar.json 200
+[HTTP] POST /api/snapshot 403
+[HTTP] POST /api/snapshot 400
+[HTTP] POST /api/snapshot 400
+[HTTP] POST /api/snapshot 400
+[HTTP] POST /api/snapshot 400
+[HTTP] POST /api/snapshot 400
+[HTTP] POST /api/snapshot 200
+[HTTP] POST /api/run 200
+[HTTP] GET /output/20261105_demo_27afc152c3b8/product_table.html 200
+[HTTP] GET /api/status 403
+[HTTP] GET /api/status 403
+[HTTP] POST /api/image 200
+[HTTP] POST /api/brief 200
+[HTTP] POST /api/run 403
+[HTTP] GET /api/status 200
+[HTTP] GET /01_CONFIG/settings.local.json 404
+[HTTP] GET /output/../../01_CONFIG/settings.local.json 404
+Setup completed. Double-click start_panel.bat. No task or blog post was created.
+
+Press any key to continue . . . 
+windows	doctor.bat	﻿2026-11-05T07:51:25.4375298Z ##[group]Run cd /d "%WS%"
+[36;1mcd /d "%WS%"[0m
+[36;1mcall doctor.bat < NUL[0m
+shell: C:\Windows\system32\cmd.EXE /D /E:ON /V:OFF /S /C "CALL "{0}""
+env:
+  PYTHONUTF8: 1
+  pythonLocation: C:\hostedtoolcache\windows\Python\3.13.17\x64
+  PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.13.17\x64/lib/pkgconfig
+  Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+  Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+  Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+  WS: D:\a\_temp\작업 폴더\Naver Blog
+##[endgroup]
+{
+  "checked_at": "2026-11-05T16:51:25.591322+09:00",
+  "platform": "Windows-2025Server-10.0.26100-SP0",
+  "checks": [
+    {
+      "name": "Python",
+      "status": "PASS",
+      "detail": "3.13.17"
+    },
+    {
+      "name": "64bit",
+      "status": "PASS",
+      "detail": "64"
+    },
+    {
+      "name": "Pillow",
+      "status": "PASS",
+      "detail": "12.3.0 (lock:12.3.0)"
+    },
+    {
+      "name": "Config",
+      "status": "PASS",
+      "detail": "Local-only / auto_publish=false"
+    },
+    {
+      "name": "Writable workspace",
+      "status": "PASS",
+      "detail": "D:\\a\\_temp\\작업 폴더\\Naver Blog"
+    },
+    {
+      "name": "Pipeline lock",
+      "status": "PASS",
+      "detail": "No lock"
+    },
+    {
+      "name": "Snapshot add-on",
+      "status": "PASS",
+      "detail": "Saved-HTML bridge (offline, no network)"
+    },
+    {
+      "name": "Danawa live collector",
+      "status": "NOT_CONFIGURED",
+      "detail": "Approved import only; live permission and selector validation required"
+    },
+    {
+      "name": "Naver shopping legacy API",
+      "status": "RETIRED",
+      "detail": "Official retirement: 2026-07-31. No API key setup needed for this baseline."
+    },
+    {
+      "name": "Naver publication",
+      "status": "DISABLED",
+      "detail": "Manual handoff only"
+    },
+    {
+      "name": "Windows BAT runtime",
+      "status": "CURRENT_PC",
+      "detail": "No claim of verification on another PC"
+    }
+  ],
+  "local_ok": true
+}
+
+Press any key to continue . . . 
+windows	smoke.bat (all tests on Windows)	﻿2026-11-05T07:51:25.6841502Z ##[group]Run cd /d "%WS%"
+[36;1mcd /d "%WS%"[0m
+[36;1mcall smoke.bat < NUL[0m
+shell: C:\Windows\system32\cmd.EXE /D /E:ON /V:OFF /S /C "CALL "{0}""
+env:
+  PYTHONUTF8: 1
+  pythonLocation: C:\hostedtoolcache\windows\Python\3.13.17\x64
+  PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.13.17\x64/lib/pkgconfig
+  Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+  Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+  Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+  WS: D:\a\_temp\작업 폴더\Naver Blog
+##[endgroup]
+test_both_inputs_processed_independently (test_daily_ops.Daily.test_both_inputs_processed_independently) ... ok
+test_concurrent_run_is_refused_and_lock_kept (test_daily_ops.Daily.test_concurrent_run_is_refused_and_lock_kept) ... ok
+test_demo_modes_do_not_touch_inbox (test_daily_ops.Daily.test_demo_modes_do_not_touch_inbox) ... ok
+test_no_input_is_not_a_failure_and_is_logged (test_daily_ops.Daily.test_no_input_is_not_a_failure_and_is_logged) ... ok
+test_one_failure_keeps_other_result (test_daily_ops.Daily.test_one_failure_keeps_other_result) ... ok
+test_rerun_same_day_reuses_output_and_keeps_observed_at (test_daily_ops.Daily.test_rerun_same_day_reuses_output_and_keeps_observed_at) ... ok
+test_bat_encoding_and_header (test_daily_ops.WindowsScriptsStatic.test_bat_encoding_and_header) ... ok
+test_bat_paths_quoted (test_daily_ops.WindowsScriptsStatic.test_bat_paths_quoted) ... ok
+test_installer_does_not_overwrite_user_data (test_daily_ops.WindowsScriptsStatic.test_installer_does_not_overwrite_user_data) ... ok
+test_python_entrypoints_exist (test_daily_ops.WindowsScriptsStatic.test_python_entrypoints_exist) ... ok
+test_scheduler_requires_confirmation_and_is_local_only (test_daily_ops.WindowsScriptsStatic.test_scheduler_requires_confirmation_and_is_local_only) ... ok
+test_unattended_python_never_prompts (test_daily_ops.WindowsScriptsStatic.test_unattended_python_never_prompts) ... ok
+test_checked_record_clears_danawa_issues_naver_still_missing (test_panel_integration.HumanReviewLoop.test_checked_record_clears_danawa_issues_naver_still_missing) ... ok
+test_broken_or_missing_image_keeps_price_row (test_panel_integration.ImageIntegrity.test_broken_or_missing_image_keeps_price_row) ... ok
+test_originals_unchanged_and_outputs_354x472 (test_panel_integration.ImageIntegrity.test_originals_unchanged_and_outputs_354x472) ... ok
+test_demo_snapshot_via_api (test_panel_integration.ServerSnapshotApi.test_demo_snapshot_via_api) ... ok
+test_snapshot_api_guards (test_panel_integration.ServerSnapshotApi.test_snapshot_api_guards) ... ok
+test_user_recorded_job_via_api (test_panel_integration.ServerSnapshotApi.test_user_recorded_job_via_api) ... ok
+test_required_table_headers_unchanged (test_panel_integration.StaticUi.test_required_table_headers_unchanged) ... ok
+test_snapshot_card_present_and_offline (test_panel_integration.StaticUi.test_snapshot_card_present_and_offline) ... ok
+test_inline_only_seven_columns (test_release_and_paste.NaverPaste.test_inline_only_seven_columns) ... ok
+test_written_by_bridge_demo (test_release_and_paste.NaverPaste.test_written_by_bridge_demo) ... ok
+test_output_inside_workspace_refused (test_release_and_paste.ReleaseBuild.test_output_inside_workspace_refused) ... ok
+test_rebuild_from_installed_copy (test_release_and_paste.ReleaseBuild.test_rebuild_from_installed_copy)
+Regression (found in P06 clean-install check): an old manifest must not be re-packed. ... ok
+test_secret_like_value_blocks_build (test_release_and_paste.ReleaseBuild.test_secret_like_value_blocks_build) ... ok
+test_zip_excludes_user_data_and_has_entrypoints (test_release_and_paste.ReleaseBuild.test_zip_excludes_user_data_and_has_entrypoints) ... ok
+test_abc_selects_a_ranks_b_excludes_c (test_snapshot_bridge.AdapterSelection.test_abc_selects_a_ranks_b_excludes_c) ... ok
+test_defence_in_depth_rejects_tampered_candidate (test_snapshot_bridge.AdapterSelection.test_defence_in_depth_rejects_tampered_candidate) ... ok
+test_evidence_kind_rules (test_snapshot_bridge.AdapterSelection.test_evidence_kind_rules) ... ok
+test_exclusion_reasons (test_snapshot_bridge.AdapterSelection.test_exclusion_reasons) ... ok
+test_old_behavior_would_have_chosen_card_only (test_snapshot_bridge.AdapterSelection.test_old_behavior_would_have_chosen_card_only)
+Documents I02: legacy meta-wide terms (no scope) are no longer promoted. ... ok
+test_price_url_time_belong_to_same_offer (test_snapshot_bridge.AdapterSelection.test_price_url_time_belong_to_same_offer) ... ok
+test_tie_is_deterministic_and_reported (test_snapshot_bridge.AdapterSelection.test_tie_is_deterministic_and_reported) ... ok
+test_demo_end_to_end_seven_columns (test_snapshot_bridge.BridgeE2E.test_demo_end_to_end_seven_columns) ... ok
+test_demo_label_preserved_everywhere (test_snapshot_bridge.BridgeE2E.test_demo_label_preserved_everywhere) ... ok
+test_html_escape_of_untrusted_names (test_snapshot_bridge.BridgeE2E.test_html_escape_of_untrusted_names) ... ok
+test_job_validation (test_snapshot_bridge.BridgeE2E.test_job_validation) ... ok
+test_manual_import_requires_user_recorded_and_stays_hold (test_snapshot_bridge.BridgeE2E.test_manual_import_requires_user_recorded_and_stays_hold) ... ok
+test_no_structured_offers_reason_visible (test_snapshot_bridge.BridgeE2E.test_no_structured_offers_reason_visible) ... ok
+test_partial_failure_keeps_rows (test_snapshot_bridge.BridgeE2E.test_partial_failure_keeps_rows) ... ok
+test_rerun_keeps_observed_at_and_does_not_publish (test_snapshot_bridge.BridgeE2E.test_rerun_keeps_observed_at_and_does_not_publish) ... ok
+test_target_mismatch_between_job_and_meta_holds (test_snapshot_bridge.BridgeE2E.test_target_mismatch_between_job_and_meta_holds) ... ok
+test_no_selection_is_none_not_zero (test_snapshot_bridge.PanelInput.test_no_selection_is_none_not_zero) ... ok
+test_selected_maps_total_and_keeps_flags_false (test_snapshot_bridge.PanelInput.test_selected_maps_total_and_keeps_flags_false) ... ok
+test_synthetic_condition_labelled (test_snapshot_bridge.PanelInput.test_synthetic_condition_labelled) ... ok
+test_demo_api_and_output (test_workspace.HTTPTests.test_demo_api_and_output) ... ok
+test_host_and_origin_guard (test_workspace.HTTPTests.test_host_and_origin_guard) ... ok
+test_local_image_upload_and_brief_save (test_workspace.HTTPTests.test_local_image_upload_and_brief_save) ... ok
+test_mutation_requires_token (test_workspace.HTTPTests.test_mutation_requires_token) ... ok
+test_status_and_missing_secret_routes (test_workspace.HTTPTests.test_status_and_missing_secret_routes) ... ok
+test_bad_image_and_rights (test_workspace.ImageTests.test_bad_image_and_rights) ... ok
+test_download_default_off_and_host_allowlist (test_workspace.ImageTests.test_download_default_off_and_host_allowlist) ... ok
+test_http_429_stops_without_retry (test_workspace.ImageTests.test_http_429_stops_without_retry) ... ok
+test_mock_download_stores_valid_image (test_workspace.ImageTests.test_mock_download_stores_valid_image) ... ok
+test_original_import_hash_and_evidence (test_workspace.ImageTests.test_original_import_hash_and_evidence) ... ok
+test_path_traversal_and_dimensions (test_workspace.ImageTests.test_path_traversal_and_dimensions) ... ok
+test_private_and_mixed_dns_are_rejected (test_workspace.ImageTests.test_private_and_mixed_dns_are_rejected) ... ok
+test_public_ip_is_pinned (test_workspace.ImageTests.test_public_ip_is_pinned) ... ok
+test_three_aspect_ratios_and_original_integrity (test_workspace.ImageTests.test_three_aspect_ratios_and_original_integrity) ... ok
+test_bad_image_keeps_prices (test_workspace.PipelineTests.test_bad_image_keeps_prices) ... ok
+test_demo_seven_columns_and_three_images (test_workspace.PipelineTests.test_demo_seven_columns_and_three_images) ... ok
+test_html_escapes_untrusted_text (test_workspace.PipelineTests.test_html_escapes_untrusted_text) ... ok
+test_live_and_publishing_are_explicitly_unavailable (test_workspace.PipelineTests.test_live_and_publishing_are_explicitly_unavailable) ... ok
+test_lock_prevents_parallel_write_and_cleans_up (test_workspace.PipelineTests.test_lock_prevents_parallel_write_and_cleans_up) ... ok
+test_missing_source_keeps_row_and_holds (test_workspace.PipelineTests.test_missing_source_keeps_row_and_holds) ... ok
+test_ready_means_only_manual_review (test_workspace.PipelineTests.test_ready_means_only_manual_review) ... ok
+test_repeat_same_input_does_not_fake_price_timestamp (test_workspace.PipelineTests.test_repeat_same_input_does_not_fake_price_timestamp) ... ok
+test_stale_generated_image_removed_on_later_failure (test_workspace.PipelineTests.test_stale_generated_image_removed_on_later_failure) ... ok
+test_bounds (test_workspace.ValidationTests.test_bounds) ... ok
+test_config_safe_and_reinstallation_preserves_config (test_workspace.ValidationTests.test_config_safe_and_reinstallation_preserves_config) ... ok
+test_credit_needed_for_permission (test_workspace.ValidationTests.test_credit_needed_for_permission) ... ok
+test_links (test_workspace.ValidationTests.test_links) ... ok
+test_price_error_preserved (test_workspace.ValidationTests.test_price_error_preserved) ... ok
+test_single_price_only (test_workspace.ValidationTests.test_single_price_only) ... ok
+test_stale_future_and_missing_timestamps (test_workspace.ValidationTests.test_stale_future_and_missing_timestamps) ... ok
+test_true_boolean_and_condition_required (test_workspace.ValidationTests.test_true_boolean_and_condition_required) ... ok
+test_conditional_hint_blocks_even_if_declared_normal (test_snapshot_probe.TestPerOfferTerms.test_conditional_hint_blocks_even_if_declared_normal) ... ok
+test_duplicate_offer_terms_ambiguous (test_snapshot_probe.TestPerOfferTerms.test_duplicate_offer_terms_ambiguous) ... ok
+test_fresh_hours_parameter (test_snapshot_probe.TestPerOfferTerms.test_fresh_hours_parameter) ... ok
+test_meta_terms_without_scope_not_promoted (test_snapshot_probe.TestPerOfferTerms.test_meta_terms_without_scope_not_promoted) ... ok
+test_multiple_or_bad_shipping_rates (test_snapshot_probe.TestPerOfferTerms.test_multiple_or_bad_shipping_rates) ... ok
+test_offer_level_shipping_and_seller_kept (test_snapshot_probe.TestPerOfferTerms.test_offer_level_shipping_and_seller_kept) ... ok
+test_shipping_conflict_between_sources (test_snapshot_probe.TestPerOfferTerms.test_shipping_conflict_between_sources) ... ok
+test_boolean_shipping_rejected (test_snapshot_probe.TestProbe.test_boolean_shipping_rejected) ... ok
+test_demo_always_not_exported (test_snapshot_probe.TestProbe.test_demo_always_not_exported) ... ok
+test_graph (test_snapshot_probe.TestProbe.test_graph) ... ok
+test_host_check (test_snapshot_probe.TestProbe.test_host_check) ... ok
+test_html_escaped (test_snapshot_probe.TestProbe.test_html_escaped) ... ok
+test_invalid_jsonld (test_snapshot_probe.TestProbe.test_invalid_jsonld) ... ok
+test_krw_parse_strict (test_snapshot_probe.TestProbe.test_krw_parse_strict) ... ok
+test_large_input_fails (test_snapshot_probe.TestProbe.test_large_input_fails) ... ok
+test_offer_and_aggregate (test_snapshot_probe.TestProbe.test_offer_and_aggregate) ... ok
+test_permission_required (test_snapshot_probe.TestProbe.test_permission_required) ... ok
+test_plain_html_does_not_guess_prices (test_snapshot_probe.TestProbe.test_plain_html_does_not_guess_prices) ... ok
+test_review_row_generated (test_snapshot_probe.TestProbe.test_review_row_generated) ... ok
+test_saves_reports (test_snapshot_probe.TestProbe.test_saves_reports) ... ok
+test_stale_blocks (test_snapshot_probe.TestProbe.test_stale_blocks) ... ok
+test_timezone_required (test_snapshot_probe.TestProbe.test_timezone_required) ... ok
+test_unknown_payment_blocks (test_snapshot_probe.TestProbe.test_unknown_payment_blocks) ... ok
+test_unknown_shipping_blocks (test_snapshot_probe.TestProbe.test_unknown_shipping_blocks) ... ok
+test_wrong_model_blocks (test_snapshot_probe.TestProbe.test_wrong_model_blocks) ... ok
+test_wrong_variant_blocks (test_snapshot_probe.TestProbe.test_wrong_variant_blocks) ... ok
+
+----------------------------------------------------------------------
+Ran 102 tests in 9.133s
+
+OK
+[HTTP] POST /api/snapshot 200
+[HTTP] GET /output/20261105_demo_d7cc23d8eeac/product_table.html 200
+[HTTP] GET /output/20261105_demo_d7cc23d8eeac/bridge/evidence_sidecar.json 200
+[HTTP] POST /api/snapshot 403
+[HTTP] POST /api/snapshot 400
+[HTTP] POST /api/snapshot 400
+[HTTP] POST /api/snapshot 400
+[HTTP] POST /api/snapshot 400
+[HTTP] POST /api/snapshot 400
+[HTTP] POST /api/snapshot 200
+[HTTP] POST /api/run 200
+[HTTP] GET /output/20261105_demo_27afc152c3b8/product_table.html 200
+[HTTP] GET /api/status 403
+[HTTP] GET /api/status 403
+[HTTP] POST /api/image 200
+[HTTP] POST /api/brief 200
+[HTTP] POST /api/run 403
+[HTTP] GET /api/status 200
+[HTTP] GET /01_CONFIG/settings.local.json 404
+[HTTP] GET /output/../../01_CONFIG/settings.local.json 404
+
+Press any key to continue . . . 
+windows	run_once.bat (empty inbox must exit 0)	﻿2026-11-05T07:51:35.1629536Z ##[group]Run cd /d "%WS%"
+[36;1mcd /d "%WS%"[0m
+[36;1mcall run_once.bat < NUL[0m
+shell: C:\Windows\system32\cmd.EXE /D /E:ON /V:OFF /S /C "CALL "{0}""
+env:
+  PYTHONUTF8: 1
+  pythonLocation: C:\hostedtoolcache\windows\Python\3.13.17\x64
+  PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.13.17\x64/lib/pkgconfig
+  Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+  Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+  Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+  WS: D:\a\_temp\작업 폴더\Naver Blog
+##[endgroup]
+{
+  "tool": "run_once",
+  "started_at": "2026-11-05T16:51:35.314354+09:00",
+  "finished_at": "2026-11-05T16:51:35.315074+09:00",
+  "overall": "NO_INPUT",
+  "inputs": {
+    "products": {
+      "status": "NO_INPUT",
+      "detail": "records 목록이 비어 있습니다."
+    }
+  },
+  "notice": "로컬 검토 자료 생성만 수행. 실시간 가격 수집·로그인·블로그 게시 없음.",
+  "network_price_collection": false,
+  "published": false,
+  "hint": "처리할 입력이 없습니다. 07_DATA/inbox/products.json에 records를 넣거나 07_DATA/inbox/snapshot_job.json 작업 파일을 만드세요.",
+  "log": "09_LOGS/daily/run_20261105_165135_314354.json"
+}
+[INFO] 처리할 입력이 없습니다. 07_DATA/inbox/products.json에 records를 넣거나 07_DATA/inbox/snapshot_job.json 작업 파일을 만드세요.
+
+Press any key to continue . . . 
+windows	run_snapshot_demo.bat	﻿2026-11-05T07:51:35.3533309Z ##[group]Run cd /d "%WS%"
+[36;1mcd /d "%WS%"[0m
+[36;1mcall run_snapshot_demo.bat < NUL[0m
+shell: C:\Windows\system32\cmd.EXE /D /E:ON /V:OFF /S /C "CALL "{0}""
+env:
+  PYTHONUTF8: 1
+  pythonLocation: C:\hostedtoolcache\windows\Python\3.13.17\x64
+  PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.13.17\x64/lib/pkgconfig
+  Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+  Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+  Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+  WS: D:\a\_temp\작업 폴더\Naver Blog
+##[endgroup]
+{
+  "run_id": "20261105_demo_d7cc23d8eeac",
+  "mode": "DEMO",
+  "evidence_kind": "synthetic",
+  "review_gate": "DEMO_ONLY",
+  "reused_output": false,
+  "output_relative": "08_OUTPUT/runs/20261105_demo_d7cc23d8eeac",
+  "sidecar": "08_OUTPUT/runs/20261105_demo_d7cc23d8eeac/bridge/evidence_sidecar.json",
+  "published": false,
+  "paste_url": "/output/20261105_demo_d7cc23d8eeac/naver_paste_table.html",
+  "products": [
+    {
+      "row": 1,
+      "query": "가상 무선 마우스 A",
+      "status": "SELECTED",
+      "danawa_price": 119000,
+      "danawa_url": "https://example.com/shop/a-offer"
+    },
+    {
+      "row": 2,
+      "query": "가상 키보드 B",
+      "status": "NO_ELIGIBLE_CANDIDATE",
+      "danawa_price": null,
+      "danawa_url": null
+    },
+    {
+      "row": 3,
+      "query": "가상 헤드셋 C",
+      "status": "NO_CANDIDATE",
+      "danawa_price": null,
+      "danawa_url": null
+    }
+  ]
+}
+
+Press any key to continue . . . 
+windows	Reinstall keeps user settings	﻿2026-11-05T07:51:35.6362830Z ##[group]Run Set-Location -LiteralPath $env:WS
+[36;1mSet-Location -LiteralPath $env:WS[0m
+[36;1m$before = (Get-FileHash '01_CONFIG\settings.local.json').Hash[0m
+[36;1mcmd /c "install.bat < NUL"[0m
+[36;1mif ($LASTEXITCODE -ne 0) { throw "reinstall failed" }[0m
+[36;1m$after = (Get-FileHash '01_CONFIG\settings.local.json').Hash[0m
+[36;1mif ($before -ne $after) { throw "settings.local.json changed on reinstall" }[0m
+[36;1mWrite-Host "settings preserved"[0m
+shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+env:
+  PYTHONUTF8: 1
+  pythonLocation: C:\hostedtoolcache\windows\Python\3.13.17\x64
+  PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.13.17\x64/lib/pkgconfig
+  Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+  Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+  Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+  WS: D:\a\_temp\작업 폴더\Naver Blog
+##[endgroup]
+Selected Python: D:\a\_temp\작업 폴더\Naver Blog\.venv\Scripts\python.exe
+Requirement already satisfied: Pillow==12.3.0 in .\.venv\Lib\site-packages (from -r D:\a\_temp\작업 폴더\Naver Blog\tools\dependencies.lock (line 1)) (12.3.0)
+No broken requirements found.
+{
+  "checked_at": "2026-11-05T16:51:38.069043+09:00",
+  "platform": "Windows-2025Server-10.0.26100-SP0",
+  "checks": [
+    {
+      "name": "Python",
+      "status": "PASS",
+      "detail": "3.13.17"
+    },
+    {
+      "name": "64bit",
+      "status": "PASS",
+      "detail": "64"
+    },
+    {
+      "name": "Pillow",
+      "status": "PASS",
+      "detail": "12.3.0 (lock:12.3.0)"
+    },
+    {
+      "name": "Config",
+      "status": "PASS",
+      "detail": "Local-only / auto_publish=false"
+    },
+    {
+      "name": "Writable workspace",
+      "status": "PASS",
+      "detail": "D:\\a\\_temp\\작업 폴더\\Naver Blog"
+    },
+    {
+      "name": "Pipeline lock",
+      "status": "PASS",
+      "detail": "No lock"
+    },
+    {
+      "name": "Snapshot add-on",
+      "status": "PASS",
+      "detail": "Saved-HTML bridge (offline, no network)"
+    },
+    {
+      "name": "Danawa live collector",
+      "status": "NOT_CONFIGURED",
+      "detail": "Approved import only; live permission and selector validation required"
+    },
+    {
+      "name": "Naver shopping legacy API",
+      "status": "RETIRED",
+      "detail": "Official retirement: 2026-07-31. No API key setup needed for this baseline."
+    },
+    {
+      "name": "Naver publication",
+      "status": "DISABLED",
+      "detail": "Manual handoff only"
+    },
+    {
+      "name": "Windows BAT runtime",
+      "status": "CURRENT_PC",
+      "detail": "No claim of verification on another PC"
+    }
+  ],
+  "local_ok": true
+}
+test_both_inputs_processed_independently (test_daily_ops.Daily.test_both_inputs_processed_independently) ... ok
+test_concurrent_run_is_refused_and_lock_kept (test_daily_ops.Daily.test_concurrent_run_is_refused_and_lock_kept) ... ok
+test_demo_modes_do_not_touch_inbox (test_daily_ops.Daily.test_demo_modes_do_not_touch_inbox) ... ok
+test_no_input_is_not_a_failure_and_is_logged (test_daily_ops.Daily.test_no_input_is_not_a_failure_and_is_logged) ... ok
+test_one_failure_keeps_other_result (test_daily_ops.Daily.test_one_failure_keeps_other_result) ... ok
+test_rerun_same_day_reuses_output_and_keeps_observed_at (test_daily_ops.Daily.test_rerun_same_day_reuses_output_and_keeps_observed_at) ... ok
+test_bat_encoding_and_header (test_daily_ops.WindowsScriptsStatic.test_bat_encoding_and_header) ... ok
+test_bat_paths_quoted (test_daily_ops.WindowsScriptsStatic.test_bat_paths_quoted) ... ok
+test_installer_does_not_overwrite_user_data (test_daily_ops.WindowsScriptsStatic.test_installer_does_not_overwrite_user_data) ... ok
+test_python_entrypoints_exist (test_daily_ops.WindowsScriptsStatic.test_python_entrypoints_exist) ... ok
+test_scheduler_requires_confirmation_and_is_local_only (test_daily_ops.WindowsScriptsStatic.test_scheduler_requires_confirmation_and_is_local_only) ... ok
+test_unattended_python_never_prompts (test_daily_ops.WindowsScriptsStatic.test_unattended_python_never_prompts) ... ok
+test_checked_record_clears_danawa_issues_naver_still_missing (test_panel_integration.HumanReviewLoop.test_checked_record_clears_danawa_issues_naver_still_missing) ... ok
+test_broken_or_missing_image_keeps_price_row (test_panel_integration.ImageIntegrity.test_broken_or_missing_image_keeps_price_row) ... ok
+test_originals_unchanged_and_outputs_354x472 (test_panel_integration.ImageIntegrity.test_originals_unchanged_and_outputs_354x472) ... ok
+test_demo_snapshot_via_api (test_panel_integration.ServerSnapshotApi.test_demo_snapshot_via_api) ... ok
+test_snapshot_api_guards (test_panel_integration.ServerSnapshotApi.test_snapshot_api_guards) ... ok
+test_user_recorded_job_via_api (test_panel_integration.ServerSnapshotApi.test_user_recorded_job_via_api) ... ok
+test_required_table_headers_unchanged (test_panel_integration.StaticUi.test_required_table_headers_unchanged) ... ok
+test_snapshot_card_present_and_offline (test_panel_integration.StaticUi.test_snapshot_card_present_and_offline) ... ok
+test_inline_only_seven_columns (test_release_and_paste.NaverPaste.test_inline_only_seven_columns) ... ok
+test_written_by_bridge_demo (test_release_and_paste.NaverPaste.test_written_by_bridge_demo) ... ok
+test_output_inside_workspace_refused (test_release_and_paste.ReleaseBuild.test_output_inside_workspace_refused) ... ok
+test_rebuild_from_installed_copy (test_release_and_paste.ReleaseBuild.test_rebuild_from_installed_copy)
+Regression (found in P06 clean-install check): an old manifest must not be re-packed. ... ok
+test_secret_like_value_blocks_build (test_release_and_paste.ReleaseBuild.test_secret_like_value_blocks_build) ... ok
+test_zip_excludes_user_data_and_has_entrypoints (test_release_and_paste.ReleaseBuild.test_zip_excludes_user_data_and_has_entrypoints) ... ok
+test_abc_selects_a_ranks_b_excludes_c (test_snapshot_bridge.AdapterSelection.test_abc_selects_a_ranks_b_excludes_c) ... ok
+test_defence_in_depth_rejects_tampered_candidate (test_snapshot_bridge.AdapterSelection.test_defence_in_depth_rejects_tampered_candidate) ... ok
+test_evidence_kind_rules (test_snapshot_bridge.AdapterSelection.test_evidence_kind_rules) ... ok
+test_exclusion_reasons (test_snapshot_bridge.AdapterSelection.test_exclusion_reasons) ... ok
+test_old_behavior_would_have_chosen_card_only (test_snapshot_bridge.AdapterSelection.test_old_behavior_would_have_chosen_card_only)
+Documents I02: legacy meta-wide terms (no scope) are no longer promoted. ... ok
+test_price_url_time_belong_to_same_offer (test_snapshot_bridge.AdapterSelection.test_price_url_time_belong_to_same_offer) ... ok
+test_tie_is_deterministic_and_reported (test_snapshot_bridge.AdapterSelection.test_tie_is_deterministic_and_reported) ... ok
+test_demo_end_to_end_seven_columns (test_snapshot_bridge.BridgeE2E.test_demo_end_to_end_seven_columns) ... ok
+test_demo_label_preserved_everywhere (test_snapshot_bridge.BridgeE2E.test_demo_label_preserved_everywhere) ... ok
+test_html_escape_of_untrusted_names (test_snapshot_bridge.BridgeE2E.test_html_escape_of_untrusted_names) ... ok
+test_job_validation (test_snapshot_bridge.BridgeE2E.test_job_validation) ... ok
+test_manual_import_requires_user_recorded_and_stays_hold (test_snapshot_bridge.BridgeE2E.test_manual_import_requires_user_recorded_and_stays_hold) ... ok
+test_no_structured_offers_reason_visible (test_snapshot_bridge.BridgeE2E.test_no_structured_offers_reason_visible) ... ok
+test_partial_failure_keeps_rows (test_snapshot_bridge.BridgeE2E.test_partial_failure_keeps_rows) ... ok
+test_rerun_keeps_observed_at_and_does_not_publish (test_snapshot_bridge.BridgeE2E.test_rerun_keeps_observed_at_and_does_not_publish) ... ok
+test_target_mismatch_between_job_and_meta_holds (test_snapshot_bridge.BridgeE2E.test_target_mismatch_between_job_and_meta_holds) ... ok
+test_no_selection_is_none_not_zero (test_snapshot_bridge.PanelInput.test_no_selection_is_none_not_zero) ... ok
+test_selected_maps_total_and_keeps_flags_false (test_snapshot_bridge.PanelInput.test_selected_maps_total_and_keeps_flags_false) ... ok
+test_synthetic_condition_labelled (test_snapshot_bridge.PanelInput.test_synthetic_condition_labelled) ... ok
+test_demo_api_and_output (test_workspace.HTTPTests.test_demo_api_and_output) ... ok
+test_host_and_origin_guard (test_workspace.HTTPTests.test_host_and_origin_guard) ... ok
+test_local_image_upload_and_brief_save (test_workspace.HTTPTests.test_local_image_upload_and_brief_save) ... ok
+test_mutation_requires_token (test_workspace.HTTPTests.test_mutation_requires_token) ... ok
+test_status_and_missing_secret_routes (test_workspace.HTTPTests.test_status_and_missing_secret_routes) ... ok
+test_bad_image_and_rights (test_workspace.ImageTests.test_bad_image_and_rights) ... ok
+test_download_default_off_and_host_allowlist (test_workspace.ImageTests.test_download_default_off_and_host_allowlist) ... ok
+test_http_429_stops_without_retry (test_workspace.ImageTests.test_http_429_stops_without_retry) ... ok
+test_mock_download_stores_valid_image (test_workspace.ImageTests.test_mock_download_stores_valid_image) ... ok
+test_original_import_hash_and_evidence (test_workspace.ImageTests.test_original_import_hash_and_evidence) ... ok
+test_path_traversal_and_dimensions (test_workspace.ImageTests.test_path_traversal_and_dimensions) ... ok
+test_private_and_mixed_dns_are_rejected (test_workspace.ImageTests.test_private_and_mixed_dns_are_rejected) ... ok
+test_public_ip_is_pinned (test_workspace.ImageTests.test_public_ip_is_pinned) ... ok
+test_three_aspect_ratios_and_original_integrity (test_workspace.ImageTests.test_three_aspect_ratios_and_original_integrity) ... ok
+test_bad_image_keeps_prices (test_workspace.PipelineTests.test_bad_image_keeps_prices) ... ok
+test_demo_seven_columns_and_three_images (test_workspace.PipelineTests.test_demo_seven_columns_and_three_images) ... ok
+test_html_escapes_untrusted_text (test_workspace.PipelineTests.test_html_escapes_untrusted_text) ... ok
+test_live_and_publishing_are_explicitly_unavailable (test_workspace.PipelineTests.test_live_and_publishing_are_explicitly_unavailable) ... ok
+test_lock_prevents_parallel_write_and_cleans_up (test_workspace.PipelineTests.test_lock_prevents_parallel_write_and_cleans_up) ... ok
+test_missing_source_keeps_row_and_holds (test_workspace.PipelineTests.test_missing_source_keeps_row_and_holds) ... ok
+test_ready_means_only_manual_review (test_workspace.PipelineTests.test_ready_means_only_manual_review) ... ok
+test_repeat_same_input_does_not_fake_price_timestamp (test_workspace.PipelineTests.test_repeat_same_input_does_not_fake_price_timestamp) ... ok
+test_stale_generated_image_removed_on_later_failure (test_workspace.PipelineTests.test_stale_generated_image_removed_on_later_failure) ... ok
+test_bounds (test_workspace.ValidationTests.test_bounds) ... ok
+test_config_safe_and_reinstallation_preserves_config (test_workspace.ValidationTests.test_config_safe_and_reinstallation_preserves_config) ... ok
+test_credit_needed_for_permission (test_workspace.ValidationTests.test_credit_needed_for_permission) ... ok
+test_links (test_workspace.ValidationTests.test_links) ... ok
+test_price_error_preserved (test_workspace.ValidationTests.test_price_error_preserved) ... ok
+test_single_price_only (test_workspace.ValidationTests.test_single_price_only) ... ok
+test_stale_future_and_missing_timestamps (test_workspace.ValidationTests.test_stale_future_and_missing_timestamps) ... ok
+test_true_boolean_and_condition_required (test_workspace.ValidationTests.test_true_boolean_and_condition_required) ... ok
+test_conditional_hint_blocks_even_if_declared_normal (test_snapshot_probe.TestPerOfferTerms.test_conditional_hint_blocks_even_if_declared_normal) ... ok
+test_duplicate_offer_terms_ambiguous (test_snapshot_probe.TestPerOfferTerms.test_duplicate_offer_terms_ambiguous) ... ok
+test_fresh_hours_parameter (test_snapshot_probe.TestPerOfferTerms.test_fresh_hours_parameter) ... ok
+test_meta_terms_without_scope_not_promoted (test_snapshot_probe.TestPerOfferTerms.test_meta_terms_without_scope_not_promoted) ... ok
+test_multiple_or_bad_shipping_rates (test_snapshot_probe.TestPerOfferTerms.test_multiple_or_bad_shipping_rates) ... ok
+test_offer_level_shipping_and_seller_kept (test_snapshot_probe.TestPerOfferTerms.test_offer_level_shipping_and_seller_kept) ... ok
+test_shipping_conflict_between_sources (test_snapshot_probe.TestPerOfferTerms.test_shipping_conflict_between_sources) ... ok
+test_boolean_shipping_rejected (test_snapshot_probe.TestProbe.test_boolean_shipping_rejected) ... ok
+test_demo_always_not_exported (test_snapshot_probe.TestProbe.test_demo_always_not_exported) ... ok
+test_graph (test_snapshot_probe.TestProbe.test_graph) ... ok
+test_host_check (test_snapshot_probe.TestProbe.test_host_check) ... ok
+test_html_escaped (test_snapshot_probe.TestProbe.test_html_escaped) ... ok
+test_invalid_jsonld (test_snapshot_probe.TestProbe.test_invalid_jsonld) ... ok
+test_krw_parse_strict (test_snapshot_probe.TestProbe.test_krw_parse_strict) ... ok
+test_large_input_fails (test_snapshot_probe.TestProbe.test_large_input_fails) ... ok
+test_offer_and_aggregate (test_snapshot_probe.TestProbe.test_offer_and_aggregate) ... ok
+test_permission_required (test_snapshot_probe.TestProbe.test_permission_required) ... ok
+test_plain_html_does_not_guess_prices (test_snapshot_probe.TestProbe.test_plain_html_does_not_guess_prices) ... ok
+test_review_row_generated (test_snapshot_probe.TestProbe.test_review_row_generated) ... ok
+test_saves_reports (test_snapshot_probe.TestProbe.test_saves_reports) ... ok
+test_stale_blocks (test_snapshot_probe.TestProbe.test_stale_blocks) ... ok
+test_timezone_required (test_snapshot_probe.TestProbe.test_timezone_required) ... ok
+test_unknown_payment_blocks (test_snapshot_probe.TestProbe.test_unknown_payment_blocks) ... ok
+test_unknown_shipping_blocks (test_snapshot_probe.TestProbe.test_unknown_shipping_blocks) ... ok
+test_wrong_model_blocks (test_snapshot_probe.TestProbe.test_wrong_model_blocks) ... ok
+test_wrong_variant_blocks (test_snapshot_probe.TestProbe.test_wrong_variant_blocks) ... ok
+
+----------------------------------------------------------------------
+Ran 102 tests in 8.129s
+
+OK
+[HTTP] POST /api/snapshot 200
+[HTTP] GET /output/20261105_demo_d7cc23d8eeac/product_table.html 200
+[HTTP] GET /output/20261105_demo_d7cc23d8eeac/bridge/evidence_sidecar.json 200
+[HTTP] POST /api/snapshot 403
+[HTTP] POST /api/snapshot 400
+[HTTP] POST /api/snapshot 400
+[HTTP] POST /api/snapshot 400
+[HTTP] POST /api/snapshot 400
+[HTTP] POST /api/snapshot 400
+[HTTP] POST /api/snapshot 200
+[HTTP] POST /api/run 200
+[HTTP] GET /output/20261105_demo_27afc152c3b8/product_table.html 200
+[HTTP] GET /api/status 403
+[HTTP] GET /api/status 403
+[HTTP] POST /api/image 200
+[HTTP] POST /api/brief 200
+[HTTP] POST /api/run 403
+[HTTP] GET /api/status 200
+[HTTP] GET /01_CONFIG/settings.local.json 404
+[HTTP] GET /output/../../01_CONFIG/settings.local.json 404
+Setup completed. Double-click start_panel.bat. No task or blog post was created.
+
+Press any key to continue . . . 
+settings preserved
+windows	Panel server smoke (real server.py over HTTP)	﻿2026-11-05T07:51:47.0454529Z ##[group]Run cd /d "%WS%"
+[36;1mcd /d "%WS%"[0m
+[36;1m.venv\Scripts\python.exe 00_PROJECT\QA\server_smoke.py[0m
+shell: C:\Windows\system32\cmd.EXE /D /E:ON /V:OFF /S /C "CALL "{0}""
+env:
+  PYTHONUTF8: 1
+  pythonLocation: C:\hostedtoolcache\windows\Python\3.13.17\x64
+  PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.13.17\x64/lib/pkgconfig
+  Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+  Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+  Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+  WS: D:\a\_temp\작업 폴더\Naver Blog
+##[endgroup]
+PASS server_started_on_127.0.0.1 — port 53194
+PASS status_local_only
+PASS host_guard
+PASS token_guard
+PASS snapshot_demo_api
+PASS status_rows
+PASS korean_text_intact
+PASS gate_demo_only
+PASS seven_column_table_served
+PASS paste_table_served
+PASS server_banner_local_only — Workspace: http://127.0.0.1:53194
+{"passed": 11, "total": 11, "platform": "win32"}
+windows	Browser E2E of the panel (Chromium on Windows)	﻿2026-11-05T07:51:48.0143541Z ##[group]Run $py = Join-Path $env:WS '.venv\Scripts\python.exe'
+[36;1m$py = Join-Path $env:WS '.venv\Scripts\python.exe'[0m
+[36;1m& $py -m pip install --disable-pip-version-check -q playwright[0m
+[36;1mif ($LASTEXITCODE -ne 0) { throw "playwright install failed" }[0m
+[36;1m& $py -m playwright install chromium[0m
+[36;1mif ($LASTEXITCODE -ne 0) { throw "chromium install failed" }[0m
+[36;1m& $py "$env:GITHUB_WORKSPACE\00_SESSION\evidence\P04\ui_snapshot_e2e.py"[0m
+[36;1mif ($LASTEXITCODE -ne 0) { throw "panel E2E failed" }[0m
+shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+env:
+  PYTHONUTF8: 1
+  pythonLocation: C:\hostedtoolcache\windows\Python\3.13.17\x64
+  PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.13.17\x64/lib/pkgconfig
+  Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+  Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+  Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+  WS: D:\a\_temp\작업 폴더\Naver Blog
+##[endgroup]
+Downloading Chrome for Testing 156.0.8078.4 (playwright chromium v1248)[2m from https://cdn.playwright.dev/builds/cft/156.0.8078.4/win64/chrome-win64.zip[22m
+|                                                                                |   0% of 197.5 MiB
+|■■■■■■■■                                                                        |  10% of 197.5 MiB
+|■■■■■■■■■■■■■■■■                                                                |  20% of 197.5 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■                                                        |  30% of 197.5 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                                |  40% of 197.5 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                        |  50% of 197.5 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                |  60% of 197.5 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                        |  70% of 197.5 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                |  80% of 197.5 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■        |  90% of 197.5 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■| 100% of 197.5 MiB
+Chrome for Testing 156.0.8078.4 (playwright chromium v1248) downloaded to C:\Users\runneradmin\AppData\Local\ms-playwright\chromium-1248
+Downloading FFmpeg (playwright ffmpeg v1013)[2m from https://cdn.playwright.dev/dbazure/download/playwright/builds/ffmpeg/1013/ffmpeg-win64.zip[22m
+|                                                                                |   0% of 1.6 MiB
+|■■■■■■■■                                                                        |  10% of 1.6 MiB
+|■■■■■■■■■■■■■■■■                                                                |  20% of 1.6 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■                                                        |  30% of 1.6 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                                |  40% of 1.6 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                        |  50% of 1.6 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                |  60% of 1.6 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                        |  70% of 1.6 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                |  80% of 1.6 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■        |  90% of 1.6 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■| 100% of 1.6 MiB
+FFmpeg (playwright ffmpeg v1013) downloaded to C:\Users\runneradmin\AppData\Local\ms-playwright\ffmpeg-1013
+Downloading Chrome Headless Shell 156.0.8078.4 (playwright chromium-headless-shell v1248)[2m from https://cdn.playwright.dev/builds/cft/156.0.8078.4/win64/chrome-headless-shell-win64.zip[22m
+|                                                                                |   0% of 118.1 MiB
+|■■■■■■■■                                                                        |  10% of 118.1 MiB
+|■■■■■■■■■■■■■■■■                                                                |  20% of 118.1 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■                                                        |  30% of 118.1 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                                |  40% of 118.1 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                        |  50% of 118.1 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                |  60% of 118.1 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                        |  70% of 118.1 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                |  80% of 118.1 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■        |  90% of 118.1 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■| 100% of 118.1 MiB
+Chrome Headless Shell 156.0.8078.4 (playwright chromium-headless-shell v1248) downloaded to C:\Users\runneradmin\AppData\Local\ms-playwright\chromium_headless_shell-1248
+Downloading Winldd (playwright winldd v1007)[2m from https://cdn.playwright.dev/dbazure/download/playwright/builds/winldd/1007/winldd-win64.zip[22m
+|■■■■■■■■                                                                        |  12% of 0.1 MiB
+|■■■■■■■■■■■■■■■■                                                                |  25% of 0.1 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■                                                        |  38% of 0.1 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                        |  51% of 0.1 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                        |  70% of 0.1 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                |  89% of 0.1 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■| 100% of 0.1 MiB
+Winldd (playwright winldd v1007) downloaded to C:\Users\runneradmin\AppData\Local\ms-playwright\winldd-1007
+[HTTP] GET / 200
+[HTTP] GET /api/status 200
+PASS connected_real_http http://127.0.0.1:53225/
+[HTTP] POST /api/snapshot 200
+PASS status_rows_three 
+PASS row1_selected_total 
+PASS row2_hold_reason_korean 
+PASS row3_no_structured 
+PASS naver_not_connected_shown 
+PASS badge_demo 
+PASS loaded_into_review_list 
+PASS mode_badge_demo 
+PASS human_check_unticked 
+[HTTP] GET /output/20261105_demo_d7cc23d8eeac/product_table.html 200
+PASS generated_table_seven_headers ['No.', '상품명', '이미지', '다나와 최저가', '사이트 주소', '네이버 최저가', '사이트 주소']
+[HTTP] GET / 200
+[HTTP] GET /api/status 200
+[HTTP] POST /api/snapshot 200
+PASS mobile_no_page_horizontal_overflow overflow=0px
+PASS mobile_status_table_scrolls_inside_card 
+PASS no_javascript_errors 
+{"passed": 14, "total": 14}
+windows	Scheduler script syntax only (no task is registered)	﻿2026-11-05T07:52:13.9346536Z ##[group]Run $errors = $null
+[36;1m$errors = $null[0m
+[36;1m[System.Management.Automation.Language.Parser]::ParseFile((Join-Path $env:WS 'tools\schedule.ps1'), [ref]$null, [ref]$errors) | Out-Null[0m
+[36;1mif ($errors.Count) { $errors | Format-List; throw "schedule.ps1 parse errors" }[0m
+[36;1mWrite-Host "schedule.ps1 parses. Registration is NOT executed in CI."[0m
+shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+env:
+  PYTHONUTF8: 1
+  pythonLocation: C:\hostedtoolcache\windows\Python\3.13.17\x64
+  PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.13.17\x64/lib/pkgconfig
+  Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+  Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+  Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+  WS: D:\a\_temp\작업 폴더\Naver Blog
+##[endgroup]
+schedule.ps1 parses. Registration is NOT executed in CI.
+windows	Run actions/upload-artifact@v5	﻿2026-11-05T07:52:14.4614708Z ##[group]Run actions/upload-artifact@v5
+with:
+  name: windows-logs
+  path: D:\a\_temp\작업 폴더\Naver Blog/09_LOGS/
+windows	Run actions/upload-artifact@v5	00_SESSION/evidence/P04/*.png
+windows	Run actions/upload-artifact@v5	00_SESSION/evidence/P04/ui_snapshot_e2e.json
+windows	Run actions/upload-artifact@v5	
+  if-no-files-found: warn
+  compression-level: 6
+  overwrite: false
+  include-hidden-files: false
+env:
+  PYTHONUTF8: 1
+  pythonLocation: C:\hostedtoolcache\windows\Python\3.13.17\x64
+  PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.13.17\x64/lib/pkgconfig
+  Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+  Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+  Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+  WS: D:\a\_temp\작업 폴더\Naver Blog
+##[endgroup]
+(node:7508) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Multiple search paths detected. Calculating the least common ancestor of all paths
+The least common ancestor is D:\a. This will be the root directory of the artifact
+With the provided path, there will be 13 files uploaded
+Artifact name is valid!
+Root directory input is valid!
+Beginning upload of artifact content to blob storage
+(node:7508) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+Uploaded bytes 798517
+Finished uploading artifact content to blob storage!
+SHA256 digest of uploaded artifact zip is 951f4fc317fd8687e70cadedc3438a2406cb63c4c87e177b6f79e95cdd7223a9
+Finalizing artifact upload
+Artifact windows-logs.zip successfully finalized. Artifact ID 13397926244
+Artifact windows-logs has been successfully uploaded! Final size is 798517 bytes. Artifact ID is 13397926244
+Artifact download URL: https://github.com/jaykayLee/Exp_ClaudeCode/actions/runs/41990092041/artifacts/13397926244
+windows	Post Run actions/setup-python@v6	﻿2026-11-05T07:52:15.6107266Z Post job cleanup.
+windows	Post Run actions/checkout@v5	﻿2026-11-05T07:52:15.8177111Z Post job cleanup.
+[command]"C:\Program Files\Git\bin\git.exe" version
+git version 2.56.0.windows.4
+Temporarily overriding HOME='D:\a\_temp\cfcbc84b-c59a-4a0d-abd3-93a685c205ca' before making global git config changes
+Adding repository directory to the temporary git global config as a safe directory
+[command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\Exp_ClaudeCode\Exp_ClaudeCode
+[command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+[command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+[command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+http.https://github.com/.extraheader
+[command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all http.https://github.com/.extraheader
+[command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+[command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+[command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+windows	Complete job	﻿2026-11-05T07:52:18.1506415Z Cleaning up orphan processes
+##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/upload-artifact@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

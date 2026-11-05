@@ -7,7 +7,7 @@ description: Package and deliver phase results for the Naver Blog automation pro
 
 ## Steps
 1. Commit everything (`git status` clean except ignored files).
-2. Manifest: write `RELEASE_MANIFEST_<PHASE>.json` at repo root listing every `git ls-files` entry (sha256, bytes) + `preserved_originals` for `reference/originals/*.zip`. Name must sort after older manifests (`tools/verify_release.py` uses the latest by name). Run `python3 tools/verify_release.py` → PASS, then commit.
+2. Manifest (LAST change before the final commit): `python3 tools/write_manifest.py <PHASE> "note"` then `python3 tools/verify_release.py` → PASS, then commit. Any later edit to a tracked file makes CI `Handoff manifest check` fail — re-run the tool.
 3. Install ZIP: `cd workspace/Naver_Blog_Automation && .venv/bin/python tools/build_release.py --out /home/user/<PHASE>_다운로드 --label <PHASE>_<YYYYMMDD>` (refuses output inside the workspace; excludes user data/secrets).
 4. Handoff ZIP: `git archive HEAD` into a staging dir named `Naver_Blog_Cloud_Handoff_v1.0/`, zip it as `Naver_Blog_Cloud_Handoff_v1.0_<PHASE>.zip`.
 5. Bundle: `git bundle create <dir>/naver_blog_automation_full_history.bundle HEAD main` (HEAD is required or the clone has no branch).
