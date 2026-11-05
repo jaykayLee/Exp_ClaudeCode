@@ -1,0 +1,12 @@
+{
+  "source_page": "https://prod.danawa.com/info/?pcode=900003",
+  "observed_at": "2026-11-05T11:00:00+09:00",
+  "usage_permission": "confirmed",
+  "permission_reference": "합성 테스트 — 실제 이용 허락 아님",
+  "target": {
+    "query": "가상 헤드셋 C",
+    "model": "SYN-HEAD-C",
+    "variant": "gray"
+  },
+  "notes": "합성 샘플. 화면 텍스트 가격은 추측하지 않는다 → NO_STRUCTURED_OFFERS."
+}

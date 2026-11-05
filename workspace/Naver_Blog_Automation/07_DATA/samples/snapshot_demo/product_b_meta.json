@@ -1,0 +1,14 @@
+{
+  "source_page": "https://prod.danawa.com/info/?pcode=900002",
+  "observed_at": "2026-11-05T11:00:00+09:00",
+  "usage_permission": "confirmed",
+  "permission_reference": "합성 테스트 — 실제 이용 허락 아님",
+  "target": {
+    "query": "가상 키보드 B",
+    "model": "SYN-KEY-B",
+    "variant": "white"
+  },
+  "shipping_fee": 0,
+  "payment_condition": "normal",
+  "notes": "합성 샘플. 공통 배송비 0은 offer_terms_scope 선언이 없으므로 판매자별 사실로 쓰이지 않는다 → 보류가 정상."
+}

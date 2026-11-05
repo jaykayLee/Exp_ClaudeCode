@@ -1,0 +1,33 @@
+{
+  "schema_version": "snapshot_job.1",
+  "mode": "DEMO",
+  "evidence_kind": "synthetic",
+  "evaluation_time": "2026-11-05T12:00:00+09:00",
+  "notes": "합성 DEMO 작업. evaluation_time은 합성 관측시각 평가용 고정 시계이며 DEMO에서만 허용된다.",
+  "products": [
+    {
+      "query": "가상 무선 마우스 A",
+      "html": "product_a.html",
+      "meta": "product_a_meta.json",
+      "image_path": "07_DATA/samples/landscape.png",
+      "image_rights": "owned",
+      "image_credit": "본 프로젝트 생성 테스트 도형. 실제 상품 사진 아님."
+    },
+    {
+      "query": "가상 키보드 B",
+      "html": "product_b.html",
+      "meta": "product_b_meta.json",
+      "image_path": "07_DATA/samples/portrait.png",
+      "image_rights": "owned",
+      "image_credit": "본 프로젝트 생성 테스트 도형. 실제 상품 사진 아님."
+    },
+    {
+      "query": "가상 헤드셋 C",
+      "html": "product_c.html",
+      "meta": "product_c_meta.json",
+      "image_path": "07_DATA/samples/transparent.png",
+      "image_rights": "owned",
+      "image_credit": "본 프로젝트 생성 테스트 도형. 실제 상품 사진 아님."
+    }
+  ]
+}

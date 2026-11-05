@@ -1,0 +1,29 @@
+{
+  "source_page": "https://prod.danawa.com/info/?pcode=900001",
+  "observed_at": "2026-11-05T11:00:00+09:00",
+  "usage_permission": "confirmed",
+  "permission_reference": "합성 테스트 — 실제 이용 허락 아님",
+  "target": {
+    "query": "가상 무선 마우스 A",
+    "model": "SYN-MOUSE-A",
+    "variant": "black"
+  },
+  "offer_terms": [
+    {
+      "url": "https://example.com/shop/a-offer",
+      "payment_condition": "normal",
+      "evidence": "합성: 일반 결제 기록 예시"
+    },
+    {
+      "url": "https://example.com/shop/b-offer",
+      "payment_condition": "normal",
+      "evidence": "합성: 일반 결제 기록 예시"
+    },
+    {
+      "url": "https://example.com/shop/c-offer",
+      "payment_condition": "card_only",
+      "evidence": "합성: 특정 카드 전용 기록 예시"
+    }
+  ],
+  "notes": "합성 샘플. 판매자별 배송비는 JSON-LD shippingDetails, 결제조건은 offer_terms(사용자 기록)에서 온다."
+}
