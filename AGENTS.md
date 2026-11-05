@@ -17,3 +17,6 @@
 - `cd workspace/Naver_Blog_Automation && .venv/bin/python tools/qa_runner.py`
 - `python3 tools/verify_release.py` (latest RELEASE_MANIFEST_*.json)
 - Push → GitHub Actions `ci` (linux + windows).
+
+## Project skills
+`.claude/skills/`: phase-runner, price-data-contract, qa-verify, release-package, danawa-snapshot-onboarding, windows-ci-triage (list: `docs/SKILLS.md`).

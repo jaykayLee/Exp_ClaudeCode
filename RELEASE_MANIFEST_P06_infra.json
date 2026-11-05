@@ -3,12 +3,42 @@
   "date": "2026-11-05",
   "previous_release": "RELEASE_MANIFEST_P06.json",
   "app_core_changed": false,
-  "note": "Repository infra added after P06 (CI, gitattributes, setup script, docs). Lists every tracked file.",
+  "note": "Repository infra + project skills added after P06. Lists every tracked file.",
   "preserved_originals": {
     "reference/originals/Naver_Blog_Automation_Workspace_v1.0.zip": "b7e9015a9db956b9eba5b6739c198d795d491f28551d0437a5cabbeef480bf34",
     "reference/originals/Naver_Blog_Danawa_Snapshot_Probe_Addon_v1.3.zip": "b1212dfca89316c3bdb7bfae86b27f752dd7d2a48a93bdd728910e82241f21e1"
   },
   "files": [
+    {
+      "path": ".claude/skills/danawa-snapshot-onboarding/SKILL.md",
+      "sha256": "a05a497a06e6dd460ae2f446cd7d282a380e7f3132b334ac171ca157fce268d3",
+      "bytes": 2836
+    },
+    {
+      "path": ".claude/skills/phase-runner/SKILL.md",
+      "sha256": "cc5b7a67e36d767c016814570cdd3aae3d9b5f092d35bb4be8876be3338dd8f2",
+      "bytes": 2634
+    },
+    {
+      "path": ".claude/skills/price-data-contract/SKILL.md",
+      "sha256": "ff1e652a3824a0a67509310451ddae2b366977d134bdf2506eaf3c99ee7af134",
+      "bytes": 2945
+    },
+    {
+      "path": ".claude/skills/qa-verify/SKILL.md",
+      "sha256": "6b1788c3cfd93a88cd861d523be1d02e02c2afa991980f417a51251e37cc51ce",
+      "bytes": 2268
+    },
+    {
+      "path": ".claude/skills/release-package/SKILL.md",
+      "sha256": "2464582037271b43dca9429eeea44831c89a3ec80667bc5ef6f3ed9465ee28fb",
+      "bytes": 2363
+    },
+    {
+      "path": ".claude/skills/windows-ci-triage/SKILL.md",
+      "sha256": "0d9c1a0f5f4149fcfc5784260a6fefeaac65ddc35f4737598b86e57449cbfa7c",
+      "bytes": 2375
+    },
     {
       "path": ".gitattributes",
       "sha256": "3b25d326f67371407d6ef35c02c5305686a1ecfa40340bb8f3e2bca3b62d2d06",
@@ -221,8 +251,8 @@
     },
     {
       "path": "AGENTS.md",
-      "sha256": "7d026f3c69ac97d370d7801aa60a9749bc3f54fd74450a13ed0df6e839d246d8",
-      "bytes": 1297
+      "sha256": "fb7201008b6bd8c414e5f565ed8f9ee39d14cb36470f27e3a124bcb90104405e",
+      "bytes": 1470
     },
     {
       "path": "ARTIFACT_MANIFEST.json",
@@ -318,6 +348,11 @@
       "path": "docs/SESSION_MESSAGES.md",
       "sha256": "04ffeacd0e6a4f910ed5155bea3f3d0c6ad7af2eee9bbaa9a953488ae3b259f2",
       "bytes": 2919
+    },
+    {
+      "path": "docs/SKILLS.md",
+      "sha256": "d8f2f866528e4fedd5403c5080755df330eea2493592e37e9a1e484ee553a455",
+      "bytes": 2012
     },
     {
       "path": "reference/handoffs/Naver_Blog_Danawa_Snapshot_Probe_Handoff_v1.3.md",
