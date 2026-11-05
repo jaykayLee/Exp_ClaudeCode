@@ -1,0 +1,926 @@
+Set up job	﻿2026-11-05T07:47:22.4498293Z Current runner version: '2.338.2'
+Set up job	2026-11-05T07:47:22.4556317Z ##[group]Runner Image Provisioner
+Set up job	2026-11-05T07:47:22.4557160Z Hosted Compute Agent
+Set up job	2026-11-05T07:47:22.4557722Z Version: 20261021.618
+Set up job	2026-11-05T07:47:22.4558373Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+Set up job	2026-11-05T07:47:22.4559087Z Build Date: 2026-10-21T00:45:21Z
+Set up job	2026-11-05T07:47:22.4559743Z Worker ID: {b6862402-76af-44d9-8a5f-2125e4bc9894}
+Set up job	2026-11-05T07:47:22.4560454Z Region: eastus
+Set up job	2026-11-05T07:47:22.4560990Z Cloud: Azure
+Set up job	2026-11-05T07:47:22.4561562Z ##[endgroup]
+Set up job	2026-11-05T07:47:22.4562915Z ##[group]Operating System
+Set up job	2026-11-05T07:47:22.4563616Z Microsoft Windows Server 2025
+Set up job	2026-11-05T07:47:22.4564280Z 10.0.26100
+Set up job	2026-11-05T07:47:22.4564822Z Datacenter
+Set up job	2026-11-05T07:47:22.4565369Z ##[endgroup]
+Set up job	2026-11-05T07:47:22.4565919Z ##[group]Runner Image
+Set up job	2026-11-05T07:47:22.4566515Z Image: windows-2025-vs2026
+Set up job	2026-11-05T07:47:22.4567671Z Version: 20261030.294.1
+Set up job	2026-11-05T07:47:22.4569009Z Included Software: https://github.com/actions/runner-images/blob/win25-vs2026/20261030.294/images/windows/Windows2025-VS2026-Readme.md
+Set up job	2026-11-05T07:47:22.4571246Z Image Release: https://github.com/actions/runner-images/releases/tag/win25-vs2026%2F20261030.294
+Set up job	2026-11-05T07:47:22.4572318Z ##[endgroup]
+Set up job	2026-11-05T07:47:22.4573509Z ##[group]GITHUB_TOKEN Permissions
+Set up job	2026-11-05T07:47:22.4575511Z Contents: read
+Set up job	2026-11-05T07:47:22.4576271Z Metadata: read
+Set up job	2026-11-05T07:47:22.4577138Z ##[endgroup]
+Set up job	2026-11-05T07:47:22.4580001Z Secret source: Actions
+Set up job	2026-11-05T07:47:22.4581517Z Cache mode: write
+Set up job	2026-11-05T07:47:22.4582806Z Prepare workflow directory
+Set up job	2026-11-05T07:47:22.5117810Z Prepare all required actions
+Set up job	2026-11-05T07:47:22.5174337Z Getting action download info
+Set up job	2026-11-05T07:47:22.6851036Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+Set up job	2026-11-05T07:47:22.8210044Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+Set up job	2026-11-05T07:47:22.9713203Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+Set up job	2026-11-05T07:47:23.3338683Z Complete job name: windows
+Run actions/checkout@v4	﻿2026-11-05T07:47:23.5166258Z ##[group]Run actions/checkout@v4
+Run actions/checkout@v4	2026-11-05T07:47:23.5167359Z with:
+Run actions/checkout@v4	2026-11-05T07:47:23.5167832Z   repository: jaykayLee/Exp_ClaudeCode
+Run actions/checkout@v4	2026-11-05T07:47:23.5172381Z   token: ***
+Run actions/checkout@v4	2026-11-05T07:47:23.5173229Z   ssh-strict: true
+Run actions/checkout@v4	2026-11-05T07:47:23.5173679Z   ssh-user: git
+Run actions/checkout@v4	2026-11-05T07:47:23.5174118Z   persist-credentials: true
+Run actions/checkout@v4	2026-11-05T07:47:23.5174601Z   clean: true
+Run actions/checkout@v4	2026-11-05T07:47:23.5175264Z   sparse-checkout-cone-mode: true
+Run actions/checkout@v4	2026-11-05T07:47:23.5175816Z   fetch-depth: 1
+Run actions/checkout@v4	2026-11-05T07:47:23.5176259Z   fetch-tags: false
+Run actions/checkout@v4	2026-11-05T07:47:23.5176697Z   show-progress: true
+Run actions/checkout@v4	2026-11-05T07:47:23.5177151Z   lfs: false
+Run actions/checkout@v4	2026-11-05T07:47:23.5177550Z   submodules: false
+Run actions/checkout@v4	2026-11-05T07:47:23.5178004Z   set-safe-directory: true
+Run actions/checkout@v4	2026-11-05T07:47:23.5178504Z   allow-unsafe-pr-checkout: false
+Run actions/checkout@v4	2026-11-05T07:47:23.5179324Z env:
+Run actions/checkout@v4	2026-11-05T07:47:23.5179748Z   PYTHONUTF8: 1
+Run actions/checkout@v4	2026-11-05T07:47:23.5180161Z ##[endgroup]
+Run actions/checkout@v4	2026-11-05T07:47:23.6884246Z Syncing repository: jaykayLee/Exp_ClaudeCode
+Run actions/checkout@v4	2026-11-05T07:47:23.6886236Z ##[group]Getting Git version info
+Run actions/checkout@v4	2026-11-05T07:47:23.6887010Z Working directory is 'D:\a\Exp_ClaudeCode\Exp_ClaudeCode'
+Run actions/checkout@v4	2026-11-05T07:47:23.7858030Z [command]"C:\Program Files\Git\bin\git.exe" version
+Run actions/checkout@v4	2026-11-05T07:47:24.1123978Z git version 2.56.0.windows.4
+Run actions/checkout@v4	2026-11-05T07:47:24.1186979Z ##[endgroup]
+Run actions/checkout@v4	2026-11-05T07:47:24.1210910Z Temporarily overriding HOME='D:\a\_temp\fbce4d7a-753a-41f2-878a-187c09e02ae8' before making global git config changes
+Run actions/checkout@v4	2026-11-05T07:47:24.1215067Z Adding repository directory to the temporary git global config as a safe directory
+Run actions/checkout@v4	2026-11-05T07:47:24.1225909Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\Exp_ClaudeCode\Exp_ClaudeCode
+Run actions/checkout@v4	2026-11-05T07:47:24.1918265Z Deleting the contents of 'D:\a\Exp_ClaudeCode\Exp_ClaudeCode'
+Run actions/checkout@v4	2026-11-05T07:47:24.1925888Z ##[group]Initializing the repository
+Run actions/checkout@v4	2026-11-05T07:47:24.1934936Z [command]"C:\Program Files\Git\bin\git.exe" init D:\a\Exp_ClaudeCode\Exp_ClaudeCode
+Run actions/checkout@v4	2026-11-05T07:47:24.2895736Z Initialized empty Git repository in D:/a/Exp_ClaudeCode/Exp_ClaudeCode/.git/
+Run actions/checkout@v4	2026-11-05T07:47:24.2948703Z [command]"C:\Program Files\Git\bin\git.exe" remote add origin https://github.com/jaykayLee/Exp_ClaudeCode
+Run actions/checkout@v4	2026-11-05T07:47:24.3627722Z ##[endgroup]
+Run actions/checkout@v4	2026-11-05T07:47:24.3629497Z ##[group]Disabling automatic garbage collection
+Run actions/checkout@v4	2026-11-05T07:47:24.3637490Z [command]"C:\Program Files\Git\bin\git.exe" config --local gc.auto 0
+Run actions/checkout@v4	2026-11-05T07:47:24.4019283Z ##[endgroup]
+Run actions/checkout@v4	2026-11-05T07:47:24.4020929Z ##[group]Setting up auth
+Run actions/checkout@v4	2026-11-05T07:47:24.4031964Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+Run actions/checkout@v4	2026-11-05T07:47:24.4422941Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+Run actions/checkout@v4	2026-11-05T07:47:25.9103028Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Run actions/checkout@v4	2026-11-05T07:47:25.9489632Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+Run actions/checkout@v4	2026-11-05T07:47:26.5245441Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+Run actions/checkout@v4	2026-11-05T07:47:26.5636473Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+Run actions/checkout@v4	2026-11-05T07:47:27.1358979Z [command]"C:\Program Files\Git\bin\git.exe" config --local http.https://github.com/.extraheader "AUTHORIZATION: basic ***"
+Run actions/checkout@v4	2026-11-05T07:47:27.1821160Z ##[endgroup]
+Run actions/checkout@v4	2026-11-05T07:47:27.1822954Z ##[group]Fetching the repository
+Run actions/checkout@v4	2026-11-05T07:47:27.1824926Z [command]"C:\Program Files\Git\bin\git.exe" -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +d7dbdf6c9deb76032801685e80dd3594c95c9aff:refs/remotes/origin/main
+Run actions/checkout@v4	2026-11-05T07:47:28.1593631Z From https://github.com/jaykayLee/Exp_ClaudeCode
+Run actions/checkout@v4	2026-11-05T07:47:28.1595278Z  * [new ref]         d7dbdf6c9deb76032801685e80dd3594c95c9aff -> origin/main
+Run actions/checkout@v4	2026-11-05T07:47:28.1640071Z ##[endgroup]
+Run actions/checkout@v4	2026-11-05T07:47:28.1640932Z ##[group]Determining the checkout info
+Run actions/checkout@v4	2026-11-05T07:47:28.1643592Z ##[endgroup]
+Run actions/checkout@v4	2026-11-05T07:47:28.1654770Z [command]"C:\Program Files\Git\bin\git.exe" sparse-checkout disable
+Run actions/checkout@v4	2026-11-05T07:47:28.2214690Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all extensions.worktreeConfig
+Run actions/checkout@v4	2026-11-05T07:47:28.2637224Z ##[group]Checking out the ref
+Run actions/checkout@v4	2026-11-05T07:47:28.2650365Z [command]"C:\Program Files\Git\bin\git.exe" checkout --progress --force -B main refs/remotes/origin/main
+Run actions/checkout@v4	2026-11-05T07:47:28.4031178Z Switched to a new branch 'main'
+Run actions/checkout@v4	2026-11-05T07:47:28.4052945Z branch 'main' set up to track 'origin/main'.
+Run actions/checkout@v4	2026-11-05T07:47:28.4104781Z ##[endgroup]
+Run actions/checkout@v4	2026-11-05T07:47:28.4578120Z [command]"C:\Program Files\Git\bin\git.exe" log -1 --format=%H
+Run actions/checkout@v4	2026-11-05T07:47:28.4932852Z d7dbdf6c9deb76032801685e80dd3594c95c9aff
+Run actions/setup-python@v5	﻿2026-11-05T07:47:28.5444220Z ##[group]Run actions/setup-python@v5
+Run actions/setup-python@v5	2026-11-05T07:47:28.5444647Z with:
+Run actions/setup-python@v5	2026-11-05T07:47:28.5444873Z   python-version: 3.13
+Run actions/setup-python@v5	2026-11-05T07:47:28.5445145Z   check-latest: false
+Run actions/setup-python@v5	2026-11-05T07:47:28.5448771Z   token: ***
+Run actions/setup-python@v5	2026-11-05T07:47:28.5449001Z   update-environment: true
+Run actions/setup-python@v5	2026-11-05T07:47:28.5449274Z   allow-prereleases: false
+Run actions/setup-python@v5	2026-11-05T07:47:28.5449559Z   freethreaded: false
+Run actions/setup-python@v5	2026-11-05T07:47:28.5449803Z env:
+Run actions/setup-python@v5	2026-11-05T07:47:28.5449995Z   PYTHONUTF8: 1
+Run actions/setup-python@v5	2026-11-05T07:47:28.5450197Z ##[endgroup]
+Run actions/setup-python@v5	2026-11-05T07:47:28.7087890Z ##[group]Installed versions
+Run actions/setup-python@v5	2026-11-05T07:47:28.7288713Z (node:2188) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+Run actions/setup-python@v5	2026-11-05T07:47:28.7290907Z (Use `node --trace-deprecation ...` to show where the warning was created)
+Run actions/setup-python@v5	2026-11-05T07:47:28.7291658Z Successfully set up CPython (3.13.17)
+Run actions/setup-python@v5	2026-11-05T07:47:28.7292230Z ##[endgroup]
+Copy workspace to a path with spaces and Korean	﻿2026-11-05T07:47:28.7605606Z ##[group]Run $target = Join-Path $env:RUNNER_TEMP '작업 폴더\Naver Blog'
+Copy workspace to a path with spaces and Korean	2026-11-05T07:47:28.7606361Z [36;1m$target = Join-Path $env:RUNNER_TEMP '작업 폴더\Naver Blog'[0m
+Copy workspace to a path with spaces and Korean	2026-11-05T07:47:28.7606918Z [36;1mNew-Item -ItemType Directory -Force -Path $target | Out-Null[0m
+Copy workspace to a path with spaces and Korean	2026-11-05T07:47:28.7607534Z [36;1mCopy-Item -Recurse -Force 'workspace\Naver_Blog_Automation\*' $target[0m
+Copy workspace to a path with spaces and Korean	2026-11-05T07:47:28.7608170Z [36;1m"WS=$target" | Out-File -FilePath $env:GITHUB_ENV -Append -Encoding utf8[0m
+Copy workspace to a path with spaces and Korean	2026-11-05T07:47:28.8372512Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+Copy workspace to a path with spaces and Korean	2026-11-05T07:47:28.8373525Z env:
+Copy workspace to a path with spaces and Korean	2026-11-05T07:47:28.8374434Z   PYTHONUTF8: 1
+Copy workspace to a path with spaces and Korean	2026-11-05T07:47:28.8375400Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.13.17\x64
+Copy workspace to a path with spaces and Korean	2026-11-05T07:47:28.8376963Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.13.17\x64/lib/pkgconfig
+Copy workspace to a path with spaces and Korean	2026-11-05T07:47:28.8378513Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+Copy workspace to a path with spaces and Korean	2026-11-05T07:47:28.8379826Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+Copy workspace to a path with spaces and Korean	2026-11-05T07:47:28.8381276Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+Copy workspace to a path with spaces and Korean	2026-11-05T07:47:28.8382303Z ##[endgroup]
+install.bat (real BAT + bootstrap.ps1)	﻿2026-11-05T07:47:29.5099697Z ##[group]Run cd /d "%WS%"
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:29.5100115Z [36;1mcd /d "%WS%"[0m
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:29.5100356Z [36;1mcall install.bat < NUL[0m
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:29.5135683Z shell: C:\Windows\system32\cmd.EXE /D /E:ON /V:OFF /S /C "CALL "{0}""
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:29.5136062Z env:
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:29.5136248Z   PYTHONUTF8: 1
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:29.5136831Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.13.17\x64
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:29.5137447Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.13.17\x64/lib/pkgconfig
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:29.5138069Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:29.5138518Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:29.5138944Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:29.5139293Z   WS: D:\a\_temp\작업 폴더\Naver Blog
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:29.5139524Z ##[endgroup]
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:34.8603332Z Selected Python: C:\hostedtoolcache\windows\Python\3.13.17\x64\python.exe
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:41.3659561Z Collecting Pillow==12.3.0 (from -r D:\a\_temp\작업 폴더\Naver Blog\tools\dependencies.lock (line 1))
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:41.4080155Z   Downloading pillow-12.3.0-cp313-cp313-win_amd64.whl.metadata (9.3 kB)
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:41.4450573Z Downloading pillow-12.3.0-cp313-cp313-win_amd64.whl (7.2 MB)
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:41.5739249Z    ---------------------------------------- 7.2/7.2 MB 67.9 MB/s  0:00:00
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:41.6278604Z Installing collected packages: Pillow
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:42.0369655Z Successfully installed Pillow-12.3.0
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:42.3928044Z No broken requirements found.
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:42.6210403Z {
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:42.6210979Z   "checked_at": "2026-11-05T16:47:42.571234+09:00",
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:42.6211577Z   "platform": "Windows-2025Server-10.0.26100-SP0",
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:42.6211996Z   "checks": [
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:42.6212201Z     {
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:42.6212396Z       "name": "Python",
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:42.6212642Z       "status": "PASS",
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:42.6212919Z       "detail": "3.13.17"
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:42.6213149Z     },
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:42.6213332Z     {
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:42.6213521Z       "name": "64bit",
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:42.6213751Z       "status": "PASS",
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:42.6213987Z       "detail": "64"
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:42.6214214Z     },
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:42.6214405Z     {
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:42.6214606Z       "name": "Pillow",
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:42.6214854Z       "status": "PASS",
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:42.6215407Z       "detail": "12.3.0 (lock:12.3.0)"
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:42.6215701Z     },
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:42.6215900Z     {
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:42.6216094Z       "name": "Config",
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:42.6216347Z       "status": "PASS",
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:42.6216632Z       "detail": "Local-only / auto_publish=false"
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:42.6216970Z     },
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:42.6217157Z     {
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:42.6217411Z       "name": "Writable workspace",
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:42.6217716Z       "status": "PASS",
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:42.6218269Z       "detail": "D:\\a\\_temp\\작업 폴더\\Naver Blog"
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:42.6218625Z     },
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:42.6219170Z     {
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:42.6219475Z       "name": "Pipeline lock",
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:42.6219771Z       "status": "PASS",
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:42.6220087Z       "detail": "No lock"
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:42.6220354Z     },
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:42.6220544Z     {
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:42.6220757Z       "name": "Snapshot add-on",
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:42.6221041Z       "status": "PASS",
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:42.6221356Z       "detail": "Saved-HTML bridge (offline, no network)"
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:42.6221717Z     },
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:42.6221900Z     {
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:42.6222111Z       "name": "Danawa live collector",
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:42.6222428Z       "status": "NOT_CONFIGURED",
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:42.6222925Z       "detail": "Approved import only; live permission and selector validation required"
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:42.6223435Z     },
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:42.6223617Z     {
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:42.6223834Z       "name": "Naver shopping legacy API",
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:42.6226517Z       "status": "RETIRED",
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:42.6226974Z       "detail": "Official retirement: 2026-07-31. No API key setup needed for this baseline."
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:42.6227436Z     },
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:42.6227600Z     {
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:42.6227790Z       "name": "Naver publication",
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:42.6228053Z       "status": "DISABLED",
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:42.6228299Z       "detail": "Manual handoff only"
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:42.6228554Z     },
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:42.6228725Z     {
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:42.6228908Z       "name": "Windows BAT runtime",
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:42.6229172Z       "status": "CURRENT_PC",
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:42.6229470Z       "detail": "No claim of verification on another PC"
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:42.6229780Z     }
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:42.6229943Z   ],
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:42.6230114Z   "local_ok": true
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:42.6230308Z }
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:43.3733241Z test_both_inputs_processed_independently (test_daily_ops.Daily.test_both_inputs_processed_independently) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:43.4452718Z test_concurrent_run_is_refused_and_lock_kept (test_daily_ops.Daily.test_concurrent_run_is_refused_and_lock_kept) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:43.6249491Z test_demo_modes_do_not_touch_inbox (test_daily_ops.Daily.test_demo_modes_do_not_touch_inbox) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:43.6504340Z test_no_input_is_not_a_failure_and_is_logged (test_daily_ops.Daily.test_no_input_is_not_a_failure_and_is_logged) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:43.7831258Z test_one_failure_keeps_other_result (test_daily_ops.Daily.test_one_failure_keeps_other_result) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:44.0701308Z test_rerun_same_day_reuses_output_and_keeps_observed_at (test_daily_ops.Daily.test_rerun_same_day_reuses_output_and_keeps_observed_at) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:44.0711941Z test_bat_encoding_and_header (test_daily_ops.WindowsScriptsStatic.test_bat_encoding_and_header) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:44.0958410Z test_bat_paths_quoted (test_daily_ops.WindowsScriptsStatic.test_bat_paths_quoted) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:44.1067932Z test_installer_does_not_overwrite_user_data (test_daily_ops.WindowsScriptsStatic.test_installer_does_not_overwrite_user_data) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:44.1086402Z test_python_entrypoints_exist (test_daily_ops.WindowsScriptsStatic.test_python_entrypoints_exist) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:44.1089283Z test_scheduler_requires_confirmation_and_is_local_only (test_daily_ops.WindowsScriptsStatic.test_scheduler_requires_confirmation_and_is_local_only) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:44.1231656Z test_unattended_python_never_prompts (test_daily_ops.WindowsScriptsStatic.test_unattended_python_never_prompts) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:44.2846794Z test_checked_record_clears_danawa_issues_naver_still_missing (test_panel_integration.HumanReviewLoop.test_checked_record_clears_danawa_issues_naver_still_missing) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:45.9931283Z test_broken_or_missing_image_keeps_price_row (test_panel_integration.ImageIntegrity.test_broken_or_missing_image_keeps_price_row) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:46.2571143Z test_originals_unchanged_and_outputs_354x472 (test_panel_integration.ImageIntegrity.test_originals_unchanged_and_outputs_354x472) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:47.0476007Z test_demo_snapshot_via_api (test_panel_integration.ServerSnapshotApi.test_demo_snapshot_via_api) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:47.7211565Z test_snapshot_api_guards (test_panel_integration.ServerSnapshotApi.test_snapshot_api_guards) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:48.2506801Z test_user_recorded_job_via_api (test_panel_integration.ServerSnapshotApi.test_user_recorded_job_via_api) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:48.2514207Z test_required_table_headers_unchanged (test_panel_integration.StaticUi.test_required_table_headers_unchanged) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:48.2519160Z test_snapshot_card_present_and_offline (test_panel_integration.StaticUi.test_snapshot_card_present_and_offline) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:48.2522152Z test_inline_only_seven_columns (test_release_and_paste.NaverPaste.test_inline_only_seven_columns) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:48.3466176Z test_written_by_bridge_demo (test_release_and_paste.NaverPaste.test_written_by_bridge_demo) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:48.5404886Z test_output_inside_workspace_refused (test_release_and_paste.ReleaseBuild.test_output_inside_workspace_refused) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:48.8939039Z test_rebuild_from_installed_copy (test_release_and_paste.ReleaseBuild.test_rebuild_from_installed_copy)
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:48.8940380Z Regression (found in P06 clean-install check): an old manifest must not be re-packed. ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:49.1291641Z test_secret_like_value_blocks_build (test_release_and_paste.ReleaseBuild.test_secret_like_value_blocks_build) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:49.4021349Z test_zip_excludes_user_data_and_has_entrypoints (test_release_and_paste.ReleaseBuild.test_zip_excludes_user_data_and_has_entrypoints) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:49.4030715Z test_abc_selects_a_ranks_b_excludes_c (test_snapshot_bridge.AdapterSelection.test_abc_selects_a_ranks_b_excludes_c) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:49.4037874Z test_defence_in_depth_rejects_tampered_candidate (test_snapshot_bridge.AdapterSelection.test_defence_in_depth_rejects_tampered_candidate) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:49.4039675Z test_evidence_kind_rules (test_snapshot_bridge.AdapterSelection.test_evidence_kind_rules) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:49.4068514Z test_exclusion_reasons (test_snapshot_bridge.AdapterSelection.test_exclusion_reasons) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:49.4070295Z test_old_behavior_would_have_chosen_card_only (test_snapshot_bridge.AdapterSelection.test_old_behavior_would_have_chosen_card_only)
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:49.4078730Z Documents I02: legacy meta-wide terms (no scope) are no longer promoted. ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:49.4084770Z test_price_url_time_belong_to_same_offer (test_snapshot_bridge.AdapterSelection.test_price_url_time_belong_to_same_offer) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:49.4093827Z test_tie_is_deterministic_and_reported (test_snapshot_bridge.AdapterSelection.test_tie_is_deterministic_and_reported) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:49.5072222Z test_demo_end_to_end_seven_columns (test_snapshot_bridge.BridgeE2E.test_demo_end_to_end_seven_columns) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:49.6025362Z test_demo_label_preserved_everywhere (test_snapshot_bridge.BridgeE2E.test_demo_label_preserved_everywhere) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:49.6966576Z test_html_escape_of_untrusted_names (test_snapshot_bridge.BridgeE2E.test_html_escape_of_untrusted_names) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:49.7270836Z test_job_validation (test_snapshot_bridge.BridgeE2E.test_job_validation) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:49.7885338Z test_manual_import_requires_user_recorded_and_stays_hold (test_snapshot_bridge.BridgeE2E.test_manual_import_requires_user_recorded_and_stays_hold) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:50.0575287Z test_no_structured_offers_reason_visible (test_snapshot_bridge.BridgeE2E.test_no_structured_offers_reason_visible) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:50.1409339Z test_partial_failure_keeps_rows (test_snapshot_bridge.BridgeE2E.test_partial_failure_keeps_rows) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:50.2880846Z test_rerun_keeps_observed_at_and_does_not_publish (test_snapshot_bridge.BridgeE2E.test_rerun_keeps_observed_at_and_does_not_publish) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:50.3797804Z test_target_mismatch_between_job_and_meta_holds (test_snapshot_bridge.BridgeE2E.test_target_mismatch_between_job_and_meta_holds) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:50.3803388Z test_no_selection_is_none_not_zero (test_snapshot_bridge.PanelInput.test_no_selection_is_none_not_zero) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:50.3808863Z test_selected_maps_total_and_keeps_flags_false (test_snapshot_bridge.PanelInput.test_selected_maps_total_and_keeps_flags_false) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:50.3813484Z test_synthetic_condition_labelled (test_snapshot_bridge.PanelInput.test_synthetic_condition_labelled) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:50.9491170Z test_demo_api_and_output (test_workspace.HTTPTests.test_demo_api_and_output) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:51.4844947Z test_host_and_origin_guard (test_workspace.HTTPTests.test_host_and_origin_guard) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:52.0130825Z test_local_image_upload_and_brief_save (test_workspace.HTTPTests.test_local_image_upload_and_brief_save) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:52.5348078Z test_mutation_requires_token (test_workspace.HTTPTests.test_mutation_requires_token) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:53.0568784Z test_status_and_missing_secret_routes (test_workspace.HTTPTests.test_status_and_missing_secret_routes) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:53.0765111Z test_bad_image_and_rights (test_workspace.ImageTests.test_bad_image_and_rights) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:53.1506712Z test_download_default_off_and_host_allowlist (test_workspace.ImageTests.test_download_default_off_and_host_allowlist) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:53.1817151Z test_http_429_stops_without_retry (test_workspace.ImageTests.test_http_429_stops_without_retry) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:53.2016815Z test_mock_download_stores_valid_image (test_workspace.ImageTests.test_mock_download_stores_valid_image) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:53.2220405Z test_original_import_hash_and_evidence (test_workspace.ImageTests.test_original_import_hash_and_evidence) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:53.2411778Z test_path_traversal_and_dimensions (test_workspace.ImageTests.test_path_traversal_and_dimensions) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:53.2674444Z test_private_and_mixed_dns_are_rejected (test_workspace.ImageTests.test_private_and_mixed_dns_are_rejected) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:53.2868760Z test_public_ip_is_pinned (test_workspace.ImageTests.test_public_ip_is_pinned) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:53.3391761Z test_three_aspect_ratios_and_original_integrity (test_workspace.ImageTests.test_three_aspect_ratios_and_original_integrity) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:53.3693429Z test_bad_image_keeps_prices (test_workspace.PipelineTests.test_bad_image_keeps_prices) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:53.4389979Z test_demo_seven_columns_and_three_images (test_workspace.PipelineTests.test_demo_seven_columns_and_three_images) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:53.6217250Z test_html_escapes_untrusted_text (test_workspace.PipelineTests.test_html_escapes_untrusted_text) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:53.8797377Z test_live_and_publishing_are_explicitly_unavailable (test_workspace.PipelineTests.test_live_and_publishing_are_explicitly_unavailable) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:53.9568330Z test_lock_prevents_parallel_write_and_cleans_up (test_workspace.PipelineTests.test_lock_prevents_parallel_write_and_cleans_up) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:54.0090235Z test_missing_source_keeps_row_and_holds (test_workspace.PipelineTests.test_missing_source_keeps_row_and_holds) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:54.0606787Z test_ready_means_only_manual_review (test_workspace.PipelineTests.test_ready_means_only_manual_review) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:54.1333468Z test_repeat_same_input_does_not_fake_price_timestamp (test_workspace.PipelineTests.test_repeat_same_input_does_not_fake_price_timestamp) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:54.1926001Z test_stale_generated_image_removed_on_later_failure (test_workspace.PipelineTests.test_stale_generated_image_removed_on_later_failure) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:54.2121754Z test_bounds (test_workspace.ValidationTests.test_bounds) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:54.2406143Z test_config_safe_and_reinstallation_preserves_config (test_workspace.ValidationTests.test_config_safe_and_reinstallation_preserves_config) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:54.2591918Z test_credit_needed_for_permission (test_workspace.ValidationTests.test_credit_needed_for_permission) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:54.2792915Z test_links (test_workspace.ValidationTests.test_links) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:54.2994469Z test_price_error_preserved (test_workspace.ValidationTests.test_price_error_preserved) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:54.3184768Z test_single_price_only (test_workspace.ValidationTests.test_single_price_only) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:54.3397748Z test_stale_future_and_missing_timestamps (test_workspace.ValidationTests.test_stale_future_and_missing_timestamps) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:54.3590657Z test_true_boolean_and_condition_required (test_workspace.ValidationTests.test_true_boolean_and_condition_required) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:54.3596129Z test_conditional_hint_blocks_even_if_declared_normal (test_snapshot_probe.TestPerOfferTerms.test_conditional_hint_blocks_even_if_declared_normal) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:54.3600057Z test_duplicate_offer_terms_ambiguous (test_snapshot_probe.TestPerOfferTerms.test_duplicate_offer_terms_ambiguous) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:54.3604550Z test_fresh_hours_parameter (test_snapshot_probe.TestPerOfferTerms.test_fresh_hours_parameter) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:54.3607334Z test_meta_terms_without_scope_not_promoted (test_snapshot_probe.TestPerOfferTerms.test_meta_terms_without_scope_not_promoted) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:54.3611725Z test_multiple_or_bad_shipping_rates (test_snapshot_probe.TestPerOfferTerms.test_multiple_or_bad_shipping_rates) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:54.3615633Z test_offer_level_shipping_and_seller_kept (test_snapshot_probe.TestPerOfferTerms.test_offer_level_shipping_and_seller_kept) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:54.3619398Z test_shipping_conflict_between_sources (test_snapshot_probe.TestPerOfferTerms.test_shipping_conflict_between_sources) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:54.3622746Z test_boolean_shipping_rejected (test_snapshot_probe.TestProbe.test_boolean_shipping_rejected) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:54.3625229Z test_demo_always_not_exported (test_snapshot_probe.TestProbe.test_demo_always_not_exported) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:54.3626283Z test_graph (test_snapshot_probe.TestProbe.test_graph) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:54.3628808Z test_host_check (test_snapshot_probe.TestProbe.test_host_check) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:54.3631566Z test_html_escaped (test_snapshot_probe.TestProbe.test_html_escaped) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:54.3632713Z test_invalid_jsonld (test_snapshot_probe.TestProbe.test_invalid_jsonld) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:54.3633973Z test_krw_parse_strict (test_snapshot_probe.TestProbe.test_krw_parse_strict) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:54.3647741Z test_large_input_fails (test_snapshot_probe.TestProbe.test_large_input_fails) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:54.3650613Z test_offer_and_aggregate (test_snapshot_probe.TestProbe.test_offer_and_aggregate) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:54.3653278Z test_permission_required (test_snapshot_probe.TestProbe.test_permission_required) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:54.3654613Z test_plain_html_does_not_guess_prices (test_snapshot_probe.TestProbe.test_plain_html_does_not_guess_prices) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:54.3657814Z test_review_row_generated (test_snapshot_probe.TestProbe.test_review_row_generated) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:54.3716507Z test_saves_reports (test_snapshot_probe.TestProbe.test_saves_reports) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:54.3719256Z test_stale_blocks (test_snapshot_probe.TestProbe.test_stale_blocks) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:54.3720719Z test_timezone_required (test_snapshot_probe.TestProbe.test_timezone_required) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:54.3723047Z test_unknown_payment_blocks (test_snapshot_probe.TestProbe.test_unknown_payment_blocks) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:54.3752822Z test_unknown_shipping_blocks (test_snapshot_probe.TestProbe.test_unknown_shipping_blocks) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:54.3756158Z test_wrong_model_blocks (test_snapshot_probe.TestProbe.test_wrong_model_blocks) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:54.3757568Z test_wrong_variant_blocks (test_snapshot_probe.TestProbe.test_wrong_variant_blocks) ... ok
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:54.3758282Z 
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:54.3758543Z ----------------------------------------------------------------------
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:54.3759426Z Ran 102 tests in 11.147s
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:54.3759680Z 
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:54.3759807Z OK
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:54.4315655Z [HTTP] POST /api/snapshot 200
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:54.4316557Z [HTTP] GET /output/20261105_demo_d7cc23d8eeac/product_table.html 200
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:54.4317470Z [HTTP] GET /output/20261105_demo_d7cc23d8eeac/bridge/evidence_sidecar.json 200
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:54.4318185Z [HTTP] POST /api/snapshot 403
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:54.4319049Z [HTTP] POST /api/snapshot 400
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:54.4319470Z [HTTP] POST /api/snapshot 400
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:54.4319860Z [HTTP] POST /api/snapshot 400
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:54.4320256Z [HTTP] POST /api/snapshot 400
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:54.4320654Z [HTTP] POST /api/snapshot 400
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:54.4321042Z [HTTP] POST /api/snapshot 200
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:54.4322778Z [HTTP] POST /api/run 200
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:54.4323326Z [HTTP] GET /output/20261105_demo_27afc152c3b8/product_table.html 200
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:54.4323953Z [HTTP] GET /api/status 403
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:54.4324330Z [HTTP] GET /api/status 403
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:54.4324669Z [HTTP] POST /api/image 200
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:54.4324990Z [HTTP] POST /api/brief 200
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:54.4325349Z [HTTP] POST /api/run 403
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:54.4325725Z [HTTP] GET /api/status 200
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:54.4326165Z [HTTP] GET /01_CONFIG/settings.local.json 404
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:54.4326751Z [HTTP] GET /output/../../01_CONFIG/settings.local.json 404
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:54.7896390Z Setup completed. Double-click start_panel.bat. No task or blog post was created.
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:54.9701698Z 
+install.bat (real BAT + bootstrap.ps1)	2026-11-05T07:47:54.9707997Z Press any key to continue . . . 
+doctor.bat	﻿2026-11-05T07:47:54.9900591Z ##[group]Run cd /d "%WS%"
+doctor.bat	2026-11-05T07:47:54.9900933Z [36;1mcd /d "%WS%"[0m
+doctor.bat	2026-11-05T07:47:54.9901160Z [36;1mcall doctor.bat < NUL[0m
+doctor.bat	2026-11-05T07:47:54.9934940Z shell: C:\Windows\system32\cmd.EXE /D /E:ON /V:OFF /S /C "CALL "{0}""
+doctor.bat	2026-11-05T07:47:54.9935316Z env:
+doctor.bat	2026-11-05T07:47:54.9935489Z   PYTHONUTF8: 1
+doctor.bat	2026-11-05T07:47:54.9935784Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.13.17\x64
+doctor.bat	2026-11-05T07:47:54.9936275Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.13.17\x64/lib/pkgconfig
+doctor.bat	2026-11-05T07:47:54.9936750Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+doctor.bat	2026-11-05T07:47:54.9937176Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+doctor.bat	2026-11-05T07:47:54.9937581Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+doctor.bat	2026-11-05T07:47:54.9937913Z   WS: D:\a\_temp\작업 폴더\Naver Blog
+doctor.bat	2026-11-05T07:47:54.9938141Z ##[endgroup]
+doctor.bat	2026-11-05T07:47:55.1955864Z {
+doctor.bat	2026-11-05T07:47:55.1956595Z   "checked_at": "2026-11-05T16:47:55.142241+09:00",
+doctor.bat	2026-11-05T07:47:55.1957328Z   "platform": "Windows-2025Server-10.0.26100-SP0",
+doctor.bat	2026-11-05T07:47:55.1962277Z   "checks": [
+doctor.bat	2026-11-05T07:47:55.1962970Z     {
+doctor.bat	2026-11-05T07:47:55.1963390Z       "name": "Python",
+doctor.bat	2026-11-05T07:47:55.1964248Z       "status": "PASS",
+doctor.bat	2026-11-05T07:47:55.1964931Z       "detail": "3.13.17"
+doctor.bat	2026-11-05T07:47:55.1965841Z     },
+doctor.bat	2026-11-05T07:47:55.1966195Z     {
+doctor.bat	2026-11-05T07:47:55.1966624Z       "name": "64bit",
+doctor.bat	2026-11-05T07:47:55.1967144Z       "status": "PASS",
+doctor.bat	2026-11-05T07:47:55.1967815Z       "detail": "64"
+doctor.bat	2026-11-05T07:47:55.1968289Z     },
+doctor.bat	2026-11-05T07:47:55.1969093Z     {
+doctor.bat	2026-11-05T07:47:55.1969531Z       "name": "Pillow",
+doctor.bat	2026-11-05T07:47:55.1970055Z       "status": "PASS",
+doctor.bat	2026-11-05T07:47:55.1970591Z       "detail": "12.3.0 (lock:12.3.0)"
+doctor.bat	2026-11-05T07:47:55.1971183Z     },
+doctor.bat	2026-11-05T07:47:55.1971790Z     {
+doctor.bat	2026-11-05T07:47:55.1972256Z       "name": "Config",
+doctor.bat	2026-11-05T07:47:55.1972755Z       "status": "PASS",
+doctor.bat	2026-11-05T07:47:55.1973282Z       "detail": "Local-only / auto_publish=false"
+doctor.bat	2026-11-05T07:47:55.1974289Z     },
+doctor.bat	2026-11-05T07:47:55.1974927Z     {
+doctor.bat	2026-11-05T07:47:55.1975475Z       "name": "Writable workspace",
+doctor.bat	2026-11-05T07:47:55.1976099Z       "status": "PASS",
+doctor.bat	2026-11-05T07:47:55.1977100Z       "detail": "D:\\a\\_temp\\작업 폴더\\Naver Blog"
+doctor.bat	2026-11-05T07:47:55.1977703Z     },
+doctor.bat	2026-11-05T07:47:55.1978295Z     {
+doctor.bat	2026-11-05T07:47:55.1978740Z       "name": "Pipeline lock",
+doctor.bat	2026-11-05T07:47:55.1979401Z       "status": "PASS",
+doctor.bat	2026-11-05T07:47:55.1980276Z       "detail": "No lock"
+doctor.bat	2026-11-05T07:47:55.1980704Z     },
+doctor.bat	2026-11-05T07:47:55.1981104Z     {
+doctor.bat	2026-11-05T07:47:55.1981589Z       "name": "Snapshot add-on",
+doctor.bat	2026-11-05T07:47:55.1982318Z       "status": "PASS",
+doctor.bat	2026-11-05T07:47:55.1983103Z       "detail": "Saved-HTML bridge (offline, no network)"
+doctor.bat	2026-11-05T07:47:55.1983925Z     },
+doctor.bat	2026-11-05T07:47:55.1984290Z     {
+doctor.bat	2026-11-05T07:47:55.1984653Z       "name": "Danawa live collector",
+doctor.bat	2026-11-05T07:47:55.1985169Z       "status": "NOT_CONFIGURED",
+doctor.bat	2026-11-05T07:47:55.1986030Z       "detail": "Approved import only; live permission and selector validation required"
+doctor.bat	2026-11-05T07:47:55.1986846Z     },
+doctor.bat	2026-11-05T07:47:55.1987198Z     {
+doctor.bat	2026-11-05T07:47:55.1987599Z       "name": "Naver shopping legacy API",
+doctor.bat	2026-11-05T07:47:55.1988165Z       "status": "RETIRED",
+doctor.bat	2026-11-05T07:47:55.1989128Z       "detail": "Official retirement: 2026-07-31. No API key setup needed for this baseline."
+doctor.bat	2026-11-05T07:47:55.1989999Z     },
+doctor.bat	2026-11-05T07:47:55.1990382Z     {
+doctor.bat	2026-11-05T07:47:55.1991219Z       "name": "Naver publication",
+doctor.bat	2026-11-05T07:47:55.1992086Z       "status": "DISABLED",
+doctor.bat	2026-11-05T07:47:55.1992625Z       "detail": "Manual handoff only"
+doctor.bat	2026-11-05T07:47:55.1993341Z     },
+doctor.bat	2026-11-05T07:47:55.1993727Z     {
+doctor.bat	2026-11-05T07:47:55.1994149Z       "name": "Windows BAT runtime",
+doctor.bat	2026-11-05T07:47:55.1995759Z       "status": "CURRENT_PC",
+doctor.bat	2026-11-05T07:47:55.2000301Z       "detail": "No claim of verification on another PC"
+doctor.bat	2026-11-05T07:47:55.2004042Z     }
+doctor.bat	2026-11-05T07:47:55.2004409Z   ],
+doctor.bat	2026-11-05T07:47:55.2004716Z   "local_ok": true
+doctor.bat	2026-11-05T07:47:55.2005105Z }
+doctor.bat	2026-11-05T07:47:55.2251401Z 
+doctor.bat	2026-11-05T07:47:55.2260713Z Press any key to continue . . . 
+smoke.bat (all tests on Windows)	﻿2026-11-05T07:47:55.2543603Z ##[group]Run cd /d "%WS%"
+smoke.bat (all tests on Windows)	2026-11-05T07:47:55.2543963Z [36;1mcd /d "%WS%"[0m
+smoke.bat (all tests on Windows)	2026-11-05T07:47:55.2544219Z [36;1mcall smoke.bat < NUL[0m
+smoke.bat (all tests on Windows)	2026-11-05T07:47:55.2577005Z shell: C:\Windows\system32\cmd.EXE /D /E:ON /V:OFF /S /C "CALL "{0}""
+smoke.bat (all tests on Windows)	2026-11-05T07:47:55.2577444Z env:
+smoke.bat (all tests on Windows)	2026-11-05T07:47:55.2577624Z   PYTHONUTF8: 1
+smoke.bat (all tests on Windows)	2026-11-05T07:47:55.2578307Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.13.17\x64
+smoke.bat (all tests on Windows)	2026-11-05T07:47:55.2578867Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.13.17\x64/lib/pkgconfig
+smoke.bat (all tests on Windows)	2026-11-05T07:47:55.2579355Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+smoke.bat (all tests on Windows)	2026-11-05T07:47:55.2579785Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+smoke.bat (all tests on Windows)	2026-11-05T07:47:55.2580216Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+smoke.bat (all tests on Windows)	2026-11-05T07:47:55.2580583Z   WS: D:\a\_temp\작업 폴더\Naver Blog
+smoke.bat (all tests on Windows)	2026-11-05T07:47:55.2580817Z ##[endgroup]
+smoke.bat (all tests on Windows)	2026-11-05T07:47:55.7639828Z test_both_inputs_processed_independently (test_daily_ops.Daily.test_both_inputs_processed_independently) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:47:55.8598130Z test_concurrent_run_is_refused_and_lock_kept (test_daily_ops.Daily.test_concurrent_run_is_refused_and_lock_kept) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:47:56.3584827Z test_demo_modes_do_not_touch_inbox (test_daily_ops.Daily.test_demo_modes_do_not_touch_inbox) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:47:56.4994925Z test_no_input_is_not_a_failure_and_is_logged (test_daily_ops.Daily.test_no_input_is_not_a_failure_and_is_logged) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:47:56.7878877Z test_one_failure_keeps_other_result (test_daily_ops.Daily.test_one_failure_keeps_other_result) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:47:56.8782649Z test_rerun_same_day_reuses_output_and_keeps_observed_at (test_daily_ops.Daily.test_rerun_same_day_reuses_output_and_keeps_observed_at) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:47:56.8793564Z test_bat_encoding_and_header (test_daily_ops.WindowsScriptsStatic.test_bat_encoding_and_header) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:47:56.8812471Z test_bat_paths_quoted (test_daily_ops.WindowsScriptsStatic.test_bat_paths_quoted) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:47:56.8816755Z test_installer_does_not_overwrite_user_data (test_daily_ops.WindowsScriptsStatic.test_installer_does_not_overwrite_user_data) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:47:56.8828838Z test_python_entrypoints_exist (test_daily_ops.WindowsScriptsStatic.test_python_entrypoints_exist) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:47:56.8835326Z test_scheduler_requires_confirmation_and_is_local_only (test_daily_ops.WindowsScriptsStatic.test_scheduler_requires_confirmation_and_is_local_only) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:47:56.8956034Z test_unattended_python_never_prompts (test_daily_ops.WindowsScriptsStatic.test_unattended_python_never_prompts) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:47:56.9856824Z test_checked_record_clears_danawa_issues_naver_still_missing (test_panel_integration.HumanReviewLoop.test_checked_record_clears_danawa_issues_naver_still_missing) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:47:57.1142129Z test_broken_or_missing_image_keeps_price_row (test_panel_integration.ImageIntegrity.test_broken_or_missing_image_keeps_price_row) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:47:57.2110201Z test_originals_unchanged_and_outputs_354x472 (test_panel_integration.ImageIntegrity.test_originals_unchanged_and_outputs_354x472) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:47:57.8518759Z test_demo_snapshot_via_api (test_panel_integration.ServerSnapshotApi.test_demo_snapshot_via_api) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:47:58.4001565Z test_snapshot_api_guards (test_panel_integration.ServerSnapshotApi.test_snapshot_api_guards) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:47:58.9426062Z test_user_recorded_job_via_api (test_panel_integration.ServerSnapshotApi.test_user_recorded_job_via_api) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:47:58.9433274Z test_required_table_headers_unchanged (test_panel_integration.StaticUi.test_required_table_headers_unchanged) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:47:58.9438218Z test_snapshot_card_present_and_offline (test_panel_integration.StaticUi.test_snapshot_card_present_and_offline) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:47:58.9440946Z test_inline_only_seven_columns (test_release_and_paste.NaverPaste.test_inline_only_seven_columns) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:47:59.0382727Z test_written_by_bridge_demo (test_release_and_paste.NaverPaste.test_written_by_bridge_demo) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:47:59.2051202Z test_output_inside_workspace_refused (test_release_and_paste.ReleaseBuild.test_output_inside_workspace_refused) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:47:59.2052678Z test_rebuild_from_installed_copy (test_release_and_paste.ReleaseBuild.test_rebuild_from_installed_copy)
+smoke.bat (all tests on Windows)	2026-11-05T07:47:59.7751980Z Regression (found in P06 clean-install check): an old manifest must not be re-packed. ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:00.0093511Z test_secret_like_value_blocks_build (test_release_and_paste.ReleaseBuild.test_secret_like_value_blocks_build) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:00.2707281Z test_zip_excludes_user_data_and_has_entrypoints (test_release_and_paste.ReleaseBuild.test_zip_excludes_user_data_and_has_entrypoints) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:00.2714110Z test_abc_selects_a_ranks_b_excludes_c (test_snapshot_bridge.AdapterSelection.test_abc_selects_a_ranks_b_excludes_c) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:00.2719710Z test_defence_in_depth_rejects_tampered_candidate (test_snapshot_bridge.AdapterSelection.test_defence_in_depth_rejects_tampered_candidate) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:00.2721825Z test_evidence_kind_rules (test_snapshot_bridge.AdapterSelection.test_evidence_kind_rules) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:00.2744539Z test_exclusion_reasons (test_snapshot_bridge.AdapterSelection.test_exclusion_reasons) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:00.2747105Z test_old_behavior_would_have_chosen_card_only (test_snapshot_bridge.AdapterSelection.test_old_behavior_would_have_chosen_card_only)
+smoke.bat (all tests on Windows)	2026-11-05T07:48:00.2752789Z Documents I02: legacy meta-wide terms (no scope) are no longer promoted. ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:00.2757467Z test_price_url_time_belong_to_same_offer (test_snapshot_bridge.AdapterSelection.test_price_url_time_belong_to_same_offer) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:00.2764032Z test_tie_is_deterministic_and_reported (test_snapshot_bridge.AdapterSelection.test_tie_is_deterministic_and_reported) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:00.3731562Z test_demo_end_to_end_seven_columns (test_snapshot_bridge.BridgeE2E.test_demo_end_to_end_seven_columns) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:00.4680560Z test_demo_label_preserved_everywhere (test_snapshot_bridge.BridgeE2E.test_demo_label_preserved_everywhere) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:00.5620857Z test_html_escape_of_untrusted_names (test_snapshot_bridge.BridgeE2E.test_html_escape_of_untrusted_names) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:00.5947817Z test_job_validation (test_snapshot_bridge.BridgeE2E.test_job_validation) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:00.8341604Z test_manual_import_requires_user_recorded_and_stays_hold (test_snapshot_bridge.BridgeE2E.test_manual_import_requires_user_recorded_and_stays_hold) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:00.9597925Z test_no_structured_offers_reason_visible (test_snapshot_bridge.BridgeE2E.test_no_structured_offers_reason_visible) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:01.0506781Z test_partial_failure_keeps_rows (test_snapshot_bridge.BridgeE2E.test_partial_failure_keeps_rows) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:01.1964480Z test_rerun_keeps_observed_at_and_does_not_publish (test_snapshot_bridge.BridgeE2E.test_rerun_keeps_observed_at_and_does_not_publish) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:01.2883631Z test_target_mismatch_between_job_and_meta_holds (test_snapshot_bridge.BridgeE2E.test_target_mismatch_between_job_and_meta_holds) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:01.2889196Z test_no_selection_is_none_not_zero (test_snapshot_bridge.PanelInput.test_no_selection_is_none_not_zero) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:01.2894688Z test_selected_maps_total_and_keeps_flags_false (test_snapshot_bridge.PanelInput.test_selected_maps_total_and_keeps_flags_false) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:01.2899626Z test_synthetic_condition_labelled (test_snapshot_bridge.PanelInput.test_synthetic_condition_labelled) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:01.8557285Z test_demo_api_and_output (test_workspace.HTTPTests.test_demo_api_and_output) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:02.3761916Z test_host_and_origin_guard (test_workspace.HTTPTests.test_host_and_origin_guard) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:02.8991715Z test_local_image_upload_and_brief_save (test_workspace.HTTPTests.test_local_image_upload_and_brief_save) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:03.4198615Z test_mutation_requires_token (test_workspace.HTTPTests.test_mutation_requires_token) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:03.9432615Z test_status_and_missing_secret_routes (test_workspace.HTTPTests.test_status_and_missing_secret_routes) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:03.9609572Z test_bad_image_and_rights (test_workspace.ImageTests.test_bad_image_and_rights) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:03.9804407Z test_download_default_off_and_host_allowlist (test_workspace.ImageTests.test_download_default_off_and_host_allowlist) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:03.9993782Z test_http_429_stops_without_retry (test_workspace.ImageTests.test_http_429_stops_without_retry) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.0194673Z test_mock_download_stores_valid_image (test_workspace.ImageTests.test_mock_download_stores_valid_image) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.0376583Z test_original_import_hash_and_evidence (test_workspace.ImageTests.test_original_import_hash_and_evidence) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.0553379Z test_path_traversal_and_dimensions (test_workspace.ImageTests.test_path_traversal_and_dimensions) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.0732598Z test_private_and_mixed_dns_are_rejected (test_workspace.ImageTests.test_private_and_mixed_dns_are_rejected) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.0903058Z test_public_ip_is_pinned (test_workspace.ImageTests.test_public_ip_is_pinned) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.1413730Z test_three_aspect_ratios_and_original_integrity (test_workspace.ImageTests.test_three_aspect_ratios_and_original_integrity) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.1693593Z test_bad_image_keeps_prices (test_workspace.PipelineTests.test_bad_image_keeps_prices) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.2335223Z test_demo_seven_columns_and_three_images (test_workspace.PipelineTests.test_demo_seven_columns_and_three_images) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.2707482Z test_html_escapes_untrusted_text (test_workspace.PipelineTests.test_html_escapes_untrusted_text) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.2873618Z test_live_and_publishing_are_explicitly_unavailable (test_workspace.PipelineTests.test_live_and_publishing_are_explicitly_unavailable) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.3049650Z test_lock_prevents_parallel_write_and_cleans_up (test_workspace.PipelineTests.test_lock_prevents_parallel_write_and_cleans_up) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.3416964Z test_missing_source_keeps_row_and_holds (test_workspace.PipelineTests.test_missing_source_keeps_row_and_holds) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.3836827Z test_ready_means_only_manual_review (test_workspace.PipelineTests.test_ready_means_only_manual_review) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.4360607Z test_repeat_same_input_does_not_fake_price_timestamp (test_workspace.PipelineTests.test_repeat_same_input_does_not_fake_price_timestamp) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.4785511Z test_stale_generated_image_removed_on_later_failure (test_workspace.PipelineTests.test_stale_generated_image_removed_on_later_failure) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.4955471Z test_bounds (test_workspace.ValidationTests.test_bounds) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.5211012Z test_config_safe_and_reinstallation_preserves_config (test_workspace.ValidationTests.test_config_safe_and_reinstallation_preserves_config) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.5388087Z test_credit_needed_for_permission (test_workspace.ValidationTests.test_credit_needed_for_permission) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.5555810Z test_links (test_workspace.ValidationTests.test_links) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.5724180Z test_price_error_preserved (test_workspace.ValidationTests.test_price_error_preserved) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.5887543Z test_single_price_only (test_workspace.ValidationTests.test_single_price_only) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.6058868Z test_stale_future_and_missing_timestamps (test_workspace.ValidationTests.test_stale_future_and_missing_timestamps) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.6226032Z test_true_boolean_and_condition_required (test_workspace.ValidationTests.test_true_boolean_and_condition_required) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.6231323Z test_conditional_hint_blocks_even_if_declared_normal (test_snapshot_probe.TestPerOfferTerms.test_conditional_hint_blocks_even_if_declared_normal) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.6234720Z test_duplicate_offer_terms_ambiguous (test_snapshot_probe.TestPerOfferTerms.test_duplicate_offer_terms_ambiguous) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.6238411Z test_fresh_hours_parameter (test_snapshot_probe.TestPerOfferTerms.test_fresh_hours_parameter) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.6240994Z test_meta_terms_without_scope_not_promoted (test_snapshot_probe.TestPerOfferTerms.test_meta_terms_without_scope_not_promoted) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.6244995Z test_multiple_or_bad_shipping_rates (test_snapshot_probe.TestPerOfferTerms.test_multiple_or_bad_shipping_rates) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.6249084Z test_offer_level_shipping_and_seller_kept (test_snapshot_probe.TestPerOfferTerms.test_offer_level_shipping_and_seller_kept) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.6252552Z test_shipping_conflict_between_sources (test_snapshot_probe.TestPerOfferTerms.test_shipping_conflict_between_sources) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.6254963Z test_boolean_shipping_rejected (test_snapshot_probe.TestProbe.test_boolean_shipping_rejected) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.6257339Z test_demo_always_not_exported (test_snapshot_probe.TestProbe.test_demo_always_not_exported) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.6258602Z test_graph (test_snapshot_probe.TestProbe.test_graph) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.6260268Z test_host_check (test_snapshot_probe.TestProbe.test_host_check) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.6262883Z test_html_escaped (test_snapshot_probe.TestProbe.test_html_escaped) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.6264211Z test_invalid_jsonld (test_snapshot_probe.TestProbe.test_invalid_jsonld) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.6265767Z test_krw_parse_strict (test_snapshot_probe.TestProbe.test_krw_parse_strict) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.6278521Z test_large_input_fails (test_snapshot_probe.TestProbe.test_large_input_fails) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.6280849Z test_offer_and_aggregate (test_snapshot_probe.TestProbe.test_offer_and_aggregate) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.6283090Z test_permission_required (test_snapshot_probe.TestProbe.test_permission_required) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.6284391Z test_plain_html_does_not_guess_prices (test_snapshot_probe.TestProbe.test_plain_html_does_not_guess_prices) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.6286591Z test_review_row_generated (test_snapshot_probe.TestProbe.test_review_row_generated) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.6340771Z test_saves_reports (test_snapshot_probe.TestProbe.test_saves_reports) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.6343281Z test_stale_blocks (test_snapshot_probe.TestProbe.test_stale_blocks) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.6344740Z test_timezone_required (test_snapshot_probe.TestProbe.test_timezone_required) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.6346762Z test_unknown_payment_blocks (test_snapshot_probe.TestProbe.test_unknown_payment_blocks) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.6349094Z test_unknown_shipping_blocks (test_snapshot_probe.TestProbe.test_unknown_shipping_blocks) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.6351318Z test_wrong_model_blocks (test_snapshot_probe.TestProbe.test_wrong_model_blocks) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.6354029Z test_wrong_variant_blocks (test_snapshot_probe.TestProbe.test_wrong_variant_blocks) ... ok
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.6354876Z 
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.6355141Z ----------------------------------------------------------------------
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.6355819Z Ran 102 tests in 9.151s
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.6356133Z 
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.6356302Z OK
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.6903662Z [HTTP] POST /api/snapshot 200
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.6904410Z [HTTP] GET /output/20261105_demo_d7cc23d8eeac/product_table.html 200
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.6905213Z [HTTP] GET /output/20261105_demo_d7cc23d8eeac/bridge/evidence_sidecar.json 200
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.6905831Z [HTTP] POST /api/snapshot 403
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.6906187Z [HTTP] POST /api/snapshot 400
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.6906540Z [HTTP] POST /api/snapshot 400
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.6906955Z [HTTP] POST /api/snapshot 400
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.6907329Z [HTTP] POST /api/snapshot 400
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.6907695Z [HTTP] POST /api/snapshot 400
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.6908058Z [HTTP] POST /api/snapshot 200
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.6908898Z [HTTP] POST /api/run 200
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.6909362Z [HTTP] GET /output/20261105_demo_27afc152c3b8/product_table.html 200
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.6909948Z [HTTP] GET /api/status 403
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.6910258Z [HTTP] GET /api/status 403
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.6910562Z [HTTP] POST /api/image 200
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.6910889Z [HTTP] POST /api/brief 200
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.6911181Z [HTTP] POST /api/run 403
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.6911479Z [HTTP] GET /api/status 200
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.6911815Z [HTTP] GET /01_CONFIG/settings.local.json 404
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.6912279Z [HTTP] GET /output/../../01_CONFIG/settings.local.json 404
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.7229947Z 
+smoke.bat (all tests on Windows)	2026-11-05T07:48:04.7235896Z Press any key to continue . . . 
+run_once.bat (empty inbox must exit 0)	﻿2026-11-05T07:48:04.7476021Z ##[group]Run cd /d "%WS%"
+run_once.bat (empty inbox must exit 0)	2026-11-05T07:48:04.7476506Z [36;1mcd /d "%WS%"[0m
+run_once.bat (empty inbox must exit 0)	2026-11-05T07:48:04.7477170Z [36;1mcall run_once.bat < NUL[0m
+run_once.bat (empty inbox must exit 0)	2026-11-05T07:48:04.7533950Z shell: C:\Windows\system32\cmd.EXE /D /E:ON /V:OFF /S /C "CALL "{0}""
+run_once.bat (empty inbox must exit 0)	2026-11-05T07:48:04.7534589Z env:
+run_once.bat (empty inbox must exit 0)	2026-11-05T07:48:04.7534880Z   PYTHONUTF8: 1
+run_once.bat (empty inbox must exit 0)	2026-11-05T07:48:04.7535365Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.13.17\x64
+run_once.bat (empty inbox must exit 0)	2026-11-05T07:48:04.7535947Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.13.17\x64/lib/pkgconfig
+run_once.bat (empty inbox must exit 0)	2026-11-05T07:48:04.7536424Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+run_once.bat (empty inbox must exit 0)	2026-11-05T07:48:04.7537532Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+run_once.bat (empty inbox must exit 0)	2026-11-05T07:48:04.7537958Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+run_once.bat (empty inbox must exit 0)	2026-11-05T07:48:04.7538296Z   WS: D:\a\_temp\작업 폴더\Naver Blog
+run_once.bat (empty inbox must exit 0)	2026-11-05T07:48:04.7538531Z ##[endgroup]
+run_once.bat (empty inbox must exit 0)	2026-11-05T07:48:04.9119279Z {
+run_once.bat (empty inbox must exit 0)	2026-11-05T07:48:04.9119654Z   "tool": "run_once",
+run_once.bat (empty inbox must exit 0)	2026-11-05T07:48:04.9120152Z   "started_at": "2026-11-05T16:48:04.910449+09:00",
+run_once.bat (empty inbox must exit 0)	2026-11-05T07:48:04.9120713Z   "finished_at": "2026-11-05T16:48:04.911126+09:00",
+run_once.bat (empty inbox must exit 0)	2026-11-05T07:48:04.9121217Z   "overall": "NO_INPUT",
+run_once.bat (empty inbox must exit 0)	2026-11-05T07:48:04.9121574Z   "inputs": {
+run_once.bat (empty inbox must exit 0)	2026-11-05T07:48:04.9121874Z     "products": {
+run_once.bat (empty inbox must exit 0)	2026-11-05T07:48:04.9122192Z       "status": "NO_INPUT",
+run_once.bat (empty inbox must exit 0)	2026-11-05T07:48:04.9122842Z       "detail": "records 목록이 비어 있습니다."
+run_once.bat (empty inbox must exit 0)	2026-11-05T07:48:04.9123264Z     }
+run_once.bat (empty inbox must exit 0)	2026-11-05T07:48:04.9123524Z   },
+run_once.bat (empty inbox must exit 0)	2026-11-05T07:48:04.9124184Z   "notice": "로컬 검토 자료 생성만 수행. 실시간 가격 수집·로그인·블로그 게시 없음.",
+run_once.bat (empty inbox must exit 0)	2026-11-05T07:48:04.9124726Z   "network_price_collection": false,
+run_once.bat (empty inbox must exit 0)	2026-11-05T07:48:04.9125577Z   "published": false,
+run_once.bat (empty inbox must exit 0)	2026-11-05T07:48:04.9126638Z   "hint": "처리할 입력이 없습니다. 07_DATA/inbox/products.json에 records를 넣거나 07_DATA/inbox/snapshot_job.json 작업 파일을 만드세요.",
+run_once.bat (empty inbox must exit 0)	2026-11-05T07:48:04.9127594Z   "log": "09_LOGS/daily/run_20261105_164804_910449.json"
+run_once.bat (empty inbox must exit 0)	2026-11-05T07:48:04.9128067Z }
+run_once.bat (empty inbox must exit 0)	2026-11-05T07:48:04.9128894Z [INFO] 처리할 입력이 없습니다. 07_DATA/inbox/products.json에 records를 넣거나 07_DATA/inbox/snapshot_job.json 작업 파일을 만드세요.
+run_once.bat (empty inbox must exit 0)	2026-11-05T07:48:04.9302612Z 
+run_once.bat (empty inbox must exit 0)	2026-11-05T07:48:04.9309571Z Press any key to continue . . . 
+run_snapshot_demo.bat	﻿2026-11-05T07:48:04.9579952Z ##[group]Run cd /d "%WS%"
+run_snapshot_demo.bat	2026-11-05T07:48:04.9580287Z [36;1mcd /d "%WS%"[0m
+run_snapshot_demo.bat	2026-11-05T07:48:04.9580517Z [36;1mcall run_snapshot_demo.bat < NUL[0m
+run_snapshot_demo.bat	2026-11-05T07:48:04.9615091Z shell: C:\Windows\system32\cmd.EXE /D /E:ON /V:OFF /S /C "CALL "{0}""
+run_snapshot_demo.bat	2026-11-05T07:48:04.9615451Z env:
+run_snapshot_demo.bat	2026-11-05T07:48:04.9615624Z   PYTHONUTF8: 1
+run_snapshot_demo.bat	2026-11-05T07:48:04.9615944Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.13.17\x64
+run_snapshot_demo.bat	2026-11-05T07:48:04.9616429Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.13.17\x64/lib/pkgconfig
+run_snapshot_demo.bat	2026-11-05T07:48:04.9616890Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+run_snapshot_demo.bat	2026-11-05T07:48:04.9617299Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+run_snapshot_demo.bat	2026-11-05T07:48:04.9617723Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+run_snapshot_demo.bat	2026-11-05T07:48:04.9618065Z   WS: D:\a\_temp\작업 폴더\Naver Blog
+run_snapshot_demo.bat	2026-11-05T07:48:04.9618296Z ##[endgroup]
+run_snapshot_demo.bat	2026-11-05T07:48:05.1920493Z {
+run_snapshot_demo.bat	2026-11-05T07:48:05.1920912Z   "run_id": "20261105_demo_d7cc23d8eeac",
+run_snapshot_demo.bat	2026-11-05T07:48:05.1921874Z   "mode": "DEMO",
+run_snapshot_demo.bat	2026-11-05T07:48:05.1922234Z   "evidence_kind": "synthetic",
+run_snapshot_demo.bat	2026-11-05T07:48:05.1922667Z   "review_gate": "DEMO_ONLY",
+run_snapshot_demo.bat	2026-11-05T07:48:05.1923065Z   "reused_output": false,
+run_snapshot_demo.bat	2026-11-05T07:48:05.1923590Z   "output_relative": "08_OUTPUT/runs/20261105_demo_d7cc23d8eeac",
+run_snapshot_demo.bat	2026-11-05T07:48:05.1924465Z   "sidecar": "08_OUTPUT/runs/20261105_demo_d7cc23d8eeac/bridge/evidence_sidecar.json",
+run_snapshot_demo.bat	2026-11-05T07:48:05.1925199Z   "published": false,
+run_snapshot_demo.bat	2026-11-05T07:48:05.1925738Z   "paste_url": "/output/20261105_demo_d7cc23d8eeac/naver_paste_table.html",
+run_snapshot_demo.bat	2026-11-05T07:48:05.1926372Z   "products": [
+run_snapshot_demo.bat	2026-11-05T07:48:05.1926666Z     {
+run_snapshot_demo.bat	2026-11-05T07:48:05.1926931Z       "row": 1,
+run_snapshot_demo.bat	2026-11-05T07:48:05.1927498Z       "query": "가상 무선 마우스 A",
+run_snapshot_demo.bat	2026-11-05T07:48:05.1927897Z       "status": "SELECTED",
+run_snapshot_demo.bat	2026-11-05T07:48:05.1928270Z       "danawa_price": 119000,
+run_snapshot_demo.bat	2026-11-05T07:48:05.1928760Z       "danawa_url": "https://example.com/shop/a-offer"
+run_snapshot_demo.bat	2026-11-05T07:48:05.1929273Z     },
+run_snapshot_demo.bat	2026-11-05T07:48:05.1929543Z     {
+run_snapshot_demo.bat	2026-11-05T07:48:05.1929810Z       "row": 2,
+run_snapshot_demo.bat	2026-11-05T07:48:05.1930187Z       "query": "가상 키보드 B",
+run_snapshot_demo.bat	2026-11-05T07:48:05.1930578Z       "status": "NO_ELIGIBLE_CANDIDATE",
+run_snapshot_demo.bat	2026-11-05T07:48:05.1931026Z       "danawa_price": null,
+run_snapshot_demo.bat	2026-11-05T07:48:05.1931392Z       "danawa_url": null
+run_snapshot_demo.bat	2026-11-05T07:48:05.1932003Z     },
+run_snapshot_demo.bat	2026-11-05T07:48:05.1932263Z     {
+run_snapshot_demo.bat	2026-11-05T07:48:05.1932519Z       "row": 3,
+run_snapshot_demo.bat	2026-11-05T07:48:05.1932882Z       "query": "가상 헤드셋 C",
+run_snapshot_demo.bat	2026-11-05T07:48:05.1933255Z       "status": "NO_CANDIDATE",
+run_snapshot_demo.bat	2026-11-05T07:48:05.1933648Z       "danawa_price": null,
+run_snapshot_demo.bat	2026-11-05T07:48:05.1934071Z       "danawa_url": null
+run_snapshot_demo.bat	2026-11-05T07:48:05.1934401Z     }
+run_snapshot_demo.bat	2026-11-05T07:48:05.1934654Z   ]
+run_snapshot_demo.bat	2026-11-05T07:48:05.1934904Z }
+run_snapshot_demo.bat	2026-11-05T07:48:05.2138083Z 
+run_snapshot_demo.bat	2026-11-05T07:48:05.2144567Z Press any key to continue . . . 
+Reinstall keeps user settings	﻿2026-11-05T07:48:05.2386860Z ##[group]Run Set-Location -LiteralPath $env:WS
+Reinstall keeps user settings	2026-11-05T07:48:05.2387327Z [36;1mSet-Location -LiteralPath $env:WS[0m
+Reinstall keeps user settings	2026-11-05T07:48:05.2387754Z [36;1m$before = (Get-FileHash '01_CONFIG\settings.local.json').Hash[0m
+Reinstall keeps user settings	2026-11-05T07:48:05.2388169Z [36;1mcmd /c "install.bat < NUL"[0m
+Reinstall keeps user settings	2026-11-05T07:48:05.2388531Z [36;1mif ($LASTEXITCODE -ne 0) { throw "reinstall failed" }[0m
+Reinstall keeps user settings	2026-11-05T07:48:05.2389002Z [36;1m$after = (Get-FileHash '01_CONFIG\settings.local.json').Hash[0m
+Reinstall keeps user settings	2026-11-05T07:48:05.2389549Z [36;1mif ($before -ne $after) { throw "settings.local.json changed on reinstall" }[0m
+Reinstall keeps user settings	2026-11-05T07:48:05.2390019Z [36;1mWrite-Host "settings preserved"[0m
+Reinstall keeps user settings	2026-11-05T07:48:05.2461626Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+Reinstall keeps user settings	2026-11-05T07:48:05.2462032Z env:
+Reinstall keeps user settings	2026-11-05T07:48:05.2462224Z   PYTHONUTF8: 1
+Reinstall keeps user settings	2026-11-05T07:48:05.2462544Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.13.17\x64
+Reinstall keeps user settings	2026-11-05T07:48:05.2463110Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.13.17\x64/lib/pkgconfig
+Reinstall keeps user settings	2026-11-05T07:48:05.2463709Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+Reinstall keeps user settings	2026-11-05T07:48:05.2464202Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+Reinstall keeps user settings	2026-11-05T07:48:05.2464690Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+Reinstall keeps user settings	2026-11-05T07:48:05.2465086Z   WS: D:\a\_temp\작업 폴더\Naver Blog
+Reinstall keeps user settings	2026-11-05T07:48:05.2465350Z ##[endgroup]
+Reinstall keeps user settings	2026-11-05T07:48:06.2074578Z Selected Python: D:\a\_temp\작업 폴더\Naver Blog\.venv\Scripts\python.exe
+Reinstall keeps user settings	2026-11-05T07:48:07.1771582Z Requirement already satisfied: Pillow==12.3.0 in .\.venv\Lib\site-packages (from -r D:\a\_temp\작업 폴더\Naver Blog\tools\dependencies.lock (line 1)) (12.3.0)
+Reinstall keeps user settings	2026-11-05T07:48:07.5475167Z No broken requirements found.
+Reinstall keeps user settings	2026-11-05T07:48:07.7524741Z {
+Reinstall keeps user settings	2026-11-05T07:48:07.7525225Z   "checked_at": "2026-11-05T16:48:07.699545+09:00",
+Reinstall keeps user settings	2026-11-05T07:48:07.7526009Z   "platform": "Windows-2025Server-10.0.26100-SP0",
+Reinstall keeps user settings	2026-11-05T07:48:07.7526360Z   "checks": [
+Reinstall keeps user settings	2026-11-05T07:48:07.7526590Z     {
+Reinstall keeps user settings	2026-11-05T07:48:07.7526776Z       "name": "Python",
+Reinstall keeps user settings	2026-11-05T07:48:07.7527008Z       "status": "PASS",
+Reinstall keeps user settings	2026-11-05T07:48:07.7527226Z       "detail": "3.13.17"
+Reinstall keeps user settings	2026-11-05T07:48:07.7527444Z     },
+Reinstall keeps user settings	2026-11-05T07:48:07.7527621Z     {
+Reinstall keeps user settings	2026-11-05T07:48:07.7527802Z       "name": "64bit",
+Reinstall keeps user settings	2026-11-05T07:48:07.7528029Z       "status": "PASS",
+Reinstall keeps user settings	2026-11-05T07:48:07.7528262Z       "detail": "64"
+Reinstall keeps user settings	2026-11-05T07:48:07.7528466Z     },
+Reinstall keeps user settings	2026-11-05T07:48:07.7528654Z     {
+Reinstall keeps user settings	2026-11-05T07:48:07.7528835Z       "name": "Pillow",
+Reinstall keeps user settings	2026-11-05T07:48:07.7529063Z       "status": "PASS",
+Reinstall keeps user settings	2026-11-05T07:48:07.7529295Z       "detail": "12.3.0 (lock:12.3.0)"
+Reinstall keeps user settings	2026-11-05T07:48:07.7529568Z     },
+Reinstall keeps user settings	2026-11-05T07:48:07.7529738Z     {
+Reinstall keeps user settings	2026-11-05T07:48:07.7529919Z       "name": "Config",
+Reinstall keeps user settings	2026-11-05T07:48:07.7530139Z       "status": "PASS",
+Reinstall keeps user settings	2026-11-05T07:48:07.7530406Z       "detail": "Local-only / auto_publish=false"
+Reinstall keeps user settings	2026-11-05T07:48:07.7530727Z     },
+Reinstall keeps user settings	2026-11-05T07:48:07.7530902Z     {
+Reinstall keeps user settings	2026-11-05T07:48:07.7531119Z       "name": "Writable workspace",
+Reinstall keeps user settings	2026-11-05T07:48:07.7531397Z       "status": "PASS",
+Reinstall keeps user settings	2026-11-05T07:48:07.7531990Z       "detail": "D:\\a\\_temp\\작업 폴더\\Naver Blog"
+Reinstall keeps user settings	2026-11-05T07:48:07.7532300Z     },
+Reinstall keeps user settings	2026-11-05T07:48:07.7532829Z     {
+Reinstall keeps user settings	2026-11-05T07:48:07.7533033Z       "name": "Pipeline lock",
+Reinstall keeps user settings	2026-11-05T07:48:07.7533300Z       "status": "PASS",
+Reinstall keeps user settings	2026-11-05T07:48:07.7533534Z       "detail": "No lock"
+Reinstall keeps user settings	2026-11-05T07:48:07.7533766Z     },
+Reinstall keeps user settings	2026-11-05T07:48:07.7534244Z     {
+Reinstall keeps user settings	2026-11-05T07:48:07.7534446Z       "name": "Snapshot add-on",
+Reinstall keeps user settings	2026-11-05T07:48:07.7534714Z       "status": "PASS",
+Reinstall keeps user settings	2026-11-05T07:48:07.7534999Z       "detail": "Saved-HTML bridge (offline, no network)"
+Reinstall keeps user settings	2026-11-05T07:48:07.7535331Z     },
+Reinstall keeps user settings	2026-11-05T07:48:07.7535504Z     {
+Reinstall keeps user settings	2026-11-05T07:48:07.7535699Z       "name": "Danawa live collector",
+Reinstall keeps user settings	2026-11-05T07:48:07.7535997Z       "status": "NOT_CONFIGURED",
+Reinstall keeps user settings	2026-11-05T07:48:07.7536443Z       "detail": "Approved import only; live permission and selector validation required"
+Reinstall keeps user settings	2026-11-05T07:48:07.7539257Z     },
+Reinstall keeps user settings	2026-11-05T07:48:07.7539427Z     {
+Reinstall keeps user settings	2026-11-05T07:48:07.7539622Z       "name": "Naver shopping legacy API",
+Reinstall keeps user settings	2026-11-05T07:48:07.7539901Z       "status": "RETIRED",
+Reinstall keeps user settings	2026-11-05T07:48:07.7540295Z       "detail": "Official retirement: 2026-07-31. No API key setup needed for this baseline."
+Reinstall keeps user settings	2026-11-05T07:48:07.7540716Z     },
+Reinstall keeps user settings	2026-11-05T07:48:07.7540872Z     {
+Reinstall keeps user settings	2026-11-05T07:48:07.7541048Z       "name": "Naver publication",
+Reinstall keeps user settings	2026-11-05T07:48:07.7541298Z       "status": "DISABLED",
+Reinstall keeps user settings	2026-11-05T07:48:07.7541529Z       "detail": "Manual handoff only"
+Reinstall keeps user settings	2026-11-05T07:48:07.7541764Z     },
+Reinstall keeps user settings	2026-11-05T07:48:07.7541916Z     {
+Reinstall keeps user settings	2026-11-05T07:48:07.7542091Z       "name": "Windows BAT runtime",
+Reinstall keeps user settings	2026-11-05T07:48:07.7542348Z       "status": "CURRENT_PC",
+Reinstall keeps user settings	2026-11-05T07:48:07.7542622Z       "detail": "No claim of verification on another PC"
+Reinstall keeps user settings	2026-11-05T07:48:07.7542911Z     }
+Reinstall keeps user settings	2026-11-05T07:48:07.7543062Z   ],
+Reinstall keeps user settings	2026-11-05T07:48:07.7543220Z   "local_ok": true
+Reinstall keeps user settings	2026-11-05T07:48:07.7543407Z }
+Reinstall keeps user settings	2026-11-05T07:48:08.0702370Z test_both_inputs_processed_independently (test_daily_ops.Daily.test_both_inputs_processed_independently) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:08.1396190Z test_concurrent_run_is_refused_and_lock_kept (test_daily_ops.Daily.test_concurrent_run_is_refused_and_lock_kept) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:08.2876863Z test_demo_modes_do_not_touch_inbox (test_daily_ops.Daily.test_demo_modes_do_not_touch_inbox) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:08.3095396Z test_no_input_is_not_a_failure_and_is_logged (test_daily_ops.Daily.test_no_input_is_not_a_failure_and_is_logged) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:08.3693240Z test_one_failure_keeps_other_result (test_daily_ops.Daily.test_one_failure_keeps_other_result) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:08.4536459Z test_rerun_same_day_reuses_output_and_keeps_observed_at (test_daily_ops.Daily.test_rerun_same_day_reuses_output_and_keeps_observed_at) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:08.4547449Z test_bat_encoding_and_header (test_daily_ops.WindowsScriptsStatic.test_bat_encoding_and_header) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:08.4566804Z test_bat_paths_quoted (test_daily_ops.WindowsScriptsStatic.test_bat_paths_quoted) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:08.4571906Z test_installer_does_not_overwrite_user_data (test_daily_ops.WindowsScriptsStatic.test_installer_does_not_overwrite_user_data) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:08.4584602Z test_python_entrypoints_exist (test_daily_ops.WindowsScriptsStatic.test_python_entrypoints_exist) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:08.4591412Z test_scheduler_requires_confirmation_and_is_local_only (test_daily_ops.WindowsScriptsStatic.test_scheduler_requires_confirmation_and_is_local_only) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:08.4718786Z test_unattended_python_never_prompts (test_daily_ops.WindowsScriptsStatic.test_unattended_python_never_prompts) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:08.5515638Z test_checked_record_clears_danawa_issues_naver_still_missing (test_panel_integration.HumanReviewLoop.test_checked_record_clears_danawa_issues_naver_still_missing) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:08.6771904Z test_broken_or_missing_image_keeps_price_row (test_panel_integration.ImageIntegrity.test_broken_or_missing_image_keeps_price_row) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:08.7765273Z test_originals_unchanged_and_outputs_354x472 (test_panel_integration.ImageIntegrity.test_originals_unchanged_and_outputs_354x472) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:09.3893742Z test_demo_snapshot_via_api (test_panel_integration.ServerSnapshotApi.test_demo_snapshot_via_api) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:09.9284873Z test_snapshot_api_guards (test_panel_integration.ServerSnapshotApi.test_snapshot_api_guards) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:10.4602487Z test_user_recorded_job_via_api (test_panel_integration.ServerSnapshotApi.test_user_recorded_job_via_api) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:10.4609517Z test_required_table_headers_unchanged (test_panel_integration.StaticUi.test_required_table_headers_unchanged) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:10.4614308Z test_snapshot_card_present_and_offline (test_panel_integration.StaticUi.test_snapshot_card_present_and_offline) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:10.4616948Z test_inline_only_seven_columns (test_release_and_paste.NaverPaste.test_inline_only_seven_columns) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:10.5524689Z test_written_by_bridge_demo (test_release_and_paste.NaverPaste.test_written_by_bridge_demo) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:10.7225150Z test_output_inside_workspace_refused (test_release_and_paste.ReleaseBuild.test_output_inside_workspace_refused) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:10.7226646Z test_rebuild_from_installed_copy (test_release_and_paste.ReleaseBuild.test_rebuild_from_installed_copy)
+Reinstall keeps user settings	2026-11-05T07:48:11.1196644Z Regression (found in P06 clean-install check): an old manifest must not be re-packed. ... ok
+Reinstall keeps user settings	2026-11-05T07:48:11.3562631Z test_secret_like_value_blocks_build (test_release_and_paste.ReleaseBuild.test_secret_like_value_blocks_build) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:11.6232125Z test_zip_excludes_user_data_and_has_entrypoints (test_release_and_paste.ReleaseBuild.test_zip_excludes_user_data_and_has_entrypoints) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:11.6238968Z test_abc_selects_a_ranks_b_excludes_c (test_snapshot_bridge.AdapterSelection.test_abc_selects_a_ranks_b_excludes_c) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:11.6244736Z test_defence_in_depth_rejects_tampered_candidate (test_snapshot_bridge.AdapterSelection.test_defence_in_depth_rejects_tampered_candidate) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:11.6247799Z test_evidence_kind_rules (test_snapshot_bridge.AdapterSelection.test_evidence_kind_rules) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:11.6272997Z test_exclusion_reasons (test_snapshot_bridge.AdapterSelection.test_exclusion_reasons) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:11.6275071Z test_old_behavior_would_have_chosen_card_only (test_snapshot_bridge.AdapterSelection.test_old_behavior_would_have_chosen_card_only)
+Reinstall keeps user settings	2026-11-05T07:48:11.6282957Z Documents I02: legacy meta-wide terms (no scope) are no longer promoted. ... ok
+Reinstall keeps user settings	2026-11-05T07:48:11.6287942Z test_price_url_time_belong_to_same_offer (test_snapshot_bridge.AdapterSelection.test_price_url_time_belong_to_same_offer) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:11.6295169Z test_tie_is_deterministic_and_reported (test_snapshot_bridge.AdapterSelection.test_tie_is_deterministic_and_reported) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:11.7236162Z test_demo_end_to_end_seven_columns (test_snapshot_bridge.BridgeE2E.test_demo_end_to_end_seven_columns) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:11.8172905Z test_demo_label_preserved_everywhere (test_snapshot_bridge.BridgeE2E.test_demo_label_preserved_everywhere) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:11.9266826Z test_html_escape_of_untrusted_names (test_snapshot_bridge.BridgeE2E.test_html_escape_of_untrusted_names) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:11.9553647Z test_job_validation (test_snapshot_bridge.BridgeE2E.test_job_validation) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:12.0146423Z test_manual_import_requires_user_recorded_and_stays_hold (test_snapshot_bridge.BridgeE2E.test_manual_import_requires_user_recorded_and_stays_hold) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:12.1272740Z test_no_structured_offers_reason_visible (test_snapshot_bridge.BridgeE2E.test_no_structured_offers_reason_visible) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:12.2088519Z test_partial_failure_keeps_rows (test_snapshot_bridge.BridgeE2E.test_partial_failure_keeps_rows) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:12.3572964Z test_rerun_keeps_observed_at_and_does_not_publish (test_snapshot_bridge.BridgeE2E.test_rerun_keeps_observed_at_and_does_not_publish) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:12.4973911Z test_target_mismatch_between_job_and_meta_holds (test_snapshot_bridge.BridgeE2E.test_target_mismatch_between_job_and_meta_holds) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:12.4980360Z test_no_selection_is_none_not_zero (test_snapshot_bridge.PanelInput.test_no_selection_is_none_not_zero) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:12.4985915Z test_selected_maps_total_and_keeps_flags_false (test_snapshot_bridge.PanelInput.test_selected_maps_total_and_keeps_flags_false) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:12.4990490Z test_synthetic_condition_labelled (test_snapshot_bridge.PanelInput.test_synthetic_condition_labelled) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:13.1030686Z test_demo_api_and_output (test_workspace.HTTPTests.test_demo_api_and_output) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:13.6245549Z test_host_and_origin_guard (test_workspace.HTTPTests.test_host_and_origin_guard) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:14.1614279Z test_local_image_upload_and_brief_save (test_workspace.HTTPTests.test_local_image_upload_and_brief_save) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:14.6833932Z test_mutation_requires_token (test_workspace.HTTPTests.test_mutation_requires_token) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:15.2055223Z test_status_and_missing_secret_routes (test_workspace.HTTPTests.test_status_and_missing_secret_routes) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:15.2235155Z test_bad_image_and_rights (test_workspace.ImageTests.test_bad_image_and_rights) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:15.2411325Z test_download_default_off_and_host_allowlist (test_workspace.ImageTests.test_download_default_off_and_host_allowlist) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:15.2603634Z test_http_429_stops_without_retry (test_workspace.ImageTests.test_http_429_stops_without_retry) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:15.2806139Z test_mock_download_stores_valid_image (test_workspace.ImageTests.test_mock_download_stores_valid_image) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:15.2996507Z test_original_import_hash_and_evidence (test_workspace.ImageTests.test_original_import_hash_and_evidence) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:15.3173043Z test_path_traversal_and_dimensions (test_workspace.ImageTests.test_path_traversal_and_dimensions) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:15.3352968Z test_private_and_mixed_dns_are_rejected (test_workspace.ImageTests.test_private_and_mixed_dns_are_rejected) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:15.3525336Z test_public_ip_is_pinned (test_workspace.ImageTests.test_public_ip_is_pinned) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:15.4017711Z test_three_aspect_ratios_and_original_integrity (test_workspace.ImageTests.test_three_aspect_ratios_and_original_integrity) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:15.4304983Z test_bad_image_keeps_prices (test_workspace.PipelineTests.test_bad_image_keeps_prices) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:15.5031600Z test_demo_seven_columns_and_three_images (test_workspace.PipelineTests.test_demo_seven_columns_and_three_images) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:15.5408643Z test_html_escapes_untrusted_text (test_workspace.PipelineTests.test_html_escapes_untrusted_text) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:15.5575821Z test_live_and_publishing_are_explicitly_unavailable (test_workspace.PipelineTests.test_live_and_publishing_are_explicitly_unavailable) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:15.5774050Z test_lock_prevents_parallel_write_and_cleans_up (test_workspace.PipelineTests.test_lock_prevents_parallel_write_and_cleans_up) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:15.6152511Z test_missing_source_keeps_row_and_holds (test_workspace.PipelineTests.test_missing_source_keeps_row_and_holds) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:15.6530952Z test_ready_means_only_manual_review (test_workspace.PipelineTests.test_ready_means_only_manual_review) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:15.7080057Z test_repeat_same_input_does_not_fake_price_timestamp (test_workspace.PipelineTests.test_repeat_same_input_does_not_fake_price_timestamp) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:15.7525576Z test_stale_generated_image_removed_on_later_failure (test_workspace.PipelineTests.test_stale_generated_image_removed_on_later_failure) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:15.7698585Z test_bounds (test_workspace.ValidationTests.test_bounds) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:15.7955309Z test_config_safe_and_reinstallation_preserves_config (test_workspace.ValidationTests.test_config_safe_and_reinstallation_preserves_config) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:15.8127167Z test_credit_needed_for_permission (test_workspace.ValidationTests.test_credit_needed_for_permission) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:15.8302062Z test_links (test_workspace.ValidationTests.test_links) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:15.8475407Z test_price_error_preserved (test_workspace.ValidationTests.test_price_error_preserved) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:15.8641440Z test_single_price_only (test_workspace.ValidationTests.test_single_price_only) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:15.8814976Z test_stale_future_and_missing_timestamps (test_workspace.ValidationTests.test_stale_future_and_missing_timestamps) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:15.8989003Z test_true_boolean_and_condition_required (test_workspace.ValidationTests.test_true_boolean_and_condition_required) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:15.8996847Z test_conditional_hint_blocks_even_if_declared_normal (test_snapshot_probe.TestPerOfferTerms.test_conditional_hint_blocks_even_if_declared_normal) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:15.9002146Z test_duplicate_offer_terms_ambiguous (test_snapshot_probe.TestPerOfferTerms.test_duplicate_offer_terms_ambiguous) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:15.9008520Z test_fresh_hours_parameter (test_snapshot_probe.TestPerOfferTerms.test_fresh_hours_parameter) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:15.9012073Z test_meta_terms_without_scope_not_promoted (test_snapshot_probe.TestPerOfferTerms.test_meta_terms_without_scope_not_promoted) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:15.9018049Z test_multiple_or_bad_shipping_rates (test_snapshot_probe.TestPerOfferTerms.test_multiple_or_bad_shipping_rates) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:15.9023668Z test_offer_level_shipping_and_seller_kept (test_snapshot_probe.TestPerOfferTerms.test_offer_level_shipping_and_seller_kept) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:15.9029794Z test_shipping_conflict_between_sources (test_snapshot_probe.TestPerOfferTerms.test_shipping_conflict_between_sources) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:15.9032993Z test_boolean_shipping_rejected (test_snapshot_probe.TestProbe.test_boolean_shipping_rejected) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:15.9036039Z test_demo_always_not_exported (test_snapshot_probe.TestProbe.test_demo_always_not_exported) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:15.9037468Z test_graph (test_snapshot_probe.TestProbe.test_graph) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:15.9039601Z test_host_check (test_snapshot_probe.TestProbe.test_host_check) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:15.9043095Z test_html_escaped (test_snapshot_probe.TestProbe.test_html_escaped) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:15.9044953Z test_invalid_jsonld (test_snapshot_probe.TestProbe.test_invalid_jsonld) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:15.9046579Z test_krw_parse_strict (test_snapshot_probe.TestProbe.test_krw_parse_strict) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:15.9061130Z test_large_input_fails (test_snapshot_probe.TestProbe.test_large_input_fails) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:15.9064714Z test_offer_and_aggregate (test_snapshot_probe.TestProbe.test_offer_and_aggregate) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:15.9068201Z test_permission_required (test_snapshot_probe.TestProbe.test_permission_required) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:15.9070122Z test_plain_html_does_not_guess_prices (test_snapshot_probe.TestProbe.test_plain_html_does_not_guess_prices) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:15.9073103Z test_review_row_generated (test_snapshot_probe.TestProbe.test_review_row_generated) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:15.9133930Z test_saves_reports (test_snapshot_probe.TestProbe.test_saves_reports) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:15.9137170Z test_stale_blocks (test_snapshot_probe.TestProbe.test_stale_blocks) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:15.9139189Z test_timezone_required (test_snapshot_probe.TestProbe.test_timezone_required) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:15.9141527Z test_unknown_payment_blocks (test_snapshot_probe.TestProbe.test_unknown_payment_blocks) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:15.9144708Z test_unknown_shipping_blocks (test_snapshot_probe.TestProbe.test_unknown_shipping_blocks) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:15.9147195Z test_wrong_model_blocks (test_snapshot_probe.TestProbe.test_wrong_model_blocks) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:15.9149437Z test_wrong_variant_blocks (test_snapshot_probe.TestProbe.test_wrong_variant_blocks) ... ok
+Reinstall keeps user settings	2026-11-05T07:48:15.9150627Z 
+Reinstall keeps user settings	2026-11-05T07:48:15.9150861Z ----------------------------------------------------------------------
+Reinstall keeps user settings	2026-11-05T07:48:15.9151375Z Ran 102 tests in 7.962s
+Reinstall keeps user settings	2026-11-05T07:48:15.9151588Z 
+Reinstall keeps user settings	2026-11-05T07:48:15.9151722Z OK
+Reinstall keeps user settings	2026-11-05T07:48:15.9678417Z [HTTP] POST /api/snapshot 200
+Reinstall keeps user settings	2026-11-05T07:48:15.9678985Z [HTTP] GET /output/20261105_demo_d7cc23d8eeac/product_table.html 200
+Reinstall keeps user settings	2026-11-05T07:48:15.9679657Z [HTTP] GET /output/20261105_demo_d7cc23d8eeac/bridge/evidence_sidecar.json 200
+Reinstall keeps user settings	2026-11-05T07:48:15.9680206Z [HTTP] POST /api/snapshot 403
+Reinstall keeps user settings	2026-11-05T07:48:15.9680526Z [HTTP] POST /api/snapshot 400
+Reinstall keeps user settings	2026-11-05T07:48:15.9680844Z [HTTP] POST /api/snapshot 400
+Reinstall keeps user settings	2026-11-05T07:48:15.9681152Z [HTTP] POST /api/snapshot 400
+Reinstall keeps user settings	2026-11-05T07:48:15.9681462Z [HTTP] POST /api/snapshot 400
+Reinstall keeps user settings	2026-11-05T07:48:15.9683329Z [HTTP] POST /api/snapshot 400
+Reinstall keeps user settings	2026-11-05T07:48:15.9683707Z [HTTP] POST /api/snapshot 200
+Reinstall keeps user settings	2026-11-05T07:48:15.9684048Z [HTTP] POST /api/run 200
+Reinstall keeps user settings	2026-11-05T07:48:15.9684508Z [HTTP] GET /output/20261105_demo_27afc152c3b8/product_table.html 200
+Reinstall keeps user settings	2026-11-05T07:48:15.9685040Z [HTTP] GET /api/status 403
+Reinstall keeps user settings	2026-11-05T07:48:15.9685367Z [HTTP] GET /api/status 403
+Reinstall keeps user settings	2026-11-05T07:48:15.9685687Z [HTTP] POST /api/image 200
+Reinstall keeps user settings	2026-11-05T07:48:15.9686029Z [HTTP] POST /api/brief 200
+Reinstall keeps user settings	2026-11-05T07:48:15.9686354Z [HTTP] POST /api/run 403
+Reinstall keeps user settings	2026-11-05T07:48:15.9686678Z [HTTP] GET /api/status 200
+Reinstall keeps user settings	2026-11-05T07:48:15.9687046Z [HTTP] GET /01_CONFIG/settings.local.json 404
+Reinstall keeps user settings	2026-11-05T07:48:15.9687586Z [HTTP] GET /output/../../01_CONFIG/settings.local.json 404
+Reinstall keeps user settings	2026-11-05T07:48:16.3064552Z Setup completed. Double-click start_panel.bat. No task or blog post was created.
+Reinstall keeps user settings	2026-11-05T07:48:16.4440117Z 
+Reinstall keeps user settings	2026-11-05T07:48:16.4446411Z Press any key to continue . . . 
+Reinstall keeps user settings	2026-11-05T07:48:16.4574024Z settings preserved
+Scheduler script syntax only (no task is registered)	﻿2026-11-05T07:48:16.5255196Z ##[group]Run $errors = $null
+Scheduler script syntax only (no task is registered)	2026-11-05T07:48:16.5255582Z [36;1m$errors = $null[0m
+Scheduler script syntax only (no task is registered)	2026-11-05T07:48:16.5256328Z [36;1m[System.Management.Automation.Language.Parser]::ParseFile((Join-Path $env:WS 'tools\schedule.ps1'), [ref]$null, [ref]$errors) | Out-Null[0m
+Scheduler script syntax only (no task is registered)	2026-11-05T07:48:16.5257297Z [36;1mif ($errors.Count) { $errors | Format-List; throw "schedule.ps1 parse errors" }[0m
+Scheduler script syntax only (no task is registered)	2026-11-05T07:48:16.5257956Z [36;1mWrite-Host "schedule.ps1 parses. Registration is NOT executed in CI."[0m
+Scheduler script syntax only (no task is registered)	2026-11-05T07:48:16.5332860Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+Scheduler script syntax only (no task is registered)	2026-11-05T07:48:16.5333316Z env:
+Scheduler script syntax only (no task is registered)	2026-11-05T07:48:16.5333532Z   PYTHONUTF8: 1
+Scheduler script syntax only (no task is registered)	2026-11-05T07:48:16.5333898Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.13.17\x64
+Scheduler script syntax only (no task is registered)	2026-11-05T07:48:16.5334503Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.13.17\x64/lib/pkgconfig
+Scheduler script syntax only (no task is registered)	2026-11-05T07:48:16.5335097Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+Scheduler script syntax only (no task is registered)	2026-11-05T07:48:16.5335628Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+Scheduler script syntax only (no task is registered)	2026-11-05T07:48:16.5336198Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+Scheduler script syntax only (no task is registered)	2026-11-05T07:48:16.5336631Z   WS: D:\a\_temp\작업 폴더\Naver Blog
+Scheduler script syntax only (no task is registered)	2026-11-05T07:48:16.5336919Z ##[endgroup]
+Scheduler script syntax only (no task is registered)	2026-11-05T07:48:16.9435930Z schedule.ps1 parses. Registration is NOT executed in CI.
+Run actions/upload-artifact@v4	﻿2026-11-05T07:48:17.0185328Z ##[group]Run actions/upload-artifact@v4
+Run actions/upload-artifact@v4	2026-11-05T07:48:17.0185793Z with:
+Run actions/upload-artifact@v4	2026-11-05T07:48:17.0186051Z   name: windows-logs
+Run actions/upload-artifact@v4	2026-11-05T07:48:17.0186373Z   path: D:\a\_temp\작업 폴더\Naver Blog/09_LOGS/
+Run actions/upload-artifact@v4	2026-11-05T07:48:17.0186759Z   if-no-files-found: warn
+Run actions/upload-artifact@v4	2026-11-05T07:48:17.0187060Z   compression-level: 6
+Run actions/upload-artifact@v4	2026-11-05T07:48:17.0187334Z   overwrite: false
+Run actions/upload-artifact@v4	2026-11-05T07:48:17.0187603Z   include-hidden-files: false
+Run actions/upload-artifact@v4	2026-11-05T07:48:17.0187899Z env:
+Run actions/upload-artifact@v4	2026-11-05T07:48:17.0188117Z   PYTHONUTF8: 1
+Run actions/upload-artifact@v4	2026-11-05T07:48:17.0188490Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.13.17\x64
+Run actions/upload-artifact@v4	2026-11-05T07:48:17.0189152Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.13.17\x64/lib/pkgconfig
+Run actions/upload-artifact@v4	2026-11-05T07:48:17.0189807Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+Run actions/upload-artifact@v4	2026-11-05T07:48:17.0190390Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+Run actions/upload-artifact@v4	2026-11-05T07:48:17.0191200Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.17\x64
+Run actions/upload-artifact@v4	2026-11-05T07:48:17.0191674Z   WS: D:\a\_temp\작업 폴더\Naver Blog
+Run actions/upload-artifact@v4	2026-11-05T07:48:17.0192245Z ##[endgroup]
+Run actions/upload-artifact@v4	2026-11-05T07:48:17.2170746Z (node:4188) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+Run actions/upload-artifact@v4	2026-11-05T07:48:17.2171900Z (Use `node --trace-deprecation ...` to show where the warning was created)
+Run actions/upload-artifact@v4	2026-11-05T07:48:17.2285787Z With the provided path, there will be 7 files uploaded
+Run actions/upload-artifact@v4	2026-11-05T07:48:17.2291265Z Artifact name is valid!
+Run actions/upload-artifact@v4	2026-11-05T07:48:17.2293426Z Root directory input is valid!
+Run actions/upload-artifact@v4	2026-11-05T07:48:17.4146997Z Beginning upload of artifact content to blob storage
+Run actions/upload-artifact@v4	2026-11-05T07:48:17.4473193Z (node:4188) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+Run actions/upload-artifact@v4	2026-11-05T07:48:17.4726814Z Uploaded bytes 3536
+Run actions/upload-artifact@v4	2026-11-05T07:48:17.4897542Z Finished uploading artifact content to blob storage!
+Run actions/upload-artifact@v4	2026-11-05T07:48:17.4899095Z SHA256 digest of uploaded artifact zip is a2fc0b542c97bfc594f04a722af1a19e03fb452a930842c7ea16fcc306aa7c13
+Run actions/upload-artifact@v4	2026-11-05T07:48:17.4902352Z Finalizing artifact upload
+Run actions/upload-artifact@v4	2026-11-05T07:48:17.9022925Z Artifact windows-logs.zip successfully finalized. Artifact ID 13397158637
+Run actions/upload-artifact@v4	2026-11-05T07:48:17.9024981Z Artifact windows-logs has been successfully uploaded! Final size is 3536 bytes. Artifact ID is 13397158637
+Run actions/upload-artifact@v4	2026-11-05T07:48:17.9039226Z Artifact download URL: https://github.com/jaykayLee/Exp_ClaudeCode/actions/runs/41989684593/artifacts/13397158637
+Post Run actions/setup-python@v5	﻿2026-11-05T07:48:17.9419830Z Post job cleanup.
+Post Run actions/setup-python@v5	2026-11-05T07:48:18.0974575Z (node:8716) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+Post Run actions/setup-python@v5	2026-11-05T07:48:18.0975749Z (Use `node --trace-deprecation ...` to show where the warning was created)
+Post Run actions/checkout@v4	﻿2026-11-05T07:48:18.1314121Z Post job cleanup.
+Post Run actions/checkout@v4	2026-11-05T07:48:18.3428412Z [command]"C:\Program Files\Git\bin\git.exe" version
+Post Run actions/checkout@v4	2026-11-05T07:48:18.3782375Z git version 2.56.0.windows.4
+Post Run actions/checkout@v4	2026-11-05T07:48:18.3856105Z Temporarily overriding HOME='D:\a\_temp\58c67d01-8807-4641-8d11-c990de666a68' before making global git config changes
+Post Run actions/checkout@v4	2026-11-05T07:48:18.3857471Z Adding repository directory to the temporary git global config as a safe directory
+Post Run actions/checkout@v4	2026-11-05T07:48:18.3867625Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\Exp_ClaudeCode\Exp_ClaudeCode
+Post Run actions/checkout@v4	2026-11-05T07:48:18.4267971Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+Post Run actions/checkout@v4	2026-11-05T07:48:18.4667254Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+Post Run actions/checkout@v4	2026-11-05T07:48:19.0329145Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Post Run actions/checkout@v4	2026-11-05T07:48:19.0686529Z http.https://github.com/.extraheader
+Post Run actions/checkout@v4	2026-11-05T07:48:19.0743786Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all http.https://github.com/.extraheader
+Post Run actions/checkout@v4	2026-11-05T07:48:19.1151545Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+Post Run actions/checkout@v4	2026-11-05T07:48:19.6969893Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+Post Run actions/checkout@v4	2026-11-05T07:48:19.7377004Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+Complete job	﻿2026-11-05T07:48:20.3163413Z Cleaning up orphan processes
+Complete job	2026-11-05T07:48:20.3762730Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

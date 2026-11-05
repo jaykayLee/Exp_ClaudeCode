@@ -1,13 +1,35 @@
-# 사용자 Windows에서 확인할 항목 (P05 갱신 2026-11-05)
+# 사용자 Windows에서 확인할 항목 (P07 갱신 2026-11-05)
 
-제작·검증 환경은 Linux다. 아래 항목은 완료했다고 가정하지 않는다. 각 항목 옆에 날짜와 결과를 적고, `09_LOGS` 폴더를 다음 세션에 올리면 Windows 증거로 쓴다.
+제작·검증 환경은 Linux다. 아래 항목은 완료했다고 가정하지 않는다.
+
+## CI 자동 확인 (P07, GitHub Actions `windows-latest`)
+깨끗한 Windows Server 러너에서 실제 BAT를 실행한 증거다. **사용자 PC 확인을 대신하지 않는다**(설치된 보안 프로그램, 사용자 권한, 실제 브라우저, 작업 스케줄러는 다르다).
+
+| 항목 | CI 결과 | 근거 |
+|---|---|---|
+| A. install.bat (Python 탐지·venv·lock·pip check·설치 중 테스트) | PASS — Python 3.13.17, 102 tests | run 41989684593 |
+| A. 공백·한글 경로 (`D:\a\_temp\작업 폴더\Naver Blog`) | PASS | run 41989684593 |
+| A. 재설치 시 settings.local.json 보존 | PASS | run 41989684593 |
+| B. doctor.bat `local_ok=true` | PASS | run 41989684593 |
+| B. smoke.bat 102 tests | PASS | run 41989684593 |
+| D. run_once.bat 빈 인박스 → 입력 없음(exit 0), 한글 출력 정상 | PASS | run 41989684593 |
+| D. run_snapshot_demo.bat → DEMO_ONLY, 1행 SELECTED | PASS | run 41989684593 |
+| E. schedule.ps1 문법 검사 (등록은 하지 않음) | PASS | run 41989684593 |
+| C. 패널 서버 HTTP 점검 `server_smoke.py` | P07에서 추가 — 최신 CI 실행 참고 | Actions |
+| C. 패널 브라우저 E2E (Chromium) | P07에서 추가 — 최신 CI 실행 참고 | Actions |
+| A. 오프라인 설치 실패 메시지, E. 작업 스케줄러 등록·실행·해제, F. 이미지 다운로드 | **CI 대상 아님 — 사용자 PC 필요** | — |
+
+사용자 PC 점검 보조: `.venv\Scripts\python.exe 00_PROJECT\QA\server_smoke.py` (작업실 서버를 임시 사본에서 띄워 11개 항목 확인)
+
+## 사용자 PC 체크리스트
+각 항목 옆에 날짜와 결과를 적고, `09_LOGS` 폴더를 다음 세션에 올리면 Windows 증거로 쓴다.
 
 ## A. 설치 (install.bat)
 - [ ] ZIP 전체 해제. 최상단 BAT 파일 **10개**(install, doctor, smoke, start_panel, run_once, run_snapshot, run_snapshot_demo, open_guide, enable/disable_daily_review)와 폴더 존재 확인.
 - [ ] **경로에 공백·한글이 있는 폴더**(예: `C:\Users\홍길동\바탕 화면\블로그 작업`)에서도 설치 확인.
 - [ ] install.bat에서 Python 탐지 또는 동의한 설치 완료.
 - [ ] Pillow==12.3.0 설치와 pip check 성공. 설치 로그 `09_LOGS/install_*.log` 확인.
-- [ ] 설치 중 자동 실행되는 테스트가 통과(작업 폴더 + 저장본 애드온 합계, Linux 기준 96개).
+- [ ] 설치 중 자동 실행되는 테스트가 통과(작업 폴더 + 저장본 애드온 합계, CI·Linux 기준 102개).
 - [ ] **재설치**: install.bat을 한 번 더 실행해도 `01_CONFIG/settings.local.json`, `07_DATA/inbox`가 바뀌지 않음.
 - [ ] **오프라인 실패 메시지**: 네트워크를 끊고 새 폴더에서 install.bat 실행 → 창이 바로 닫히지 않고 실패 이유와 로그 경로가 보임.
 

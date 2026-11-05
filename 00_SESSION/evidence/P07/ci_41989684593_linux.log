@@ -1,0 +1,504 @@
+Set up job	﻿2026-11-05T07:47:22.3534621Z Current runner version: '2.338.2'
+Set up job	2026-11-05T07:47:22.3555427Z ##[group]Runner Image Provisioner
+Set up job	2026-11-05T07:47:22.3556006Z Hosted Compute Agent
+Set up job	2026-11-05T07:47:22.3556364Z Version: 20261021.618
+Set up job	2026-11-05T07:47:22.3556801Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+Set up job	2026-11-05T07:47:22.3557278Z Build Date: 2026-10-21T00:45:21Z
+Set up job	2026-11-05T07:47:22.3557719Z Worker ID: {ef42accd-132e-4b88-b357-77db9b94c4e3}
+Set up job	2026-11-05T07:47:22.3558163Z Region: centralus
+Set up job	2026-11-05T07:47:22.3558513Z Cloud: Azure
+Set up job	2026-11-05T07:47:22.3559021Z ##[endgroup]
+Set up job	2026-11-05T07:47:22.3559907Z ##[group]Operating System
+Set up job	2026-11-05T07:47:22.3560318Z Ubuntu
+Set up job	2026-11-05T07:47:22.3560664Z 24.04.5
+Set up job	2026-11-05T07:47:22.3560991Z LTS
+Set up job	2026-11-05T07:47:22.3561351Z ##[endgroup]
+Set up job	2026-11-05T07:47:22.3561729Z ##[group]Runner Image
+Set up job	2026-11-05T07:47:22.3562087Z Image: ubuntu-24.04
+Set up job	2026-11-05T07:47:22.3562487Z Version: 20261025.353.1
+Set up job	2026-11-05T07:47:22.3563115Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261025.353/images/ubuntu/Ubuntu2404-Readme.md
+Set up job	2026-11-05T07:47:22.3564219Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261025.353
+Set up job	2026-11-05T07:47:22.3564777Z ##[endgroup]
+Set up job	2026-11-05T07:47:22.3565517Z ##[group]GITHUB_TOKEN Permissions
+Set up job	2026-11-05T07:47:22.3566846Z Contents: read
+Set up job	2026-11-05T07:47:22.3567270Z Metadata: read
+Set up job	2026-11-05T07:47:22.3567652Z ##[endgroup]
+Set up job	2026-11-05T07:47:22.3569375Z Secret source: Actions
+Set up job	2026-11-05T07:47:22.3569970Z Cache mode: write
+Set up job	2026-11-05T07:47:22.3570622Z Prepare workflow directory
+Set up job	2026-11-05T07:47:22.3860343Z Prepare all required actions
+Set up job	2026-11-05T07:47:22.3891960Z Getting action download info
+Set up job	2026-11-05T07:47:22.6593499Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+Set up job	2026-11-05T07:47:22.8164455Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+Set up job	2026-11-05T07:47:22.9707460Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+Set up job	2026-11-05T07:47:23.1604808Z Complete job name: linux
+Run actions/checkout@v4	﻿2026-11-05T07:47:23.2504768Z ##[group]Run actions/checkout@v4
+Run actions/checkout@v4	2026-11-05T07:47:23.2505517Z with:
+Run actions/checkout@v4	2026-11-05T07:47:23.2505772Z   repository: jaykayLee/Exp_ClaudeCode
+Run actions/checkout@v4	2026-11-05T07:47:23.2509174Z   token: ***
+Run actions/checkout@v4	2026-11-05T07:47:23.2509411Z   ssh-strict: true
+Run actions/checkout@v4	2026-11-05T07:47:23.2509712Z   ssh-user: git
+Run actions/checkout@v4	2026-11-05T07:47:23.2509981Z   persist-credentials: true
+Run actions/checkout@v4	2026-11-05T07:47:23.2511382Z   clean: true
+Run actions/checkout@v4	2026-11-05T07:47:23.2511668Z   sparse-checkout-cone-mode: true
+Run actions/checkout@v4	2026-11-05T07:47:23.2512706Z   fetch-depth: 1
+Run actions/checkout@v4	2026-11-05T07:47:23.2513039Z   fetch-tags: false
+Run actions/checkout@v4	2026-11-05T07:47:23.2513307Z   show-progress: true
+Run actions/checkout@v4	2026-11-05T07:47:23.2513558Z   lfs: false
+Run actions/checkout@v4	2026-11-05T07:47:23.2513789Z   submodules: false
+Run actions/checkout@v4	2026-11-05T07:47:23.2514034Z   set-safe-directory: true
+Run actions/checkout@v4	2026-11-05T07:47:23.2514315Z   allow-unsafe-pr-checkout: false
+Run actions/checkout@v4	2026-11-05T07:47:23.2514688Z ##[endgroup]
+Run actions/checkout@v4	2026-11-05T07:47:23.4995130Z Syncing repository: jaykayLee/Exp_ClaudeCode
+Run actions/checkout@v4	2026-11-05T07:47:23.4996657Z ##[group]Getting Git version info
+Run actions/checkout@v4	2026-11-05T07:47:23.4997077Z Working directory is '/home/runner/work/Exp_ClaudeCode/Exp_ClaudeCode'
+Run actions/checkout@v4	2026-11-05T07:47:23.4997679Z [command]/usr/bin/git version
+Run actions/checkout@v4	2026-11-05T07:47:23.5085276Z git version 2.56.0
+Run actions/checkout@v4	2026-11-05T07:47:23.5101014Z ##[endgroup]
+Run actions/checkout@v4	2026-11-05T07:47:23.5112447Z Temporarily overriding HOME='/home/runner/work/_temp/d60c84e9-090c-4ecb-b846-24a4a35784c6' before making global git config changes
+Run actions/checkout@v4	2026-11-05T07:47:23.5113711Z Adding repository directory to the temporary git global config as a safe directory
+Run actions/checkout@v4	2026-11-05T07:47:23.5116556Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Exp_ClaudeCode/Exp_ClaudeCode
+Run actions/checkout@v4	2026-11-05T07:47:23.5172798Z Deleting the contents of '/home/runner/work/Exp_ClaudeCode/Exp_ClaudeCode'
+Run actions/checkout@v4	2026-11-05T07:47:23.5174276Z ##[group]Initializing the repository
+Run actions/checkout@v4	2026-11-05T07:47:23.5174981Z [command]/usr/bin/git init /home/runner/work/Exp_ClaudeCode/Exp_ClaudeCode
+Run actions/checkout@v4	2026-11-05T07:47:23.5266854Z hint: Using 'master' as the name for the initial branch. This default branch name
+Run actions/checkout@v4	2026-11-05T07:47:23.5267933Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+Run actions/checkout@v4	2026-11-05T07:47:23.5268465Z hint: to use in all of your new repositories, which will suppress this warning,
+Run actions/checkout@v4	2026-11-05T07:47:23.5269243Z hint: call:
+Run actions/checkout@v4	2026-11-05T07:47:23.5269581Z hint:
+Run actions/checkout@v4	2026-11-05T07:47:23.5269965Z hint: 	git config --global init.defaultBranch <name>
+Run actions/checkout@v4	2026-11-05T07:47:23.5270304Z hint:
+Run actions/checkout@v4	2026-11-05T07:47:23.5270629Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+Run actions/checkout@v4	2026-11-05T07:47:23.5271143Z hint: 'development'. The just-created branch can be renamed via this command:
+Run actions/checkout@v4	2026-11-05T07:47:23.5271562Z hint:
+Run actions/checkout@v4	2026-11-05T07:47:23.5271798Z hint: 	git branch -m <name>
+Run actions/checkout@v4	2026-11-05T07:47:23.5272062Z hint:
+Run actions/checkout@v4	2026-11-05T07:47:23.5272412Z hint: Disable this message with "git config set advice.defaultBranchName false"
+Run actions/checkout@v4	2026-11-05T07:47:23.5277414Z Initialized empty Git repository in /home/runner/work/Exp_ClaudeCode/Exp_ClaudeCode/.git/
+Run actions/checkout@v4	2026-11-05T07:47:23.5287853Z [command]/usr/bin/git remote add origin https://github.com/jaykayLee/Exp_ClaudeCode
+Run actions/checkout@v4	2026-11-05T07:47:23.5336307Z ##[endgroup]
+Run actions/checkout@v4	2026-11-05T07:47:23.5337160Z ##[group]Disabling automatic garbage collection
+Run actions/checkout@v4	2026-11-05T07:47:23.5340421Z [command]/usr/bin/git config --local gc.auto 0
+Run actions/checkout@v4	2026-11-05T07:47:23.5393040Z ##[endgroup]
+Run actions/checkout@v4	2026-11-05T07:47:23.5393874Z ##[group]Setting up auth
+Run actions/checkout@v4	2026-11-05T07:47:23.5394653Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Run actions/checkout@v4	2026-11-05T07:47:23.5436965Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Run actions/checkout@v4	2026-11-05T07:47:23.5784665Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Run actions/checkout@v4	2026-11-05T07:47:23.5823757Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Run actions/checkout@v4	2026-11-05T07:47:23.6035440Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Run actions/checkout@v4	2026-11-05T07:47:23.6074740Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Run actions/checkout@v4	2026-11-05T07:47:23.6274016Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+Run actions/checkout@v4	2026-11-05T07:47:23.6320460Z ##[endgroup]
+Run actions/checkout@v4	2026-11-05T07:47:23.6321104Z ##[group]Fetching the repository
+Run actions/checkout@v4	2026-11-05T07:47:23.6330151Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +d7dbdf6c9deb76032801685e80dd3594c95c9aff:refs/remotes/origin/main
+Run actions/checkout@v4	2026-11-05T07:47:24.1107355Z From https://github.com/jaykayLee/Exp_ClaudeCode
+Run actions/checkout@v4	2026-11-05T07:47:24.1108366Z  * [new ref]         d7dbdf6c9deb76032801685e80dd3594c95c9aff -> origin/main
+Run actions/checkout@v4	2026-11-05T07:47:24.1110662Z ##[endgroup]
+Run actions/checkout@v4	2026-11-05T07:47:24.1111350Z ##[group]Determining the checkout info
+Run actions/checkout@v4	2026-11-05T07:47:24.1119924Z ##[endgroup]
+Run actions/checkout@v4	2026-11-05T07:47:24.1120482Z [command]/usr/bin/git sparse-checkout disable
+Run actions/checkout@v4	2026-11-05T07:47:24.1176467Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+Run actions/checkout@v4	2026-11-05T07:47:24.1216898Z ##[group]Checking out the ref
+Run actions/checkout@v4	2026-11-05T07:47:24.1219381Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+Run actions/checkout@v4	2026-11-05T07:47:24.1455738Z Switched to a new branch 'main'
+Run actions/checkout@v4	2026-11-05T07:47:24.1464310Z branch 'main' set up to track 'origin/main'.
+Run actions/checkout@v4	2026-11-05T07:47:24.1469265Z ##[endgroup]
+Run actions/checkout@v4	2026-11-05T07:47:24.1520320Z [command]/usr/bin/git log -1 --format=%H
+Run actions/checkout@v4	2026-11-05T07:47:24.1550882Z d7dbdf6c9deb76032801685e80dd3594c95c9aff
+Run actions/setup-python@v5	﻿2026-11-05T07:47:24.3353997Z ##[group]Run actions/setup-python@v5
+Run actions/setup-python@v5	2026-11-05T07:47:24.3354809Z with:
+Run actions/setup-python@v5	2026-11-05T07:47:24.3355398Z   python-version: 3.13
+Run actions/setup-python@v5	2026-11-05T07:47:24.3356049Z   check-latest: false
+Run actions/setup-python@v5	2026-11-05T07:47:24.3360934Z   token: ***
+Run actions/setup-python@v5	2026-11-05T07:47:24.3361707Z   update-environment: true
+Run actions/setup-python@v5	2026-11-05T07:47:24.3362396Z   allow-prereleases: false
+Run actions/setup-python@v5	2026-11-05T07:47:24.3363063Z   freethreaded: false
+Run actions/setup-python@v5	2026-11-05T07:47:24.3363678Z ##[endgroup]
+Run actions/setup-python@v5	2026-11-05T07:47:24.4252151Z ##[group]Installed versions
+Run actions/setup-python@v5	2026-11-05T07:47:24.4781350Z (node:2071) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+Run actions/setup-python@v5	2026-11-05T07:47:24.4782046Z (Use `node --trace-deprecation ...` to show where the warning was created)
+Run actions/setup-python@v5	2026-11-05T07:47:24.4782498Z Successfully set up CPython (3.13.17)
+Run actions/setup-python@v5	2026-11-05T07:47:24.4782979Z ##[endgroup]
+Install locked dependencies	﻿2026-11-05T07:47:24.4928311Z ##[group]Run python -m venv .venv
+Install locked dependencies	2026-11-05T07:47:24.4928879Z [36;1mpython -m venv .venv[0m
+Install locked dependencies	2026-11-05T07:47:24.4929278Z [36;1m.venv/bin/python -m pip install --disable-pip-version-check --only-binary=:all: -r tools/dependencies.lock[0m
+Install locked dependencies	2026-11-05T07:47:24.4929628Z [36;1m.venv/bin/python -m pip check[0m
+Install locked dependencies	2026-11-05T07:47:24.5006314Z shell: /usr/bin/bash -e {0}
+Install locked dependencies	2026-11-05T07:47:24.5006748Z env:
+Install locked dependencies	2026-11-05T07:47:24.5007059Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.17/x64
+Install locked dependencies	2026-11-05T07:47:24.5007520Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.17/x64/lib/pkgconfig
+Install locked dependencies	2026-11-05T07:47:24.5007957Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.17/x64
+Install locked dependencies	2026-11-05T07:47:24.5008348Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.17/x64
+Install locked dependencies	2026-11-05T07:47:24.5009441Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.17/x64
+Install locked dependencies	2026-11-05T07:47:24.5009845Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.17/x64/lib
+Install locked dependencies	2026-11-05T07:47:24.5010185Z ##[endgroup]
+Install locked dependencies	2026-11-05T07:47:29.3837144Z Collecting Pillow==12.3.0 (from -r tools/dependencies.lock (line 1))
+Install locked dependencies	2026-11-05T07:47:29.4775417Z   Downloading pillow-12.3.0-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.1 kB)
+Install locked dependencies	2026-11-05T07:47:29.5340421Z Downloading pillow-12.3.0-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (6.9 MB)
+Install locked dependencies	2026-11-05T07:47:29.6774864Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.9/6.9 MB 66.5 MB/s  0:00:00
+Install locked dependencies	2026-11-05T07:47:29.6951927Z Installing collected packages: Pillow
+Install locked dependencies	2026-11-05T07:47:29.9186003Z Successfully installed Pillow-12.3.0
+Install locked dependencies	2026-11-05T07:47:30.0809386Z No broken requirements found.
+Doctor	﻿2026-11-05T07:47:30.1030533Z ##[group]Run .venv/bin/python tools/doctor.py
+Doctor	2026-11-05T07:47:30.1030796Z [36;1m.venv/bin/python tools/doctor.py[0m
+Doctor	2026-11-05T07:47:30.1048815Z shell: /usr/bin/bash -e {0}
+Doctor	2026-11-05T07:47:30.1048969Z env:
+Doctor	2026-11-05T07:47:30.1049130Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.17/x64
+Doctor	2026-11-05T07:47:30.1049381Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.17/x64/lib/pkgconfig
+Doctor	2026-11-05T07:47:30.1049628Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.17/x64
+Doctor	2026-11-05T07:47:30.1049853Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.17/x64
+Doctor	2026-11-05T07:47:30.1050117Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.17/x64
+Doctor	2026-11-05T07:47:30.1050344Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.17/x64/lib
+Doctor	2026-11-05T07:47:30.1050563Z ##[endgroup]
+Doctor	2026-11-05T07:47:30.1830549Z {
+Doctor	2026-11-05T07:47:30.1830917Z   "checked_at": "2026-11-05T16:47:30.179831+09:00",
+Doctor	2026-11-05T07:47:30.1831295Z   "platform": "Linux-7.0.0-1017-azure-x86_64-with-glibc2.39",
+Doctor	2026-11-05T07:47:30.1831715Z   "checks": [
+Doctor	2026-11-05T07:47:30.1831899Z     {
+Doctor	2026-11-05T07:47:30.1832081Z       "name": "Python",
+Doctor	2026-11-05T07:47:30.1832298Z       "status": "PASS",
+Doctor	2026-11-05T07:47:30.1832515Z       "detail": "3.13.17"
+Doctor	2026-11-05T07:47:30.1832740Z     },
+Doctor	2026-11-05T07:47:30.1832903Z     {
+Doctor	2026-11-05T07:47:30.1833088Z       "name": "64bit",
+Doctor	2026-11-05T07:47:30.1833325Z       "status": "PASS",
+Doctor	2026-11-05T07:47:30.1833562Z       "detail": "64"
+Doctor	2026-11-05T07:47:30.1833778Z     },
+Doctor	2026-11-05T07:47:30.1833885Z     {
+Doctor	2026-11-05T07:47:30.1833997Z       "name": "Pillow",
+Doctor	2026-11-05T07:47:30.1834135Z       "status": "PASS",
+Doctor	2026-11-05T07:47:30.1834271Z       "detail": "12.3.0 (lock:12.3.0)"
+Doctor	2026-11-05T07:47:30.1834422Z     },
+Doctor	2026-11-05T07:47:30.1834810Z     {
+Doctor	2026-11-05T07:47:30.1834920Z       "name": "Config",
+Doctor	2026-11-05T07:47:30.1835174Z       "status": "PASS",
+Doctor	2026-11-05T07:47:30.1835348Z       "detail": "Local-only / auto_publish=false"
+Doctor	2026-11-05T07:47:30.1835519Z     },
+Doctor	2026-11-05T07:47:30.1835628Z     {
+Doctor	2026-11-05T07:47:30.1835755Z       "name": "Writable workspace",
+Doctor	2026-11-05T07:47:30.1835909Z       "status": "PASS",
+Doctor	2026-11-05T07:47:30.1836145Z       "detail": "/home/runner/work/Exp_ClaudeCode/Exp_ClaudeCode/workspace/Naver_Blog_Automation"
+Doctor	2026-11-05T07:47:30.1836395Z     },
+Doctor	2026-11-05T07:47:30.1836500Z     {
+Doctor	2026-11-05T07:47:30.1836620Z       "name": "Pipeline lock",
+Doctor	2026-11-05T07:47:30.1836771Z       "status": "PASS",
+Doctor	2026-11-05T07:47:30.1837069Z       "detail": "No lock"
+Doctor	2026-11-05T07:47:30.1837255Z     },
+Doctor	2026-11-05T07:47:30.1837407Z     {
+Doctor	2026-11-05T07:47:30.1837589Z       "name": "Snapshot add-on",
+Doctor	2026-11-05T07:47:30.1837738Z       "status": "PASS",
+Doctor	2026-11-05T07:47:30.1837901Z       "detail": "Saved-HTML bridge (offline, no network)"
+Doctor	2026-11-05T07:47:30.1838089Z     },
+Doctor	2026-11-05T07:47:30.1838193Z     {
+Doctor	2026-11-05T07:47:30.1838315Z       "name": "Danawa live collector",
+Doctor	2026-11-05T07:47:30.1838475Z       "status": "NOT_CONFIGURED",
+Doctor	2026-11-05T07:47:30.1838900Z       "detail": "Approved import only; live permission and selector validation required"
+Doctor	2026-11-05T07:47:30.1839141Z     },
+Doctor	2026-11-05T07:47:30.1839246Z     {
+Doctor	2026-11-05T07:47:30.1839372Z       "name": "Naver shopping legacy API",
+Doctor	2026-11-05T07:47:30.1839536Z       "status": "RETIRED",
+Doctor	2026-11-05T07:47:30.1839768Z       "detail": "Official retirement: 2026-07-31. No API key setup needed for this baseline."
+Doctor	2026-11-05T07:47:30.1840003Z     },
+Doctor	2026-11-05T07:47:30.1840110Z     {
+Doctor	2026-11-05T07:47:30.1840227Z       "name": "Naver publication",
+Doctor	2026-11-05T07:47:30.1840381Z       "status": "DISABLED",
+Doctor	2026-11-05T07:47:30.1840528Z       "detail": "Manual handoff only"
+Doctor	2026-11-05T07:47:30.1840677Z     },
+Doctor	2026-11-05T07:47:30.1840795Z     {
+Doctor	2026-11-05T07:47:30.1840938Z       "name": "Windows BAT runtime",
+Doctor	2026-11-05T07:47:30.1841104Z       "status": "USER_PC_REQUIRED",
+Doctor	2026-11-05T07:47:30.1841290Z       "detail": "No claim of verification on another PC"
+Doctor	2026-11-05T07:47:30.1841463Z     }
+Doctor	2026-11-05T07:47:30.1841569Z   ],
+Doctor	2026-11-05T07:47:30.1841679Z   "local_ok": true
+Doctor	2026-11-05T07:47:30.1841968Z }
+Tests (workspace + snapshot add-on)	﻿2026-11-05T07:47:30.1944083Z ##[group]Run .venv/bin/python tools/qa_runner.py
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:30.1944342Z [36;1m.venv/bin/python tools/qa_runner.py[0m
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:30.1962159Z shell: /usr/bin/bash -e {0}
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:30.1962314Z env:
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:30.1962481Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.17/x64
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:30.1962737Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.17/x64/lib/pkgconfig
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:30.1962984Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.17/x64
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:30.1963218Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.17/x64
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:30.1963442Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.17/x64
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:30.1963680Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.17/x64/lib
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:30.1963871Z ##[endgroup]
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:31.0214349Z test_both_inputs_processed_independently (test_daily_ops.Daily.test_both_inputs_processed_independently) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:31.0325038Z test_concurrent_run_is_refused_and_lock_kept (test_daily_ops.Daily.test_concurrent_run_is_refused_and_lock_kept) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:31.0762166Z test_demo_modes_do_not_touch_inbox (test_daily_ops.Daily.test_demo_modes_do_not_touch_inbox) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:31.0781491Z test_no_input_is_not_a_failure_and_is_logged (test_daily_ops.Daily.test_no_input_is_not_a_failure_and_is_logged) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:31.0886176Z test_one_failure_keeps_other_result (test_daily_ops.Daily.test_one_failure_keeps_other_result) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:31.1079093Z test_rerun_same_day_reuses_output_and_keeps_observed_at (test_daily_ops.Daily.test_rerun_same_day_reuses_output_and_keeps_observed_at) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:31.1082086Z test_bat_encoding_and_header (test_daily_ops.WindowsScriptsStatic.test_bat_encoding_and_header) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:31.1089493Z test_bat_paths_quoted (test_daily_ops.WindowsScriptsStatic.test_bat_paths_quoted) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:31.1091619Z test_installer_does_not_overwrite_user_data (test_daily_ops.WindowsScriptsStatic.test_installer_does_not_overwrite_user_data) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:31.1094496Z test_python_entrypoints_exist (test_daily_ops.WindowsScriptsStatic.test_python_entrypoints_exist) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:31.1096497Z test_scheduler_requires_confirmation_and_is_local_only (test_daily_ops.WindowsScriptsStatic.test_scheduler_requires_confirmation_and_is_local_only) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:31.1180591Z test_unattended_python_never_prompts (test_daily_ops.WindowsScriptsStatic.test_unattended_python_never_prompts) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:31.1379894Z test_checked_record_clears_danawa_issues_naver_still_missing (test_panel_integration.HumanReviewLoop.test_checked_record_clears_danawa_issues_naver_still_missing) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:31.1612076Z test_broken_or_missing_image_keeps_price_row (test_panel_integration.ImageIntegrity.test_broken_or_missing_image_keeps_price_row) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:31.1849763Z test_originals_unchanged_and_outputs_354x472 (test_panel_integration.ImageIntegrity.test_originals_unchanged_and_outputs_354x472) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:31.7108740Z test_demo_snapshot_via_api (test_panel_integration.ServerSnapshotApi.test_demo_snapshot_via_api) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:32.2170320Z test_snapshot_api_guards (test_panel_integration.ServerSnapshotApi.test_snapshot_api_guards) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:32.7213462Z test_user_recorded_job_via_api (test_panel_integration.ServerSnapshotApi.test_user_recorded_job_via_api) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:32.7218315Z test_required_table_headers_unchanged (test_panel_integration.StaticUi.test_required_table_headers_unchanged) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:32.7222271Z test_snapshot_card_present_and_offline (test_panel_integration.StaticUi.test_snapshot_card_present_and_offline) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:32.7224758Z test_inline_only_seven_columns (test_release_and_paste.NaverPaste.test_inline_only_seven_columns) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:32.7515067Z test_written_by_bridge_demo (test_release_and_paste.NaverPaste.test_written_by_bridge_demo) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:32.7639710Z test_output_inside_workspace_refused (test_release_and_paste.ReleaseBuild.test_output_inside_workspace_refused) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:32.7640518Z test_rebuild_from_installed_copy (test_release_and_paste.ReleaseBuild.test_rebuild_from_installed_copy)
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:32.8375698Z Regression (found in P06 clean-install check): an old manifest must not be re-packed. ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:32.8714803Z test_secret_like_value_blocks_build (test_release_and_paste.ReleaseBuild.test_secret_like_value_blocks_build) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:32.9163617Z test_zip_excludes_user_data_and_has_entrypoints (test_release_and_paste.ReleaseBuild.test_zip_excludes_user_data_and_has_entrypoints) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:32.9169134Z test_abc_selects_a_ranks_b_excludes_c (test_snapshot_bridge.AdapterSelection.test_abc_selects_a_ranks_b_excludes_c) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:32.9172661Z test_defence_in_depth_rejects_tampered_candidate (test_snapshot_bridge.AdapterSelection.test_defence_in_depth_rejects_tampered_candidate) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:32.9179694Z test_evidence_kind_rules (test_snapshot_bridge.AdapterSelection.test_evidence_kind_rules) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:32.9185723Z test_exclusion_reasons (test_snapshot_bridge.AdapterSelection.test_exclusion_reasons) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:32.9186635Z test_old_behavior_would_have_chosen_card_only (test_snapshot_bridge.AdapterSelection.test_old_behavior_would_have_chosen_card_only)
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:32.9190906Z Documents I02: legacy meta-wide terms (no scope) are no longer promoted. ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:32.9193358Z test_price_url_time_belong_to_same_offer (test_snapshot_bridge.AdapterSelection.test_price_url_time_belong_to_same_offer) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:32.9196655Z test_tie_is_deterministic_and_reported (test_snapshot_bridge.AdapterSelection.test_tie_is_deterministic_and_reported) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:32.9453713Z test_demo_end_to_end_seven_columns (test_snapshot_bridge.BridgeE2E.test_demo_end_to_end_seven_columns) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:32.9699798Z test_demo_label_preserved_everywhere (test_snapshot_bridge.BridgeE2E.test_demo_label_preserved_everywhere) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:32.9947875Z test_html_escape_of_untrusted_names (test_snapshot_bridge.BridgeE2E.test_html_escape_of_untrusted_names) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:32.9975680Z test_job_validation (test_snapshot_bridge.BridgeE2E.test_job_validation) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:33.0293055Z test_manual_import_requires_user_recorded_and_stays_hold (test_snapshot_bridge.BridgeE2E.test_manual_import_requires_user_recorded_and_stays_hold) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:33.0527015Z test_no_structured_offers_reason_visible (test_snapshot_bridge.BridgeE2E.test_no_structured_offers_reason_visible) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:33.0756728Z test_partial_failure_keeps_rows (test_snapshot_bridge.BridgeE2E.test_partial_failure_keeps_rows) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:33.1658312Z test_rerun_keeps_observed_at_and_does_not_publish (test_snapshot_bridge.BridgeE2E.test_rerun_keeps_observed_at_and_does_not_publish) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:33.1909583Z test_target_mismatch_between_job_and_meta_holds (test_snapshot_bridge.BridgeE2E.test_target_mismatch_between_job_and_meta_holds) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:33.1913628Z test_no_selection_is_none_not_zero (test_snapshot_bridge.PanelInput.test_no_selection_is_none_not_zero) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:33.1916657Z test_selected_maps_total_and_keeps_flags_false (test_snapshot_bridge.PanelInput.test_selected_maps_total_and_keeps_flags_false) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:33.1919037Z test_synthetic_condition_labelled (test_snapshot_bridge.PanelInput.test_synthetic_condition_labelled) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:33.7134005Z test_demo_api_and_output (test_workspace.HTTPTests.test_demo_api_and_output) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:34.2169769Z test_host_and_origin_guard (test_workspace.HTTPTests.test_host_and_origin_guard) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:34.7215812Z test_local_image_upload_and_brief_save (test_workspace.HTTPTests.test_local_image_upload_and_brief_save) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.2249864Z test_mutation_requires_token (test_workspace.HTTPTests.test_mutation_requires_token) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.7294808Z test_status_and_missing_secret_routes (test_workspace.HTTPTests.test_status_and_missing_secret_routes) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.7314072Z test_bad_image_and_rights (test_workspace.ImageTests.test_bad_image_and_rights) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.7329790Z test_download_default_off_and_host_allowlist (test_workspace.ImageTests.test_download_default_off_and_host_allowlist) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.7352716Z test_http_429_stops_without_retry (test_workspace.ImageTests.test_http_429_stops_without_retry) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.7375789Z test_mock_download_stores_valid_image (test_workspace.ImageTests.test_mock_download_stores_valid_image) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.7392752Z test_original_import_hash_and_evidence (test_workspace.ImageTests.test_original_import_hash_and_evidence) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.7407487Z test_path_traversal_and_dimensions (test_workspace.ImageTests.test_path_traversal_and_dimensions) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.7426684Z test_private_and_mixed_dns_are_rejected (test_workspace.ImageTests.test_private_and_mixed_dns_are_rejected) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.7442185Z test_public_ip_is_pinned (test_workspace.ImageTests.test_public_ip_is_pinned) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.7650759Z test_three_aspect_ratios_and_original_integrity (test_workspace.ImageTests.test_three_aspect_ratios_and_original_integrity) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.7674877Z test_bad_image_keeps_prices (test_workspace.PipelineTests.test_bad_image_keeps_prices) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.7883203Z test_demo_seven_columns_and_three_images (test_workspace.PipelineTests.test_demo_seven_columns_and_three_images) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.7965256Z test_html_escapes_untrusted_text (test_workspace.PipelineTests.test_html_escapes_untrusted_text) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.7980223Z test_live_and_publishing_are_explicitly_unavailable (test_workspace.PipelineTests.test_live_and_publishing_are_explicitly_unavailable) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.7995833Z test_lock_prevents_parallel_write_and_cleans_up (test_workspace.PipelineTests.test_lock_prevents_parallel_write_and_cleans_up) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.8073459Z test_missing_source_keeps_row_and_holds (test_workspace.PipelineTests.test_missing_source_keeps_row_and_holds) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.8154340Z test_ready_means_only_manual_review (test_workspace.PipelineTests.test_ready_means_only_manual_review) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.8304558Z test_repeat_same_input_does_not_fake_price_timestamp (test_workspace.PipelineTests.test_repeat_same_input_does_not_fake_price_timestamp) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.8397454Z test_stale_generated_image_removed_on_later_failure (test_workspace.PipelineTests.test_stale_generated_image_removed_on_later_failure) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.8412498Z test_bounds (test_workspace.ValidationTests.test_bounds) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.8434682Z test_config_safe_and_reinstallation_preserves_config (test_workspace.ValidationTests.test_config_safe_and_reinstallation_preserves_config) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.8449883Z test_credit_needed_for_permission (test_workspace.ValidationTests.test_credit_needed_for_permission) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.8465035Z test_links (test_workspace.ValidationTests.test_links) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.8481579Z test_price_error_preserved (test_workspace.ValidationTests.test_price_error_preserved) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.8495974Z test_single_price_only (test_workspace.ValidationTests.test_single_price_only) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.8511814Z test_stale_future_and_missing_timestamps (test_workspace.ValidationTests.test_stale_future_and_missing_timestamps) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.8526608Z test_true_boolean_and_condition_required (test_workspace.ValidationTests.test_true_boolean_and_condition_required) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.8530446Z test_conditional_hint_blocks_even_if_declared_normal (test_snapshot_probe.TestPerOfferTerms.test_conditional_hint_blocks_even_if_declared_normal) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.8532186Z test_duplicate_offer_terms_ambiguous (test_snapshot_probe.TestPerOfferTerms.test_duplicate_offer_terms_ambiguous) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.8534040Z test_fresh_hours_parameter (test_snapshot_probe.TestPerOfferTerms.test_fresh_hours_parameter) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.8535004Z test_meta_terms_without_scope_not_promoted (test_snapshot_probe.TestPerOfferTerms.test_meta_terms_without_scope_not_promoted) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.8537598Z test_multiple_or_bad_shipping_rates (test_snapshot_probe.TestPerOfferTerms.test_multiple_or_bad_shipping_rates) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.8540395Z test_offer_level_shipping_and_seller_kept (test_snapshot_probe.TestPerOfferTerms.test_offer_level_shipping_and_seller_kept) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.8541660Z test_shipping_conflict_between_sources (test_snapshot_probe.TestPerOfferTerms.test_shipping_conflict_between_sources) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.8543074Z test_boolean_shipping_rejected (test_snapshot_probe.TestProbe.test_boolean_shipping_rejected) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.8544573Z test_demo_always_not_exported (test_snapshot_probe.TestProbe.test_demo_always_not_exported) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.8545045Z test_graph (test_snapshot_probe.TestProbe.test_graph) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.8546035Z test_host_check (test_snapshot_probe.TestProbe.test_host_check) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.8547820Z test_html_escaped (test_snapshot_probe.TestProbe.test_html_escaped) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.8548739Z test_invalid_jsonld (test_snapshot_probe.TestProbe.test_invalid_jsonld) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.8549571Z test_krw_parse_strict (test_snapshot_probe.TestProbe.test_krw_parse_strict) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.8578249Z test_large_input_fails (test_snapshot_probe.TestProbe.test_large_input_fails) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.8580564Z test_offer_and_aggregate (test_snapshot_probe.TestProbe.test_offer_and_aggregate) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.8582181Z test_permission_required (test_snapshot_probe.TestProbe.test_permission_required) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.8582907Z test_plain_html_does_not_guess_prices (test_snapshot_probe.TestProbe.test_plain_html_does_not_guess_prices) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.8584436Z test_review_row_generated (test_snapshot_probe.TestProbe.test_review_row_generated) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.8591705Z test_saves_reports (test_snapshot_probe.TestProbe.test_saves_reports) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.8593471Z test_stale_blocks (test_snapshot_probe.TestProbe.test_stale_blocks) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.8593932Z test_timezone_required (test_snapshot_probe.TestProbe.test_timezone_required) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.8595115Z test_unknown_payment_blocks (test_snapshot_probe.TestProbe.test_unknown_payment_blocks) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.8596487Z test_unknown_shipping_blocks (test_snapshot_probe.TestProbe.test_unknown_shipping_blocks) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.8597789Z test_wrong_model_blocks (test_snapshot_probe.TestProbe.test_wrong_model_blocks) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.8599095Z test_wrong_variant_blocks (test_snapshot_probe.TestProbe.test_wrong_variant_blocks) ... ok
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.8599402Z 
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.8599554Z ----------------------------------------------------------------------
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.8599844Z Ran 102 tests in 4.864s
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.8599970Z 
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.8600042Z OK
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.8625365Z [HTTP] POST /api/snapshot 200
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.8625871Z [HTTP] GET /output/20261105_demo_d7cc23d8eeac/product_table.html 200
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.8626309Z [HTTP] GET /output/20261105_demo_d7cc23d8eeac/bridge/evidence_sidecar.json 200
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.8626651Z [HTTP] POST /api/snapshot 403
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.8626874Z [HTTP] POST /api/snapshot 400
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.8627089Z [HTTP] POST /api/snapshot 400
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.8627303Z [HTTP] POST /api/snapshot 400
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.8627517Z [HTTP] POST /api/snapshot 400
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.8627740Z [HTTP] POST /api/snapshot 400
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.8627953Z [HTTP] POST /api/snapshot 200
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.8628162Z [HTTP] POST /api/run 200
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.8628438Z [HTTP] GET /output/20261105_demo_27afc152c3b8/product_table.html 200
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.8628842Z [HTTP] GET /api/status 403
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.8629169Z [HTTP] GET /api/status 403
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.8629305Z [HTTP] POST /api/image 200
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.8629432Z [HTTP] POST /api/brief 200
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.8629561Z [HTTP] POST /api/run 403
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.8629687Z [HTTP] GET /api/status 200
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.8629832Z [HTTP] GET /01_CONFIG/settings.local.json 404
+Tests (workspace + snapshot add-on)	2026-11-05T07:47:35.8630022Z [HTTP] GET /output/../../01_CONFIG/settings.local.json 404
+Daily run and snapshot demo	﻿2026-11-05T07:47:35.8883565Z ##[group]Run .venv/bin/python tools/run_once.py
+Daily run and snapshot demo	2026-11-05T07:47:35.8883814Z [36;1m.venv/bin/python tools/run_once.py[0m
+Daily run and snapshot demo	2026-11-05T07:47:35.8884017Z [36;1m.venv/bin/python tools/run_once.py --snapshot-demo[0m
+Daily run and snapshot demo	2026-11-05T07:47:35.8900629Z shell: /usr/bin/bash -e {0}
+Daily run and snapshot demo	2026-11-05T07:47:35.8900772Z env:
+Daily run and snapshot demo	2026-11-05T07:47:35.8900927Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.17/x64
+Daily run and snapshot demo	2026-11-05T07:47:35.8901172Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.17/x64/lib/pkgconfig
+Daily run and snapshot demo	2026-11-05T07:47:35.8901408Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.17/x64
+Daily run and snapshot demo	2026-11-05T07:47:35.8901623Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.17/x64
+Daily run and snapshot demo	2026-11-05T07:47:35.8901833Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.17/x64
+Daily run and snapshot demo	2026-11-05T07:47:35.8902050Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.17/x64/lib
+Daily run and snapshot demo	2026-11-05T07:47:35.8902232Z ##[endgroup]
+Daily run and snapshot demo	2026-11-05T07:47:35.9437975Z {
+Daily run and snapshot demo	2026-11-05T07:47:35.9438265Z   "tool": "run_once",
+Daily run and snapshot demo	2026-11-05T07:47:35.9438452Z   "started_at": "2026-11-05T16:47:35.943091+09:00",
+Daily run and snapshot demo	2026-11-05T07:47:35.9438905Z   "finished_at": "2026-11-05T16:47:35.943365+09:00",
+Daily run and snapshot demo	2026-11-05T07:47:35.9439076Z   "overall": "NO_INPUT",
+Daily run and snapshot demo	2026-11-05T07:47:35.9439212Z   "inputs": {
+Daily run and snapshot demo	2026-11-05T07:47:35.9439548Z     "products": {
+Daily run and snapshot demo	2026-11-05T07:47:35.9439670Z       "status": "NO_INPUT",
+Daily run and snapshot demo	2026-11-05T07:47:35.9440109Z       "detail": "records 목록이 비어 있습니다."
+Daily run and snapshot demo	2026-11-05T07:47:35.9440252Z     }
+Daily run and snapshot demo	2026-11-05T07:47:35.9440356Z   },
+Daily run and snapshot demo	2026-11-05T07:47:35.9440891Z   "notice": "로컬 검토 자료 생성만 수행. 실시간 가격 수집·로그인·블로그 게시 없음.",
+Daily run and snapshot demo	2026-11-05T07:47:35.9441073Z   "network_price_collection": false,
+Daily run and snapshot demo	2026-11-05T07:47:35.9441226Z   "published": false,
+Daily run and snapshot demo	2026-11-05T07:47:35.9441629Z   "hint": "처리할 입력이 없습니다. 07_DATA/inbox/products.json에 records를 넣거나 07_DATA/inbox/snapshot_job.json 작업 파일을 만드세요.",
+Daily run and snapshot demo	2026-11-05T07:47:35.9441963Z   "log": "09_LOGS/daily/run_20261105_164735_943091.json"
+Daily run and snapshot demo	2026-11-05T07:47:35.9442124Z }
+Daily run and snapshot demo	2026-11-05T07:47:35.9442408Z [INFO] 처리할 입력이 없습니다. 07_DATA/inbox/products.json에 records를 넣거나 07_DATA/inbox/snapshot_job.json 작업 파일을 만드세요.
+Daily run and snapshot demo	2026-11-05T07:47:36.0392694Z {
+Daily run and snapshot demo	2026-11-05T07:47:36.0392997Z   "tool": "run_once",
+Daily run and snapshot demo	2026-11-05T07:47:36.0393252Z   "started_at": "2026-11-05T16:47:36.002795+09:00",
+Daily run and snapshot demo	2026-11-05T07:47:36.0393509Z   "finished_at": "2026-11-05T16:47:36.038940+09:00",
+Daily run and snapshot demo	2026-11-05T07:47:36.0393671Z   "overall": "DONE",
+Daily run and snapshot demo	2026-11-05T07:47:36.0393793Z   "inputs": {
+Daily run and snapshot demo	2026-11-05T07:47:36.0393912Z     "snapshot_demo": {
+Daily run and snapshot demo	2026-11-05T07:47:36.0394039Z       "status": "DONE",
+Daily run and snapshot demo	2026-11-05T07:47:36.0394171Z       "review_gate": "DEMO_ONLY",
+Daily run and snapshot demo	2026-11-05T07:47:36.0394325Z       "run_id": "20261105_demo_d7cc23d8eeac",
+Daily run and snapshot demo	2026-11-05T07:47:36.0394476Z       "rows": 3,
+Daily run and snapshot demo	2026-11-05T07:47:36.0394601Z       "reused_output": false,
+Daily run and snapshot demo	2026-11-05T07:47:36.0394767Z       "output": "08_OUTPUT/runs/20261105_demo_d7cc23d8eeac",
+Daily run and snapshot demo	2026-11-05T07:47:36.0395028Z       "sidecar": "08_OUTPUT/runs/20261105_demo_d7cc23d8eeac/bridge/evidence_sidecar.json",
+Daily run and snapshot demo	2026-11-05T07:47:36.0395266Z       "published": false,
+Daily run and snapshot demo	2026-11-05T07:47:36.0395393Z       "products": [
+Daily run and snapshot demo	2026-11-05T07:47:36.0395517Z         {
+Daily run and snapshot demo	2026-11-05T07:47:36.0395851Z           "query": "가상 무선 마우스 A",
+Daily run and snapshot demo	2026-11-05T07:47:36.0395998Z           "status": "SELECTED"
+Daily run and snapshot demo	2026-11-05T07:47:36.0396128Z         },
+Daily run and snapshot demo	2026-11-05T07:47:36.0396236Z         {
+Daily run and snapshot demo	2026-11-05T07:47:36.0396374Z           "query": "가상 키보드 B",
+Daily run and snapshot demo	2026-11-05T07:47:36.0396521Z           "status": "NO_ELIGIBLE_CANDIDATE"
+Daily run and snapshot demo	2026-11-05T07:47:36.0396667Z         },
+Daily run and snapshot demo	2026-11-05T07:47:36.0396767Z         {
+Daily run and snapshot demo	2026-11-05T07:47:36.0396896Z           "query": "가상 헤드셋 C",
+Daily run and snapshot demo	2026-11-05T07:47:36.0397033Z           "status": "NO_CANDIDATE"
+Daily run and snapshot demo	2026-11-05T07:47:36.0397166Z         }
+Daily run and snapshot demo	2026-11-05T07:47:36.0397268Z       ]
+Daily run and snapshot demo	2026-11-05T07:47:36.0397369Z     }
+Daily run and snapshot demo	2026-11-05T07:47:36.0397469Z   },
+Daily run and snapshot demo	2026-11-05T07:47:36.0397682Z   "notice": "로컬 검토 자료 생성만 수행. 실시간 가격 수집·로그인·블로그 게시 없음.",
+Daily run and snapshot demo	2026-11-05T07:47:36.0397854Z   "network_price_collection": false,
+Daily run and snapshot demo	2026-11-05T07:47:36.0398005Z   "published": false,
+Daily run and snapshot demo	2026-11-05T07:47:36.0398169Z   "log": "09_LOGS/daily/run_20261105_164736_002795.json"
+Daily run and snapshot demo	2026-11-05T07:47:36.0398571Z }
+Build install ZIP	﻿2026-11-05T07:47:36.0571480Z ##[group]Run .venv/bin/python tools/build_release.py --out "$RUNNER_TEMP/dist" --label ci-1
+Build install ZIP	2026-11-05T07:47:36.0571865Z [36;1m.venv/bin/python tools/build_release.py --out "$RUNNER_TEMP/dist" --label ci-1[0m
+Build install ZIP	2026-11-05T07:47:36.0589002Z shell: /usr/bin/bash -e {0}
+Build install ZIP	2026-11-05T07:47:36.0589159Z env:
+Build install ZIP	2026-11-05T07:47:36.0589314Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.17/x64
+Build install ZIP	2026-11-05T07:47:36.0589559Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.17/x64/lib/pkgconfig
+Build install ZIP	2026-11-05T07:47:36.0589794Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.17/x64
+Build install ZIP	2026-11-05T07:47:36.0590009Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.17/x64
+Build install ZIP	2026-11-05T07:47:36.0590226Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.17/x64
+Build install ZIP	2026-11-05T07:47:36.0590451Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.17/x64/lib
+Build install ZIP	2026-11-05T07:47:36.0590636Z ##[endgroup]
+Build install ZIP	2026-11-05T07:47:36.1656290Z {
+Build install ZIP	2026-11-05T07:47:36.1656689Z   "zip": "/home/runner/work/_temp/dist/Naver_Blog_Automation_ci-1.zip",
+Build install ZIP	2026-11-05T07:47:36.1657212Z   "sha256": "8eb8ae6f6f7a8f56acb0392617c0ad76686d2b5e25ad59c2fe0601073ccaa94f",
+Build install ZIP	2026-11-05T07:47:36.1657564Z   "files": 112,
+Build install ZIP	2026-11-05T07:47:36.1657981Z   "bytes": 208038
+Build install ZIP	2026-11-05T07:47:36.1658151Z }
+Handoff manifest check	﻿2026-11-05T07:47:36.1729160Z ##[group]Run python tools/verify_release.py
+Handoff manifest check	2026-11-05T07:47:36.1729386Z [36;1mpython tools/verify_release.py[0m
+Handoff manifest check	2026-11-05T07:47:36.1745847Z shell: /usr/bin/bash -e {0}
+Handoff manifest check	2026-11-05T07:47:36.1745989Z env:
+Handoff manifest check	2026-11-05T07:47:36.1746145Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.17/x64
+Handoff manifest check	2026-11-05T07:47:36.1746391Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.17/x64/lib/pkgconfig
+Handoff manifest check	2026-11-05T07:47:36.1746630Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.17/x64
+Handoff manifest check	2026-11-05T07:47:36.1746844Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.17/x64
+Handoff manifest check	2026-11-05T07:47:36.1747054Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.17/x64
+Handoff manifest check	2026-11-05T07:47:36.1747270Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.17/x64/lib
+Handoff manifest check	2026-11-05T07:47:36.1747455Z ##[endgroup]
+Handoff manifest check	2026-11-05T07:47:36.2085385Z RELEASE_MANIFEST_P06_infra.json: phase=P06_infra files=204
+Handoff manifest check	2026-11-05T07:47:36.2085903Z PASS: release file hashes and preserved original ZIPs.
+Handoff manifest check	2026-11-05T07:47:36.2086364Z NOT a claim of Windows, live scraping, E2E or blog publication success.
+Run actions/upload-artifact@v4	﻿2026-11-05T07:47:36.2164500Z ##[group]Run actions/upload-artifact@v4
+Run actions/upload-artifact@v4	2026-11-05T07:47:36.2164714Z with:
+Run actions/upload-artifact@v4	2026-11-05T07:47:36.2164903Z   name: linux-logs-and-install-zip
+Run actions/upload-artifact@v4	2026-11-05T07:47:36.2165262Z   path: workspace/Naver_Blog_Automation/09_LOGS/
+Run actions/upload-artifact@v4	/home/runner/work/_temp/dist/
+Run actions/upload-artifact@v4	
+Run actions/upload-artifact@v4	2026-11-05T07:47:36.2165621Z   if-no-files-found: warn
+Run actions/upload-artifact@v4	2026-11-05T07:47:36.2165828Z   compression-level: 6
+Run actions/upload-artifact@v4	2026-11-05T07:47:36.2166028Z   overwrite: false
+Run actions/upload-artifact@v4	2026-11-05T07:47:36.2166159Z   include-hidden-files: false
+Run actions/upload-artifact@v4	2026-11-05T07:47:36.2166307Z env:
+Run actions/upload-artifact@v4	2026-11-05T07:47:36.2166457Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.17/x64
+Run actions/upload-artifact@v4	2026-11-05T07:47:36.2166710Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.17/x64/lib/pkgconfig
+Run actions/upload-artifact@v4	2026-11-05T07:47:36.2166958Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.17/x64
+Run actions/upload-artifact@v4	2026-11-05T07:47:36.2167173Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.17/x64
+Run actions/upload-artifact@v4	2026-11-05T07:47:36.2167392Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.17/x64
+Run actions/upload-artifact@v4	2026-11-05T07:47:36.2167605Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.17/x64/lib
+Run actions/upload-artifact@v4	2026-11-05T07:47:36.2167806Z ##[endgroup]
+Run actions/upload-artifact@v4	2026-11-05T07:47:36.3279874Z (node:2184) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+Run actions/upload-artifact@v4	2026-11-05T07:47:36.3280326Z (Use `node --trace-deprecation ...` to show where the warning was created)
+Run actions/upload-artifact@v4	2026-11-05T07:47:36.3332297Z Multiple search paths detected. Calculating the least common ancestor of all paths
+Run actions/upload-artifact@v4	2026-11-05T07:47:36.3333619Z The least common ancestor is /home/runner/work. This will be the root directory of the artifact
+Run actions/upload-artifact@v4	2026-11-05T07:47:36.3334222Z With the provided path, there will be 6 files uploaded
+Run actions/upload-artifact@v4	2026-11-05T07:47:36.3334957Z Artifact name is valid!
+Run actions/upload-artifact@v4	2026-11-05T07:47:36.3335324Z Root directory input is valid!
+Run actions/upload-artifact@v4	2026-11-05T07:47:36.6493897Z Beginning upload of artifact content to blob storage
+Run actions/upload-artifact@v4	2026-11-05T07:47:36.6784357Z (node:2184) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+Run actions/upload-artifact@v4	2026-11-05T07:47:36.8899106Z Uploaded bytes 197795
+Run actions/upload-artifact@v4	2026-11-05T07:47:36.9268976Z Finished uploading artifact content to blob storage!
+Run actions/upload-artifact@v4	2026-11-05T07:47:36.9269804Z SHA256 digest of uploaded artifact zip is a3060c372eb8ca03e4c442133c79817c68179d5f83139a00500b6a4df7b2bf38
+Run actions/upload-artifact@v4	2026-11-05T07:47:36.9270465Z Finalizing artifact upload
+Run actions/upload-artifact@v4	2026-11-05T07:47:37.4045270Z Artifact linux-logs-and-install-zip.zip successfully finalized. Artifact ID 13396989920
+Run actions/upload-artifact@v4	2026-11-05T07:47:37.4046277Z Artifact linux-logs-and-install-zip has been successfully uploaded! Final size is 197795 bytes. Artifact ID is 13396989920
+Run actions/upload-artifact@v4	2026-11-05T07:47:37.4051217Z Artifact download URL: https://github.com/jaykayLee/Exp_ClaudeCode/actions/runs/41989684593/artifacts/13396989920
+Post Run actions/setup-python@v5	﻿2026-11-05T07:47:37.4212186Z Post job cleanup.
+Post Run actions/setup-python@v5	2026-11-05T07:47:37.5013601Z (node:2196) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+Post Run actions/setup-python@v5	2026-11-05T07:47:37.5014088Z (Use `node --trace-deprecation ...` to show where the warning was created)
+Post Run actions/checkout@v4	﻿2026-11-05T07:47:37.5211640Z Post job cleanup.
+Post Run actions/checkout@v4	2026-11-05T07:47:37.5798778Z [command]/usr/bin/git version
+Post Run actions/checkout@v4	2026-11-05T07:47:37.5830249Z git version 2.56.0
+Post Run actions/checkout@v4	2026-11-05T07:47:37.5853065Z Temporarily overriding HOME='/home/runner/work/_temp/9fc51444-2661-456e-b6b4-e8161decdd0e' before making global git config changes
+Post Run actions/checkout@v4	2026-11-05T07:47:37.5853792Z Adding repository directory to the temporary git global config as a safe directory
+Post Run actions/checkout@v4	2026-11-05T07:47:37.5856492Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Exp_ClaudeCode/Exp_ClaudeCode
+Post Run actions/checkout@v4	2026-11-05T07:47:37.5889196Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Post Run actions/checkout@v4	2026-11-05T07:47:37.5921567Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Post Run actions/checkout@v4	2026-11-05T07:47:37.6132252Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Post Run actions/checkout@v4	2026-11-05T07:47:37.6157268Z http.https://github.com/.extraheader
+Post Run actions/checkout@v4	2026-11-05T07:47:37.6166576Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+Post Run actions/checkout@v4	2026-11-05T07:47:37.6201980Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Post Run actions/checkout@v4	2026-11-05T07:47:37.6416158Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Post Run actions/checkout@v4	2026-11-05T07:47:37.6454097Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Complete job	﻿2026-11-05T07:47:37.6759344Z Cleaning up orphan processes
+Complete job	2026-11-05T07:47:37.7029435Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

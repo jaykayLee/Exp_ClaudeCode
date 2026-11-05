@@ -18,7 +18,9 @@ from environment import ROOT  # noqa: E402
 from server import LocalServer  # noqa: E402
 from playwright.sync_api import sync_playwright  # noqa: E402
 
-CHROME = "/opt/pw-browsers/chromium"
+import os
+# Cloud sessions ship Chromium here; elsewhere (CI, user PC) use Playwright's own browser.
+CHROME = "/opt/pw-browsers/chromium" if os.path.exists("/opt/pw-browsers/chromium") else None
 checks, errors = [], []
 
 

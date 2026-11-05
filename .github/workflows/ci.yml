@@ -21,8 +21,8 @@ jobs:
       run:
         working-directory: workspace/Naver_Blog_Automation
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.13"
       - name: Install locked dependencies
@@ -38,12 +38,14 @@ jobs:
         run: |
           .venv/bin/python tools/run_once.py
           .venv/bin/python tools/run_once.py --snapshot-demo
+      - name: Panel server smoke (real server.py over HTTP)
+        run: .venv/bin/python 00_PROJECT/QA/server_smoke.py
       - name: Build install ZIP
         run: .venv/bin/python tools/build_release.py --out "$RUNNER_TEMP/dist" --label ci-${{ github.run_number }}
       - name: Handoff manifest check
         working-directory: .
         run: python tools/verify_release.py
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v5
         if: always()
         with:
           name: linux-logs-and-install-zip
@@ -58,8 +60,8 @@ jobs:
     env:
       PYTHONUTF8: "1"
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.13"
       - name: Copy workspace to a path with spaces and Korean
@@ -104,6 +106,21 @@ jobs:
           $after = (Get-FileHash '01_CONFIG\settings.local.json').Hash
           if ($before -ne $after) { throw "settings.local.json changed on reinstall" }
           Write-Host "settings preserved"
+      - name: Panel server smoke (real server.py over HTTP)
+        shell: cmd
+        run: |
+          cd /d "%WS%"
+          .venv\Scripts\python.exe 00_PROJECT\QA\server_smoke.py
+      - name: Browser E2E of the panel (Chromium on Windows)
+        shell: pwsh
+        run: |
+          $py = Join-Path $env:WS '.venv\Scripts\python.exe'
+          & $py -m pip install --disable-pip-version-check -q playwright
+          if ($LASTEXITCODE -ne 0) { throw "playwright install failed" }
+          & $py -m playwright install chromium
+          if ($LASTEXITCODE -ne 0) { throw "chromium install failed" }
+          & $py "$env:GITHUB_WORKSPACE\00_SESSION\evidence\P04\ui_snapshot_e2e.py"
+          if ($LASTEXITCODE -ne 0) { throw "panel E2E failed" }
       - name: Scheduler script syntax only (no task is registered)
         shell: pwsh
         run: |
@@ -111,9 +128,12 @@ jobs:
           [System.Management.Automation.Language.Parser]::ParseFile((Join-Path $env:WS 'tools\schedule.ps1'), [ref]$null, [ref]$errors) | Out-Null
           if ($errors.Count) { $errors | Format-List; throw "schedule.ps1 parse errors" }
           Write-Host "schedule.ps1 parses. Registration is NOT executed in CI."
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v5
         if: always()
         with:
           name: windows-logs
-          path: ${{ env.WS }}/09_LOGS/
+          path: |
+            ${{ env.WS }}/09_LOGS/
+            00_SESSION/evidence/P04/*.png
+            00_SESSION/evidence/P04/ui_snapshot_e2e.json
           if-no-files-found: warn
