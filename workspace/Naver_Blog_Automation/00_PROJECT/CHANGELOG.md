@@ -15,3 +15,9 @@
 - 일일 작업은 사용자 실행·확인 후 등록하는 로컬 자료 검토 작업이며 가격 갱신/발행 아님.
 
 보존한 v0.4 SHA256: `2a50b3da09b497cd26ef28788c4fcf03abc50025d71c5cb97e4d1bdb8ab1695f`
+
+## P01 (인계 패키지 작업) — 2026-11-05
+- v1.0 Core는 변경하지 않음. 신규 `providers/snapshot_adapter.py`(직접 어댑터, v1.1/v1.2 재현 아님)와 `tools/run_snapshot_to_panel.py` 추가.
+- Snapshot Probe v1.3.1: 판매자별 배송비·결제조건 근거 분리. 공통 meta는 `offer_terms_scope: "all_offers"` 명시 시에만 적용.
+- 합성 DEMO job(`07_DATA/samples/snapshot_demo`)과 인수 테스트 19개(`10_TESTS/test_snapshot_bridge.py`) 추가.
+- Linux에서만 검증함. Windows BAT·실제 다나와/네이버 수집·게시는 미검증.

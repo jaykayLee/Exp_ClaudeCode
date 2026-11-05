@@ -1,0 +1,12 @@
+[CONFIRMED] seven_headers_exact: ["No.", "상품명", "이미지", "다나와 최저가", "사이트 주소", "네이버 최저가", "사이트 주소"]
+[NOT_CONFIRMED] I02_meta_shipping_applied_to_all_offers: {"eligible_rows": [], "naive_lowest_total_url": null, "expected_after_fix": "A (119000+0) only; B ranked after A (122000); C excluded (card-only)"}
+[CONFIRMED] I02_offer_level_seller_shipping_dropped: {"offer_candidates_keys": ["candidate_model", "candidate_variant", "condition", "currency", "image_url", "name", "offer_index", "offer_shipping_declared", "offer_shipping_fee", "offer_shipping_problem", "payment_hints", "price", "seller_id", "seller_name", "url"]}
+[CONFIRMED] I03_schema_mismatch: {"shared_keys": ["image_credit", "image_path", "image_rights", "model", "query", "variant"], "v1_3_only": ["base_price", "candidate_model", "candidate_variant", "observed_at", "payment_condition", "product_condition", "shipping_fee", "source_page", "url"], "v1_0_required_for_danawa_but_absent_in_v1_3": ["danawa_condition", "danawa_match_checked", "danawa_observed_at", "danawa_price", "danawa_terms_checked", "danawa_url"]}
+[NOT_CONFIRMED] I03_direct_feed_loses_price: {"normalized_from_v1_3_row": null}
+[CONFIRMED] evidence_fields_dropped_by_normalize_records: {"dropped": ["candidate_id", "evidence_kind", "shipping_fee", "snapshot_sha256", "source_kind"]}
+[CONFIRMED] v1_3_demo_csv_empty: {"status": "DEMO_ONLY", "review_csv_count": 0}
+[CONFIRMED] v1_3_run_demo_overwrites_observed_at: "run(demo=True) replaces observed_at with current time; P01 harness must call inspect_snapshot(now=...) instead"
+[CONFIRMED] freshness_threshold_split: {"v1_3_FRESH_HOURS_hardcoded": 24, "v1_0_config_max_price_age_hours": 24, "v1_0_allowed_range": "1..168"}
+[CONFIRMED] v1_0_demo_pipeline_isolated: {"gate": "DEMO_ONLY", "rows": 3, "files": ["NAVER_HANDOFF.md", "images", "normalized_products.json", "product_table.html", "run_report.json"], "network_price_collection": false, "published": false}
+[CONFIRMED] v1_0_empty_inbox_rejected: {"message": "상품 데이터 목록 1~30개가 필요합니다.", "note": "07_DATA/inbox/products.json ships with records: [] so run_once.bat (non-demo) exits 1 until input exists"}
+WROTE 00_SESSION/evidence/p00_interface_probe.json

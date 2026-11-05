@@ -11,3 +11,10 @@
 2026-11-05 (P00) — v1.0에 넣는 `danawa_price`는 배송비 포함 일반 구매 총액(int)이다. 상품가·배송비 분해와 근거는 `danawa_condition` 문구와 evidence sidecar에 둔다. 7열은 바꾸지 않는다.
 2026-11-05 (P00) — `*_match_checked`/`*_terms_checked`는 사람 확인 플래그로 유지한다. 어댑터가 자동으로 true로 만들지 않는다.
 2026-11-05 (P00) — 체크포인트는 로컬 git으로 관리한다(원격 push 없음). 인계 ZIP에는 .git/.venv/캐시/settings.local.json을 넣지 않는다.
+2026-11-05 (P01) — 판매자별 결제조건의 근거는 meta `offer_terms`(URL별 사용자 기록)로 받는다. schema.org에는 "일반 결제" 표준 필드가 없으므로 HTML만으로 normal을 추정하지 않는다.
+2026-11-05 (P01) — Offer 문구에 카드·렌탈·약정·쿠폰·할부·월 납입 등이 있으면 사용자가 normal로 기록해도 보류한다(보수적 선택).
+2026-11-05 (P01) — 총액 동률은 상품가가 낮은 쪽 → candidate_id 순서로 결정하고 `ties`에 남긴다.
+2026-11-05 (P01) — `run_snapshot_to_panel(input_paths, root)`: 출력 폴더 인자 대신 v1.0의 `08_OUTPUT/runs/<id>/bridge/`를 사용한다(기존 출력 구조 유지).
+2026-11-05 (P01) — DEMO에서는 v1.3을 demo=True로 호출해 CSV 0건 계약을 지키고, DEMO_ONLY는 선택 연습에서 라벨로만 취급한다. 합성 고정 평가시각(`evaluation_time`)은 DEMO job에서만 허용한다.
+2026-11-05 (P01) — 스냅샷 경로의 evidence_kind는 synthetic(DEMO)·user_recorded(MANUAL_IMPORT)만 허용하고 live_verified는 거부한다.
+2026-11-05 (P01) — 링크 정책(I11): 스냅샷 후보 URL은 https만 허용한다. v1.0의 http 허용 정책은 바꾸지 않았다(P04에서 통일 여부 결정).

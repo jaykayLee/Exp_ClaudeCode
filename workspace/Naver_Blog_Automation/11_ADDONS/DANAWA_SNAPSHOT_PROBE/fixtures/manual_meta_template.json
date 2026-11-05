@@ -1,9 +1,22 @@
 {
-  "target": {"query": "정확한 상품명", "model": "정확한 모델번호", "variant": "색상/용량 등 옵션"},
+  "target": {
+    "query": "정확한 상품명",
+    "model": "정확한 모델번호",
+    "variant": "색상/용량 등 옵션"
+  },
   "source_page": "https://prod.danawa.com/info/?pcode=YOUR_PRODUCT_ID",
   "observed_at": "",
   "usage_permission": "unknown",
   "shipping_fee": null,
   "payment_condition": "unknown",
-  "notes": "스크래핑이나 재사용이 허용되었다는 의미가 아닙니다. 실제 확인한 시각을 타임존 포함으로 기록하고, 권한·가격조건을 확인하세요."
+  "notes": "스크래핑이나 재사용이 허용되었다는 의미가 아닙니다. 실제 확인한 시각을 타임존 포함으로 기록하고, 권한·가격조건을 확인하세요. v1.3.1: shipping_fee/payment_condition(최상위)는 offer_terms_scope='all_offers'라고 명시할 때만 모든 판매자에게 적용됩니다. 판매자별로 다르면 offer_terms에 URL별로 기록하세요. 배송비 0은 무료배송을 확인한 경우만, 모르면 null.",
+  "offer_terms_scope": "",
+  "offer_terms": [
+    {
+      "url": "판매처 Offer URL (HTML JSON-LD의 url과 정확히 같아야 함)",
+      "payment_condition": "normal / card_only / rental / coupon / unknown 중 실제 확인값",
+      "shipping_fee": null,
+      "evidence": "확인 방법·화면 위치 메모"
+    }
+  ]
 }

@@ -1,69 +1,146 @@
 {
-  "stage": "P00",
-  "date": "2026-11-05",
-  "os": "Linux-6.18.44-fc-v236-x86_64-with-glibc2.39",
-  "python": "3.13.18",
-  "pillow": "12.3.0",
-  "dependency_install": {
-    "command": "python3 -m venv .venv && .venv/bin/pip install -r tools/dependencies.lock",
-    "result": "OK",
-    "packages": [
-      "Pillow==12.3.0"
+  "stage": "P01",
+  "p00": {
+    "date": "2026-11-05",
+    "os": "Linux-6.18.44-fc-v236-x86_64-with-glibc2.39",
+    "python": "3.13.18",
+    "pillow": "12.3.0",
+    "dependency_install": {
+      "command": "python3 -m venv .venv && .venv/bin/pip install -r tools/dependencies.lock",
+      "result": "OK",
+      "packages": [
+        "Pillow==12.3.0"
+      ]
+    },
+    "tests": [
+      {
+        "suite": "handoff_integrity",
+        "cwd": ".",
+        "command": "python3 tools/verify_handoff.py",
+        "exit_code": 0,
+        "result": "PASS",
+        "note": "Run on pristine copy before any change"
+      },
+      {
+        "suite": "workspace_v1_0",
+        "cwd": "workspace/Naver_Blog_Automation",
+        "command": ".venv/bin/python tools/qa_runner.py",
+        "exit_code": 0,
+        "executed": 31,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "log": "00_SESSION/evidence/logs/v1_0_qa_runner.txt"
+      },
+      {
+        "suite": "snapshot_v1_3",
+        "cwd": "workspace/Naver_Blog_Automation/11_ADDONS/DANAWA_SNAPSHOT_PROBE",
+        "command": "../../.venv/bin/python -m unittest discover -s tests -v",
+        "exit_code": 0,
+        "executed": 19,
+        "failures": 0,
+        "errors": 0,
+        "log": "00_SESSION/evidence/logs/v1_3_unittest.txt"
+      },
+      {
+        "suite": "doctor",
+        "cwd": "workspace/Naver_Blog_Automation",
+        "command": ".venv/bin/python tools/doctor.py",
+        "exit_code": 0,
+        "log": "00_SESSION/evidence/logs/doctor.txt"
+      },
+      {
+        "suite": "p00_interface_probe",
+        "cwd": ".",
+        "command": "workspace/Naver_Blog_Automation/.venv/bin/python 00_SESSION/evidence/p00_interface_probe.py",
+        "exit_code": 0,
+        "checks_confirmed": 11,
+        "log": "00_SESSION/evidence/p00_interface_probe.txt",
+        "note": "Defect reproduction, not a pass of target behavior"
+      }
+    ],
+    "not_run": [
+      "Windows BAT installation (install/start_panel/doctor/smoke/run_once .bat)",
+      "Cross-module E2E v1.0<->v1.3",
+      "Real Danawa response parsing",
+      "Naver Shopping live collection",
+      "Naver editor/publication",
+      "Re-confirmation of Naver Shopping API retirement notice"
     ]
   },
-  "tests": [
-    {
-      "suite": "handoff_integrity",
-      "cwd": ".",
-      "command": "python3 tools/verify_handoff.py",
-      "exit_code": 0,
-      "result": "PASS",
-      "note": "Run on pristine copy before any change"
-    },
-    {
-      "suite": "workspace_v1_0",
-      "cwd": "workspace/Naver_Blog_Automation",
-      "command": ".venv/bin/python tools/qa_runner.py",
-      "exit_code": 0,
-      "executed": 31,
-      "failures": 0,
-      "errors": 0,
-      "skipped": 0,
-      "log": "00_SESSION/evidence/logs/v1_0_qa_runner.txt"
-    },
-    {
-      "suite": "snapshot_v1_3",
-      "cwd": "workspace/Naver_Blog_Automation/11_ADDONS/DANAWA_SNAPSHOT_PROBE",
-      "command": "../../.venv/bin/python -m unittest discover -s tests -v",
-      "exit_code": 0,
-      "executed": 19,
-      "failures": 0,
-      "errors": 0,
-      "log": "00_SESSION/evidence/logs/v1_3_unittest.txt"
-    },
-    {
-      "suite": "doctor",
-      "cwd": "workspace/Naver_Blog_Automation",
-      "command": ".venv/bin/python tools/doctor.py",
-      "exit_code": 0,
-      "log": "00_SESSION/evidence/logs/doctor.txt"
-    },
-    {
-      "suite": "p00_interface_probe",
-      "cwd": ".",
-      "command": "workspace/Naver_Blog_Automation/.venv/bin/python 00_SESSION/evidence/p00_interface_probe.py",
-      "exit_code": 0,
-      "checks_confirmed": 11,
-      "log": "00_SESSION/evidence/p00_interface_probe.txt",
-      "note": "Defect reproduction, not a pass of target behavior"
-    }
-  ],
-  "not_run": [
-    "Windows BAT installation (install/start_panel/doctor/smoke/run_once .bat)",
-    "Cross-module E2E v1.0<->v1.3",
-    "Real Danawa response parsing",
-    "Naver Shopping live collection",
-    "Naver editor/publication",
-    "Re-confirmation of Naver Shopping API retirement notice"
-  ]
+  "p01": {
+    "date": "2026-11-05",
+    "os": "Linux-6.18.44-fc-v236-x86_64-with-glibc2.39",
+    "python": "3.13.18",
+    "pillow": "12.3.0",
+    "tests": [
+      {
+        "suite": "workspace_v1_0_plus_bridge",
+        "cwd": "workspace/Naver_Blog_Automation",
+        "command": ".venv/bin/python tools/qa_runner.py",
+        "exit_code": 0,
+        "executed": 50,
+        "failures": 0,
+        "errors": 0,
+        "composition": "31 existing test_workspace + 19 new test_snapshot_bridge",
+        "log": "00_SESSION/evidence/P01/v1_0_qa_runner_with_bridge.txt"
+      },
+      {
+        "suite": "snapshot_v1_3_1",
+        "cwd": "workspace/Naver_Blog_Automation/11_ADDONS/DANAWA_SNAPSHOT_PROBE",
+        "command": "../../.venv/bin/python -m unittest discover -s tests -v",
+        "exit_code": 0,
+        "executed": 26,
+        "failures": 0,
+        "errors": 0,
+        "composition": "19 existing (BASE +offer_terms_scope) + 7 new",
+        "log": "00_SESSION/evidence/P01/v1_3_1_unittest.txt"
+      },
+      {
+        "suite": "bridge_cli_demo",
+        "cwd": "copy of workspace",
+        "command": ".venv/bin/python tools/run_snapshot_to_panel.py --demo",
+        "exit_code": 0,
+        "result": "DEMO_ONLY, row1 119000 A, rows 2-3 HOLD",
+        "log": "00_SESSION/evidence/P01/cli_demo_output.json",
+        "screenshot": "00_SESSION/evidence/P01/demo_table_screenshot.png"
+      },
+      {
+        "suite": "bridge_cli_outside_path",
+        "command": "run_snapshot_to_panel.py --job /etc/passwd",
+        "exit_code": 1,
+        "result": "PATH_OUTSIDE_WORKSPACE (expected rejection)"
+      },
+      {
+        "suite": "addon_cli_demo",
+        "cwd": "11_ADDONS/DANAWA_SNAPSHOT_PROBE",
+        "command": "python -m probe.snapshot_probe demo --out <tmp>",
+        "exit_code": 0,
+        "result": "DEMO_ONLY, 2 candidates, CSV 0"
+      },
+      {
+        "suite": "doctor",
+        "command": ".venv/bin/python tools/doctor.py",
+        "exit_code": 0,
+        "log": "00_SESSION/evidence/P01/doctor.txt"
+      },
+      {
+        "suite": "p00_probe_rerun",
+        "command": "python 00_SESSION/evidence/p00_interface_probe.py",
+        "exit_code": 0,
+        "log": "00_SESSION/evidence/P01/p00_probe_rerun_after_p01.txt",
+        "note": "I02 meta-wide promotion now NOT_CONFIRMED (fixed). Check 'I02_offer_level_seller_shipping_dropped' still prints CONFIRMED only because it literally searches key names 'seller'/'shipping'; new keys are seller_name/offer_shipping_fee (visible in the same output) — fix verified by v1.3.1 tests, not by that literal check."
+      }
+    ],
+    "bugs_found_during_p01": [
+      "snapshot_adapter.evaluate_candidates raised TypeError on a tampered str price (caught by test_defence_in_depth_rejects_tampered_candidate, fixed before checkpoint)"
+    ],
+    "not_run": [
+      "Windows BAT installation and any .bat execution",
+      "Real Danawa page/HTML structure",
+      "Naver Shopping collection",
+      "Naver publication",
+      "Re-confirmation of Naver Shopping API retirement notice"
+    ]
+  }
 }

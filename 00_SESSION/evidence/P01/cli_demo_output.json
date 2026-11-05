@@ -1,0 +1,33 @@
+{
+  "run_id": "20261105_demo_d7cc23d8eeac",
+  "mode": "DEMO",
+  "evidence_kind": "synthetic",
+  "review_gate": "DEMO_ONLY",
+  "reused_output": false,
+  "output_relative": "08_OUTPUT/runs/20261105_demo_d7cc23d8eeac",
+  "sidecar": "08_OUTPUT/runs/20261105_demo_d7cc23d8eeac/bridge/evidence_sidecar.json",
+  "published": false,
+  "products": [
+    {
+      "row": 1,
+      "query": "가상 무선 마우스 A",
+      "status": "SELECTED",
+      "danawa_price": 119000,
+      "danawa_url": "https://example.com/shop/a-offer"
+    },
+    {
+      "row": 2,
+      "query": "가상 키보드 B",
+      "status": "NO_ELIGIBLE_CANDIDATE",
+      "danawa_price": null,
+      "danawa_url": null
+    },
+    {
+      "row": 3,
+      "query": "가상 헤드셋 C",
+      "status": "NO_CANDIDATE",
+      "danawa_price": null,
+      "danawa_url": null
+    }
+  ]
+}

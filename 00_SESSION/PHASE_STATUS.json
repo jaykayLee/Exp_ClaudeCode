@@ -3,7 +3,7 @@
   "project_id": "NAVER_BLOG_AUTOMATION",
   "handoff_version": "1.0",
   "prepared_date": "2026-11-05",
-  "current_phase": "P00",
+  "current_phase": "P01",
   "status": "PASS",
   "phases": {
     "P00": {
@@ -18,9 +18,17 @@
       ]
     },
     "P01": {
-      "implementation": "NOT_STARTED",
-      "verification": "NOT_RUN",
-      "scope_fixed_in": "docs/P00_INTERFACE_MAP.md §3"
+      "implementation": "PASS",
+      "verification": "PASS",
+      "verification_scope": "Linux cloud container, synthetic/offline only: v1.0 qa_runner 50 (31 existing + 19 bridge), v1.3.1 26 (19 existing + 7 new), CLI --demo, addon CLI demo",
+      "live_verification": "NOT_RUN",
+      "windows_verification": "NEEDS_WINDOWS_CHECK",
+      "app_core_changed": false,
+      "outputs": [
+        "docs/P01_IMPLEMENTATION.md",
+        "00_SESSION/evidence/P01/"
+      ],
+      "compatibility_flag": "LEGACY_V11_V12_COMPATIBILITY_UNVERIFIED"
     },
     "P02": {
       "implementation": "NOT_STARTED",
@@ -58,10 +66,11 @@
     "live_danawa": "NOT_IMPLEMENTED",
     "live_naver_shopping": "NOT_IMPLEMENTED",
     "windows_runtime": "NEEDS_WINDOWS_CHECK",
-    "combined_e2e": "NOT_RUN",
-    "naver_publishing": "NOT_IMPLEMENTED"
+    "combined_e2e": "PASS_SYNTHETIC_OFFLINE_ONLY",
+    "naver_publishing": "NOT_IMPLEMENTED",
+    "snapshot_bridge": "IMPLEMENTED"
   },
-  "next_action": "P01 only: per-offer shipping/payment fix in v1.3 + snapshot_adapter + run_snapshot_to_panel + DEMO E2E harness, per docs/P00_INTERFACE_MAP.md §3. Do not start automatically.",
+  "next_action": "Do not start automatically. P02 needs: confirmed allowed Danawa data source (API/feed/page + terms) and 1 real product the user is allowed to check. Otherwise mark P02 BLOCKED_EXTERNAL and proceed to P04 on request.",
   "auto_publish": false,
   "public_deployment_approved": false,
   "last_session_date": "2026-11-05",
@@ -80,10 +89,23 @@
     "scope": "Independent suites only; not end-to-end, not Windows, not live"
   },
   "blockers": [
-    "I01 BLOCKED_INPUT v1.1/v1.2 originals missing",
-    "I04 BLOCKED_EXTERNAL Danawa allowed source/terms",
-    "I05 BLOCKED_EXTERNAL Naver Shopping replacement path",
+    "I01 BLOCKED_INPUT v1.1/v1.2 originals missing (direct adapter used)",
+    "I04 BLOCKED_EXTERNAL Danawa allowed source/terms (needed for P02)",
+    "I05 BLOCKED_EXTERNAL Naver Shopping replacement path (P03)",
     "I06 NEEDS_WINDOWS_CHECK BAT install/schedule"
   ],
-  "next_possible_phase": "P01"
+  "next_possible_phase": "P02 (requires user input: an allowed Danawa source and usage confirmation) — or P04 with manual/user_recorded input if P02/P03 remain BLOCKED_EXTERNAL",
+  "p01_checks": {
+    "v1_0_qa_runner": {
+      "executed": 50,
+      "failures": 0,
+      "errors": 0
+    },
+    "v1_3_1_unittest": {
+      "executed": 26,
+      "failures": 0,
+      "errors": 0
+    },
+    "runtime": "Linux/Python 3.13.18/Pillow 12.3.0 (venv)"
+  }
 }
