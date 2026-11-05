@@ -1,0 +1,11 @@
+{
+  "zip": "/home/user/handoff/dist/Naver_Blog_Automation_P06_20261105.zip",
+  "sha256": "f7f9164bd6cdd82682664c332b0e3cf48b9b39b021b0a2a574fe2c8a57e88895",
+  "files": 112,
+  "bytes": 208042
+}
+No broken requirements found.
+doctor EXIT=0
+Ran 102 tests in 5.708s
+OK
+  "overall": "DONE",
