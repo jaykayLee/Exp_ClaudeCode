@@ -21,6 +21,7 @@ from pathlib import Path
 from environment import ROOT
 from nbcore.pipeline import atomic_json, run_pipeline
 from nbcore.validation import now_kst
+from exporters.naver_paste import write_for_run
 
 PRODUCTS = "07_DATA/inbox/products.json"
 SNAPSHOT_JOB = "07_DATA/inbox/snapshot_job.json"
@@ -55,6 +56,7 @@ def _products(root: Path, path: Path, mode: str) -> dict:
     if mode == "MANUAL_IMPORT" and records == []:
         return {"status": "NO_INPUT", "detail": "records 목록이 비어 있습니다."}
     summary = run_pipeline(root, records, mode)
+    write_for_run(root, summary)
     return {"status": "DONE", "review_gate": summary["review_gate"], "run_id": summary["run_id"],
             "rows": summary["row_count"], "reused_output": summary["reused_output"],
             "output": summary["output_relative"], "published": False}

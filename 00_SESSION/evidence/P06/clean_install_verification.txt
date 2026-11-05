@@ -1,0 +1,32 @@
+## build
+{
+  "zip": "/home/user/handoff/dist/Naver_Blog_Automation_P06_20261105.zip",
+  "sha256": "98588a24976b6f5fc1ee1aed36beeb95f45c5e329211896b74171b2ce8251baf",
+  "files": 112,
+  "bytes": 207468
+}
+## extracted to path with space+Korean: /tmp/claude-0/-home-user/a7bc0ef0-1042-5422-b4f8-2669a62f3dea/scratchpad/설치 테스트 폴더/Naver_Blog_Automation
+BAT count: 10
+## user data absent:
+product_input.schema.json
+settings.example.json
+{
+  "records": []
+}
+ls: cannot access '08_OUTPUT': No such file or directory
+README.md
+## install steps (bootstrap.ps1 equivalent on Linux)
+pip install OK
+No broken requirements found.
+doctor EXIT=0
+Ran 102 tests in 5.581s
+OK
+suites {'workspace': 76, 'snapshot_addon': 26}
+## reinstall preserves settings
+01_CONFIG/settings.local.json: OK
+## run_once (empty inbox)
+[INFO] 처리할 입력이 없습니다. 07_DATA/inbox/products.json에 records를 넣거나 07_DATA/inbox/snapshot_job.json 작업 파일을 만드세요.
+## snapshot demo
+DEMO_ONLY /output/20261105_demo_d7cc23d8eeac/naver_paste_table.html [('SELECTED', 119000), ('NO_ELIGIBLE_CANDIDATE', None), ('NO_CANDIDATE', None)]
+## rebuild from installed copy
+  "files": 112,

@@ -28,6 +28,7 @@ sys.path.insert(0, str(ROOT / "11_ADDONS/DANAWA_SNAPSHOT_PROBE"))
 
 from nbcore.config import load_config  # noqa: E402
 from nbcore.pipeline import atomic_json, run_pipeline  # noqa: E402
+from exporters.naver_paste import write_for_run  # noqa: E402
 from nbcore.validation import now_kst, parse_time  # noqa: E402
 from probe import snapshot_probe  # noqa: E402
 from providers import snapshot_adapter as adapter  # noqa: E402
@@ -164,6 +165,7 @@ def run_snapshot_to_panel(input_paths: list[Path], root: Path = ROOT, *, now: da
     entries = [_process_product(root, item, mode=mode, kind=kind, clock=clock, max_age=max_age,
                                 processed_at=processed_at) for item in products]
     summary = run_pipeline(root, [e["panel_record"] for e in entries], mode)
+    paste_url = write_for_run(root, summary)
     bridge = root / summary["output_relative"] / "bridge"
     bridge.mkdir(parents=True, exist_ok=True)
     for i, entry in enumerate(entries, 1):
@@ -189,7 +191,7 @@ def run_snapshot_to_panel(input_paths: list[Path], root: Path = ROOT, *, now: da
             "review_gate": summary["review_gate"], "reused_output": summary["reused_output"],
             "output_relative": summary["output_relative"],
             "sidecar": (bridge / "evidence_sidecar.json").relative_to(root).as_posix(),
-            "published": False,
+            "published": False, "paste_url": paste_url,
             "products": [{"row": i, "query": e["query"], "status": e["status"],
                           "danawa_price": e["panel_record"]["danawa_price"],
                           "danawa_url": e["panel_record"]["danawa_url"]} for i, e in enumerate(entries, 1)]}
@@ -246,6 +248,7 @@ def run_for_panel(job: Path, root: Path = ROOT) -> dict:
     result = run_snapshot_to_panel([job], root)
     sidecar = json.loads((root / result["sidecar"]).read_text(encoding="utf-8"))
     report = json.loads((root / result["output_relative"] / "run_report.json").read_text(encoding="utf-8"))
+    report["paste_url"] = result["paste_url"]
     return {**result, "pipeline": report, "status_rows": status_rows(sidecar),
             "panel_records": [p["panel_record"] for p in sidecar["products"]]}
 

@@ -13,7 +13,7 @@ with tempfile.TemporaryDirectory(prefix='nb_ui_qa_') as temp:
     server=LocalServer(('127.0.0.1',0),root);thread=threading.Thread(target=server.serve_forever,daemon=True);thread.start()
     try:
         with sync_playwright() as p:
-            browser=p.chromium.launch(executable_path='/usr/bin/chromium',headless=True,args=['--no-sandbox'])
+            import os;exe=next((x for x in ('/usr/bin/chromium','/opt/pw-browsers/chromium') if os.path.exists(x)),None);browser=p.chromium.launch(executable_path=exe,headless=True,args=['--no-sandbox'])
             context=browser.new_context(viewport={'width':1440,'height':1000},accept_downloads=True)
             page=context.new_page();page.on('pageerror',lambda e:errors.append(str(e)));page.on('dialog',lambda d:d.accept())
             def bridge(path,options):
@@ -31,7 +31,7 @@ with tempfile.TemporaryDirectory(prefix='nb_ui_qa_') as temp:
             page.locator('#runButton').click();page.wait_for_function("document.querySelector('#runStatus').textContent.includes('테스트 자료')")
             assert page.locator('.requiredtable th').all_inner_texts()==['No.','상품명','이미지','다나와 최저가','사이트 주소','네이버 최저가','사이트 주소'];ok('python_demo_generation_exact_seven_columns')
             page.locator('#workbench').scroll_into_view_if_needed();page.screenshot(path=str(OUT/'desktop_workbench.png'))
-            preview=context.new_page();preview_path=root/'08_OUTPUT/runs'/page.locator('#runStatus a').get_attribute('href').removeprefix('/output/');preview.set_content(preview_path.read_text(encoding='utf-8'));assert 'DEMO_ONLY' in preview.inner_text('body');assert preview.locator('img').count()==3
+            preview=context.new_page();preview_path=root/'08_OUTPUT/runs'/page.locator('#runStatus a[href$="product_table.html"]').get_attribute('href').removeprefix('/output/');preview.set_content(preview_path.read_text(encoding='utf-8'));assert 'DEMO_ONLY' in preview.inner_text('body');assert preview.locator('img').count()==3
             assert preview.evaluate('Array.from(document.images).every(i=>i.complete&&i.naturalWidth===354&&i.naturalHeight===472)');ok('output_html_embedded_images_render');preview.close()
             page.locator('#clearButton').click();page.locator('#newButton').click()
             page.locator('[name=query]').fill('검증용 상품 <script>금지</script>');page.locator('[name=model]').fill('QA-MODEL-001')

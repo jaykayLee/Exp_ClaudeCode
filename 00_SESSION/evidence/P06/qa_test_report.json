@@ -1,0 +1,18 @@
+{
+  "checked_at": "2026-11-05T15:04:56.855316+09:00",
+  "runtime": "Linux-6.18.44-fc-v236-x86_64-with-glibc2.39",
+  "python": "3.13.18",
+  "tests": 102,
+  "suites": {
+    "workspace": 76,
+    "snapshot_addon": 26
+  },
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "passed": true,
+  "live_source_tested": false,
+  "naver_posting_tested": false,
+  "windows_installation_tested": false,
+  "scope": "Offline code and local HTTP tests; BAT installation needs Windows verification"
+}

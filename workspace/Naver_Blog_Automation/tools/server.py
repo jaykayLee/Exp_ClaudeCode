@@ -15,6 +15,7 @@ from environment import ROOT
 from nbcore.config import load_config, save_image_config
 from nbcore.pipeline import run_pipeline, atomic_json
 from nbcore.images import store_original
+from exporters.naver_paste import write_for_run
 
 class LocalServer(ThreadingHTTPServer):
     daemon_threads=True
@@ -102,6 +103,7 @@ class Handler(BaseHTTPRequestHandler):
                 mode=payload.get('mode','MANUAL_IMPORT')
                 records=payload.get('records')
                 result=run_pipeline(root,records,mode)
+                result['paste_url']=write_for_run(root,result)
                 if payload.get('persist_input') is True and mode=='MANUAL_IMPORT':
                     atomic_json(root/'07_DATA/inbox/products.json',{"records":records})
                 self.send_json(200,result)
