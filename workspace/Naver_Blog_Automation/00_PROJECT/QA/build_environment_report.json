@@ -1,0 +1,52 @@
+{
+  "checked_at": "2026-10-11T16:38:27.755125+09:00",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+  "checks": [
+    {
+      "name": "Python",
+      "status": "PASS",
+      "detail": "3.13.5"
+    },
+    {
+      "name": "64bit",
+      "status": "PASS",
+      "detail": "64"
+    },
+    {
+      "name": "Pillow",
+      "status": "PASS",
+      "detail": "12.3.0 (lock:12.3.0)"
+    },
+    {
+      "name": "Config",
+      "status": "PASS",
+      "detail": "Local-only / auto_publish=false"
+    },
+    {
+      "name": "Writable workspace",
+      "status": "PASS",
+      "detail": "/mnt/data/Naver_Blog_Automation"
+    },
+    {
+      "name": "Danawa live collector",
+      "status": "NOT_CONFIGURED",
+      "detail": "Approved import only; live permission and selector validation required"
+    },
+    {
+      "name": "Naver shopping legacy API",
+      "status": "RETIRED",
+      "detail": "Official retirement: 2026-07-31. No API key setup needed for this baseline."
+    },
+    {
+      "name": "Naver publication",
+      "status": "DISABLED",
+      "detail": "Manual handoff only"
+    },
+    {
+      "name": "Windows BAT runtime",
+      "status": "USER_PC_REQUIRED",
+      "detail": "No claim of verification on another PC"
+    }
+  ],
+  "local_ok": true
+}

@@ -1,0 +1,13 @@
+/.venv/
+**/__pycache__/
+*.pyc
+/01_CONFIG/settings.local.json
+/07_DATA/inbox/products.json
+/07_DATA/images/
+/07_DATA/state/
+/08_OUTPUT/runs/
+/09_LOGS/
+/04_CONTENT/briefs/
+*.env
+credentials*.json
+token*.json

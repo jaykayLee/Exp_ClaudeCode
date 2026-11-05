@@ -1,0 +1,120 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Blog Workspace Product Input v1",
+  "type": "object",
+  "required": [
+    "records"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "mode": {
+      "enum": [
+        "DEMO",
+        "MANUAL_IMPORT"
+      ]
+    },
+    "records": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 30,
+      "items": {
+        "type": "object",
+        "required": [
+          "query"
+        ],
+        "properties": {
+          "query": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          },
+          "model": {
+            "type": "string"
+          },
+          "variant": {
+            "type": "string"
+          },
+          "image_path": {
+            "type": "string"
+          },
+          "image_url": {
+            "type": "string"
+          },
+          "image_rights": {
+            "enum": [
+              "owned",
+              "licensed",
+              "permission",
+              "unknown",
+              ""
+            ]
+          },
+          "image_credit": {
+            "type": "string"
+          },
+          "image_source_page": {
+            "type": "string"
+          },
+          "danawa_price": {
+            "type": [
+              "integer",
+              "string",
+              "null"
+            ],
+            "description": "Positive integer or an unambiguous single amount; zero/negative/ranges/installments are invalid."
+          },
+          "danawa_url": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "danawa_observed_at": {
+            "type": "string",
+            "description": "ISO8601 timestamp with timezone; actual observation time, not export time."
+          },
+          "danawa_match_checked": {
+            "type": "boolean"
+          },
+          "danawa_terms_checked": {
+            "type": "boolean"
+          },
+          "danawa_condition": {
+            "type": "string"
+          },
+          "naver_price": {
+            "type": [
+              "integer",
+              "string",
+              "null"
+            ],
+            "description": "Positive integer or an unambiguous single amount; zero/negative/ranges/installments are invalid."
+          },
+          "naver_url": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "naver_observed_at": {
+            "type": "string",
+            "description": "ISO8601 timestamp with timezone; actual observation time, not export time."
+          },
+          "naver_match_checked": {
+            "type": "boolean"
+          },
+          "naver_terms_checked": {
+            "type": "boolean"
+          },
+          "naver_condition": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "description": "Runtime validation adds checks for links, age, rights and image safety. Extra fields are ignored by normalization."
+}

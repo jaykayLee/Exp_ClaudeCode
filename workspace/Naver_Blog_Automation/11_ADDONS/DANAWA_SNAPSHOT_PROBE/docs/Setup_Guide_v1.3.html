@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>네이버 블로그 자동화 v1.3 — 다나와 HTML 구조 진단</title>
+<style>
+:root{--bg:#f5f8fc;--ink:#142336;--muted:#63758d;--navy:#102943;--teal:#078c92;--line:#d9e4ee;--blue:#eaf7fb;--warn:#fff4df;--white:#fff}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);font:15px/1.7 'Malgun Gothic','Apple SD Gothic Neo',Arial,sans-serif;color:var(--ink)}
+header{background:linear-gradient(115deg,#0e2740,#15566a);color:white;padding:42px max(24px,calc((100vw - 1200px)/2)) 38px}header h1{font-size:34px;line-height:1.3;margin:10px 0}header p{color:#dbeff8;opacity:.96;max-width:860px}.pill{display:inline-block;border:1px solid #7cc7c8;color:#c0eff2;border-radius:20px;padding:2px 12px;font-size:12px;letter-spacing:.03em}
+.layout{display:grid;grid-template-columns:220px minmax(0,1fr);gap:25px;max-width:1250px;margin:28px auto;padding:0 24px}
+nav{position:sticky;top:20px;align-self:start;background:white;border:1px solid var(--line);border-radius:15px;padding:18px}nav a{display:block;text-decoration:none;color:#28415c;padding:8px 9px;border-radius:7px}nav a:hover{background:var(--blue);color:#065c75}main{min-width:0}section{background:white;margin:0 0 22px;border:1px solid var(--line);border-radius:16px;padding:25px 29px;box-shadow:0 3px 14px #14233308}h2{font-size:22px;margin:0 0 13px}h3{font-size:17px;margin:24px 0 8px}p{margin:8px 0 13px;color:#344861}strong{color:#12364c}small,.muted{color:var(--muted)}a{color:#0a687e}code,pre{font-family:Consolas,'Malgun Gothic',monospace}pre{background:#102943;color:#e2f3fc;border-radius:11px;padding:17px;white-space:pre;overflow-x:auto;max-width:100%;font-size:12.6px;line-height:1.7}code{background:#eff4f8;padding:2px 5px;border-radius:4px;overflow-wrap:anywhere;word-break:break-word}pre code{padding:0;background:none}
+.statrow{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.stat{background:#f0f7fa;border:1px solid #cfeaf0;padding:14px 17px;border-radius:12px}.stat b{display:block;font-size:20px;color:#0a6476}.tag{font-weight:700;font-size:11px;padding:4px 8px;border-radius:7px}.ok{background:#def8eb;color:#19683b}.hold{background:#fff0cc;color:#985900}.off{background:#e9edf2;color:#516477}
+table{border-collapse:collapse;width:100%;font-size:13px;min-width:650px}th,td{border-bottom:1px solid #dce6ee;padding:10px;text-align:left;vertical-align:top}th{background:#f1f7fb;color:#20435a}td{color:#35485f}.scroll{overflow:auto}.alert{border-left:4px solid #e3a224;background:var(--warn);padding:13px 17px;margin:17px 0;border-radius:0 10px 10px 0}.note{border-left:4px solid var(--teal);background:#edf9f9;padding:13px 17px;margin:15px 0;border-radius:0 10px 10px 0}
+ol,ul{padding-left:22px;color:#334760}li{margin:7px 0}.steps li{padding:5px 0}.foot{margin:15px 0;color:#64748a}details{margin:12px 0;border:1px solid #d9e4ee;border-radius:10px;padding:10px 14px}summary{cursor:pointer;font-weight:700;color:#254d64}.track{display:flex;gap:4px;margin-top:20px;flex-wrap:wrap}.track span{padding:7px 12px;background:#e6f6f8;color:#0a596c;border-radius:8px;font-size:12px}.track span.active{background:#0a8992;color:white}.btn{display:inline-block;background:#0a7a86;color:white;text-decoration:none;border-radius:8px;padding:10px 16px;border:0;cursor:pointer;font:inherit}.btn:hover{background:#075d69}.caption{margin:4px 0 0;font-size:13px;color:#63758d}
+@media(max-width:800px){header{padding:30px 22px}header h1{font-size:27px}.layout{display:block;padding:0 12px;margin:14px auto}nav{position:static;display:flex;flex-wrap:wrap;margin-bottom:15px;gap:5px}nav a{padding:6px 10px}section{padding:19px 17px}.statrow{grid-template-columns:1fr}}
+</style></head><body>
+<header><span class="pill">NAVER BLOG AUTOMATION · ADD-ON v1.3 · 2026-11-01</span><h1>다나와 HTML 저장본 구조 진단</h1><p>이번 단계는 ‘실제 가격 수집기를 만들기 전에 어디에서 어떤 근거를 읽을 수 있는지’를 확인하는 작은 검증입니다. 웹사이트에 자동 접속하지 않고 사용자가 저장한 HTML 파일 한 개를 오프라인으로 분석합니다.</p><div class="track"><span>v1.0 로컬 작업실</span><span>v1.1 후보 검증</span><span>v1.2 CSV Bridge</span><span class="active">v1.3 HTML 근거 진단</span><span>향후: 승인된 공급경로</span></div></header>
+<div class="layout"><nav aria-label="문서 목차"><a href="#status">구현 상태</a><a href="#goal">이번 주 목표</a><a href="#install">Windows 설치</a><a href="#workflow">실제 샘플 점검</a><a href="#structure">폴더 구조</a><a href="#data">가격 데이터 계약</a><a href="#test">테스트/완료 기준</a><a href="#risk">가장 큰 Blocker</a><a href="#next">다음 개발 단계</a><a href="#sources">공식 근거</a></nav>
+<main>
+<section id="status"><h2>1. 현재 상태를 정확히 구분합니다</h2><div class="statrow"><div class="stat"><b>19 / 19 PASS</b>합성 HTML에 대한 Python 단위 테스트</div><div class="stat"><b>OFFLINE</b>외부 HTTP 요청 없음</div><div class="stat"><b>HOLD</b>실제 다나와 구조·Windows 테스트 전</div></div>
+<div class="scroll"><table><thead><tr><th>요소</th><th>실제 상태</th><th>설명</th></tr></thead><tbody>
+<tr><td>v1.0 이미지 리사이즈·7열 표</td><td><span class="tag ok">기존 구현</span></td><td>v1.0에서 제공. 이번 패키지는 기존 코드를 변경하지 않음</td></tr>
+<tr><td>v1.1 모델/조건 검증 및 v1.2 CSV Bridge</td><td><span class="tag hold">이전 주차 구현</span></td><td>기존 ZIP 실물 접근 실패로 이번 환경에서 재통합 시험은 미실시</td></tr>
+<tr><td>v1.3 JSON-LD 구조 진단/근거 보고서</td><td><span class="tag ok">구현/시험 완료</span></td><td>합성 Product/Offer·AggregateOffer·누락·보안 사례 19개 시험</td></tr>
+<tr><td>실제 다나와 자동 스크래핑</td><td><span class="tag off">미구현</span></td><td>허용된 데이터 접근 경로 미확정, 서버 자동 접속 없음</td></tr>
+<tr><td>네이버쇼핑 검색 API</td><td><span class="tag off">종료</span></td><td>2026-07-31 종료, 과거 shop.json 재활용 금지</td></tr>
+<tr><td>네이버 블로그 자동 게시</td><td><span class="tag off">미구현</span></td><td>수동 작성·검토 유지</td></tr></tbody></table></div>
+</section>
+<section id="goal"><h2>2. 이번 주 목표</h2><p><strong>실제 제품 한 개의 저장 HTML에 구매 가능한 개별 가격 후보가 구조화 데이터로 존재하는지 확인합니다.</strong> 저장 HTML에서 <code>schema.org/Product</code>와 <code>Offer</code> JSON-LD만 찾습니다. <code>AggregateOffer.lowPrice</code>는 조건이 특정되지 않은 최저가 요약일 수 있어 개별 상품 후보로 채택하지 않습니다.</p>
+<div class="note">데이터를 찾지 못한 결과도 중요한 성공 결과입니다. 추측값을 만들지 않고 <b>NO_STRUCTURED_OFFERS</b>로 보고하면, 다음 단계에서 사이트별 API·승인 피드·수동 CSV 중 적합한 접근을 선택할 수 있습니다.</div>
+<h3>이번 주 성공 산출물</h3><p><code>snapshot_report.json</code>에 JSON-LD 발견 여부·모델·옵션·후보 가격·보류 이유·원본 해시(SHA-256)를 저장합니다. <code>snapshot_report.html</code>로 사람이 확인합니다. 모든 필수 검토 항목을 통과한 경우에 한해 <code>candidates_for_review.csv</code>에 후보 행이 생성됩니다. 이 CSV도 <b>게시 전 추가 검토용</b>입니다.</p>
+</section>
+<section id="install"><h2>3. Windows 설치 — BAT만 더블클릭</h2>
+<ol class="steps"><li>기존 <code>Naver_Blog_Automation_Workspace_v1.0</code>을 설치했다면 그 작업실과 같은 상위 폴더에 이번 ZIP을 풉니다. 기존 작업실의 <code>install.bat</code>이 Python을 설정합니다.</li><li>이번 ZIP에서 <b><code>install.bat</code></b> 실행. 기본 경로 <code>..\Naver_Blog_Automation\11_ADDONS\DANAWA_SNAPSHOT_PROBE</code>에만 복사합니다. 기존 파일이 있으면 덮어쓰지 않고 중지합니다.</li><li><b><code>doctor.bat</code></b>로 Python·기존 폴더 인식 확인. <b><code>smoke.bat</code></b>로 19개 테스트 실행.</li><li><b><code>run_demo.bat</code></b>를 실행해 예제 보고서를 열어 <code>DEMO_ONLY</code> 표시를 확인합니다.</li><li>실제 저장 HTML과 직접 작성한 메타파일을 준비하면 <b><code>run_snapshot.bat</code></b>로 점검합니다.</li></ol>
+<pre>C:\BlogWorkspace\
+├── Naver_Blog_Automation\          ← 기존 v1.0
+│   ├── install.bat
+│   └── 11_ADDONS\
+│       ├── DANAWA_CANDIDATE_QA\    ← 이전 v1.1 (있다면)
+│       ├── DANAWA_CSV_BRIDGE\      ← 이전 v1.2 (있다면)
+│       └── DANAWA_SNAPSHOT_PROBE\  ← 이번 v1.3
+└── Danawa_Snapshot_Probe_v1.3\    ← 이번 ZIP 압축 해제 폴더
+    ├── install.bat
+    ├── run_demo.bat
+    ├── run_snapshot.bat
+    ├── smoke.bat
+    └── docs\Setup_Guide_v1.3.html</pre><p class="caption">기존 v1.0 프로젝트가 없어도 설치 없이 <code>run_demo.bat</code>로 독립 테스트할 수 있습니다. Python 3.11~3.13 설치가 필요하며 이 Add-on의 외부 의존성은 0개입니다.</p>
+</section>
+<section id="workflow"><h2>4. 실제 상품 HTML 1개로 테스트하기</h2>
+<ol class="steps"><li>사용이 허용된 범위에서 다나와의 특정 제품 페이지를 브라우저로 확인하고 <b>HTML 페이지 저장본</b>을 준비합니다. 확장자가 <code>.html</code>이어야 합니다. 저장 기능이 비동기 데이터까지 보존하는지는 보장되지 않습니다.</li><li><code>fixtures/manual_meta_template.json</code>을 복사해 <code>source_page</code>, 모델 번호, 옵션, <b>실제 확인시각(+09:00 포함)</b>을 입력합니다.</li><li>사용 범위가 확인되지 않으면 <code>usage_permission: "unknown"</code>을 유지합니다. 배송비와 결제 조건을 확인하지 못했다면 <code>null</code>, <code>unknown</code>으로 둡니다. 모르는 값에 0을 넣지 않습니다.</li><li><code>run_snapshot.bat</code> 실행 후 HTML 저장 경로와 메타 JSON 경로를 입력합니다. <code>output/manual/snapshot_report.html</code>을 확인합니다.</li><li>보고서에서 후보 수와 보류 사유를 확인하고, 승인된 데이터 이용 범위에서만 추가 검증에 사용합니다. HTML의 원본 해시를 다른 검증 기록과 함께 보관합니다.</li></ol>
+<h3>메타데이터 작성 예시</h3>
+<pre>{
+  "target": {"query": "정확한 상품명", "model": "모델번호", "variant": "옵션"},
+  "source_page": "https://prod.danawa.com/info/?pcode=제품ID",
+  "observed_at": "2026-11-01T08:00:00+09:00",
+  "usage_permission": "unknown",
+  "shipping_fee": null,
+  "payment_condition": "unknown"
+}</pre>
+<div class="alert"><b>오해하기 쉬운 점:</b> <code>usage_permission="confirmed"</code>를 직접 입력해도 법적 이용 허가가 자동 부여되는 것은 아닙니다. 또한 HTML 저장시각이 사이트가 보증한 가격 시각은 아닙니다. 이 파일만으로 전체 사이트 최저가를 증명할 수 없습니다.</div>
+</section>
+<section id="structure"><h2>5. 추천 디렉토리 및 함수 인터페이스</h2>
+<pre>11_ADDONS/DANAWA_SNAPSHOT_PROBE/
+├── addon_manifest.json
+├── install.bat / doctor.bat / smoke.bat
+├── run_demo.bat / run_snapshot.bat / open_guide.bat
+├── probe/
+│   ├── __init__.py
+│   └── snapshot_probe.py
+├── fixtures/
+│   ├── demo_product.html
+│   ├── demo_meta.json
+│   └── manual_meta_template.json
+├── tests/
+│   └── test_snapshot_probe.py
+├── output/
+│   ├── demo/
+│   └── manual/
+└── docs/
+    ├── Setup_Guide_v1.3.html
+    ├── README.md
+    └── PROJECT_HANDOFF_v1.3.md</pre>
+<div class="scroll"><table><thead><tr><th>함수</th><th>목적</th></tr></thead><tbody><tr><td><code>read_jsonld(html_text)</code></td><td>로컬 문서의 JSON-LD Product 객체 식별</td></tr><tr><td><code>offer_candidates(products)</code></td><td>개별 Offer만 후보로 변환. AggregateOffer 제외</td></tr><tr><td><code>inspect_snapshot(bytes,meta)</code></td><td>조건·가격·출처·시각·옵션·권한에 따라 HOLD 사유 기록</td></tr><tr><td><code>save_report(report,out)</code></td><td>근거 JSON + 사람이 보는 HTML + 검토용 CSV 파일 출력</td></tr><tr><td><code>run(html_file,meta_file,out)</code></td><td>Windows BAT 진입점과 결합</td></tr></tbody></table></div>
+</section>
+<section id="data"><h2>6. 기존 데이터 계약과 연결</h2><p>v1.2 CSV Bridge에서 설명한 후보 컬럼을 유지합니다. 정확한 현재 v1.2 코드의 입출력 스키마는 이번 실행 환경에서 재검증하지 못했으므로 <strong>CSV 헤더 정합성만 설계 기준으로 맞춘 상태</strong>입니다. 실제 통합 시 기존 파일을 덮어쓰지 말고 한 제품에서 수동 테스트하십시오.</p>
+<pre>query, model, variant, candidate_model, candidate_variant,
+base_price, shipping_fee, product_condition, payment_condition,
+url, observed_at, source_page, image_path, image_rights, image_credit</pre>
+<p>최종 블로그 표 출력 순서는 변경하지 않습니다.</p>
+<div class="scroll"><table><thead><tr><th>No.</th><th>상품명</th><th>이미지</th><th>다나와 최저가</th><th>사이트 주소</th><th>네이버 최저가</th><th>사이트 주소</th></tr></thead><tbody><tr><td>1</td><td>가상 테스트 마우스 A</td><td>미확인</td><td>미수집</td><td>미수집</td><td>미수집</td><td>미수집</td></tr></tbody></table></div><p class="caption">데모가 실제 최저가로 둔갑하지 않도록 모든 가격을 미수집으로 표기했습니다. 가격·이미지 가공은 기존 v1.0 파이프라인에서 검토 후 수행합니다.</p>
+</section>
+<section id="test"><h2>7. 테스트와 완료 판정</h2><div class="scroll"><table><thead><tr><th>시험</th><th>기준</th><th>이번 환경</th></tr></thead><tbody>
+<tr><td>표준 JSON-LD 1개 Offer</td><td>개별 가격·URL 추출</td><td>PASS (합성)</td></tr>
+<tr><td>AggregateOffer 최저가</td><td>가격 후보에서 제외</td><td>PASS</td></tr>
+<tr><td>모델·옵션 불일치</td><td>자동 채택하지 않음</td><td>PASS</td></tr>
+<tr><td>시간대 없는 시각·24h 경과</td><td>검토 보류</td><td>PASS</td></tr>
+<tr><td>배송비·결제·이용 권한 미확정</td><td>검토 보류</td><td>PASS</td></tr>
+<tr><td>가격 숫자와 악성 URL</td><td>엄격 필터/HTML escape</td><td>PASS</td></tr>
+<tr><td>실제 저장 다나와 HTML</td><td>1개 상품에서 후보 유무 확인</td><td>사용자 PC 필요</td></tr>
+<tr><td>Windows BAT 실행</td><td><code>doctor → smoke → demo → snapshot</code></td><td>사용자 PC 필요</td></tr>
+<tr><td>v1.2 CSV Bridge 통합</td><td>실제 1상품·3후보로 연결</td><td>실물 ZIP 접근 불가로 미검증</td></tr>
+</tbody></table></div><p><strong>이번 주 작은 목표:</strong> 합성 데모에서 <code>DEMO_ONLY</code>를 확인하고, 실제 HTML 1개에서 <code>NO_STRUCTURED_OFFERS</code>, <code>HOLD_REVIEW</code> 또는 <code>REVIEW_CANDIDATES_AVAILABLE</code> 중 어떤 상태인지 근거 보고서를 저장합니다. 결과 중 하나가 명확히 산출되면 이번 기술 검증 단계의 목적을 달성한 것입니다.</p></section>
+<section id="risk"><h2>8. 한 가지 핵심 Blocker</h2><div class="alert"><strong>허용된 범위에서 반복적으로 제공받을 수 있는 ‘동일상품·옵션·배송비가 명시된 가격 근거’를 확보할 수 있는가?</strong> HTML 저장본이 가격을 포함하지 않거나 재사용 권한이 없다면 자동 스크래핑으로 넘어갈 수 없습니다.</div><p>다나와 이용약관은 회사 지식재산권 정보의 무단 영리 이용을 제한합니다. 데이터 성격·이용 범위·제공 주체를 먼저 확인해야 합니다. 확인 전에는 브라우저 우회·대량 수집 기능을 넣지 않습니다.</p><p>기술적으로도 페이지 화면에 가격이 보인다는 사실만으로 저장 HTML의 JSON-LD에 개별 판매 조건이 포함되어 있다는 보장은 없습니다. <code>NO_STRUCTURED_OFFERS</code>가 나오면 무리하게 숫자 정규식을 확대하지 말고 공식 피드·판매자 제공 데이터·기존 수동 CSV 경로를 검토합니다.</p></section>
+<section id="next"><h2>9. 다음 단계 진행 조건</h2><p>이번 보고서로 실제 HTML과 메타값을 확보했다면, 이어서 허용된 데이터 공급 경로의 <strong>입력 Adapter 1개만</strong> 구현합니다. 그 Adapter가 v1.1 검증 엔진과 v1.2 CSV Bridge에 연결되어, <strong>실제 상품 1개 × 후보 3개</strong>에서 오류 없이 통과하는지를 검사합니다.</p><p>이후 네이버쇼핑은 별도 승인된 가격 소스를 찾아 같은 <code>PriceCandidate</code> 계약으로 연결하고, 마지막에는 기존 이미지 원본 보존/354×472 리사이즈와 7열 표를 재검증합니다. 어느 단계도 네이버쇼핑 종료 API를 사용하지 않습니다.</p></section>
+<section id="sources"><h2>10. 참고 공식 자료와 확인일</h2><p>공식 공지 내용은 2026년 11월 1일 확인했습니다.</p><ul><li><a href="https://m.danawa.com/info/useTerms.html" target="_blank" rel="noopener noreferrer">다나와 이용약관</a> — 2026년 7월 13일 시행 문구, 지식재산권 이용 규정</li><li><a href="https://developers.naver.com/notice/article/32564" target="_blank" rel="noopener noreferrer">네이버 쇼핑 검색 API 종료 공지</a> — 2026년 7월 31일 종료</li><li><a href="https://developers.naver.com/notice/article/32530" target="_blank" rel="noopener noreferrer">NAVER API HUB 이관 공지</a> — 쇼핑 검색 API는 별도 대체 제공 대상에서 제외</li></ul><p class="foot">이 HTML 문서는 네이버 공식 프로그램이 아닙니다. PC 내 정적 가이드이며 자동 수집 사이트나 온라인 작업실을 호스팅한 것은 아닙니다.</p></section>
+</main></div></body></html>

@@ -1,0 +1,56 @@
+{
+  "project_id": "NAVER_BLOG_AUTOMATION",
+  "version": "1.0.0",
+  "release_kind": "LOCAL_SETUP_AND_REVIEW_FOUNDATION",
+  "created_at": "2026-10-11",
+  "architecture": "Core + price providers + evidence/content + platform publishers",
+  "entrypoints": {
+    "install": "install.bat",
+    "daily": "start_panel.bat",
+    "guide": "06_UI/index.html",
+    "doctor": "doctor.bat",
+    "test": "smoke.bat",
+    "batch": "run_once.bat"
+  },
+  "runtime": {
+    "preferred": "Python 3.13 x64",
+    "accepted": "Python >=3.11,<3.14 x64",
+    "tested": "Python 3.13.5 Linux",
+    "dependency": "Pillow==12.3.0"
+  },
+  "capabilities": {
+    "product_popup": "IMPLEMENTED",
+    "manual_price_import": "IMPLEMENTED",
+    "danawa_live": "NOT_CONFIGURED",
+    "naver_shopping_live": "NOT_CONFIGURED_LEGACY_API_RETIRED",
+    "image_local_resize": "IMPLEMENTED_OFFLINE_TESTED",
+    "image_https_download": "IMPLEMENTED_MOCK_TESTED_NOT_LIVE_VALIDATED",
+    "html_table": "IMPLEMENTED_OFFLINE_TESTED",
+    "content_brief": "IMPLEMENTED_TEMPLATE_ONLY",
+    "naver_remote_draft": "NOT_IMPLEMENTED",
+    "naver_publication": "NOT_IMPLEMENTED",
+    "blogger": "INTERFACE_ONLY",
+    "wordpress": "INTERFACE_ONLY",
+    "daily_review_task": "SCRIPT_ONLY_WINDOWS_VERIFICATION_REQUIRED"
+  },
+  "public_hosting": false,
+  "auto_publish": false,
+  "price_sources_prioritized": [
+    "danawa",
+    "naver_shopping"
+  ],
+  "required_headers": [
+    "No.",
+    "상품명",
+    "이미지",
+    "다나와 최저가",
+    "사이트 주소",
+    "네이버 최저가",
+    "사이트 주소"
+  ],
+  "baseline_source": {
+    "filename": "Naver_Blog_Auto_Step4_TableExporter_v0.4.zip",
+    "sha256": "2a50b3da09b497cd26ef28788c4fcf03abc50025d71c5cb97e4d1bdb8ab1695f",
+    "original_preserved": true
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "handoff_version": "1.0",
+  "prepared_date": "2026-11-05",
+  "application_complete": false,
+  "sources": [
+    {
+      "id": "workspace_v1_0",
+      "file": "Naver_Blog_Automation_Workspace_v1.0.zip",
+      "status": "INCLUDED_ORIGINAL",
+      "sha256": "b7e9015a9db956b9eba5b6739c198d795d491f28551d0437a5cabbeef480bf34",
+      "bytes": 154439,
+      "bundled_at": "reference/originals/Naver_Blog_Automation_Workspace_v1.0.zip",
+      "tests_reexecuted": 31,
+      "tests_passed": 31,
+      "scope": "Independent Linux offline and local HTTP tests; not Windows or live data"
+    },
+    {
+      "id": "candidate_qa_v1_1",
+      "file": "Naver_Blog_Danawa_Candidate_QA_Addon_v1.1.zip",
+      "status": "NOT_RETRIEVED",
+      "sha256": null,
+      "bundled_at": null,
+      "note": "Mentioned in prior conversation; original bytes unavailable. No code/test claims made."
+    },
+    {
+      "id": "csv_bridge_v1_2",
+      "file": "Naver_Blog_Danawa_CSV_Bridge_Addon_v1.2.zip",
+      "status": "NOT_RETRIEVED",
+      "sha256": null,
+      "bundled_at": null,
+      "note": "Mentioned in prior conversation; original bytes unavailable. No code/test claims made."
+    },
+    {
+      "id": "snapshot_probe_v1_3",
+      "file": "Naver_Blog_Danawa_Snapshot_Probe_Addon_v1.3.zip",
+      "status": "INCLUDED_ORIGINAL",
+      "sha256": "b1212dfca89316c3bdb7bfae86b27f752dd7d2a48a93bdd728910e82241f21e1",
+      "bytes": 29614,
+      "bundled_at": "reference/originals/Naver_Blog_Danawa_Snapshot_Probe_Addon_v1.3.zip",
+      "tests_reexecuted": 19,
+      "tests_passed": 19,
+      "scope": "Independent Linux synthetic unit tests; no actual Danawa HTML or integration"
+    }
+  ],
+  "workspace_assembly": "Exact base archive extraction plus exact v1.3 placement only; not integrated",
+  "historical_baseline_complete": false
+}

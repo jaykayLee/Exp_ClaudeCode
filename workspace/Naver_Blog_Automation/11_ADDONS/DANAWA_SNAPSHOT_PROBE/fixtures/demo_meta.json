@@ -1,0 +1,9 @@
+{
+  "target": {"query": "가상 테스트 마우스 A", "model": "DEMO-MOUSE-A", "variant": "black"},
+  "source_page": "https://prod.danawa.com/info/?pcode=123456",
+  "observed_at": "2026-11-01T08:00:00+09:00",
+  "usage_permission": "confirmed",
+  "shipping_fee": 3000,
+  "payment_condition": "normal",
+  "notes": "합성 샘플입니다. run_demo는 현재 확인시각을 부여하지만 DEMO_ONLY 표시를 유지합니다."
+}

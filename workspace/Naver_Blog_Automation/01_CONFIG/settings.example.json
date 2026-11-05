@@ -1,0 +1,37 @@
+{
+  "project_version": "1.0.0",
+  "platform": "naver",
+  "mode": "manual_import",
+  "auto_publish": false,
+  "image": {
+    "width_px": 354,
+    "height_px": 472,
+    "dpi": 300,
+    "background": "white",
+    "download_enabled": false,
+    "allowed_hosts": [],
+    "max_bytes": 8388608,
+    "max_pixels": 20000000
+  },
+  "quality": {
+    "max_price_age_hours": 24
+  },
+  "server": {
+    "host": "127.0.0.1",
+    "port": 8765
+  },
+  "sources": {
+    "danawa": {
+      "mode": "approved_import",
+      "live_status": "NOT_CONFIGURED"
+    },
+    "naver_shopping": {
+      "mode": "approved_import",
+      "legacy_api_status": "RETIRED_2026_07_31"
+    }
+  },
+  "schedule": {
+    "enabled": false,
+    "purpose": "local_review_only"
+  }
+}

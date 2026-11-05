@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "addon_id": "NAVER_BLOG.ADDON.DANAWA_SNAPSHOT_PROBE",
+  "version": "1.3.0",
+  "project_id": "NAVER_BLOG_AUTOMATION",
+  "name": "Danawa Offline Saved-HTML Evidence Probe",
+  "purpose": "Check whether operator-saved HTML includes schema.org Product/Offer evidence and convert only verified review candidates to v1.2-shaped CSV",
+  "entrypoint": "probe.snapshot_probe",
+  "install_entrypoint": "install.bat",
+  "python_requirement": ">=3.11,<3.14",
+  "third_party_packages": [],
+  "optional_integration": ["Naver_Blog_Automation_Workspace_v1.0", "DANAWA_CANDIDATE_QA_v1.1", "DANAWA_CSV_BRIDGE_v1.2"],
+  "network_requests": false,
+  "auto_publish": false,
+  "live_scraping": false,
+  "writes_core_files": false,
+  "evidence_policy": "Always keep source_page, user-declared observed_at, local snapshot hash and HOLD reasons. Manual confirmation is not legal certification.",
+  "release_status": "OFFLINE_PROBE_TESTED; WINDOWS_RUNTIME_UNVERIFIED; REAL_DANAWA_HTML_UNVERIFIED; V1.2_INTEGRATION_UNVERIFIED"
+}

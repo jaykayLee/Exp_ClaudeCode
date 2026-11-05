@@ -1,0 +1,70 @@
+{
+  "browser": "Chromium / Playwright on Linux; set_content rendering; browser navigation restricted by container policy; UI API calls use an explicit test bridge to the actual local HTTP server",
+  "checks": [
+    {
+      "name": "UI_connected_to_actual_local_HTTP_server_via_test_transport",
+      "passed": true
+    },
+    {
+      "name": "demo_three_rows_and_price_format",
+      "passed": true
+    },
+    {
+      "name": "python_demo_generation_exact_seven_columns",
+      "passed": true
+    },
+    {
+      "name": "output_html_embedded_images_render",
+      "passed": true
+    },
+    {
+      "name": "product_modal_image_upload_and_html_escape",
+      "passed": true
+    },
+    {
+      "name": "manual_missing_checks_hold",
+      "passed": true
+    },
+    {
+      "name": "manual_review_gate_not_publication",
+      "passed": true
+    },
+    {
+      "name": "json_export",
+      "passed": true
+    },
+    {
+      "name": "json_reimport",
+      "passed": true
+    },
+    {
+      "name": "original_content_brief_generation_and_save",
+      "passed": true
+    },
+    {
+      "name": "image_config_persisted",
+      "passed": true
+    },
+    {
+      "name": "desktop_no_document_horizontal_overflow",
+      "passed": true
+    },
+    {
+      "name": "all_internal_navigation_targets_exist",
+      "passed": true
+    },
+    {
+      "name": "standalone_HTML_render_demo_and_brief_no_python",
+      "passed": true
+    },
+    {
+      "name": "mobile_navigation_and_horizontal_table_scroll",
+      "passed": true
+    }
+  ],
+  "passed": 15,
+  "javascript_errors": [],
+  "windows_browser_tested": false,
+  "live_price_collection_tested": false,
+  "public_posting_tested": false
+}

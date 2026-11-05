@@ -1,0 +1,47 @@
+{
+  "registry_version": "1.0",
+  "modules": [
+    {
+      "id": "BLOG.CORE",
+      "version": "1.0.0",
+      "path": "02_CORE",
+      "status": "IMPLEMENTED"
+    },
+    {
+      "id": "BLOG.PROVIDER.DANAWA",
+      "version": "0.0.0",
+      "path": "03_PROVIDERS/providers/danawa.py",
+      "status": "NOT_CONFIGURED"
+    },
+    {
+      "id": "BLOG.PROVIDER.NAVER_SHOPPING",
+      "version": "0.0.0",
+      "path": "03_PROVIDERS/providers/naver_shopping.py",
+      "status": "LEGACY_API_RETIRED_NEW_PATH_REQUIRED"
+    },
+    {
+      "id": "BLOG.CONTENT.BRIEF",
+      "version": "1.0.0",
+      "path": "04_CONTENT",
+      "status": "TEMPLATE_ONLY_NO_LLM_CALL"
+    },
+    {
+      "id": "BLOG.PUBLISHER.NAVER",
+      "version": "1.0.0",
+      "path": "05_PUBLISHERS/publishers/naver.py",
+      "status": "MANUAL_HANDOFF_ONLY"
+    },
+    {
+      "id": "BLOG.PUBLISHER.BLOGGER",
+      "version": "0.0.0",
+      "path": "05_PUBLISHERS/publishers/blogger.py",
+      "status": "INTERFACE_ONLY"
+    },
+    {
+      "id": "BLOG.PUBLISHER.WORDPRESS",
+      "version": "0.0.0",
+      "path": "05_PUBLISHERS/publishers/wordpress.py",
+      "status": "INTERFACE_ONLY"
+    }
+  ]
+}

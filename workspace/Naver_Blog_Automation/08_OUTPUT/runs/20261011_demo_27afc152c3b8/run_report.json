@@ -1,0 +1,59 @@
+{
+  "project_version": "1.0.0",
+  "run_id": "20261011_demo_27afc152c3b8",
+  "mode": "DEMO",
+  "review_gate": "DEMO_ONLY",
+  "row_count": 3,
+  "reviewed_at": "2026-10-11T16:38:31.901447+09:00",
+  "network_price_collection": false,
+  "published": false,
+  "reused_output": false,
+  "preview_url": "/output/20261011_demo_27afc152c3b8/product_table.html",
+  "output_relative": "08_OUTPUT/runs/20261011_demo_27afc152c3b8",
+  "review": [
+    {
+      "row": 1,
+      "query": "테스트 상품 A",
+      "issues": [
+        "danawa:MATCH_NOT_REVIEWED",
+        "danawa:TERMS_NOT_REVIEWED",
+        "naver:MATCH_NOT_REVIEWED",
+        "naver:TERMS_NOT_REVIEWED"
+      ],
+      "details": [
+        "다나와: 동일 모델·옵션 미확인",
+        "다나와: 배송비·조건 미확인",
+        "네이버: 동일 모델·옵션 미확인",
+        "네이버: 배송비·조건 미확인"
+      ]
+    },
+    {
+      "row": 2,
+      "query": "테스트 상품 B - 네이버 미수집",
+      "issues": [
+        "danawa:MATCH_NOT_REVIEWED",
+        "danawa:TERMS_NOT_REVIEWED",
+        "naver:PRICE_MISSING"
+      ],
+      "details": [
+        "다나와: 동일 모델·옵션 미확인",
+        "다나와: 배송비·조건 미확인",
+        "네이버: 가격 미수집"
+      ]
+    },
+    {
+      "row": 3,
+      "query": "테스트 상품 C - 다나와 미수집",
+      "issues": [
+        "danawa:PRICE_MISSING",
+        "naver:MATCH_NOT_REVIEWED",
+        "naver:TERMS_NOT_REVIEWED"
+      ],
+      "details": [
+        "다나와: 가격 미수집",
+        "네이버: 동일 모델·옵션 미확인",
+        "네이버: 배송비·조건 미확인"
+      ]
+    }
+  ]
+}

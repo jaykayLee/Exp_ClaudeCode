@@ -1,0 +1,86 @@
+{
+  "release": "1.0.0",
+  "checked_at": "2026-10-11",
+  "python_tests": 31,
+  "legacy_tests": 2,
+  "ui_checks": 15,
+  "scripts": [
+    {
+      "path": "open_guide.bat",
+      "ascii": true,
+      "crlf": true,
+      "bom": false,
+      "windows_executed": false
+    },
+    {
+      "path": "disable_daily_review.bat",
+      "ascii": true,
+      "crlf": true,
+      "bom": false,
+      "windows_executed": false
+    },
+    {
+      "path": "start_panel.bat",
+      "ascii": true,
+      "crlf": true,
+      "bom": false,
+      "windows_executed": false
+    },
+    {
+      "path": "enable_daily_review.bat",
+      "ascii": true,
+      "crlf": true,
+      "bom": false,
+      "windows_executed": false
+    },
+    {
+      "path": "install.bat",
+      "ascii": true,
+      "crlf": true,
+      "bom": false,
+      "windows_executed": false
+    },
+    {
+      "path": "smoke.bat",
+      "ascii": true,
+      "crlf": true,
+      "bom": false,
+      "windows_executed": false
+    },
+    {
+      "path": "doctor.bat",
+      "ascii": true,
+      "crlf": true,
+      "bom": false,
+      "windows_executed": false
+    },
+    {
+      "path": "run_once.bat",
+      "ascii": true,
+      "crlf": true,
+      "bom": false,
+      "windows_executed": false
+    },
+    {
+      "path": "tools/bootstrap.ps1",
+      "ascii": true,
+      "crlf": true,
+      "bom": false,
+      "windows_executed": false
+    },
+    {
+      "path": "tools/schedule.ps1",
+      "ascii": true,
+      "crlf": true,
+      "bom": false,
+      "windows_executed": false
+    }
+  ],
+  "compileall": "PASS",
+  "json_parse": "PASS",
+  "zip_check": "performed after archive creation; see delivery validation",
+  "live_price_collection_tested": false,
+  "windows_install_and_schedule_tested": false,
+  "naver_publication_tested": false,
+  "original_archive_sha256": "2a50b3da09b497cd26ef28788c4fcf03abc50025d71c5cb97e4d1bdb8ab1695f"
+}

@@ -1,0 +1,97 @@
+{
+  "checked_at": "2026-10-11",
+  "source_policy": "Metadata and limited paraphrases only; do not copy third-party articles or photographs.",
+  "sources": [
+    {
+      "id": "S1",
+      "title": "네이버 개발자센터 — Search API 등 종료·API HUB 이관 안내",
+      "url": "https://developers.naver.com/notice/article/32530",
+      "note": "2026년 공식 공지. 쇼핑 검색 API 7월 31일 종료·대체 API 없음. 관련 상세 공지: 32564.",
+      "verified_access_date": "2026-10-11"
+    },
+    {
+      "id": "S2",
+      "title": "다나와 — 이용약관",
+      "url": "https://m.danawa.com/info/useTerms.html",
+      "note": "접근과 정보 이용 범위를 확인하는 원문. 자동 수집 허용 여부나 이미지 이용 허락을 임의 추정하지 않음.",
+      "verified_access_date": "2026-10-11"
+    },
+    {
+      "id": "S3",
+      "title": "네이버 — 블로그 공식 고객센터",
+      "url": "https://help.naver.com/service/5593",
+      "note": "현재 글쓰기·사진·표 등 상세 도움말의 출발점. 에디터 메뉴는 변경될 수 있음.",
+      "verified_access_date": "2026-10-11"
+    },
+    {
+      "id": "S4",
+      "title": "Python Software Foundation — Windows 배포판",
+      "url": "https://www.python.org/downloads/windows/",
+      "note": "3.13 계열을 호환성 기준으로 사용. 없을 때 사용하는 고정 대체 설치 파일: 3.13.16 x64.",
+      "verified_access_date": "2026-10-11"
+    },
+    {
+      "id": "S5",
+      "title": "Microsoft Learn — WinGet install",
+      "url": "https://learn.microsoft.com/en-us/windows/package-manager/winget/install",
+      "note": "패키지 ID·사용자 범위 설치 옵션을 참고. 대상 PC에서 패키지 제공 상태 확인 필요.",
+      "verified_access_date": "2026-10-11"
+    },
+    {
+      "id": "S6",
+      "title": "Pillow — ImageOps 공식 문서",
+      "url": "https://pillow.readthedocs.io/en/stable/reference/ImageOps.html",
+      "note": "EXIF 방향 보정 등 이미지 전처리 참고. 설치 의존성 Pillow 12.3.0.",
+      "verified_access_date": "2026-10-11"
+    },
+    {
+      "id": "S7",
+      "title": "Microsoft Learn — Register-ScheduledTask",
+      "url": "https://learn.microsoft.com/en-us/powershell/module/scheduledtasks/register-scheduledtask",
+      "note": "선택적으로 Windows 일일 로컬 검토 작업을 등록하는 근거 문서.",
+      "verified_access_date": "2026-10-11"
+    },
+    {
+      "id": "S8",
+      "title": "Google for Developers — Blogger posts.insert",
+      "url": "https://developers.google.com/blogger/docs/3.0/reference/posts/insert",
+      "note": "OAuth 기반 게시 요청과 isDraft 옵션. 현재 패키지는 API 호출 미구현.",
+      "verified_access_date": "2026-10-11"
+    },
+    {
+      "id": "S9",
+      "title": "WordPress Developer Resources — REST API Posts",
+      "url": "https://developer.wordpress.org/rest-api/reference/posts/",
+      "note": "게시물 상태·등록 인터페이스. 인증·미디어는 별도 설계 필요. 현재 호출 미구현.",
+      "verified_access_date": "2026-10-11"
+    },
+    {
+      "id": "S10",
+      "title": "ProBlogger / Darren Rowse — 20 Quick Tips on Writing Great Blog Posts",
+      "url": "https://problogger.com/writing-great-blog-posts/",
+      "note": "2013년 8월 8일. 독자 문제 해결·개인 관점·편집의 일반 원칙을 참고. 글 전문이나 고유 표현을 복제하지 않음.",
+      "verified_access_date": "2026-10-11"
+    },
+    {
+      "id": "S11",
+      "title": "Smart Passive Income — SPI 888: What’s Working in Affiliate Marketing?",
+      "url": "https://www.smartpassiveincome.com/podcasts/spi-888-whats-working-in-affiliate-marketing/",
+      "note": "2025년 9월 3일. 독자 적합성과 정직한 설명의 관점을 참고. 현재 수익·순위의 근거로 사용하지 않음.",
+      "verified_access_date": "2026-10-11"
+    },
+    {
+      "id": "S12",
+      "title": "Google Search Central — Write high quality reviews",
+      "url": "https://developers.google.com/search/docs/specialty/ecommerce/write-high-quality-reviews",
+      "note": "독창적 근거·비교·장단점·사용자 관점 지침. 순위 보장이나 네이버 공식 지침이 아님.",
+      "verified_access_date": "2026-10-11"
+    },
+    {
+      "id": "S13",
+      "title": "Google Search Central — Spam policies",
+      "url": "https://developers.google.com/search/docs/essentials/spam-policies",
+      "note": "확장된 대량 저부가가치 콘텐츠 관련 정책 참고. 단순 문장 바꾸기 자동화를 피하는 설계 근거.",
+      "verified_access_date": "2026-10-11"
+    }
+  ]
+}

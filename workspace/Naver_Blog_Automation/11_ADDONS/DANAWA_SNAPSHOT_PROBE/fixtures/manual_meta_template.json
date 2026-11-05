@@ -1,0 +1,9 @@
+{
+  "target": {"query": "정확한 상품명", "model": "정확한 모델번호", "variant": "색상/용량 등 옵션"},
+  "source_page": "https://prod.danawa.com/info/?pcode=YOUR_PRODUCT_ID",
+  "observed_at": "",
+  "usage_permission": "unknown",
+  "shipping_fee": null,
+  "payment_condition": "unknown",
+  "notes": "스크래핑이나 재사용이 허용되었다는 의미가 아닙니다. 실제 확인한 시각을 타임존 포함으로 기록하고, 권한·가격조건을 확인하세요."
+}

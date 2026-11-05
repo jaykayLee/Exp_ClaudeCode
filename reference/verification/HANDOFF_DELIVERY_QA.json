@@ -1,0 +1,25 @@
+{
+  "zip_crc_ok": true,
+  "manifest_verifier_exit": 0,
+  "mutation_detected": true,
+  "v1.0": {
+    "exit_code": 0,
+    "tests": 31
+  },
+  "v1.3": {
+    "exit_code": 0,
+    "tests": 19
+  },
+  "guide_desktop_no_horizontal_overflow": true,
+  "guide_mobile_no_horizontal_overflow": true,
+  "guide_page_errors": [],
+  "windows_bat_executed": false,
+  "live_site_collection_tested": false,
+  "cross_module_e2e_tested": false,
+  "naver_publication_tested": false,
+  "note": "Independent unit suites on a freshly extracted bundle, not connected pipeline validation.",
+  "guide_render_method": "Chromium set_content; direct file URL navigation not validated",
+  "guide_local_links_checked": 7,
+  "release_scope": "Handoff and independent baseline tests only",
+  "windows_browser_tested": false
+}
