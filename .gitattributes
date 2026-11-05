@@ -1,0 +1,3 @@
+# Byte-exact storage: no line-ending conversion anywhere.
+# BAT/PS1 must stay CRLF on Windows, and release manifests hash exact bytes.
+* -text
