@@ -21,3 +21,11 @@
 - Snapshot Probe v1.3.1: 판매자별 배송비·결제조건 근거 분리. 공통 meta는 `offer_terms_scope: "all_offers"` 명시 시에만 적용.
 - 합성 DEMO job(`07_DATA/samples/snapshot_demo`)과 인수 테스트 19개(`10_TESTS/test_snapshot_bridge.py`) 추가.
 - Linux에서만 검증함. Windows BAT·실제 다나와/네이버 수집·게시는 미검증.
+
+## P04~P06 (인계 패키지 작업) — 2026-11-05
+- P02·P03: 외부 조건으로 BLOCKED_EXTERNAL (다나와 허용 경로·실제 저장본 없음, 네이버쇼핑 가격 경로 없음).
+- P04: 작업실에 "다나와 저장본 연결 · 수집 상태" 카드, `POST /api/snapshot`, 결과 → 검토 목록 → 사람 체크 흐름. 모바일 표 스크롤 수정.
+- P05: `run_once.py`가 products.json과 snapshot_job.json을 각각 처리, 입력 없음은 exit 0, 실행 로그 `09_LOGS/daily/`. `run_snapshot.bat`, `run_snapshot_demo.bat` 추가. smoke에 애드온 테스트 포함. doctor에 잠금 파일 점검.
+- P06: 설치형 ZIP 빌더 `tools/build_release.py`(사용자 데이터·비밀정보 제외), 네이버 붙여넣기 시험용 표 `naver_paste_table.html`, 가이드 갱신.
+- v1.0 핵심(nbcore, table_exporter, providers/base, install/bootstrap/schedule)은 변경하지 않음.
+- Linux에서만 검증. Windows 실행·네이버 에디터 붙여넣기·실시간 수집은 미검증.

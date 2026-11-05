@@ -1,5 +1,5 @@
 {
-  "stage": "P01",
+  "stage": "P06",
   "p00": {
     "date": "2026-11-05",
     "os": "Linux-6.18.44-fc-v236-x86_64-with-glibc2.39",
@@ -141,6 +141,68 @@
       "Naver Shopping collection",
       "Naver publication",
       "Re-confirmation of Naver Shopping API retirement notice"
+    ]
+  },
+  "p04_p06": {
+    "date": "2026-11-05",
+    "os": "Linux-6.18.44-fc-v236-x86_64-with-glibc2.39",
+    "python": "3.13.18",
+    "pillow": "12.3.0",
+    "dev_only_dependency": "playwright (Python) installed in dev .venv for UI QA only; not in tools/dependencies.lock, not shipped",
+    "tests": [
+      {
+        "suite": "qa_runner (workspace+addon)",
+        "command": ".venv/bin/python tools/qa_runner.py",
+        "exit_code": 0,
+        "executed": 102,
+        "failures": 0,
+        "errors": 0,
+        "composition": "test_workspace 31 + snapshot_bridge 19 + panel_integration 8 + daily_ops 12 + release_and_paste 6 = 76; addon 26",
+        "log": "00_SESSION/evidence/P06/qa_runner.txt"
+      },
+      {
+        "suite": "P04 browser E2E",
+        "command": ".venv/bin/python 00_SESSION/evidence/P04/ui_snapshot_e2e.py",
+        "exit_code": 0,
+        "result": "14/14",
+        "log": "00_SESSION/evidence/P04/ui_snapshot_e2e.json",
+        "screenshots": [
+          "panel_snapshot_card.png",
+          "panel_snapshot_card_mobile.png",
+          "panel_review_list.png",
+          "panel_edit_dialog.png",
+          "generated_table.png"
+        ]
+      },
+      {
+        "suite": "developer UI QA (existing, locator updated)",
+        "command": ".venv/bin/python 00_PROJECT/QA/developer_ui_qa.py",
+        "exit_code": 0,
+        "result": "15/15, javascript_errors []",
+        "log": "00_SESSION/evidence/P06/developer_ui_qa_rerun.txt"
+      },
+      {
+        "suite": "run_once CLI",
+        "log": "00_SESSION/evidence/P05/run_once_cli.txt",
+        "result": "NO_INPUT exit 0; snapshot-demo DONE/DEMO_ONLY"
+      },
+      {
+        "suite": "clean install from install ZIP (path with space+Korean)",
+        "log": "00_SESSION/evidence/P06/clean_install_verification.txt",
+        "result": "venv+lock install OK, pip check OK, doctor 0, 102 tests OK, reinstall keeps settings.local.json, run_once NO_INPUT, snapshot demo OK, rebuild from installed copy OK"
+      }
+    ],
+    "bugs_found_and_fixed": [
+      "P04: status table clipped on mobile (CSS overflow) — fixed, E2E check added",
+      "P06: build_release re-packed an old RELEASE_MANIFEST.json when rebuilding from an installed copy (manifest hash mismatch) — found by clean-install test, fixed, regression test added",
+      "P06: developer_ui_qa strict locator broke after adding paste-table link — locator made explicit"
+    ],
+    "not_run": [
+      "Any Windows execution (install.bat, start_panel.bat, run_*.bat, PowerShell, Task Scheduler)",
+      "Real Danawa page",
+      "Naver Shopping collection",
+      "Naver editor paste of naver_paste_table.html",
+      "Naver publication"
     ]
   }
 }

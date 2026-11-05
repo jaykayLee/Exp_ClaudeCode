@@ -3,8 +3,8 @@
   "project_id": "NAVER_BLOG_AUTOMATION",
   "handoff_version": "1.0",
   "prepared_date": "2026-11-05",
-  "current_phase": "P01",
-  "status": "PASS",
+  "current_phase": "P06",
+  "status": "PASS_LINUX_SCOPE",
   "phases": {
     "P00": {
       "implementation": "PASS",
@@ -31,24 +31,53 @@
       "compatibility_flag": "LEGACY_V11_V12_COMPATIBILITY_UNVERIFIED"
     },
     "P02": {
-      "implementation": "NOT_STARTED",
-      "verification": "NOT_RUN"
+      "implementation": "BLOCKED_EXTERNAL",
+      "verification": "NOT_RUN",
+      "reason": "No allowed Danawa data source/terms confirmation and no user-saved real page (user confirmed blocked 2026-11-05). Offline saved-HTML bridge from P01 is ready to receive one."
     },
     "P03": {
-      "implementation": "NOT_STARTED",
-      "verification": "NOT_RUN"
+      "implementation": "BLOCKED_EXTERNAL",
+      "verification": "NOT_RUN",
+      "reason": "Naver Shopping legacy API retired (handoff notice, not re-checked this session); no allowed replacement path. Naver columns stay 미수집 (None)."
     },
     "P04": {
-      "implementation": "NOT_STARTED",
-      "verification": "NOT_RUN"
+      "implementation": "PASS",
+      "verification": "PASS",
+      "verification_scope": "Linux: /api/snapshot + panel status card + review-list loop; image integrity (354x472/300dpi, originals unchanged, transparent/broken/missing); browser E2E 14/14 (desktop+mobile, path with space+Korean); developer UI QA 15/15",
+      "windows_verification": "NEEDS_WINDOWS_CHECK"
     },
     "P05": {
-      "implementation": "NOT_STARTED",
-      "verification": "NOT_RUN"
+      "implementation": "PASS",
+      "verification": "PASS_LINUX_STATIC_WINDOWS",
+      "verification_scope": "Linux: run_once daily (both inputs, NO_INPUT, partial failure, re-run reuse, concurrent lock refusal, logs); static checks of all BAT/PS1",
+      "windows_verification": "NEEDS_WINDOWS_CHECK (BAT/PowerShell/Task Scheduler never executed)"
     },
     "P06": {
-      "implementation": "NOT_STARTED",
-      "verification": "NOT_RUN"
+      "implementation": "PASS",
+      "verification": "PASS",
+      "verification_scope": "Linux: build_release ZIP excludes user data/secrets; clean install re-extract in path with space+Korean: venv+lock install, pip check, doctor, 102 tests, reinstall keeps settings, demo; naver_paste_table generated",
+      "windows_verification": "NEEDS_WINDOWS_CHECK",
+      "naver_editor_paste": "NOT_RUN"
+    },
+    "P07": {
+      "implementation": "NOT_DEFINED",
+      "verification": "NOT_RUN",
+      "note": "Not defined in MASTER_IMPLEMENTATION_PROMPT_KO.md (phases end at P06). Candidates proposed in docs/PROGRESS_REPORT_P00_P06.md; scope needs user decision."
+    },
+    "P08": {
+      "implementation": "NOT_DEFINED",
+      "verification": "NOT_RUN",
+      "note": "Not defined in MASTER_IMPLEMENTATION_PROMPT_KO.md (phases end at P06). Candidates proposed in docs/PROGRESS_REPORT_P00_P06.md; scope needs user decision."
+    },
+    "P09": {
+      "implementation": "NOT_DEFINED",
+      "verification": "NOT_RUN",
+      "note": "Not defined in MASTER_IMPLEMENTATION_PROMPT_KO.md (phases end at P06). Candidates proposed in docs/PROGRESS_REPORT_P00_P06.md; scope needs user decision."
+    },
+    "P10": {
+      "implementation": "NOT_DEFINED",
+      "verification": "NOT_RUN",
+      "note": "Not defined in MASTER_IMPLEMENTATION_PROMPT_KO.md (phases end at P06). Candidates proposed in docs/PROGRESS_REPORT_P00_P06.md; scope needs user decision."
     }
   },
   "pre_handoff_checks": {
@@ -63,14 +92,17 @@
     "Naver_Blog_Danawa_CSV_Bridge_Addon_v1.2.zip"
   ],
   "capabilities": {
-    "live_danawa": "NOT_IMPLEMENTED",
-    "live_naver_shopping": "NOT_IMPLEMENTED",
+    "live_danawa": "BLOCKED_EXTERNAL",
+    "live_naver_shopping": "BLOCKED_EXTERNAL",
     "windows_runtime": "NEEDS_WINDOWS_CHECK",
     "combined_e2e": "PASS_SYNTHETIC_OFFLINE_ONLY",
-    "naver_publishing": "NOT_IMPLEMENTED",
-    "snapshot_bridge": "IMPLEMENTED"
+    "naver_publishing": "NOT_IMPLEMENTED (manual handoff + paste-test table only)",
+    "snapshot_bridge": "IMPLEMENTED",
+    "install_zip": "BUILT_LINUX_VERIFIED",
+    "panel_snapshot_card": "IMPLEMENTED",
+    "daily_run": "IMPLEMENTED_LINUX_VERIFIED"
   },
-  "next_action": "Do not start automatically. P02 needs: confirmed allowed Danawa data source (API/feed/page + terms) and 1 real product the user is allowed to check. Otherwise mark P02 BLOCKED_EXTERNAL and proceed to P04 on request.",
+  "next_action": "Do not start automatically. See docs/PROGRESS_REPORT_P00_P06.md §6 for proposed P07-P10.",
   "auto_publish": false,
   "public_deployment_approved": false,
   "last_session_date": "2026-11-05",
@@ -89,12 +121,13 @@
     "scope": "Independent suites only; not end-to-end, not Windows, not live"
   },
   "blockers": [
-    "I01 BLOCKED_INPUT v1.1/v1.2 originals missing (direct adapter used)",
-    "I04 BLOCKED_EXTERNAL Danawa allowed source/terms (needed for P02)",
-    "I05 BLOCKED_EXTERNAL Naver Shopping replacement path (P03)",
-    "I06 NEEDS_WINDOWS_CHECK BAT install/schedule"
+    "I01 BLOCKED_INPUT v1.1/v1.2 originals (direct adapter used)",
+    "I04 BLOCKED_EXTERNAL Danawa allowed source / real saved page",
+    "I05 BLOCKED_EXTERNAL Naver Shopping price path",
+    "I06 NEEDS_WINDOWS_CHECK all BAT/PS1/Task Scheduler",
+    "I15 NOT_RUN Naver editor paste behaviour"
   ],
-  "next_possible_phase": "P02 (requires user input: an allowed Danawa source and usage confirmation) — or P04 with manual/user_recorded input if P02/P03 remain BLOCKED_EXTERNAL",
+  "next_possible_phase": "User decision: Windows acceptance run (checklist) and/or provide one saved Danawa page (P02 A). P07-P10 are not defined by the master prompt.",
   "p01_checks": {
     "v1_0_qa_runner": {
       "executed": 50,
@@ -107,5 +140,20 @@
       "errors": 0
     },
     "runtime": "Linux/Python 3.13.18/Pillow 12.3.0 (venv)"
+  },
+  "p06_checks": {
+    "qa_runner": {
+      "executed": 102,
+      "failures": 0,
+      "errors": 0,
+      "suites": {
+        "workspace": 76,
+        "snapshot_addon": 26
+      }
+    },
+    "ui_e2e": "14/14",
+    "developer_ui_qa": "15/15",
+    "clean_install": "PASS (Linux)",
+    "runtime": "Linux/Python 3.13.18/Pillow 12.3.0"
   }
 }
